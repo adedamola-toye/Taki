@@ -195,7 +195,8 @@ padding-right: 5px;
 
 /*EXPLORE COURSES PAGE*/
 .explore-courses-page{
-    margin: 2rem;
+    margin: 3rem;
+
 }
 
 .explore-courses-page{
@@ -212,4 +213,18 @@ padding-right: 5px;
 .explore-courses-heading h1{
     margin-bottom : 1rem;
 }
+
+.course-card-section{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 3rem;
+    justify-content: center;
+}
+
+
+.course-card{
+    
+   border: 1px solid greenyellow;
+}
+
 
