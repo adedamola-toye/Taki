@@ -9,7 +9,9 @@ function App() {
   return (
     <>
       <Header/>
-      
+      <div id='about'>
+        This is the about section
+      </div>
     </>
   )
 }

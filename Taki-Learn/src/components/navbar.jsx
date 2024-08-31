@@ -8,9 +8,9 @@ return(
         <nav className="navbar flex ">
             <p className="logo"><b>TakiLearn</b></p>
             <ul className="flex">
-                <li><a href="#" className="active">Home</a></li>
-                <li><a href="#">About</a></li>
-                <li><a href="#">All courses</a></li>
+                <li><a href="/" className="active">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="/courses">All courses</a></li>
             </ul>
             <div className="nav--buttons">
             <a href="#">Login</a>
