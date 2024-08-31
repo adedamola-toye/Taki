@@ -192,26 +192,6 @@ header button:hover {
 
 /*  */
 /*  navbar end*/
-<<<<<<< HEAD
-/* About Start */
-.about-section{
-    display: flex;
-    align-items: center;
-}
-.about-section div{
-    flex: 1 1 500px;
-}
-.about-section  h3{
-    color: rgba(16, 200, 67, 1);
-}
-.about-section  h2{
-    color: rgba(20, 20, 20, 1);
-}
-.about-section  p{
-    color: #1E1E1E;
-    font-family: Inter;
-}
-=======
 /* hero  */
 
 .hero {
@@ -331,5 +311,9 @@ header button:hover {
 
 
 /* hero end */
-/* header end */
->>>>>>> 6264f6d2a84c9622428b3efcd5bf77863d5f0f7e
+/* header end *
+/
+/* About-section */
+.about-section{
+    display: flex;
+}
