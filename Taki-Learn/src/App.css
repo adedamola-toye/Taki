@@ -81,7 +81,7 @@ header {
 
 .navbar li a {
     text-decoration: none;
-    color: #333333;
+    color: #747474;
 }
 
 .logo {
@@ -91,12 +91,12 @@ header {
 }
 
 .navbar button {
-    background-color: #FA8443;
+    background-color: #10C843;
     font-family: lato;
     color: #f7f7f7ff;
     width: 120px;
     height: 46px;
-    border-radius: 8px;
+    border-radius: 30px;
     border: none;
     transition: all 0.5s 0.1s ease;
     cursor: pointer;
@@ -104,7 +104,8 @@ header {
 
 .navbar button:hover {
     background-color: #f7f7f7ff;
-    color: #FA8443;
+    color: #10C843;
+    border:#10C843 solid 1px;
     /* border-radius: 10px; */
     box-shadow: 0.1px 0.1px 20px #d4d4d4;
     transform: translateY(-2px);
