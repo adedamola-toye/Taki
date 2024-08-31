@@ -1,5 +1,5 @@
 import Navbar from "./navbar";
-
+import Button from "./button";
 function Header() {
   return (
     <>
@@ -19,20 +19,10 @@ function Header() {
               <div>
                 <div className="flex store--btn">
                   <a href="#">
-                    <img
-                      src="img/appstore.webp"
-                      className="store"
-                      height="40px"
-                      alt="appstore button"
-                    />
+                    <Button label="Register" />
                   </a>
                   <a href="#">
-                    <img
-                      src="img/playstore.webp"
-                      className="store"
-                      height="40px"
-                      alt="playstore button"
-                    />
+                  <Button label="Register" />
                   </a>
                 </div>
               </div>

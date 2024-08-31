@@ -102,7 +102,7 @@ color: #747474;
 padding-right: 5px;
 }
 
-.navbar button {
+header button {
     background-color: #10C843;
     font-family: lato;
     color: #f7f7f7ff;
@@ -114,7 +114,7 @@ padding-right: 5px;
     cursor: pointer;
 }
 
-.navbar button:hover {
+header button:hover {
     background-color: #f7f7f7ff;
     color: #10C843;
     border:#10C843 solid 1px;
@@ -192,3 +192,114 @@ padding-right: 5px;
 
 /*  */
 /*  navbar end*/
+/* hero  */
+
+.hero {
+    justify-content: space-around;
+    padding: 0 40px;
+
+}
+
+.hero .text-left {
+    padding: 90px 0px;
+    width: 50%;
+    text-align: left;
+    flex-grow: 1;
+}
+
+.title {
+    font-size: 46px;
+    font-family: Poppins;
+    line-height: 124.5%;
+}
+
+.quote {
+    font-size: 16px;
+    line-height: 27px;
+    letter-spacing: 0.32px;
+}
+.store{
+    max-width:136px;
+}
+/* media queries */
+@media all and (max-width:1200px) {
+    .hero .text-left {
+        padding: 70px 0px;
+        width: 50%;
+        text-align: left;
+    }
+
+    .title {
+        font-size: 150%;
+        font-family: Poppins;
+        line-height: 124.5%;
+    }
+
+    .quote {
+        font-size: 80%;
+        line-height: 27px;
+        letter-spacing: 0.32px;
+    }
+
+    .hero .illus {
+        width: 400px;
+        height: 400px;
+    }
+}
+
+@media all and (max-width:712px) {
+    .hero .text-left {
+        padding: 30px 0px;
+        width: 50%;
+        text-align: left;
+    }
+
+    .title {
+        font-size: 90%;
+        font-family: Poppins;
+        line-height: 124.5%;
+    }
+
+    .quote {
+        font-size: 50%;
+        line-height: 17px;
+        letter-spacing: 0.32px;
+    }
+
+    .hero .illus {
+        width: 200px;
+        height: 200px;
+    }
+
+}
+
+
+@media all and (max-width:500px) {
+    .hero {
+        padding: 15px;
+    }
+
+    .hero .text-left {
+        padding: 0px 0px;
+        text-align: center;
+    }
+
+
+    .hero .illus {
+        display: none;
+    }
+
+
+
+    .store--btn {
+        display: flex;
+        justify-content: center;
+    }
+
+}
+
+
+
+
+/* hero end */
+/* header end */
