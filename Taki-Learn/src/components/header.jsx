@@ -1,5 +1,5 @@
 import Navbar from "./navbar";
-
+import Button from "./button";
 function Header() {
   return (
     <>
@@ -9,7 +9,7 @@ function Header() {
           <div className="flex hero">
             <div className="text-left">
               <p className="title">
-                <b>You bring the expertise, we'll make it unforgettable.</b>
+                <b>You bring the<span> expertise,</span> we'll make it unforgettable.</b>
               </p>
               <p className="quote">
                 Using highly personalised activities, videos and animations you
@@ -17,31 +17,21 @@ function Header() {
                 learning goals as they progress through a journey.
               </p>
               <div>
-                <div className="flex store--btn">
+                <div className="flex store store--btn">
                   <a href="#">
-                    <img
-                      src="img/appstore.webp"
-                      className="store"
-                      height="40px"
-                      alt="appstore button"
-                    />
+                    <Button label="Register" />
                   </a>
                   <a href="#">
-                    <img
-                      src="img/playstore.webp"
-                      className="store"
-                      height="40px"
-                      alt="playstore button"
-                    />
+                  <Button label="Register" />
                   </a>
                 </div>
               </div>
             </div>
             <img
               className="illus"
-              src="img/illus.webp"
-              width="640px"
-              height="550px"
+              src="./header_image.png"
+              width="450px"
+              height="500px"
               alt="image"
             />
           </div>
