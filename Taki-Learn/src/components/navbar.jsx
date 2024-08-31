@@ -11,7 +11,7 @@ return(
                 <li><a href="#" className="active">Home</a></li>
                 <li><a href="#">About us</a></li>
                 
-                <li><a href="#">All courses</a></li>
+                <li><a href="/course">All courses</a></li>
             </ul>
             <div className="nav--buttons">
             <a href="#">Login</a>
