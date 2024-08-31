@@ -52,9 +52,7 @@
 }
 
 /* Header start*/
-header {
-    background: linear-gradient(#E2F6FC 14%, white 100%);
-}
+
 
 /*  navabar start*/
 .navbar {
@@ -81,22 +79,36 @@ header {
 
 .navbar li a {
     text-decoration: none;
-    color: #333333;
+    color: #747474;
+    padding-bottom: 5px;
 }
+
+.navbar li a.active {
+    text-decoration: none;
+    border-bottom: #10C843 solid 1px;
+    /* padding: ; */
+    color: #10C843;
+}
+
 
 .logo {
     color: #10C843;
     font-family: Roboto;
     font-size: 30px;
 }
+.nav--buttons a{
+text-decoration: none;
+color: #747474;
+padding-right: 5px;
+}
 
 .navbar button {
-    background-color: #FA8443;
+    background-color: #10C843;
     font-family: lato;
     color: #f7f7f7ff;
     width: 120px;
     height: 46px;
-    border-radius: 8px;
+    border-radius: 30px;
     border: none;
     transition: all 0.5s 0.1s ease;
     cursor: pointer;
@@ -104,7 +116,8 @@ header {
 
 .navbar button:hover {
     background-color: #f7f7f7ff;
-    color: #FA8443;
+    color: #10C843;
+    border:#10C843 solid 1px;
     /* border-radius: 10px; */
     box-shadow: 0.1px 0.1px 20px #d4d4d4;
     transform: translateY(-2px);
