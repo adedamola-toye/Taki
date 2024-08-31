@@ -1,5 +1,5 @@
-import CourseCard from './components/ExploreCoursesPage/CoursesCard'
-import Navbar from './components/navbar'
+import CourseCard from './CoursesCard'
+import Navbar from '../navbar'
 function ExploreCourses(){
     return(
         <>
