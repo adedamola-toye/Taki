@@ -10,7 +10,7 @@ function Header() {
             <div className="text-left">
               <p className="title">
                 <b>
-                  You bring the<span> expertise,</span> we'll make it
+                  You bring the<span> expertise,</span> we will make it
                   unforgettable.
                 </b>
               </p>
@@ -21,7 +21,7 @@ function Header() {
               </p>
               <div>
                 <div className="flex store store--btn">
-                  <a href="#">
+                  <a >
                     <Button label="Register" />
                   </a>
                   <a href="#">
