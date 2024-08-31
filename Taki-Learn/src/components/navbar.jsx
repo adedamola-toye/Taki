@@ -11,7 +11,6 @@ return(
                 <li><a href="#">All courses</a></li>
             </ul>
             <div className="nav--buttons">
-
             <a href="#">Login</a>
             <button>Sign Up</button>
             </div>
@@ -25,6 +24,7 @@ return(
                 <li><a className="dropdown--item" href="#">All courses</a></li>
                 <button className="dropdown--item">Sign Up</button>
             </div>
+            
         </nav>
     </nav>
     </>
