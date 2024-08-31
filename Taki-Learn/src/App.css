@@ -10,6 +10,11 @@
     /* border: black solid 1px; */
 }
 
+/* smooth scrolling */
+html{
+    scroll-behavior: smooth;
+}
+
 /* general styles */
 .flex {
     display: flex;
@@ -207,7 +212,7 @@ header button:hover {
 .hero {
     justify-content: space-between;
     padding: 0 30px;
-
+position: relative;
 }
 
 .hero .text-left {
@@ -321,8 +326,63 @@ header button:hover {
 
 
 /* hero end */
-/* header end *
-/
+/* header end */
+
+/* Sign in start */
+.signin-page{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.signin{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 12px;
+    margin: 25px;
+    width: 50%;
+}
+
+.signin input{
+    border-radius: 12px;
+    padding: 8px;
+    width: 100%;
+    margin: 5px;
+    /* border: black; */
+}
+
+.signin input:focus {
+    outline: none;
+    border: #10C843 solid;
+}
+
+.signIn-button{
+    background-color: #10C843;
+    color: white;
+    border-radius: 12px;
+    border: #10C843 solid;
+    padding: 8px;
+    width: 100%;
+}
+.signIn-button:hover{
+    color: #10C843;
+    background-color: #fff;
+}
+
+.noAccount{
+    margin: 15px;
+}
+/* Sign in end */
+
+
+/* Sign up start */
+
+
+
+/* Sign up end */
+
 /* About start */
 .about-section{
     display: flex;
@@ -406,3 +466,45 @@ button {
 }
 
 /* About end */
+
+
+
+
+
+/* header end */
+
+
+/*EXPLORE COURSES PAGE*/
+.explore-courses-page{
+    margin: 3rem;
+
+}
+
+.explore-courses-page{
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    justify-content: center;
+}
+.explore-courses-heading{
+    width: 60%;
+    text-align: center;
+    align-self: center;
+}
+.explore-courses-heading h1{
+    margin-bottom : 1rem;
+}
+
+.course-card-section{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 3rem;
+    justify-content: center;
+}
+
+
+.course-card{
+    
+   border: 1px solid greenyellow;
+}
+
