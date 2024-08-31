@@ -29,9 +29,9 @@ function Header() {
             </div>
             <img
               className="illus"
-              src="img/illus.webp"
-              width="640px"
-              height="550px"
+              src="./header_image.png"
+              width="450px"
+              height="500px"
               alt="image"
             />
           </div>
