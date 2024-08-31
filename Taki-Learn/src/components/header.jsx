@@ -22,7 +22,7 @@ function Header() {
                     <Button label="Register" />
                   </a>
                   <a href="#">
-                  <Button label="Register" />
+                  <Button label="Register" style="white-button" />
                   </a>
                 </div>
               </div>
