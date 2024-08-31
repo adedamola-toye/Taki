@@ -321,6 +321,61 @@ header button:hover {
 /* hero end */
 /* header end */
 
+/* Sign in start */
+.signin-page{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.signin{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 12px;
+    margin: 25px;
+    width: 50%;
+}
+
+.signin input{
+    border-radius: 12px;
+    padding: 8px;
+    width: 100%;
+    margin: 5px;
+    /* border: black; */
+}
+
+.signin input:focus {
+    outline: none;
+    border: #10C843 solid;
+}
+
+.signIn-button{
+    background-color: #10C843;
+    color: white;
+    border-radius: 12px;
+    border: #10C843 solid;
+    padding: 8px;
+    width: 100%;
+}
+.signIn-button:hover{
+    color: #10C843;
+    background-color: #fff;
+}
+
+.noAccount{
+    margin: 15px;
+}
+/* Sign in end */
+
+
+/* Sign up start */
+
+
+
+/* Sign up end */
+
 /* About start */
 .about-content h3{
     color: rgba(16, 200, 67, 1);
@@ -386,3 +441,4 @@ button {
     
    border: 1px solid greenyellow;
 }
+
