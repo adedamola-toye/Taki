@@ -123,6 +123,13 @@ header button:hover {
     transform: translateY(-2px);
 
 }
+.white-button{
+    background-color: #f7f7f7ff;
+    color: #10C843;
+    border:#10C843 solid 1px;
+}
+
+
 
 /* dropdown start */
 .dropdown--menu {
@@ -178,7 +185,8 @@ header button:hover {
 @media all and (max-width:780px) {
 
 
-    nav .flex,
+    nav a ,
+    /* nav li, */
     nav button {
         display: none;
     }
@@ -196,7 +204,7 @@ header button:hover {
 
 .hero {
     justify-content: space-between;
-    padding: 0 40px;
+    padding: 0 30px;
 
 }
 
@@ -313,8 +321,6 @@ header button:hover {
 /* hero end */
 /* header end */
 
-
-
 /* Sign in start */
 .signin-page{
     display: flex;
@@ -369,3 +375,70 @@ header button:hover {
 
 
 /* Sign up end */
+
+/* About start */
+.about-content h3{
+    color: rgba(16, 200, 67, 1);
+  }
+.about-content  h2{
+    color: rgba(20, 20, 20, 1);
+}
+.about-content p{
+    color: #1E1E1E;
+    margin-bottom: 20px;
+}
+button {
+    background-color: #10C843;
+    font-family: lato;
+    color: #f7f7f7ff;
+    width: 120px;
+    height: 46px;
+    border-radius: 30px;
+    border: none;
+    transition: all 0.5s 0.1s ease;
+    cursor: pointer;
+}
+
+/* About end */
+
+
+
+
+
+/* header end */
+
+
+/*EXPLORE COURSES PAGE*/
+.explore-courses-page{
+    margin: 3rem;
+
+}
+
+.explore-courses-page{
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    justify-content: center;
+}
+.explore-courses-heading{
+    width: 60%;
+    text-align: center;
+    align-self: center;
+}
+.explore-courses-heading h1{
+    margin-bottom : 1rem;
+}
+
+.course-card-section{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 3rem;
+    justify-content: center;
+}
+
+
+.course-card{
+    
+   border: 1px solid greenyellow;
+}
+
