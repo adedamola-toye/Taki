@@ -8,7 +8,7 @@ import ExploreCourses from './components/ExploreCoursesPage/Explore-Courses-Page
 const router = createBrowserRouter([
   {path: '/', element:<App />,  },
   {path:'/courses', element: <ExploreCourses/>},
-  {path:'/about', element: <ExploreCourses/>}
+  /* {path:'/about', element: <ExploreCourses/>} */
 ])
 
 createRoot(document.getElementById('root')).render(
