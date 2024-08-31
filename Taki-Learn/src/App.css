@@ -123,6 +123,13 @@ header button:hover {
     transform: translateY(-2px);
 
 }
+.white-button{
+    background-color: #f7f7f7ff;
+    color: #10C843;
+    border:#10C843 solid 1px;
+}
+
+
 
 /* dropdown start */
 .dropdown--menu {
@@ -178,7 +185,8 @@ header button:hover {
 @media all and (max-width:780px) {
 
 
-    nav .flex,
+    nav a ,
+    /* nav li, */
     nav button {
         display: none;
     }
@@ -196,7 +204,7 @@ header button:hover {
 
 .hero {
     justify-content: space-between;
-    padding: 0 40px;
+    padding: 0 30px;
 
 }
 
