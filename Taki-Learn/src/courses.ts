@@ -44,9 +44,8 @@ const frontendTopics = [
 ];
 
 
-const frontend = new Course('Frontend Engineering','It encompasses everything about frontend engineering',frontendTopics)
 
-const ourCourses = [frontend,back]
+
 
 const backendTopics = [
   new Topic('Node.js', 'A JavaScript runtime built on Chrome\'s V8 JavaScript engine, used for server-side scripting.'),
@@ -69,3 +68,10 @@ const backendTopics = [
   new Topic('Serverless', 'A cloud-computing execution model where the cloud provider dynamically manages the allocation of machine resources.')
 ];
 
+const backendDevelopment = "Backend development refers to the server-side of web development, where developers focus on how a website works. It involves creating and managing the technologies that power the server, database, and application logic. The backend is responsible for processing user requests, managing the database, and serving the right data to the frontend (user interface). Backend developers work with programming languages like Python, Java, Ruby, PHP, Node.js, and frameworks such as Django, Express.js, and Spring. They also handle tasks like API development, server configuration, database management, security, and scalability to ensure a smooth, secure, and efficient user experience.";
+
+const frontend = new Course('Frontend development','It encompasses everything about frontend engineering',frontendTopics)
+
+const backend = new Course(backendDevelopment,'decription',backendTopics)
+
+export const ourCourses = [backend,frontend]
