@@ -1,12 +1,16 @@
-import Navbar from "./navbar"
+import Navbar from "./navbar";
 
-function Header(){
-return(
+function Header() {
+  return (
     <>
-    <Navbar/>
+      <header>
+        <Navbar />
+        <div className="hero">
+
+        </div>
+      </header>
     </>
-)
+  );
 }
 
-export default Header
-
+export default Header;

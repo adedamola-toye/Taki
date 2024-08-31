@@ -4,15 +4,15 @@ return(
     <nav>
         
         <nav class="navbar flex ">
-            <p class="logo"><b>Taki Learn</b></p>
+            <p class="logo"><b>TakiLearn</b></p>
             <ul class="flex">
-                <li><a href="#">Home</a></li>
+                <li><a href="#" className="active">Home</a></li>
                 <li><a href="#">About</a></li>
                 <li><a href="#">All courses</a></li>
             </ul>
             <div className="nav--buttons">
 
-            <a>Login</a>
+            <a href="#">Login</a>
             <button>Sign Up</button>
             </div>
             <div class="toggle_Btn">
