@@ -211,15 +211,24 @@ header button:hover {
     font-size: 46px;
     font-family: Poppins;
     line-height: 124.5%;
+    padding-bottom: 10px;
+}
+.title span{
+    color: #10C843;
 }
 
 .quote {
     font-size: 16px;
     line-height: 27px;
     letter-spacing: 0.32px;
+    padding-bottom: 10px;
 }
 .store{
-    max-width:136px;
+    max-width:250px;
+}
+.store--btn{
+    gap:3px;
+    justify-content: space-between;
 }
 /* media queries */
 @media all and (max-width:1200px) {

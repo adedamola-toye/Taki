@@ -9,7 +9,7 @@ function Header() {
           <div className="flex hero">
             <div className="text-left">
               <p className="title">
-                <b>You bring the expertise, we'll make it unforgettable.</b>
+                <b>You bring the<span> expertise,</span> we'll make it unforgettable.</b>
               </p>
               <p className="quote">
                 Using highly personalised activities, videos and animations you
@@ -17,7 +17,7 @@ function Header() {
                 learning goals as they progress through a journey.
               </p>
               <div>
-                <div className="flex store--btn">
+                <div className="flex store store--btn">
                   <a href="#">
                     <Button label="Register" />
                   </a>
