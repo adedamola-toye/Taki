@@ -2,13 +2,13 @@ function Navbar(){
 return(
     <>
     <nav>
-        <p>navbar</p>
+        
         <nav class="navbar flex ">
-            <p class="logo">Travling!</p>
+            <p class="logo">Taki Learn</p>
             <ul class="flex">
-                <li><a href="#">Product</a></li>
-                <li><a href="#">Contact Us</a></li>
-                <li><a href="#">About Us</a></li>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="#">All courses</a></li>
             </ul>
             <button>Sign Up</button>
             <div class="toggle_Btn">
