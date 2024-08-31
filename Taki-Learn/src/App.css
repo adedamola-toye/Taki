@@ -179,3 +179,21 @@ header {
 
 /*  */
 /*  navbar end*/
+/* About Start */
+.about-section{
+    display: flex;
+    align-items: center;
+}
+.about-section div{
+    flex: 1 1 500px;
+}
+.about-section  h3{
+    color: rgba(16, 200, 67, 1);
+}
+.about-section  h2{
+    color: rgba(20, 20, 20, 1);
+}
+.about-section  p{
+    color: #1E1E1E;
+    font-family: Inter;
+}
