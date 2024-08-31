@@ -313,7 +313,27 @@ header button:hover {
 /* hero end */
 /* header end *
 /
-/* About-section */
-.about-section{
-    display: flex;
+/* About start */
+.about-content h3{
+    color: rgba(16, 200, 67, 1);
+  }
+.about-content  h2{
+    color: rgba(20, 20, 20, 1);
 }
+.about-content p{
+    color: #1E1E1E;
+    margin-bottom: 20px;
+}
+button {
+    background-color: #10C843;
+    font-family: lato;
+    color: #f7f7f7ff;
+    width: 120px;
+    height: 46px;
+    border-radius: 30px;
+    border: none;
+    transition: all 0.5s 0.1s ease;
+    cursor: pointer;
+}
+
+/* About end */
