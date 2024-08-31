@@ -1,4 +1,4 @@
-import Button from "./button"
+import Button from "./button";
 
 function Navbar(){
 return(
@@ -8,9 +8,10 @@ return(
         <nav className="navbar flex ">
             <p className="logo"><b>TakiLearn</b></p>
             <ul className="flex">
-                <li><a href="/" className="active">Home</a></li>
-                <li><a href="#about">About</a></li>
-                <li><a href="/courses">All courses</a></li>
+                <li><a href="#" className="active">Home</a></li>
+                <li><a href="#">About us</a></li>
+                
+                <li><a href="/course">All courses</a></li>
             </ul>
             <div className="nav--buttons">
             <a href="#">Login</a>
@@ -23,13 +24,15 @@ return(
 
             <div className="dropdown--menu ">
                 <li><a className="dropdown--item" href="#">Home</a></li>
-                <li><a className="dropdown--item" href="#">About</a></li>
+                <li><a className="dropdown--item" href="#">About us</a></li>
                 <li><a className="dropdown--item" href="#">All courses</a></li>
                 <button className="dropdown--item">Sign Up</button>
             </div>
             
         </nav>
     </nav>
+
+    
     </>
 )
 }

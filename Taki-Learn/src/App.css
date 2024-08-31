@@ -319,8 +319,8 @@ header button:hover {
 
 
 /* hero end */
-/* header end *
-/
+/* header end */
+
 /* About start */
 .about-content h3{
     color: rgba(16, 200, 67, 1);
@@ -345,3 +345,44 @@ button {
 }
 
 /* About end */
+
+
+
+
+
+/* header end */
+
+
+/*EXPLORE COURSES PAGE*/
+.explore-courses-page{
+    margin: 3rem;
+
+}
+
+.explore-courses-page{
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    justify-content: center;
+}
+.explore-courses-heading{
+    width: 60%;
+    text-align: center;
+    align-self: center;
+}
+.explore-courses-heading h1{
+    margin-bottom : 1rem;
+}
+
+.course-card-section{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 3rem;
+    justify-content: center;
+}
+
+
+.course-card{
+    
+   border: 1px solid greenyellow;
+}
