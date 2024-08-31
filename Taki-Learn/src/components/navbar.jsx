@@ -14,8 +14,8 @@ return(
                 <li><a href="/courses">All courses</a></li>
             </ul>
             <div className="nav--buttons">
-            <a href="#">Login</a>
-            <Button label="Sign up"/>
+            <a href="/signIn">Login</a>
+            <a href = "/signUp"><button>Sign up{/* <Button label="Sign up"/> */}</button></a>
             {/* <button>Sign Up</button> */}
             </div>
             <div className="toggle_Btn">
