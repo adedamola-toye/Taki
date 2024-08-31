@@ -179,3 +179,24 @@ header {
 
 /*  */
 /*  navbar end*/
+
+/*EXPLORE COURSES PAGE*/
+.explore-courses-page{
+    margin: 2rem;
+}
+
+.explore-courses-page{
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    justify-content: center;
+}
+.explore-courses-heading{
+    width: 60%;
+    text-align: center;
+    align-self: center;
+}
+.explore-courses-heading h1{
+    margin-bottom : 1rem;
+}
+

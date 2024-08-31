@@ -3,7 +3,7 @@ return(
     <>
     <nav>
         
-        <nav class="navbar flex ">
+        <nav className="navbar flex ">
             <p class="logo">Taki Learn</p>
             <ul class="flex">
                 <li><a href="#">Home</a></li>
