@@ -9,7 +9,10 @@ function Header() {
           <div className="flex hero">
             <div className="text-left">
               <p className="title">
-                <b>You bring the<span> expertise,</span> we'll make it unforgettable.</b>
+                <b>
+                  You bring the<span> expertise,</span> we'll make it
+                  unforgettable.
+                </b>
               </p>
               <p className="quote">
                 Using highly personalised activities, videos and animations you
@@ -22,7 +25,7 @@ function Header() {
                     <Button label="Register" />
                   </a>
                   <a href="#">
-                  <Button label="Register" style="white-button" />
+                    <Button label="Register" style="white-button" />
                   </a>
                 </div>
               </div>
@@ -34,6 +37,14 @@ function Header() {
               height="500px"
               alt="image"
             />
+          </div>
+          <div className="select-course" style={{height:"fit-content"}}>
+            <select>
+              <option>Select Course</option>
+              <option>frontend</option>
+              <option>backend</option>
+            </select>
+            <Button label="Search"/>
           </div>
         </div>
       </header>
