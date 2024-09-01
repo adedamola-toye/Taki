@@ -1,9 +1,11 @@
-import React from "react";
-import Button from "./button";
 
+import Button from "./button";
+import Navbar from "./navbar";
 const About = () => {
   return (
-    <section className="about-section">
+    <>
+    <Navbar/>
+      <section className="about-section">
       <div className="about-content">
         <h4>About Us</h4>
         <h2>
@@ -34,6 +36,7 @@ const About = () => {
       </div>
       
     </section>
+    </>
   );
 };
 
