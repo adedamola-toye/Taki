@@ -504,7 +504,19 @@ button {
 
 
 .course-card{
-    
    border: 1px solid greenyellow;
+   width: 25%;
+   padding: 3rem;
+   display: flex;
+   flex-direction: column;
+   gap: 2rem
+}
+
+.quiz-invitation{
+    margin-top: 3rem;
+    text-align: center;
+}
+.quiz-invitation p{
+    margin-bottom: 2rem;
 }
 
