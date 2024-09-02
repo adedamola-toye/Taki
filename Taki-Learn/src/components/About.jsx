@@ -30,8 +30,8 @@ const About = () => {
       </div>
       <div className="about-image">
         <div className="shadow-box" >
-            <img src="./Rectangle 13.png" alt="" className="image1" />
-            <img src="./Rectangle 14.png" alt="" className="image2" />
+            <img src="./Rectangle 13.webp" alt="" className="image1" />
+            <img src="./Rectangle 14.webp" alt="" className="image2" />
         </div>
       </div>
       

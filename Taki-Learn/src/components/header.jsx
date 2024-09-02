@@ -32,7 +32,7 @@ function Header() {
             </div>
             <img
               className="illus"
-              src="./header_image.png"
+              src="./header_image.webp"
               width="450px"
               height="500px"
               alt="image"
