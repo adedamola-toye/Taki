@@ -1,5 +1,5 @@
 import CourseCard from "./CoursesCard";
-import Navbar from "../navbar";
+import Navbar from "../homePage/navbar";
 function ExploreCourses() {
   return (
     <>
