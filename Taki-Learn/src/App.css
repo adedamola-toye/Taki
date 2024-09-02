@@ -330,7 +330,7 @@ z-index: 0;
 @media all and (max-width:500px) {
     .hero {
         padding: 15px;
-        flex-wrap: wrap;
+        flex-wrap: wrap-reverse;
 
         place-content: center;
     }
