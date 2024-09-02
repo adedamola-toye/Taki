@@ -1,5 +1,6 @@
 import CourseCard from "./CoursesCard";
 import Navbar from "../homePage/navbar";
+import { Link } from "react-router-dom";
 function ExploreCourses() {
   return (
     <>
@@ -24,7 +25,7 @@ function ExploreCourses() {
             Not sure the course for you? take this personalized quiz to choose a
             track
           </p>
-          <button>Take Quiz</button>
+          <Link to = "/quiz"><button>Take Quiz</button></Link>
         </div>
       </div>
     </>
