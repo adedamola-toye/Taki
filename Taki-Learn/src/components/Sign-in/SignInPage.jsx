@@ -1,4 +1,4 @@
-
+import { Link } from "react-router-dom";
 import "../../App.css"
 function SignInPage() {
 
@@ -14,7 +14,7 @@ function SignInPage() {
         </form>
 
         <div className='noAccount'>
-        <p>No Account? <a href="">Create an account</a> </p>
+        <p>No Account? <Link to="/signUp">Create an account</Link> </p>
         </div>
       </div>
     </>
