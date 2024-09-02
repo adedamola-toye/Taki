@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>nav bar</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="../../Web des/css/fontawesome/css/all.css">
+    <!-- <link rel="stylesheet" href="../../Web des/css/bootcss/bootstrap.min.css"> -->
+
+    <!-- <link rel="stylesheet" href="https://fonts.google.com/specimen/Lato "> -->
+</head>
+
+<body>
+    <header>
+        <nav class="bs-dark">
+            <div class="conflex flex">
+                <div class="flex1 flex">
+                    <a href="#home">Home</a>
+                    <a href="#about">About</a>
+                    <a href="#contact">Contact Us</a>
+                </div>
+                <div class="flex2 flex">
+                    <a class="startModal">Login</a>
+                    <a href="#">Register</a>
+                </div>
+            </div>
+
+        </nav>
+        <div class="container">
+            <img src="../../../Downloads/pexels-karolina-grabowska-4210784.jpg" id="home" alt="">
+            <div class="overlay">
+            </div>
+        </div>
+
+        <div class="modal-content1 hidden">
+            <form action="">
+                <button class="p1">&times;</button>
+                <h1>Login</h1>
+                <label for="password" class="fa fa-envelope"></label>
+                <input name="Username" class="user" type="text" placeholder="Username">
+
+                <input style="margin-left: 16px ;" type="password" name="password" placeholder="Password"><label
+                    for="password" style="position: absolute;left: 113px;top: 49%;" class="fa fa-lock"></label><br>
+                <a href="#" class="a">Forgot your password?</a>
+                <button class="button">Login</button><br><br>
+                <p>Dont have an account? <a class="link" href="Register.html" >Register</a>
+                </p>
+            </form>
+        </div>
+        <div class="modal-overlay1 hidden">
+        </div>
+    </header>
+    <section id="about" class="section">
+        <img src="../img/pexels-carlos-rubio-tristan-12417133.jpg" alt="">
+        <p>Hi, I'm Kenny, a 16-year-old web designer and developer. <br>I'm passionate about creating beautiful and
+            functional websites that help<br> businesses succeed.
+            <br><br>
+            I have a strong understanding of HTML and CSS,<br> and I'm currently learning JavaScript.<br> I'm also eager
+            to
+            learn PHP and SQL in the near future.
+            <br><br>
+            I'm a creative thinker and problem solver. <br>I'm always looking for new ways to improve the user
+            experience.
+            <br><br>
+            <!-- I'm also a team player and I'm always willing to go the extra mile.
+            <br><br>
+            I'm confident that I can help you create a website that meets your needs <br>and exceeds your expectations</p> -->
+    </section>
+    <section>
+        <h1>PROJECTS</h1>
+    </section>
+    <script src="script.js"></script>
+</body>
+
+</html>

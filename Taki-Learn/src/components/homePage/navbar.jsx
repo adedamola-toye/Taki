@@ -1,7 +1,7 @@
 //import Button from "./button";
 import { Link } from "react-router-dom";
 
-function Navbar() {
+function Navbar({onIsSignupOpen,onIsLoginOpen}) {
   return (
     <>
       <nav>
@@ -24,10 +24,10 @@ function Navbar() {
             </li>
           </ul>
           <div className="nav--buttons">
-            <Link to="/signIn">Login</Link>
-            <Link to="/signUp">
-              <button>Sign up{/* <Button label="Sign up"/> */}</button>
-            </Link>
+            <a href="#" onClick={()=>onIsLoginOpen(true)}>Login</a>
+            {/* <Link to="/signUp"> */}
+              <button onClick={()=>onIsSignupOpen(true)}>Sign up{/* <Button label="Sign up"/> */}</button>
+            {/* </Link> */}
             {/* <button>Sign Up</button> */}
           </div>
           <div className="toggle_Btn">

@@ -1,10 +1,10 @@
 import Navbar from "./navbar";
 import Button from "./button";
-function Header() {
+function Header({onIsSignupOpen,onIsLoginOpen}) {
   return (
     <>
       <header>
-        <Navbar />
+        <Navbar onIsSignupOpen={onIsSignupOpen} onIsLoginOpen={onIsLoginOpen} />
         <div className="hero">
           <div className="flex hero">
             <div className="text-left">
