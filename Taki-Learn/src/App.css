@@ -341,6 +341,96 @@ header button:hover {
 
 /* hero end */
 /* header end */
+/* modal start */
+.modal-overlay1 {
+  position: fixed;
+  top: 0;
+  left: 0;
+
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.4);
+  backdrop-filter: blur(3px);
+  z-index: 5;
+}
+
+.modal-content1 {
+  width: 50%;
+  z-index: 10;
+  height: auto;
+  padding: 55px;
+  position: fixed;
+  top: 40px;
+  left: 25%;
+  text-align: center;
+  background-color: white;
+  border-radius: 5px;
+  color: #10c843;
+  /* border : 1px black solid; */
+  box-shadow: 1px 1px 1px 1px black;
+}
+
+.formBorder {
+  border-top: none;
+  border-left: none;
+  border-right: none;
+}
+
+.modal-content1 input {
+  width: 80%;
+  margin: 30px 0 20px 0;
+  height: 40px;
+  border-top: none;
+  border-left: none;
+  border-right: none;
+  font-size: 20px;
+}
+
+.modal-content1 .p1 {
+  position: absolute;
+  padding: 0px;
+  right: 30px;
+  top: 10px;
+  font-size: 40px;
+  color: #10c843;
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+.modal-content1 .a {
+  position: absolute;
+  right: 120px;
+  color: #10c843;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.modal-content1 .button {
+  background-color: #10c843;
+  width: 60%;
+  border-radius: 30px;
+  height: 50px;
+  color: white;
+  border: none;
+  margin: 60px 0 0px 0;
+  font-size: 20px;
+  transition-property: transform;
+  transition-duration: 0.1s;
+  transition-timing-function: ease;
+}
+
+.modal-content1 .button:hover {
+  transform: translateY(-1px);
+}
+
+.link {
+  color: #10c843;
+  text-decoration: none;
+}
+
+/*modal end  */
+
 /* black band */
 .black-band {
   background-color: black;
@@ -355,57 +445,6 @@ header button:hover {
   width: 20%;
 }
 /* black band */
-/* Sign in start */
-.signin-page {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-direction: column;
-}
-
-.signin {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 12px;
-  margin: 25px;
-  width: 50%;
-}
-
-.signin input {
-  border-radius: 12px;
-  padding: 8px;
-  width: 100%;
-  margin: 5px;
-  /* border: black; */
-}
-
-.signin input:focus {
-  outline: none;
-  border: #10c843 solid;
-}
-
-.signIn-button {
-  background-color: #10c843;
-  color: white;
-  border-radius: 12px;
-  border: #10c843 solid;
-  padding: 8px;
-  width: 100%;
-}
-.signIn-button:hover {
-  color: #10c843;
-  background-color: #fff;
-}
-
-.noAccount {
-  margin: 15px;
-}
-/* Sign in end */
-
-/* Sign up start */
-
-/* Sign up end */
 
 /* About start */
 .about-section {
@@ -537,92 +576,3 @@ button {
   margin-bottom: 2rem;
 }
 
-/*  */
-.modal-overlay1 {
-  position: fixed;
-  top: 0;
-  left: 0;
-
-  width: 100%;
-  height: 100%;
-  background-color: rgba(0, 0, 0, 0.4);
-  backdrop-filter: blur(3px);
-  z-index: 5;
-}
-
-.modal-content1 {
-  width: 50%;
-  z-index: 10;
-  height: auto;
-  padding: 55px;
-  position: fixed;
-  top: 40px;
-  left: 25%;
-  text-align: center;
-  background-color: white;
-  border-radius: 5px;
-  color: #10c843;
-  /* border : 1px black solid; */
-  box-shadow: 1px 1px 1px 1px black;
-}
-
-.formBorder {
-  border-top: none;
-  border-left: none;
-  border-right: none;
-}
-
-.modal-content1 input {
-  width: 80%;
-  margin: 30px 0 20px 0;
-  height: 40px;
-  border-top: none;
-  border-left: none;
-  border-right: none;
-  font-size: 20px;
-}
-
-.modal-content1 .p1 {
-  position: absolute;
-  padding: 0px;
-  right: 30px;
-  top: 10px;
-  font-size: 40px;
-  color: #10c843;
-  background: none;
-  border: none;
-  cursor: pointer;
-}
-
-.modal-content1 .a {
-  position: absolute;
-  right: 120px;
-  color: #10c843;
-  text-decoration: none;
-  font-weight: bold;
-}
-
-.modal-content1 .button {
-  background-color: #10c843;
-  width: 60%;
-  border-radius: 30px;
-  height: 50px;
-  color: white;
-  border: none;
-  margin: 60px 0 0px 0;
-  font-size: 20px;
-  transition-property: transform;
-  transition-duration: 0.1s;
-  transition-timing-function: ease;
-}
-
-.modal-content1 .button:hover {
-  transform: translateY(-1px);
-}
-
-.link {
-  color: #10c843;
-  text-decoration: none;
-}
-
-/*  */
