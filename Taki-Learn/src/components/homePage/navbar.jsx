@@ -2,6 +2,11 @@
 import { Link } from "react-router-dom";
 
 function Navbar({onIsSignupOpen,onIsLoginOpen}) {
+  function dropDown() {
+    const dropdown = document.querySelector('.dropdown--menu')
+    dropdown.style.display = 'block'
+  }
+
   return (
     <>
       <nav>
@@ -30,7 +35,7 @@ function Navbar({onIsSignupOpen,onIsLoginOpen}) {
             {/* </Link> */}
             {/* <button>Sign Up</button> */}
           </div>
-          <div className="toggle_Btn">
+          <div className="toggle_Btn" onClick={()=>dropDown()}>
             <svg
               fill="#10C843"
               width="50px"
@@ -44,6 +49,7 @@ function Navbar({onIsSignupOpen,onIsLoginOpen}) {
           </div>
 
           <div className="dropdown--menu ">
+           
             <li>
               <a className="dropdown--item" href="#">
                 Home
@@ -59,7 +65,7 @@ function Navbar({onIsSignupOpen,onIsLoginOpen}) {
                 All courses
               </a>
             </li>
-            <button className="dropdown--item">Sign Up</button>
+            <button className="dropdown--item" onClick={()=>onIsSignupOpen(true)}>Sign Up</button>
           </div>
         </nav>
       </nav>
