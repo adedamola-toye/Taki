@@ -329,10 +329,6 @@ header button:hover {
     text-align: center;
   }
 
-  .hero .illus {
-    /* display: none; */
-  }
-
   .store--btn {
     display: flex;
     justify-content: center;
@@ -368,6 +364,7 @@ header button:hover {
   color: #10c843;
   /* border : 1px black solid; */
   box-shadow: 1px 1px 1px 1px black;
+
 }
 
 .formBorder {
@@ -575,21 +572,50 @@ button {
 .quiz-invitation p {
   margin-bottom: 2rem;
 }
-
+.quiz-container{
+  place-content: center;
+}
 .questions{
-  margin-left: 30%;
-  width: 70%;
+  position: relative;
+  width: 600px;
+  overflow-x: scroll;
+  border: #10c843 1px solid;
+  border-radius: 25px;
+  padding: 30px;
+  overflow: hidden;
 }
 
 .options li{
   list-style: none;
+  padding: 10px;
+  border: #10c843 1px solid;
+  margin: 0 0 10px 0;
 }
 
 .question{
   font-size:1.2rem;
-  
+  width: 100%;
+  height: 100px;
+  padding: 10px;
 }
 
+.question-cont{
+  border-top: #10c843 1px solid;
+  border-bottom: #10c843 1px solid;
+
+  margin: 30px 0 30px 10px;
+  padding: 10px;
+}
+
+.quiz-head{
+  padding: 20px;
+  /* width: 10%; */
+}
+.quiz-buttons{
+  justify-content: space-between;
+  /* position: absolute;
+  bottom: 20px; */
+}
 .error{
   color: red;
 }
