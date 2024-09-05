@@ -1,6 +1,8 @@
 import { useState } from "react";
 import Navbar from "../homePage/navbar.jsx";
-import quizQuestions from "./quisQuestions.js";
+import quizQuestions from "./quizQuestions.js";
+import { Navigate } from "react-router-dom";
+import Question from "./Question.jsx";
 
 function PersonalizedQuiz() {
   const [selectedAnswers, setSelectedAnswers] = useState({});
@@ -8,6 +10,7 @@ function PersonalizedQuiz() {
   const [suggestedTrack, setSuggestedTrack] = useState("");
   const [errors, setErrors] = useState({});
   const [currentQuestion, setCurrentQuestion] = useState(0);
+  const [proceed, setProceed] = useState(false); 
 
   const handleRadioChange = (questionId, option, categoryIndex) => {
     const category = quizQuestions.find((q) => q.id === questionId)?.category[
@@ -85,6 +88,30 @@ function PersonalizedQuiz() {
     if (currentQuestion === 0) return;
     setCurrentQuestion((currentQuestion) => currentQuestion - 1);
   };
+
+  const handleProceed = () => {
+    console.log("Proceeding with track:", suggestedTrack);
+    setProceed(true); // Set the proceed state to true
+  };
+
+  // Conditionally Navigate based on the track and proceed state
+  if (proceed) {
+    switch (suggestedTrack) {
+      case "Frontend Web Development":
+        return <Navigate to="/frontend" />;
+      case "Backend Web Development":
+        return <Navigate to="/backend" />;
+      case "Full Stack Web Development":
+        return <Navigate to="/fullstack" />;
+      case "Cybersecurity":
+        return <Navigate to="/cybersecurity" />;
+      case "Data Science":
+        return <Navigate to="/data-science" />;
+      default:
+        alert("No specific track available.");
+        break;
+    }
+  }
   
   return (
     <>
@@ -125,7 +152,7 @@ function PersonalizedQuiz() {
           <p className="suggestedTrack">{suggestedTrack}</p>
           <div className="suggested-track-btns">
             <button onClick={handleRetakeQuiz}>Retake Quiz</button>
-            <button>Proceed</button>
+            <button onClick = {handleProceed}>Proceed</button>
           </div>
         </div>
       )}
@@ -133,37 +160,6 @@ function PersonalizedQuiz() {
   );
 }
 
-function Question({
-  question,
-  index,
-  selectedAnswers,
-  errors,
-  handleRadioChange,
-}) {
-  return (
-    <div key={question.id} className="question-cont">
-      <p className="question">{`${index + 1}. ${question.question}`}</p>
-      <ul className="options">
-        {question.options.map((option, optionIndex) => (
-          <li key={optionIndex}>
-            <label>
-              <input
-                type="radio"
-                name={`question-${question.id}`}
-                value={option}
-                checked={selectedAnswers[question.id]?.option === option}
-                onChange={() =>
-                  handleRadioChange(question.id, option, optionIndex)
-                }
-              />
-              {option}
-            </label>
-          </li>
-        ))}
-      </ul>
-      {errors[question.id] && <p className="error">{errors[question.id]}</p>}
-    </div>
-  );
-}
+
 
 export default PersonalizedQuiz;
