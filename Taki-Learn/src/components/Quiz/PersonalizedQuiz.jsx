@@ -17,7 +17,7 @@ function PersonalizedQuiz() {
       [questionId]: { option, category },
     }));
 
-    // Clear the error for this question
+ 
     setErrors((prevErrors) => ({
       ...prevErrors,
       [questionId]: null,
