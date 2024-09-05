@@ -10,6 +10,8 @@ import './index.css'
 /* const router = createBrowserRouter([
   {path: '/', element:<App />,  },
   {path:'/courses', element: <ExploreCourses/>},
+  {path:'#about', element: <About/>}
+=======
   /* {path:'/about', element: <ExploreCourses/>} */
 /*   {path: '/signIn', element: <SignInPage/>},
   {path: '/signUp', element: <SignUpPage/>} */
