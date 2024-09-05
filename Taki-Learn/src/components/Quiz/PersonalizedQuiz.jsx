@@ -7,6 +7,7 @@ function PersonalizedQuiz() {
   const [submitted, setSubmitted] = useState(false);
   const [suggestedTrack, setSuggestedTrack] = useState("");
   const [errors, setErrors] = useState({});
+  const [currentQuestion, setCurrentQuestion] = useState(0);
 
   const handleRadioChange = (questionId, option, categoryIndex) => {
     const category = quizQuestions.find((q) => q.id === questionId)?.category[
@@ -70,48 +71,53 @@ function PersonalizedQuiz() {
 
   const handleRetakeQuiz = () => {
     setSelectedAnswers({});
+    setCurrentQuestion(0);
     setSubmitted(false);
   };
 
+  const handleClickRight = function () {
+    console.log(quizQuestions.length, currentQuestion);
+    if (currentQuestion === quizQuestions.length - 1) return;
+    setCurrentQuestion((currentQuestion) => currentQuestion + 1);
+  };
+  const handleClickLeft = function () {
+    console.log(quizQuestions.length, currentQuestion);
+    if (currentQuestion === 0) return;
+    setCurrentQuestion((currentQuestion) => currentQuestion - 1);
+  };
+  
   return (
     <>
       <Navbar />
 
       {!submitted ? (
-        <div className="questions">
-          <h1>Personalized Quiz</h1>
-          <h2>Answer these questions so we can suggest a track for you</h2>
-
-          {quizQuestions.map((question, index) => (
-            <div key={question.id}>
-              <p className="question">{`${index + 1}. ${question.question}`}</p>
-              <ul className="options">
-                {question.options.map((option, optionIndex) => (
-                  <li key={optionIndex}>
-                    <label>
-                      <input
-                        type="radio"
-                        name={`question-${question.id}`}
-                        value={option}
-                        checked={
-                          selectedAnswers[question.id]?.option === option
-                        }
-                        onChange={() =>
-                          handleRadioChange(question.id, option, optionIndex)
-                        }
-                      />
-                      {option}
-                    </label>
-                  </li>
-                ))}
-              </ul>
-              {errors[question.id] && (
-                <p className="error">{errors[question.id]}</p>
-              )}
+        <div className="flex quiz-container">
+          <div className="questions">
+            <div className="quiz-head">
+              <h4>Personalized Quiz</h4>
+              <h4>Answer these questions so we can suggest a track for you</h4>
             </div>
-          ))}
-
-          <button onClick={handleSubmit}>Submit</button>
+            <div>
+              {quizQuestions.map((question, index) => {
+                if (index === currentQuestion)
+                  return (
+                    <Question
+                      key={index}
+                      question={question}
+                      index={index}
+                      selectedAnswers={selectedAnswers}
+                      errors={errors}
+                      handleRadioChange={handleRadioChange}
+                    />
+                  );
+              })}
+            </div>
+            <div className="flex quiz-buttons ">
+              <button onClick={handleClickLeft}>Previous</button>
+              <button onClick={handleSubmit}>Submit</button>
+              <button onClick={handleClickRight}>Next</button>
+            </div>
+          </div>
         </div>
       ) : (
         <div className="suggested-track-section">
@@ -124,6 +130,39 @@ function PersonalizedQuiz() {
         </div>
       )}
     </>
+  );
+}
+
+function Question({
+  question,
+  index,
+  selectedAnswers,
+  errors,
+  handleRadioChange,
+}) {
+  return (
+    <div key={question.id} className="question-cont">
+      <p className="question">{`${index + 1}. ${question.question}`}</p>
+      <ul className="options">
+        {question.options.map((option, optionIndex) => (
+          <li key={optionIndex}>
+            <label>
+              <input
+                type="radio"
+                name={`question-${question.id}`}
+                value={option}
+                checked={selectedAnswers[question.id]?.option === option}
+                onChange={() =>
+                  handleRadioChange(question.id, option, optionIndex)
+                }
+              />
+              {option}
+            </label>
+          </li>
+        ))}
+      </ul>
+      {errors[question.id] && <p className="error">{errors[question.id]}</p>}
+    </div>
   );
 }
 
