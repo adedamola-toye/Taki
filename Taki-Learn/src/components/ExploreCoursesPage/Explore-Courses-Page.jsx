@@ -20,9 +20,10 @@ function ExploreCourses() {
 
         {/* CARD */}
         <CourseCard />
+        
         <div className="quiz-invitation">
           <p>
-            Not sure the course for you? take this personalized quiz to choose a
+            Not sure the course for you? Take this personalized quiz to choose a
             track
           </p>
           <Link to = "/quiz"><button>Take Quiz</button></Link>
