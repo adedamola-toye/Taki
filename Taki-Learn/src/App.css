@@ -576,3 +576,39 @@ button {
   margin-bottom: 2rem;
 }
 
+.questions{
+  margin-left: 30%;
+  width: 70%;
+}
+
+.options li{
+  list-style: none;
+}
+
+.question{
+  font-size:1.2rem;
+  
+}
+
+.error{
+  color: red;
+}
+
+.suggested-track-section{
+  display:flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+  height: 60vh;
+  gap:5rem;
+}
+
+.suggestedTrack{
+  font-size: 2rem;
+}
+
+.suggested-track-btns {
+  display: flex;
+  gap: 3rem;
+}
