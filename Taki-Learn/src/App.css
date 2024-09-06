@@ -88,10 +88,14 @@ html {
   padding-bottom: 5px;
 }
 
-.navbar li a.active {
+.flex li a.active {
   text-decoration: none;
   border-bottom: #10c843 solid 1px;
   /* padding: ; */
+  color: #10c843;
+}
+
+.nav--buttons a:hover , .navbar li a:hover{
   color: #10c843;
 }
 
@@ -139,7 +143,7 @@ header button:hover {
 /* dropdown start */
 .dropdown--menu {
   display: none;
-  height: 0;
+  height: max-content;
   position: absolute;
   right: 2rem;
   /* color:  var(--gray); */
@@ -193,6 +197,7 @@ header button:hover {
     nav button {
     display: none;
   }
+
 }
 
 @media all and (min-width: 780px) {
@@ -316,11 +321,10 @@ header button:hover {
   }
 }
 
-@media all and (max-width: 500px) {
-  .hero {
+@media all and (max-width: 480px) {
+  .flex-hero {
     padding: 15px;
     flex-wrap: wrap-reverse;
-
     place-content: center;
   }
 
@@ -525,6 +529,77 @@ button {
   cursor: pointer;
 }
 
+.contri-section{
+  width: 100%;
+  max-width: 1200px;
+  margin: 1rem 4rem;
+}
+
+.contri-section h2{
+  margin: 1rem;
+  color: #10c843;
+}
+
+.contribution{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  margin: 2rem 1rem;
+  padding: 2rem;
+  gap: 2rem;
+
+}
+
+.member-card{
+  height: 100px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 1rem;
+  width: 30%;
+  height: 300px;
+  max-height: max-content;
+  padding: 1rem;
+  border: #747474 solid 2px;
+  border-radius: 12px;
+}
+
+@media (max-width: 768px) {
+  .contri-section{
+    max-width: 768px;
+    margin: 1rem 2rem;
+  }
+  .contribution{
+    margin: 1rem 1rem;
+    padding: 1rem;
+  }
+  .member-card{
+    width: 40%;
+    height: 300px;
+  }
+  .about-section{
+    flex-direction: column;
+  }
+}
+
+@media (max-width: 480px) {
+  .contri-section{
+    max-width: 480px;
+    margin: 1rem 2rem;
+  }
+  .contribution{
+    margin: 1rem 1rem;
+    padding: 1rem;
+  }
+  .member-card{
+    width: 50%;
+    height: 300px;
+  }
+  .about-section{
+    flex-direction: column;
+  }
+}
 /* About end */
 
 /* header end */
