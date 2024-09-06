@@ -2,8 +2,14 @@ import CourseCard from "./CoursesCard";
 import Navbar from "../homePage/navbar";
 import { Link } from "react-router-dom";
 import courses from "../../coursesData";
+import { useState } from "react";
 
 function ExploreCourses() {
+  const [visibleCourses, setVisibleCourses] = useState(8);
+  const loadMoreCourses = () => {
+    setVisibleCourses(prevCount => prevCount + 8)
+  }
+
   return (
     
 
@@ -24,7 +30,13 @@ function ExploreCourses() {
         </div>
 
         {/* CARD */}
-        <CourseCard course = {courses} />
+        <CourseCard course = {courses.slice(0, visibleCourses)} />
+
+        {visibleCourses < courses.length && (
+          <div className="load-more-btn">
+            <button onClick={loadMoreCourses}>Load More</button>
+          </div>
+        )}
         
         <div className="quiz-invitation">
           <p>

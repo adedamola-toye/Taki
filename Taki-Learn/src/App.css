@@ -803,6 +803,11 @@ button {
   }
 }
 
+.load-more-btn{
+  display: flex;
+  justify-content: center;
+}
+
 .quiz-invitation {
   margin-top: 3rem;
   text-align: center;
