@@ -72,7 +72,7 @@ const About = () => {
             <ul>
               <li>Courses page</li>
               <li>Planning, Ideation and UX</li>
-              <li>Deployment</li>
+              <li>Deployment on vercel</li>
             </ul>
           </div>
           <div className="member-card">
