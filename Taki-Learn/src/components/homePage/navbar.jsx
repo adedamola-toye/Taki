@@ -1,7 +1,12 @@
 //import Button from "./button";
 import { Link } from "react-router-dom";
 
-function Navbar({onIsSignupOpen,onIsLoginOpen}) {
+function Navbar({ onIsSignupOpen, onIsLoginOpen }) {
+  function dropDown() {
+    const dropdown = document.querySelector(".dropdown--menu");
+    dropdown.style.display = "block";
+  }
+
   return (
     <>
       <nav>
@@ -24,13 +29,17 @@ function Navbar({onIsSignupOpen,onIsLoginOpen}) {
             </li>
           </ul>
           <div className="nav--buttons">
-            <a href="#" onClick={()=>onIsLoginOpen(true)}>Login</a>
+            <a href="#" onClick={() => onIsLoginOpen(true)}>
+              Login
+            </a>
             {/* <Link to="/signUp"> */}
-              <button onClick={()=>onIsSignupOpen(true)}>Sign up{/* <Button label="Sign up"/> */}</button>
+            <button onClick={() => onIsSignupOpen(true)}>
+              Sign up{/* <Button label="Sign up"/> */}
+            </button>
             {/* </Link> */}
             {/* <button>Sign Up</button> */}
           </div>
-          <div className="toggle_Btn">
+          <div className="toggle_Btn" onClick={() => dropDown()}>
             <svg
               fill="#10C843"
               width="50px"
@@ -45,21 +54,26 @@ function Navbar({onIsSignupOpen,onIsLoginOpen}) {
 
           <div className="dropdown--menu ">
             <li>
-              <a className="dropdown--item" href="#">
+              <Link className="dropdown--item" to="/">
                 Home
-              </a>
+              </Link>
             </li>
             <li>
-              <a className="dropdown--item" href="#">
+              <Link className="dropdown--item" to="/about">
                 About us
-              </a>
+              </Link>
             </li>
             <li>
-              <a className="dropdown--item" href="#">
+              <Link className="dropdown--item" to="/explore-courses">
                 All courses
-              </a>
+              </Link>
             </li>
-            <button className="dropdown--item">Sign Up</button>
+            <button
+              className="dropdown--item"
+              onClick={() => onIsSignupOpen(true)}
+            >
+              Sign Up
+            </button>
           </div>
         </nav>
       </nav>

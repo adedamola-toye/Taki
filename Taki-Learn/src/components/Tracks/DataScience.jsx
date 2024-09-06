@@ -1,6 +1,11 @@
 import Navbar from "../homePage/navbar";
 import CoursesCard from "../ExploreCoursesPage/CoursesCard";
+import courses from "../../coursesData";
+
 function DataScience() {
+
+  const dataScienceCourses = courses.filter((course) => course.track === "Data Science")
+
   return (
     <>
       <Navbar />
@@ -10,7 +15,7 @@ function DataScience() {
         <h1>Welcome to the Data science Track</h1>
         <p>Explore the courses in this track</p>
         </div>
-        <CoursesCard/>
+        <CoursesCard course={dataScienceCourses}/>
       </div>
     </>
   );

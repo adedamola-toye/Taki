@@ -23,22 +23,15 @@ function Header({onIsSignupOpen,onIsLoginOpen}) {
               <div>
                 <div className="flex store store--btn">
                   <a >
-                    <Button label="Sign up" />
+                    <button onClick={()=>onIsSignupOpen(true)}>Sign Up</button>
                   </a>
                   <a href="#">
-                    <Button label="Login" style="white-button" />
+                    <button className="white-button" onClick={()=>onIsLoginOpen(true)}>Log In</button>
                   </a>
                 </div>
 
               </div>
-              {/* <div className="select-course flex">
-            <select>
-              <option>Select Course</option>
-              <option>frontend</option>
-              <option>backend</option>
-            </select>
-            <Button label="Search"/>
-          </div> */}
+              
             </div>
             <img
               className="illus"

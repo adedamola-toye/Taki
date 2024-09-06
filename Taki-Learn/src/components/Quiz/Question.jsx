@@ -1,6 +1,8 @@
 import PropTypes from 'prop-types'
 
+//Ensure correct types of props are passed
 Question.propTypes = {
+  //question must be an object with the following properties
     question: PropTypes.shape({
       id: PropTypes.number.isRequired,
       question: PropTypes.string.isRequired,

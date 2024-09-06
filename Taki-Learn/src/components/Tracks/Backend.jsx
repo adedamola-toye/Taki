@@ -1,6 +1,9 @@
 import Navbar from "../homePage/navbar";
 import CoursesCard from "../ExploreCoursesPage/CoursesCard";
+import courses from "../../coursesData";
+
 function Backend() {
+  const backendCourses = courses.filter((course) => course.track === "Backend Web Development")
   return (
     <>
       <Navbar />
@@ -9,7 +12,7 @@ function Backend() {
           <h1>Welcome to the Backend Track</h1>
           <p>Explore the courses in this track</p>
         </div>
-        <CoursesCard/>
+        <CoursesCard course ={backendCourses}/>
       </div>
     </>
   );
