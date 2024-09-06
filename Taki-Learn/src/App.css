@@ -319,16 +319,26 @@ header button:hover {
     width: 100%;
     text-align: center;
   }
+  .store button{
+    width: 70px;
+  }
+  .hero
   .flex-hero {
     padding: 15px;
-    flex-wrap: wrap-reverse;
     place-content: center;
   }
 
-
+  .hero{
+    flex-wrap: wrap-reverse;
+  }
+  .store{
+    width: 700px;
+    margin-left: -50px;
+  }
   .store--btn {
     display: flex;
     justify-content: center;
+   
   }
 }
 
