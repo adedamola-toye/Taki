@@ -84,12 +84,12 @@ function PersonalizedQuiz() {
   };
 
   const handleClickRight = function () {
-    console.log(quizQuestions.length, currentQuestion);
+    // console.log(quizQuestions.length, currentQuestion);
     if (currentQuestion === quizQuestions.length - 1) return;
     setCurrentQuestion((currentQuestion) => currentQuestion + 1);
   };
   const handleClickLeft = function () {
-    console.log(quizQuestions.length, currentQuestion);
+    // console.log(quizQuestions.length, currentQuestion);
     if (currentQuestion === 0) return;
     setCurrentQuestion((currentQuestion) => currentQuestion - 1);
   };
