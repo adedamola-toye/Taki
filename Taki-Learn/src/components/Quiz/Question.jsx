@@ -1,7 +1,8 @@
-import PropTypes from 'prop-types'
+/* eslint-disable react/prop-types */
+//import PropTypes from 'prop-types'
 
 //Ensure correct types of props are passed
-Question.propTypes = {
+/* Question.propTypes = {
   //question must be an object with the following properties
     question: PropTypes.shape({
       id: PropTypes.number.isRequired,
@@ -13,6 +14,7 @@ Question.propTypes = {
     errors: PropTypes.object.isRequired,
     handleRadioChange: PropTypes.func.isRequired,
   };
+   */
   
 function Question({
     question,

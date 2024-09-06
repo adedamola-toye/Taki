@@ -10,14 +10,11 @@ function Header({onIsSignupOpen,onIsLoginOpen}) {
             <div className="text-left">
               <p className="title">
                 <b>
-                  You bring the<span> expertise,</span> we will make it
-                  unforgettable.
+                Discover Your Perfect Learning Path! 
                 </b>
               </p>
               <p className="quote">
-                Using highly personalised activities, videos and animations you
-                can energise your students and motivate them to achieve their
-                learning goals as they progress through a journey.
+              Take our personalized quiz to find the track that suits you best, and explore courses designed to help you achieve your learning goals.
               </p>
               
               <div>
