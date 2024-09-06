@@ -1,6 +1,6 @@
 
-import Button from "./button";
-import Navbar from "./navbar";
+//import Button from "./button";
+//import Navbar from "./navbar";
 const About = () => {
   return (
     <>

@@ -12,16 +12,21 @@ function PersonalizedQuiz() {
   const [currentQuestion, setCurrentQuestion] = useState(0);
   const [proceed, setProceed] = useState(false); 
 
+  //option- the option the user chooses
+  //Is called when user selects an option for a question
+  //categoryIndex = index of category that option chosen belongs to
+  //questionId = ID of the question  being answered
   const handleRadioChange = (questionId, option, categoryIndex) => {
     const category = quizQuestions.find((q) => q.id === questionId)?.category[
       categoryIndex
     ];
     setSelectedAnswers((prevAns) => ({
       ...prevAns,
-      [questionId]: { option, category },
+      [questionId]: { option, category }, //adds current options answer as an object
     }));
 
- 
+    
+    //If user has answered this question then set the error to null while still keeping error for unanswered questions
     setErrors((prevErrors) => ({
       ...prevErrors,
       [questionId]: null,
@@ -41,6 +46,7 @@ function PersonalizedQuiz() {
       }
     });
 
+  
     const maxCount = Math.max(...Object.values(categoryCounts));
     const suggestedCategories = Object.keys(categoryCounts).filter(
       (cat) => categoryCounts[cat] === maxCount
@@ -52,8 +58,7 @@ function PersonalizedQuiz() {
   };
 
   const handleSubmit = (e) => {
-    e.preventDefault();
-
+    e.preventDefault(); //Prevents default behaviour of form which is reloading the page
     //This checks if all questions have been answered
     const newErrors = {};
     quizQuestions.forEach((question) => {
