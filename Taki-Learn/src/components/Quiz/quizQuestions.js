@@ -11,7 +11,7 @@ const quizQuestions = [
     category: [
       "Backend Web Development",
       "Frontend Web Development",
-      "Full Stack Web Development",
+      "Backend Web Development",
       "Cybersecurity",
     ],
   },

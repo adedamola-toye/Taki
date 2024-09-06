@@ -1,8 +1,13 @@
 import CourseCard from "./CoursesCard";
 import Navbar from "../homePage/navbar";
 import { Link } from "react-router-dom";
+import courses from "../../coursesData";
+
 function ExploreCourses() {
   return (
+    
+
+
     <>
       <Navbar />
       <div className="explore-courses-page  courses-page">
@@ -19,7 +24,7 @@ function ExploreCourses() {
         </div>
 
         {/* CARD */}
-        <CourseCard />
+        <CourseCard course = {courses} />
         
         <div className="quiz-invitation">
           <p>

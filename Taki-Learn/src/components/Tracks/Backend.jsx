@@ -1,6 +1,9 @@
 import Navbar from "../homePage/navbar";
 import CoursesCard from "../ExploreCoursesPage/CoursesCard";
+import courses from "../../coursesData";
+
 function Backend() {
+  
   return (
     <>
       <Navbar />
