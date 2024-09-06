@@ -6,7 +6,7 @@ function ExploreCourses() {
     <>
       <Navbar />
       <div className="explore-courses-page  courses-page">
-        {/* HEADER */}
+        
 
         <div className="explore-courses-heading  courses-page-heading">
           <h1>Explore Courses</h1>
