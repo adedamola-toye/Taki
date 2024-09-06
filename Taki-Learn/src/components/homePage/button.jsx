@@ -1,4 +1,4 @@
-function Button({ label, style="" }) {
+function Button({ label, style=""}) {
   return <button className={style}>{label}</button>;
 }
 
