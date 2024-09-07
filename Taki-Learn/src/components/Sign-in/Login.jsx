@@ -1,8 +1,8 @@
+import { auth } from "../../config/firebase2";
 import { useState } from "react";
 import { signInWithEmailAndPassword } from "firebase/auth";
 import PropTypes from 'prop-types';
 import { useNavigate } from "react-router-dom";
-import { auth } from "../../config/firebase2";
 
 Login.propTypes = {
   onIsLoginOpen: PropTypes.func.isRequired,
@@ -12,26 +12,23 @@ Login.propTypes = {
 function Login({ onIsLoginOpen, onIsSignupOpen }) {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
-  const [error, setError] = useState(null);
+  const [error, setError] = useState(null); // Store error during login
   const navigate = useNavigate();
 
-  const handleCloseModal = () => {
-    if (typeof onIsLoginOpen === 'function') {
-      onIsLoginOpen(false);
-    } else {
-      console.error("onIsLoginOpen is not a function");
-    }
-  };
+  function handleCloseModal() {
+    onIsLoginOpen(false); // Close the login modal
+  }
 
   const handleSubmit = async (event) => {
     event.preventDefault();
-    setError(null);
+    setError(null); // Reset error state
 
     try {
+      // Sign in the user
       await signInWithEmailAndPassword(auth, email, password);
       console.log("User signed in successfully");
-      handleCloseModal();
-      navigate("/welcomeUser");
+      handleCloseModal(); // Close the modal after successful login
+      navigate("/welcomeUser"); // Redirect to the welcome page
     } catch (error) {
       setError("Failed to log in: " + error.message);
     }
@@ -41,40 +38,46 @@ function Login({ onIsLoginOpen, onIsSignupOpen }) {
     <>
       <div className="modal-content1">
         <form onSubmit={handleSubmit}>
-          <button className="p1" onClick={handleCloseModal}>
+          <button className="p1" type="button" onClick={handleCloseModal}>
             &times;
           </button>
           <h1>Login</h1>
           {error && <p style={{ color: "red" }}>{error}</p>}
+
           <label htmlFor="email" className="fa fa-envelope"></label>
           <input
             id="email"
+            name="email"
             className="user"
             type="email"
             placeholder="Email"
             value={email}
-            onChange={(e) => setEmail(e.target.value)}
+            onChange={(event) => setEmail(event.target.value)}
             required
           />
+
           <input
             style={{ marginLeft: "16px" }}
             type="password"
             id="password"
+            name="password"
             placeholder="Password"
             value={password}
-            onChange={(e) => setPassword(e.target.value)}
+            onChange={(event) => setPassword(event.target.value)}
             required
           />
+
           <label
             htmlFor="password"
             style={{ position: "absolute", left: "113px", top: "49%" }}
             className="fa fa-lock"
           ></label>
           <br />
+
           <a href="#" className="a">
             Forgot your password?
           </a>
-          <button className="button">Login</button>
+          <button className="button" type="submit">Login</button>
           <br />
           <br />
           <p style={{ color: "grey" }}>
@@ -83,8 +86,8 @@ function Login({ onIsLoginOpen, onIsSignupOpen }) {
               className="link"
               href="#"
               onClick={() => {
-                handleCloseModal();
-                onIsSignupOpen(true);
+                handleCloseModal(); // Close login modal
+                onIsSignupOpen(true); // Open signup modal
               }}
             >
               Register
