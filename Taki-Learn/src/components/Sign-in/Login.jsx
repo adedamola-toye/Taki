@@ -1,81 +1,76 @@
-import {auth} from "../../config/firebase2"
 import { useState } from "react";
 import { signInWithEmailAndPassword } from "firebase/auth";
-import PropTypes from 'prop-types'
+import PropTypes from 'prop-types';
 import { useNavigate } from "react-router-dom";
+import { auth } from "../../config/firebase2";
 
 Login.propTypes = {
   onIsLoginOpen: PropTypes.func.isRequired,
   onIsSignupOpen: PropTypes.func.isRequired,
 };
 
-function Login({ onIsLoginOpen,onIsSignupOpen }) {
+function Login({ onIsLoginOpen, onIsSignupOpen }) {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
-  const [error, setError] = useState(null); //store error during login
+  const [error, setError] = useState(null);
   const navigate = useNavigate();
-  console.log(onIsSignupOpen)
 
-  function handleCloseModal() {
-    onIsLoginOpen((isLoginOpen) => !isLoginOpen);
-  }
+  const handleCloseModal = () => {
+    if (typeof onIsLoginOpen === 'function') {
+      onIsLoginOpen(false);
+    } else {
+      console.error("onIsLoginOpen is not a function");
+    }
+  };
 
-  const handleSubmit = (event) => {
+  const handleSubmit = async (event) => {
     event.preventDefault();
     setError(null);
 
-    const signIn = async() => {
-      try{
-        await signInWithEmailAndPassword(auth, email, password);
-        console.log("User signed in successfully");
-        handleCloseModal(); //Close modal after successful login
-        navigate("/welcomeUser"); 
-      }
-      catch(error){
-        setError("Failed to log in: " + error.message)
-      }
+    try {
+      await signInWithEmailAndPassword(auth, email, password);
+      console.log("User signed in successfully");
+      handleCloseModal();
+      navigate("/welcomeUser");
+    } catch (error) {
+      setError("Failed to log in: " + error.message);
     }
-    signIn()
-  }
+  };
+
   return (
     <>
-      <div className="modal-content1 hidden">
+      <div className="modal-content1">
         <form onSubmit={handleSubmit}>
           <button className="p1" onClick={handleCloseModal}>
             &times;
           </button>
           <h1>Login</h1>
           {error && <p style={{ color: "red" }}>{error}</p>}
-
-
-          <label htmlFor="password" className="fa fa-envelope"></label>
+          <label htmlFor="email" className="fa fa-envelope"></label>
           <input
-            name="Email"
+            id="email"
             className="user"
             type="email"
             placeholder="Email"
+            value={email}
             onChange={(e) => setEmail(e.target.value)}
             required
           />
-
           <input
             style={{ marginLeft: "16px" }}
             type="password"
-            name="password"
+            id="password"
             placeholder="Password"
-            value = {password}
+            value={password}
             onChange={(e) => setPassword(e.target.value)}
             required
           />
-
-
           <label
             htmlFor="password"
             style={{ position: "absolute", left: "113px", top: "49%" }}
             className="fa fa-lock"
           ></label>
           <br />
-
           <a href="#" className="a">
             Forgot your password?
           </a>
@@ -84,14 +79,22 @@ function Login({ onIsLoginOpen,onIsSignupOpen }) {
           <br />
           <p style={{ color: "grey" }}>
             Dont have an account?{" "}
-            <a className="link" href="#" onClick={()=> {handleCloseModal();onIsSignupOpen(true)}}>
+            <a
+              className="link"
+              href="#"
+              onClick={() => {
+                handleCloseModal();
+                onIsSignupOpen(true);
+              }}
+            >
               Register
             </a>
           </p>
         </form>
       </div>
-      <div className="modal-overlay1 hidden" onClick={handleCloseModal}></div>
+      <div className="modal-overlay1" onClick={handleCloseModal}></div>
     </>
   );
 }
+
 export default Login;
