@@ -70,8 +70,9 @@ const About = () => {
           <div className="member-card">
             <h3>Abdullah</h3>
             <ul>
-              <li></li>
-              <li></li>
+              <li>Courses page</li>
+              <li>Planning, Ideation and UX</li>
+              <li>Deployment on vercel</li>
             </ul>
           </div>
           <div className="member-card">
