@@ -1,5 +1,11 @@
 import Navbar from "./navbar";
-import Button from "./button";
+//import Button from "./button";
+import PropTypes from 'prop-types'
+
+Header.propTypes = {
+  onIsSignupOpen: PropTypes.func.isRequired,
+  onIsLoginOpen: PropTypes.func.isRequired,
+};
 function Header({onIsSignupOpen,onIsLoginOpen}) {
   return (
     <>

@@ -1,7 +1,15 @@
 //import Button from "./button";
 import { Link } from "react-router-dom";
+import PropTypes from 'prop-types'
+
+Navbar.propTypes = {
+  onIsSignupOpen: PropTypes.func.isRequired,
+  onIsLoginOpen: PropTypes.func.isRequired,
+};
 
 function Navbar({ onIsSignupOpen, onIsLoginOpen }) {
+  
+
   function dropDown() {
     const dropdown = document.querySelector(".dropdown--menu");
     dropdown.style.display = "block";

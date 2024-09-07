@@ -1,21 +1,117 @@
+import {auth} from "../../config/firebase2"
+import { createUserWithEmailAndPassword } from "firebase/auth";
+import { useState } from "react";
+import PropTypes from 'prop-types';
+import { useNavigate } from "react-router-dom";
+
+Signup.propTypes = {
+  onIsSignupOpen: PropTypes.func.isRequired, // Add prop validation
+};
+
 function Signup({ onIsSignupOpen }) {
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
+  const [confirmPassword, setConfirmPassword] = useState("");
+  const [error, setError] = useState(null);
+
+  const navigate = useNavigate();
+
+  const validatePassword = (password) => {
+    const minLength = 7;
+    const hasUpperCase = /[A-Z]/.test(password);
+    const hasLowerCase = /[a-z]/.test(password);
+    const hasNumber = /\d/.test(password);
+    const hasSpecialChar = /[!@#$%^&*(),.?":{}|<>]/.test(password);
+
+    if (password.length < minLength) {
+      return "Password should be at least 7 characters long.";
+    }
+    if (!hasUpperCase) {
+      return "Password should contain at least one uppercase letter.";
+    }
+    if (!hasLowerCase) {
+      return "Password should contain at least one lowercase letter.";
+    }
+    if (!hasNumber) {
+      return "Password should contain at least one number.";
+    }
+    if (!hasSpecialChar) {
+      return "Password should contain at least one special character.";
+    }
+    return null;
+  };
+
   function handleCloseModal() {
     onIsSignupOpen((isOpen) => !isOpen);
   }
+
+  const getErrorMessage = (errorCode) => {
+    switch (errorCode) {
+      case 'auth/email-already-in-use':
+        return 'Email already in use. Please try a different email.';
+      case 'auth/invalid-email':
+        return 'Invalid email address. Please enter a valid email.';
+      case 'auth/weak-password':
+        return 'Weak password. Please enter a stronger password.';
+      case 'auth/wrong-password':
+        return 'Incorrect password. Please try again.';
+      case 'auth/user-not-found':
+        return 'No user found with this email.';
+      default:
+        return 'An unexpected error occurred. Please try again later.';
+    }
+  };
+
+  const handleSubmit = async (event) => {
+    event.preventDefault();
+    console.log("Submit button clicked");
+  
+    setError(null);
+  
+    if (password !== confirmPassword) {
+      console.log("Passwords do not match");
+      setError("Passwords do not match");
+      return;
+    }
+  
+    const passwordError = validatePassword(password);
+    if (passwordError) {
+      console.log("Password validation error:", passwordError);
+      setError(passwordError);
+      return;
+    }
+  
+    try {
+      console.log("Attempting to sign up with email:", email);
+      const userCredential = await createUserWithEmailAndPassword(auth, email, password);
+      console.log("User signed up successfully", userCredential);
+      handleCloseModal();
+      navigate('./login')
+    } catch (error) {
+      console.error("Error signing up:", error);
+      setError(getErrorMessage(error.code));
+    }
+  };
+  
+  
+
+
   return (
     <>
       <div className="modal-content1 hidden">
-        <form action="">
+        <form action="" onSubmit={handleSubmit}>
           <button className="p1" onClick={handleCloseModal}>
             &times;
           </button>
           <h1>Signup</h1>
           <label htmlFor="password" className="fa fa-envelope"></label>
           <input
-            name="Username"
+            name="email"
             className="user"
-            type="text"
-            placeholder="Username"
+            type="email"
+            placeholder="Email"
+            onChange={(e) => setEmail(e.target.value)}
+            required
           />
 
           <input
@@ -23,6 +119,9 @@ function Signup({ onIsSignupOpen }) {
             type="password"
             name="password"
             placeholder="Password"
+            value={password}
+            onChange={(e) => setPassword(e.target.value)}
+            required
           />
           <label
             htmlFor="password"
@@ -34,6 +133,8 @@ function Signup({ onIsSignupOpen }) {
             type="password"
             name="password"
             placeholder="Confirm Password"
+            value = {confirmPassword}
+            onChange={(event) => setConfirmPassword(event.target.value)}
           />
           <label
             htmlFor="password"
@@ -44,7 +145,9 @@ function Signup({ onIsSignupOpen }) {
           {/* <a href="#" className="a">
             Forgot your password?
           </a> */}
-          <button className="button">Sign Up</button>
+
+          {error && <p className="error-message" style={{color: "red"}}>{error}</p>}
+          <button className="button" type = "submit">Sign Up</button>
           <br />
           <br />
           {/* <p style={{ color: "grey" }}>

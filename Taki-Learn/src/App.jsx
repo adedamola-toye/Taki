@@ -11,6 +11,10 @@ import Frontend from "./components/Tracks/Frontend";
 import Backend from "./components/Tracks/Backend"
 import CyberSecurity from "./components/Tracks/CyberSecurity";
 import DataScience from "./components/Tracks/DataScience";
+//import { SignInMethod } from "firebase/auth";
+import Login from "./components/Sign-in/Login";
+import WelcomePage from "./components/WelcomePage"
+
 
 function App() {
   return (
@@ -20,11 +24,13 @@ function App() {
         <Route path="#about" element={<About />} />
         <Route path="/explore-courses" element={<ExploreCoursesPage />} />
         <Route path="/quiz" element={<PersonalizedQuiz />} />
-        <Route path="*" element={<Navigate to="/" />} />
+        <Route path = "/login" element = {<Login/>}/>
+        <Route path = "/welcomeUser" element = {<WelcomePage/>}/>
         <Route path="/frontend" element={<Frontend />} />
         <Route path="/backend" element={<Backend />} />
         <Route path="/cybersecurity" element={<CyberSecurity />} />
         <Route path="/data-science" element={<DataScience />} />
+        <Route path="*" element={<Navigate to="/" />} />
       </Routes>
       {/* <About id = 'about' /> */}
     </BrowserRouter>
