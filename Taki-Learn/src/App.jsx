@@ -1,7 +1,7 @@
 import "./App.css";
 import { BrowserRouter, Route, Routes, Navigate } from "react-router-dom";
 import About from "./components/homePage/About";
-import ExploreCoursesPage from "./components/ExploreCoursesPage/Explore-Courses-Page";
+import ExploreCoursesPage from "./components/Courses/Explore-Courses-Page";
 import Home from "./components/homePage/home";
 import PersonalizedQuiz from "./components/Quiz/PersonalizedQuiz";
 import Frontend from "./components/Tracks/Frontend";

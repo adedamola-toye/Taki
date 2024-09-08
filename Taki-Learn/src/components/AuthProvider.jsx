@@ -1,6 +1,6 @@
 import { useState, useContext, createContext } from "react";
 import { createUserWithEmailAndPassword } from "firebase/auth";
-import { auth } from "../config/firebasek";
+import { auth } from "./config/firebasek";
 
 const AuthContext = createContext();
 
@@ -15,7 +15,7 @@ export default function AuthProvider({ children }) {
         email,
         password
       );
-      
+
       console.log("User signed up successfully", userCredential);
     } catch (e) {
       console.log(e.message);
