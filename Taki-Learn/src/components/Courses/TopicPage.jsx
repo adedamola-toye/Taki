@@ -6,7 +6,7 @@ function TopicPage() {
   const decodedCourseName = decodeURIComponent(courseName).replace(/-/g, " ");
   const decodedTopicName = decodeURIComponent(topicName).replace(/-/g, " ");
 
-  const course = courses.find(
+  const course = courses?.find(
     (course) => course.name.toLowerCase() === decodedCourseName.toLowerCase()
   );
 
@@ -14,6 +14,12 @@ function TopicPage() {
     return <p>Course not found</p>;
   }
 
+  //Check if the course has topics
+  if(!course.topics || course.topics.length === 0){
+    return <p>This course does not have any topics yet</p>
+  }
+
+  //Find thr topic within the course
   const topic = course.topics.find(
     (topic) => topic.topicName.toLowerCase() === decodedTopicName.toLowerCase()
   );
