@@ -1,5 +1,6 @@
 import { useParams } from "react-router-dom";
 import courses from "./coursesData";
+import Navbar from "../homePage/navbar"
 
 function TopicPage() {
   const { courseName, topicName } = useParams();
@@ -14,12 +15,12 @@ function TopicPage() {
     return <p>Course not found</p>;
   }
 
-  //Check if the course has topics
-  if(!course.topics || course.topics.length === 0){
-    return <p>This course does not have any topics yet</p>
+  // Check if the course has topics
+  if (!course.topics || course.topics.length === 0) {
+    return <p>This course does not have any topics yet</p>;
   }
 
-  //Find thr topic within the course
+  // Find the topic within the course
   const topic = course.topics.find(
     (topic) => topic.topicName.toLowerCase() === decodedTopicName.toLowerCase()
   );
@@ -29,7 +30,9 @@ function TopicPage() {
   }
 
   return (
-    <div className="topic-page">
+    <>
+      <Navbar/>
+      <div className="topic-page">
       <h1>{topic.topicName}</h1>
       {topic.content.map((contentItem, index) => (
         <div key={index}>
@@ -41,13 +44,26 @@ function TopicPage() {
             </pre>
           )}
           {contentItem.videoLink && (
-            <a href={contentItem.videoLink} target="_blank" rel="noopener noreferrer">
-              Watch this video
-            </a>
+            <div className="video-container">
+              <iframe
+                width="560"
+                height="315"
+                src={contentItem.videoLink.replace(
+                  "watch?v=",
+                  "embed/"
+                )}
+                title="Video player"
+                frameBorder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allowFullScreen
+              ></iframe>
+            </div>
           )}
         </div>
       ))}
     </div>
+    </>
+    
   );
 }
 
