@@ -5,7 +5,73 @@ const courses = [
       name: "HTML for Beginners",
       description: "Learn the basics of HTML to build and structure simple web pages.",
       track: "Frontend Web Development",
+      topics:[
+        {
+          id: 1,
+          topicName : "HTML Basics",
+          content:[
+            {
+              title: "Introduction to HTML",
+              text: "HTML, or HyperText Markup Language, is the backbone of every website you visit. It’s the language that gives structure to the web, turning plain text into rich, interactive web pages. Whether it’s a bold heading, an image, or a clickable link, HTML is what makes it all happen. Think of it as the building blocks of the internet, where every tag you write brings a web page to life. With HTML, you're not just coding—you’re creating experiences that users around the world can engage with every day!"
+
+            },
+            {
+              title:"HTML Document Structure",
+              text: "Every HTML document begins with the <!DOCTYPE html> declaration, which tells the browser the version of HTML being used. This is followed by the <html> tag, which wraps the entire document. Inside the <html> tag, the <head> section contains meta-information about the page, such as the title and character encoding, while the <body> section contains the content that appears on the web page. The structure of an HTML document looks like the code below: ",
+              exampleCode : `<!DOCTYPE html> <html> <head> <meta charset="UTF-8"> <title>Page Title</title> </head> <body> <h1>Welcome to HTML Basics</h1> <p>This is a paragraph of text.</p> </body> </html>`
+            },
+            {
+              title: "HTML Syntax and Comments",
+              text: "HTML uses a combination of opening and closing tags to define elements. Comments can be added using <!-- --> to leave notes in your code. Comments are not displayed in the browser and are useful for documentation or reminders.",
+              exampleCode: "<!-- This is a comment --> <p>This is a paragraph of text.</p>"
+            },
+            {
+              title: "HTML Document MetaData",
+              text : "",
+              exampleCode : `<head> <meta charset="UTF-8"> <title>Document Title</title> <link rel="stylesheet" href="styles.css"> </head>`
+            },
+            {
+              title: "Best Practices",
+              text: "When writing HTML, it's important to follow best practices for writing clean, maintainable code. This includes properly nesting tags, using semantic HTML, and ensuring that your document is properly structured."
+            }, 
+            {
+              title: "Additional Resources",
+              text: "Check out this video for a visual introduction to HTML:",
+              videoLink: "https://www.youtube.com/watch?v=it1rTvBcfRg&list=PLP9IO4UYNF0VdAajP_5pYG-jG2JRrG72s"
+            }
+          ]
+        },
+
+        //TOPIC 2
+        {
+          id: 2,
+          topicName:"Common HTML Tags",
+          content : []
+        },
+
+        //TOPIC 3
+        {
+          id: 3,
+          topicName:"HTML Lists and Tables",
+          content : []
+        },
+
+        //TOPIC 4
+        {
+          id: 4,
+          topicName:"Adding Images and Multimedia",
+          content : []
+        },
+
+        //TOPIC 5
+        {
+          id: 5,
+          topicName:"HTML Forms",
+          content : []
+        }
+      ]
     },
+
     {
       id: 2,
       name: "CSS Fundamentals",

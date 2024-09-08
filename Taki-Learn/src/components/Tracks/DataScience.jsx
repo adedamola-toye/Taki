@@ -1,6 +1,6 @@
 import Navbar from "../homePage/navbar";
-import CoursesCard from "../ExploreCoursesPage/CoursesCard";
-import courses from "../../coursesData";
+import CoursesCard from "../Courses/CoursesCard";
+import courses from "../Courses/coursesData";
 
 function DataScience() {
 

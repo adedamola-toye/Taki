@@ -1,4 +1,4 @@
-import {auth} from "../../config/firebase2"
+import {auth} from "../config/firebase2"
 import { createUserWithEmailAndPassword } from "firebase/auth";
 import { useState } from "react";
 import PropTypes from 'prop-types';

@@ -1,4 +1,4 @@
-import { auth } from "../../config/firebase2";
+import { auth } from "../config/firebase2";
 import { useState } from "react";
 import { signInWithEmailAndPassword } from "firebase/auth";
 import PropTypes from 'prop-types';

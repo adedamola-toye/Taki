@@ -2,7 +2,7 @@ import "./App.css";
 import { BrowserRouter, Route, Routes, Navigate } from "react-router-dom";
 //import Header from './components/homePage/header'
 import About from "./components/homePage/About";
-import ExploreCoursesPage from "./components/ExploreCoursesPage/Explore-Courses-Page";
+import ExploreCoursesPage from "./components/Courses/Explore-Courses-Page";
 // import SignInPage from './components/Sign-in/SignInPage'
 // import SignUpPage from './components/Sign-in/SignUpPage'
 import Home from "./components/homePage/home";
@@ -14,6 +14,8 @@ import DataScience from "./components/Tracks/DataScience";
 //import { SignInMethod } from "firebase/auth";
 import Login from "./components/Sign-in/Login";
 import WelcomePage from "./components/WelcomePage"
+import CoursePage from "./components/Courses/CoursePage"
+import TopicPage from "./components/Courses/TopicPage"
 
 
 function App() {
@@ -30,6 +32,8 @@ function App() {
         <Route path="/backend" element={<Backend />} />
         <Route path="/cybersecurity" element={<CyberSecurity />} />
         <Route path="/data-science" element={<DataScience />} />
+        <Route path = "/courses/:courseName" element = {<CoursePage/>}/>
+        <Route path = "/courses/:courseName/topics/:topicName" element={<TopicPage/>}/>
         <Route path="*" element={<Navigate to="/" />} />
       </Routes>
       {/* <About id = 'about' /> */}
