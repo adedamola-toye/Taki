@@ -29,6 +29,8 @@ function App() {
         <Route path="/backend" element={<Backend />} />
         <Route path="/cybersecurity" element={<CyberSecurity />} />
         <Route path="/data-science" element={<DataScience />} />
+        <Route path = "/courses/:courseName" element = {<CoursePage/>}/>
+        <Route path = "/courses/:courseName/topics/:topicName" element={<TopicPage/>}/>
         <Route path="*" element={<Navigate to="/" />} />
       </Routes>
       {/* <About id = 'about' /> */}

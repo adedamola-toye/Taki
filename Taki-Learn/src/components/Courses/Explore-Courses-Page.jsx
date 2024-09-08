@@ -1,7 +1,7 @@
 import CourseCard from "./CoursesCard";
 import Navbar from "../homePage/navbar";
 import { Link } from "react-router-dom";
-import courses from "../../coursesData";
+import courses from "./coursesData";
 import { useState } from "react";
 
 function ExploreCourses() {
