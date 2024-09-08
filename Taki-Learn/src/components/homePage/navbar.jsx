@@ -1,10 +1,6 @@
 import { Link } from "react-router-dom";
 import PropTypes from 'prop-types';
 
-Navbar.propTypes = {
-  onIsSignupOpen: PropTypes.func.isRequired,
-  onIsLoginOpen: PropTypes.func.isRequired,
-};
 
 function Navbar({ onIsSignupOpen, onIsLoginOpen }) {
 
@@ -25,7 +21,7 @@ function Navbar({ onIsSignupOpen, onIsLoginOpen }) {
               <Link to="/" className="active">Home</Link>
             </li>
             <li>
-              <a href="#about">About us</a>
+              <a href="/#about">About us</a>
             </li>
             <li>
               <Link to="/explore-courses">All courses</Link>

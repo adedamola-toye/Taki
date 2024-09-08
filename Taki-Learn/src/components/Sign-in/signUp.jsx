@@ -1,14 +1,16 @@
-import {auth} from "../../config/firebase2"
+import {auth} from "../../config/firebasek"
 import { createUserWithEmailAndPassword } from "firebase/auth";
 import { useState } from "react";
 import PropTypes from 'prop-types';
 import { useNavigate } from "react-router-dom";
+import { useAuth } from "../AuthProvider";
 
-Signup.propTypes = {
-  onIsSignupOpen: PropTypes.func.isRequired, // Add prop validation
-};
 
-function Signup({ onIsSignupOpen }) {
+function Signup({ onIsSignupOpen,onIsLoginOpen }) {
+const signup = useAuth().signup
+console.log(signup)
+
+  const [userName,setUserName] = useState('')
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [confirmPassword, setConfirmPassword] = useState("");
@@ -74,19 +76,21 @@ function Signup({ onIsSignupOpen }) {
       return;
     }
   
-    const passwordError = validatePassword(password);
-    if (passwordError) {
-      console.log("Password validation error:", passwordError);
-      setError(passwordError);
-      return;
-    }
+    // const passwordError = validatePassword(password);
+    // if (passwordError) {
+    //   console.log("Password validation error:", passwordError);
+    //   setError(passwordError);
+    //   return;
+    // }
   
     try {
-      console.log("Attempting to sign up with email:", email);
-      const userCredential = await createUserWithEmailAndPassword(auth, email, password);
-      console.log("User signed up successfully", userCredential);
+     
+      signup(email,password)
+      // console.log(auth,email,password)
       handleCloseModal();
-      navigate('./login')
+      navigate("/welcomeUser"); 
+      
+      // navigate('./login')
     } catch (error) {
       console.error("Error signing up:", error);
       setError(getErrorMessage(error.code));
@@ -105,6 +109,14 @@ function Signup({ onIsSignupOpen }) {
           </button>
           <h1>Signup</h1>
           <label htmlFor="password" className="fa fa-envelope"></label>
+          <input
+            name="username"
+            className="user"
+            type="text"
+            placeholder="Full Name"
+            onChange={(e) => setUserName(e.target.value)}
+            required
+          />
           <input
             name="email"
             className="user"

@@ -12,8 +12,8 @@ function Home() {
   return (
     <>
       <Header onIsSignupOpen={setIsSignupOpen} onIsLoginOpen={setIsLoginOpen} />
-      {isLoginOpen && <Login onIsLoginOpen={setIsLoginOpen} />}
-      {isSignupOpen && <Signup onIsSignupOpen={setIsSignupOpen} />}
+      {isLoginOpen && <Login onIsLoginOpen={setIsLoginOpen} onIsSignupOpen={setIsSignupOpen} />}
+      {isSignupOpen && <Signup onIsLoginOpen={setIsLoginOpen} onIsSignupOpen={setIsSignupOpen} />}
       <Band />
       <About />
     </>

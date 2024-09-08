@@ -1,15 +1,15 @@
-import { auth } from "../../config/firebase2";
+import { auth } from "../../config/firebasek";
 import { useState } from "react";
 import { signInWithEmailAndPassword } from "firebase/auth";
 import PropTypes from 'prop-types';
 import { useNavigate } from "react-router-dom";
+import { useAuth } from "../AuthProvider";
 
-Login.propTypes = {
-  onIsLoginOpen: PropTypes.func.isRequired,
-  onIsSignupOpen: PropTypes.func.isRequired,
-};
 
 function Login({ onIsLoginOpen, onIsSignupOpen }) {
+ 
+const login = useAuth().login
+
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [error, setError] = useState(null); // Store error during login
@@ -25,7 +25,8 @@ function Login({ onIsLoginOpen, onIsSignupOpen }) {
 
     try {
       // Sign in the user
-      await signInWithEmailAndPassword(auth, email, password);
+      // await signInWithEmailAndPassword(auth, email, password);
+      login(email,password)
       console.log("User signed in successfully");
       handleCloseModal(); // Close the modal after successful login
       navigate("/welcomeUser"); // Redirect to the welcome page
