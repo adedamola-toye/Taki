@@ -384,7 +384,7 @@ header button:hover {
 .modal-content1 input {
   width: 80%;
   margin: 30px 0 20px 0;
-  height: 40px;
+  height: 20px;
   border-top: none;
   border-left: none;
   border-right: none;
@@ -885,3 +885,69 @@ button {
   display: flex;
   gap: 3rem;
 }
+
+
+/* Welcome user starts */
+
+.welcome-body{
+  margin: 20px 40px;
+}
+
+.welcome-header{
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  justify-content: center;
+  align-items: center;
+
+}
+.welcome-header p{
+  text-align: center;
+}
+.welcome-header button{
+  font-family:Arial, Helvetica, sans-serif;
+}
+.welcome-header button:hover{
+  background: #fff;
+  color: #10c843;
+  border: #10c843 solid;
+}
+
+.learning-path{
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  margin-top: 40px;
+  width: 100%;
+  justify-content: center;
+}
+
+.track-card{
+  width: 250px;
+  border: #10c843 solid;
+  height: 200px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.track-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+}
+
+.track-top{
+  background-color: #10c843;
+  border-radius: 20px 20px 0px 0px ;
+  height: 8px;
+  width: 100%;
+}
+
+/* Welcome user ends */
+
+
+/* Footer starts */
+
+
+/* Footer ends */

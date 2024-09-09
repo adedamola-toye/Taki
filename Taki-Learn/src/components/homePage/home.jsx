@@ -4,6 +4,7 @@ import Band from "./blackBand";
 import Header from "./header";
 import Login from "../Sign-in/Login";
 import Signup from "../Sign-in/signUp";
+import Footer from "../footer";
 
 function Home() {
   const [isSignupOpen, setIsSignupOpen] = useState(false);
@@ -16,6 +17,7 @@ function Home() {
       {isSignupOpen && <Signup onIsLoginOpen={setIsLoginOpen} onIsSignupOpen={setIsSignupOpen} />}
       <Band />
       <About />
+      <Footer/>
     </>
   );
 }
