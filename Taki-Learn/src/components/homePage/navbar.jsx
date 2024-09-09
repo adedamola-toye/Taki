@@ -1,8 +1,10 @@
 import { Link } from "react-router-dom";
 import PropTypes from 'prop-types';
+import { useAuth } from "../AuthProvider";
 
 
 function Navbar({ onIsSignupOpen, onIsLoginOpen }) {
+const currentUser = useAuth().currentUser
 
   function dropDown() {
     const dropdown = document.querySelector(".dropdown--menu");
@@ -27,10 +29,10 @@ function Navbar({ onIsSignupOpen, onIsLoginOpen }) {
               <Link to="/explore-courses">All courses</Link>
             </li>
           </ul>
-          <div className="nav--buttons">
+         {currentUser || <div className="nav--buttons">
             <a href="#" onClick={() => onIsLoginOpen(true)}>Login</a>
             <button onClick={() => onIsSignupOpen(true)}>Sign up</button>
-          </div>
+          </div>}
           <div className="toggle_Btn" onClick={() => dropDown()}>
             <svg
               fill="#10C843"

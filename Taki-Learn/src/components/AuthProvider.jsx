@@ -5,7 +5,7 @@ import { auth } from "./config/firebasek";
 const AuthContext = createContext();
 
 export default function AuthProvider({ children }) {
-  const [user, setUser] = useState("");
+  const [currentUser, setCurrentUser] = useState("");
   const signup = async function (email, password) {
     try {
       console.log("Attempting to sign up with email:", email);
@@ -30,7 +30,7 @@ export default function AuthProvider({ children }) {
   };
 
   return (
-    <AuthContext.Provider value={{ user, signup, login }}>
+    <AuthContext.Provider value={{ signup, login,currentUser,setCurrentUser }}>
       {children}
     </AuthContext.Provider>
   );

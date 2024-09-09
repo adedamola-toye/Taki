@@ -4,6 +4,7 @@ import { useAuth } from "../AuthProvider";
 
 function Signup({ onIsSignupOpen, onIsLoginOpen }) {
   const signup = useAuth().signup;
+  const setCurrentUser = useAuth().setCurrentUser;
   console.log(signup);
 
   const [userName, setUserName] = useState("");
@@ -81,6 +82,7 @@ function Signup({ onIsSignupOpen, onIsLoginOpen }) {
 
     try {
       signup(email, password);
+      setCurrentUser(userName)
       // console.log(auth,email,password)
       handleCloseModal();
       navigate("/welcomeUser");
