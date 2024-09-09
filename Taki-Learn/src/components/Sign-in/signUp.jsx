@@ -3,15 +3,14 @@ import { useNavigate } from "react-router-dom";
 import { useAuth } from "../AuthProvider";
 
 function Signup({ onIsSignupOpen, onIsLoginOpen }) {
-  const signup = useAuth().signup;
-  const setCurrentUser = useAuth().setCurrentUser;
-  console.log(signup);
+  const {signup } = useAuth()
 
   const [userName, setUserName] = useState("");
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [confirmPassword, setConfirmPassword] = useState("");
   const [error, setError] = useState(null);
+  const [loading,setLoading] = useState(false)
 
   const navigate = useNavigate();
 
@@ -81,8 +80,10 @@ function Signup({ onIsSignupOpen, onIsLoginOpen }) {
     // }
 
     try {
-      signup(email, password);
-      setCurrentUser(userName)
+      console.log(userName)      
+      setLoading(true)
+     await signup(email, password);
+      
       // console.log(auth,email,password)
       handleCloseModal();
       navigate("/welcomeUser");
@@ -92,6 +93,7 @@ function Signup({ onIsSignupOpen, onIsLoginOpen }) {
       console.error("Error signing up:", error);
       setError(getErrorMessage(error.code));
     }
+    setLoading(false)
   };
 
   return (
@@ -102,6 +104,7 @@ function Signup({ onIsSignupOpen, onIsLoginOpen }) {
             &times;
           </button>
           <h1>Signup</h1>
+          {error && <p>{error}</p>}
           <label htmlFor="password" className="fa fa-envelope"></label>
           <input
             name="username"
@@ -157,7 +160,7 @@ function Signup({ onIsSignupOpen, onIsLoginOpen }) {
               {error}
             </p>
           )}
-          <button className="button" type="submit">
+          <button disabled={loading} className="button" type="submit">
             Sign Up
           </button>
           <br />
