@@ -1,5 +1,5 @@
 import { useState, useContext, createContext } from "react";
-import { createUserWithEmailAndPassword } from "firebase/auth";
+import { createUserWithEmailAndPassword, signOut, signInWithEmailAndPassword } from "firebase/auth";
 import { auth } from "./config/firebasek";
 
 const AuthContext = createContext();
@@ -28,6 +28,13 @@ export default function AuthProvider({ children }) {
       console.log(e.message);
     }
   };
+  // const signout = async function () {
+  //   try {
+  //     await signOut(auth)
+  //   }catch(e){
+  //     console.log(e.message)
+  //   }
+  // }
 
   return (
     <AuthContext.Provider value={{ signup, login,currentUser,setCurrentUser }}>

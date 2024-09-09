@@ -9,7 +9,7 @@ import Backend from "./components/Tracks/Backend"
 import CyberSecurity from "./components/Tracks/CyberSecurity";
 import DataScience from "./components/Tracks/DataScience";
 import Login from "./components/Sign-in/Login";
-import WelcomePage from "./components/WelcomePage";
+import WelcomePage from "./components/User/WelcomePage";
 import AuthProvider from "./components/AuthProvider";
 import CoursePage from "./components/Courses/CoursePage";
 import TopicPage from "./components/Courses/TopicPage"
