@@ -11,6 +11,8 @@ import DataScience from "./components/Tracks/DataScience";
 import Login from "./components/Sign-in/Login";
 import WelcomePage from "./components/WelcomePage";
 import AuthProvider from "./components/AuthProvider";
+import CoursePage from "./components/Courses/CoursePage";
+import TopicPage from "./components/Courses/TopicPage"
 
 
 function App() {
