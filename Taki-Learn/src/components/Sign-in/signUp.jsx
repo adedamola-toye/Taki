@@ -104,7 +104,7 @@ function Signup({ onIsSignupOpen, onIsLoginOpen }) {
             &times;
           </button>
           <h1>Signup</h1>
-          {error && <p>{error}</p>}
+          
           <label htmlFor="password" className="fa fa-envelope"></label>
           <input
             name="username"
@@ -165,12 +165,19 @@ function Signup({ onIsSignupOpen, onIsLoginOpen }) {
           </button>
           <br />
           <br />
-          {/* <p style={{ color: "grey" }}>
-            Dont have an account?{" "}
-            <a className="link" href="Register.html">
-              Register
+          <p style={{ color: "grey" }}>
+           Already have an account?{" "}
+            <a
+              className="link"
+              href="#"
+              onClick={() => {
+                handleCloseModal(); // Close login modal
+                onIsLoginOpen(true); // Open signup modal
+              }}
+            >
+              Login
             </a>
-          </p> */}
+          </p>
         </form>
       </div>
       <div className="modal-overlay1 hidden" onClick={handleCloseModal}></div>

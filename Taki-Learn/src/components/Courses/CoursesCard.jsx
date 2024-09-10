@@ -1,22 +1,22 @@
-import PropTypes from "prop-types";
 import { Link } from "react-router-dom";
-
-CoursesCard.propTypes = {
-  course: PropTypes.arrayOf(
-    PropTypes.shape({
-      id: PropTypes.number.isRequired,
-      name: PropTypes.string.isRequired,
-      description: PropTypes.string.isRequired,
-      track: PropTypes.string.isRequired,
-    })
-  ).isRequired,
-};
+import { useNavigate } from "react-router-dom";
+import { useAuth } from "../AuthProvider";
 
 //Makes sure course names are URL safe
 const encodeCourseName = (name) =>
   encodeURIComponent(name.toLowerCase().replace(/\s+/g, "-"));
 
-function CoursesCard({ course }) {
+function CoursesCard({ course,onIsLoginOpen,onIsSignupOpen }) {
+const {currentUser} = useAuth()
+const navigate = useNavigate()
+
+  function handleClickLearn() {
+    if (!currentUser) {
+      onIsSignupOpen(true);
+    } else navigate(`/courses/${encodeCourseName(course.name)}`);
+
+  }
+
   return (
     <div className="course-card-section">
       {course.map((course) => (
@@ -27,9 +27,9 @@ function CoursesCard({ course }) {
             <b>Track: </b>
             {course.track}
           </p>
-          <Link to={`/courses/${encodeCourseName(course.name)}`}>
-            <button>Learn</button>
-          </Link>
+          {/* <Link to={`/courses/${encodeCourseName(course.name)}`}> */}
+            <button onClick={handleClickLearn} >Learn</button>
+          {/* </Link> */}
         </div>
       ))}
     </div>
