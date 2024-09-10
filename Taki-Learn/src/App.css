@@ -991,3 +991,124 @@ footer ul{
 
 }
 /* Footer ends */
+
+
+/*COURSE PAGE STYLING*/
+
+/* General Container Styling */
+.course-page {
+  margin-top: 2rem;
+  padding: 1rem; 
+}
+
+
+.courseHead {
+  text-align: center;
+  font-size: 2.5rem; 
+  font-weight: bold; 
+  margin-bottom: 1rem;
+}
+
+.courseDescription {
+  text-align: center;
+  margin-bottom: 2rem;
+  font-size: 1.2rem;
+  color: #333; 
+  line-height: 1.6;
+}
+
+
+.course-topics {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.5rem;
+  padding: 1rem;
+  background-color: #d4faed; 
+  border-radius: 8px; 
+  width: 50%;
+  margin: auto;
+  min-width: 300px
+}
+
+
+.topics-list {
+  list-style-type: decimal; 
+  padding-left: 1.5rem; 
+ 
+}
+
+.topic-link {
+  font-size: 1.2rem;
+  padding: 0.5rem; 
+  border-bottom: 1px solid #41b443;
+}
+.topic-link:last-child {
+  border-bottom: none;
+}
+
+.topic-link:hover {
+  background-color: #87e2cc; 
+}
+
+
+.topic-link a {
+  text-decoration: none;
+  color: #075148; 
+  transition: color 0.3s ease, font-weight 0.3s ease;
+}
+
+.topic-link a:hover {
+  color: #196823; 
+  font-weight: bold; 
+}
+
+
+/*TOPIC PAGE STYLING*/
+.topic-page {
+  padding: 2rem;
+  background-color: #f4fdf0;
+  color: #333;
+}
+
+.topic-page h1 {
+  text-align: center;
+  color: #004d00;
+  margin-bottom: 2rem;
+  font-size: 2.5rem;
+  font-weight: bold;
+}
+
+.topic-page h2 {
+  color: #007f00;
+  margin-top: 1.5rem;
+  margin-bottom: 1rem;
+  font-size: 1.8rem;
+}
+
+.topic-page p {
+  font-size: 1rem;
+  line-height: 1.6;
+  margin-bottom: 1.5rem;
+}
+
+.topic-page pre {
+  background-color: #eaf9e0;
+  border-radius: 8px;
+  padding: 1rem;
+  overflow-x: auto;
+}
+
+.topic-page code {
+  color: #006600;
+}
+
+.video-container {
+  text-align: center;
+  margin-top: 2rem;
+}
+
+.video-container iframe {
+  border: none;
+  border-radius: 8px;
+}

@@ -1,9 +1,9 @@
-import { Link, Navigate } from "react-router-dom"
+import { Link, /* Navigate */ } from "react-router-dom"
 import Footer from "../footer"
 import { onAuthStateChanged } from "firebase/auth"
 import { auth } from "../config/firebasek"
 import { useEffect, useState } from "react"
-import UserNavbar from "./UserNavbar"
+//import UserNavbar from "./UserNavbar"
 
 
 function WelcomeUser(){

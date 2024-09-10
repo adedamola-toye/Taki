@@ -8,7 +8,7 @@ function CoursePage() {
   const decodedCourseName = decodeURIComponent(courseName).replace(/-/g, " ");
 
   const course = courses.find(
-    (course) => course.name.toLowerCase() == decodedCourseName.toLowerCase()
+    (course) => course.name.toLowerCase() == decodedCourseName?.toLowerCase()
   );
 
   if (!course) {
@@ -21,29 +21,28 @@ function CoursePage() {
 
   return (
     <>
-        <Navbar/>
-        <div className="course-page">
-      <h1>{course.name}</h1>
-      <p>{course.description}</p>
-      <div className="course-topics">
-        <h2>Topics</h2>
-        <ul>
-          {course.topics.map((topic) => (
-            <li key={topic.id}>
-              <Link
-                to={`/courses/${encodedCourseName}/topics/${encodeURIComponent(
-                  topic.topicName
-                )}`}
-              >
-                {topic.topicName}
-              </Link>
-            </li>
-          ))}
-        </ul>
+      <Navbar />
+      <div className="course-page">
+        <h1 className="courseHead">{course.name}</h1>
+        <p className="courseDescription">{course.description}</p>
+        <div className="course-topics">
+          <h2>Topics</h2>
+          <ol className="topics-list">
+            {course.topics.map((topic) => (
+              <li key={topic.id} className="topic-link">
+                <Link
+                  to={`/courses/${encodedCourseName}/topics/${encodeURIComponent(
+                    topic.topicName
+                  )}`}
+                >
+                  {topic.topicName}
+                </Link>
+              </li>
+            ))}
+          </ol>
+        </div>
       </div>
-    </div>
     </>
-    
   );
 }
 
