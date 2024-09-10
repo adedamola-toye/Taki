@@ -25,7 +25,7 @@ function ExploreCourses() {
 
   return (
     <>
-      <Navbar onIsSignupOpen={setIsSignupOpen} onIsLoginOpen={setIsLoginOpen} />
+      {/* <Navbar onIsSignupOpen={setIsSignupOpen} onIsLoginOpen={setIsLoginOpen} /> */}
       {isLoginOpen && (
         <Login
           onIsLoginOpen={setIsLoginOpen}

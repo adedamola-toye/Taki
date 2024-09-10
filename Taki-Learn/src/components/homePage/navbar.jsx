@@ -31,7 +31,7 @@ function Navbar({ onIsSignupOpen, onIsLoginOpen }) {
               ""
             ) : (
               <li>
-                <a href="/#about">About us</a>
+                <a href="/about">About us</a>
               </li>
             )}
             <li>

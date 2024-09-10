@@ -21,7 +21,7 @@ function CoursePage() {
 
   return (
     <>
-        <Navbar/>
+        {/* <Navbar/> */}
         <div className="course-page">
       <h1>{course.name}</h1>
       <p>{course.description}</p>
