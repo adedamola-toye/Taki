@@ -100,9 +100,9 @@ function Signup({ onIsSignupOpen, onIsLoginOpen }) {
     <>
       <div className="modal-content1 hidden">
         <form action="" onSubmit={handleSubmit}>
-          <button className="p1" onClick={handleCloseModal}>
+          <span className="p1" onClick={handleCloseModal}>
             &times;
-          </button>
+          </span>
           <h1>Signup</h1>
           
           <label htmlFor="password" className="fa fa-envelope"></label>

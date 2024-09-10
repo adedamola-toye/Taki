@@ -16,7 +16,7 @@ function Navbar({ onIsSignupOpen, onIsLoginOpen }) {
   }
   return (
     <>
-      <nav>
+    
         <nav className="navbar flex ">
           <p className="logo">
             <b>TakiLearn</b>
@@ -85,7 +85,7 @@ function Navbar({ onIsSignupOpen, onIsLoginOpen }) {
             </button>
           </div>
         </nav>
-      </nav>
+
     </>
   );
 }

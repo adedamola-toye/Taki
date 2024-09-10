@@ -137,7 +137,6 @@ header button:hover {
   display: none;
 }
 
-
 /* Navbar styles */
 .navbar {
   justify-content: space-between;
@@ -163,8 +162,7 @@ header button:hover {
   text-decoration: none;
   color: #747474;
   /* padding-bottom: 5px; */
-  overflow: hidden;
-
+  /* overflow: hidden; */
 }
 
 .flex li a.active {
@@ -172,7 +170,8 @@ header button:hover {
   color: #10c843;
 }
 
-.nav--buttons a:hover, .navbar li a:hover {
+.nav--buttons a:hover,
+.navbar li a:hover {
   color: #10c843;
 }
 
@@ -188,12 +187,15 @@ header button:hover {
   padding-right: 5px;
 }
 
+
 /* Responsive adjustments for dropdown and navbar */
 @media all and (max-width: 780px) {
-  .navbar ul, .nav--buttons a, .nav--buttons button {
+  .navbar ul,
+  .nav--buttons a,
+  .nav--buttons button {
     display: none;
   }
-  
+
   .dropdown--menu {
     width: 100%; /* Full width on small screens */
     right: 0; /* Align to the left edge */
@@ -319,29 +321,26 @@ header button:hover {
     width: 100%;
     text-align: center;
   }
-  .store button{
+  .store button {
     width: 70px;
   }
-  .hero
-  .flex-hero {
+  .hero .flex-hero {
     padding: 15px;
     place-content: center;
   }
 
-  .hero{
+  .hero {
     flex-wrap: wrap-reverse;
   }
-  .store{
+  .store {
     width: 700px;
     margin-left: -50px;
   }
   .store--btn {
     display: flex;
     justify-content: center;
-   
   }
 }
-
 
 /* hero end */
 /* header end */
@@ -350,7 +349,7 @@ header button:hover {
   position: fixed;
   top: 0;
   left: 0;
-overflow: hidden;
+  overflow: hidden;
   width: 100%;
   height: 100%;
   background-color: rgba(0, 0, 0, 0.4);
@@ -361,11 +360,11 @@ overflow: hidden;
 .modal-content1 {
   width: 50%;
   z-index: 10;
-  height: 100vh;
+  height: 90vh;
   padding: 55px;
   position: fixed;
   top: 40px;
-  overflow:auto;
+  overflow: auto;
   left: 25%;
   text-align: center;
   background-color: white;
@@ -373,7 +372,6 @@ overflow: hidden;
   color: #10c843;
   /* border : 1px black solid; */
   box-shadow: 1px 1px 1px 1px black;
-
 }
 
 .formBorder {
@@ -390,6 +388,10 @@ overflow: hidden;
   border-left: none;
   border-right: none;
   font-size: 20px;
+}
+
+.modal-content1 input:focus {
+  outline: none;
 }
 
 .modal-content1 .p1 {
@@ -433,6 +435,15 @@ overflow: hidden;
 .link {
   color: #10c843;
   text-decoration: none;
+}
+@media all and (max-width: 950px) {
+  .modal-content1 {
+    /* position: fixed; */
+    /* top: 40px; */
+    padding: 35px;
+    width: 80%;
+    left: 10%;
+  }
 }
 
 /*modal end  */
@@ -524,39 +535,39 @@ overflow: hidden;
   left: -10%;
 }
 
-@media (max-width: 1024px){
-  .about-content h2{
+@media (max-width: 1024px) {
+  .about-content h2 {
     font-size: 35px;
   }
 
-  .shadow-box{
+  .shadow-box {
     width: 350px;
     height: 350px;
   }
 
-  .about-content p{
+  .about-content p {
     font-size: 15px;
     line-height: 24px;
   }
 }
 
-@media (max-width: 768px){
-  .about-section{
+@media (max-width: 768px) {
+  .about-section {
     flex-direction: column;
     text-align: center;
   }
 
-  .about-content h2{
+  .about-content h2 {
     font-size: 32px;
     line-height: 1.2;
   }
 
-  .shadow-box{
+  .shadow-box {
     width: 300px;
     height: 300px;
   }
 
-  .about-content p{
+  .about-content p {
     font-size: 14px;
   }
 }
@@ -585,7 +596,8 @@ overflow: hidden;
     height: 250px;
   }
 
-  .image1, .image2 {
+  .image1,
+  .image2 {
     max-width: 100%;
   }
 }
@@ -725,13 +737,13 @@ button {
   }
 }
 
-
 /* About end */
 
 /* header end */
 
 /*EXPLORE COURSES PAGE*/
-.explore-courses-page, .courses-page {
+.explore-courses-page,
+.courses-page {
   margin: 3rem;
 }
 
@@ -741,7 +753,8 @@ button {
   gap: 2rem;
   justify-content: center;
 }
-.explore-courses-heading, .courses-page-heading {
+.explore-courses-heading,
+.courses-page-heading {
   width: 60%;
   text-align: center;
   align-self: center;
@@ -768,11 +781,13 @@ button {
 
 /* For medium screens (tablets) */
 @media (max-width: 768px) {
-  .explore-courses-page, .courses-page {
+  .explore-courses-page,
+  .courses-page {
     margin: 2rem;
   }
 
-  .explore-courses-heading, .courses-page-heading {
+  .explore-courses-heading,
+  .courses-page-heading {
     width: 80%;
   }
 
@@ -781,18 +796,20 @@ button {
   }
 
   .course-card {
-    width: 45%; 
+    width: 45%;
     padding: 2rem;
   }
 }
 
 /* For small screens (mobile phones) */
 @media (max-width: 480px) {
-  .explore-courses-page, .courses-page {
+  .explore-courses-page,
+  .courses-page {
     margin: 1rem;
   }
 
-  .explore-courses-heading, .courses-page-heading {
+  .explore-courses-heading,
+  .courses-page-heading {
     width: 90%;
   }
 
@@ -803,12 +820,12 @@ button {
   }
 
   .course-card {
-    width: 100%; 
+    width: 100%;
     padding: 1.5rem;
   }
 }
 
-.load-more-btn{
+.load-more-btn {
   display: flex;
   justify-content: center;
 }
@@ -820,10 +837,10 @@ button {
 .quiz-invitation p {
   margin-bottom: 2rem;
 }
-.quiz-container{
+.quiz-container {
   place-content: center;
 }
-.questions{
+.questions {
   position: relative;
   width: 600px;
   overflow-x: scroll;
@@ -833,21 +850,21 @@ button {
   overflow: hidden;
 }
 
-.options li{
+.options li {
   list-style: none;
   padding: 10px;
   border: #10c843 1px solid;
   margin: 0 0 10px 0;
 }
 
-.question{
-  font-size:1.2rem;
+.question {
+  font-size: 1.2rem;
   width: 100%;
   height: 100px;
   padding: 10px;
 }
 
-.question-cont{
+.question-cont {
   border-top: #10c843 1px solid;
   border-bottom: #10c843 1px solid;
 
@@ -855,30 +872,30 @@ button {
   padding: 10px;
 }
 
-.quiz-head{
+.quiz-head {
   padding: 20px;
   /* width: 10%; */
 }
-.quiz-buttons{
+.quiz-buttons {
   justify-content: space-between;
   /* position: absolute;
   bottom: 20px; */
 }
-.error{
+.error {
   color: red;
 }
 
-.suggested-track-section{
-  display:flex;
+.suggested-track-section {
+  display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   align-content: center;
   height: 60vh;
-  gap:5rem;
+  gap: 5rem;
 }
 
-.suggestedTrack{
+.suggestedTrack {
   font-size: 2rem;
 }
 
