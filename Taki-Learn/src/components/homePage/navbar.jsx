@@ -23,7 +23,8 @@ const currentUser = useAuth().currentUser
               <Link to="/" className="active">Home</Link>
             </li>
             <li>
-              <a href="/#about">About us</a>
+              <Link to="/about">About us</Link>
+              {/* <a href="/about">About us</a> */}
             </li>
             <li>
               <Link to="/explore-courses">All courses</Link>

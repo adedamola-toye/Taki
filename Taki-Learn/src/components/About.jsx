@@ -1,9 +1,21 @@
 //import Button from "./button";
-//import Navbar from "./navbar";
-const About = () => {
+import { useState } from 'react';
+import Navbar from "../components/homePage/navbar";
+import PropTypes from "prop-types";
+
+const About = ({onIsSignupOpen,onIsLoginOpen}) => {
+
+  
+  
   return (
     <>
       {/* <Navbar/> */}
+      {/* <Navbar onIsSignupOpen={onIsSignupOpen} onIsLoginOpen={onIsLoginOpen} /> */}
+      
+      {/* Trigger modals if login or signup is clicked */}
+      {/* {isLoginOpen && <Login onIsLoginOpen={setIsLoginOpen} onIsSignupOpen={setIsSignupOpen} />}
+      {isSignupOpen && <Signup onIsLoginOpen={setIsLoginOpen} onIsSignupOpen={setIsSignupOpen} />} */}
+
       <section className="about-section" id="about">
         <div className="about-content">
           <h4>About Us</h4>
@@ -77,15 +89,22 @@ const About = () => {
           </div>
           <div className="member-card">
             
-            <h3>Iddayat</h3>
+            <h3>Idayat</h3>
             <ul>
               <li>About us section</li>
             </ul>
           </div>
         </div>
       </section>
+      
+
     </>
   );
+};
+
+About.propTypes = {
+  onIsSignupOpen: PropTypes.func.isRequired,
+  onIsLoginOpen: PropTypes.func.isRequired,
 };
 
 export default About;

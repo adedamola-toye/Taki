@@ -6,7 +6,7 @@ function Header({ onIsSignupOpen, onIsLoginOpen }) {
   return (
     <>
       <header>
-        <Navbar onIsSignupOpen={onIsSignupOpen} onIsLoginOpen={onIsLoginOpen} />
+        {/* <Navbar onIsSignupOpen={onIsSignupOpen} onIsLoginOpen={onIsLoginOpen} /> */}
         <div className="hero">
           <div className="flex hero">
             <div className="text-left">
@@ -19,11 +19,11 @@ function Header({ onIsSignupOpen, onIsLoginOpen }) {
               <div>
                 <div className="flex store store--btn">
                   <a>
-                    <button onClick={() => onIsSignupOpen(true)}>Sign Up</button>
+                    <button onClick={() => onIsSignupOpen(true)}>Get Started</button>
                   </a>
-                  <a href="#">
+                  {/* <a href="#">
                     <button className="white-button" onClick={() => onIsLoginOpen(true)}>Log In</button>
-                  </a>
+                  </a> */}
                 </div>
               </div>
             </div>

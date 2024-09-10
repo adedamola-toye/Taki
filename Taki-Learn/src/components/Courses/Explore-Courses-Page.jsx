@@ -11,11 +11,9 @@ function ExploreCourses() {
   }
 
   return (
-    
-
 
     <>
-      <Navbar />
+      {/* <Navbar /> */}
       <div className="explore-courses-page  courses-page">
         
 
