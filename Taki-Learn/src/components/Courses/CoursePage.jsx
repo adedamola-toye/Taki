@@ -27,7 +27,7 @@ function CoursePage() {
         <p className="courseDescription">{course.description}</p>
         <div className="course-topics">
           <h2>Topics</h2>
-          <ol className="topics-list">
+          <ul className="topics-list">
             {course.topics.map((topic) => (
               <li key={topic.id} className="topic-link">
                 <Link
@@ -39,7 +39,7 @@ function CoursePage() {
                 </Link>
               </li>
             ))}
-          </ol>
+          </ul>
         </div>
       </div>
     </>
