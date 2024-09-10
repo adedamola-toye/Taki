@@ -1,16 +1,19 @@
 import { Link } from "react-router-dom";
-import PropTypes from 'prop-types';
+import { useNavigate } from "react-router-dom";
 import { useAuth } from "../AuthProvider";
 
-
 function Navbar({ onIsSignupOpen, onIsLoginOpen }) {
-const currentUser = useAuth().currentUser
+  const { currentUser, logout } = useAuth();
+  const navigate = useNavigate();
 
   function dropDown() {
     const dropdown = document.querySelector(".dropdown--menu");
     dropdown.style.display = "block";
   }
-
+  async function handleLogout() {
+    await logout();
+    navigate("/");
+  }
   return (
     <>
       <nav>
@@ -20,20 +23,32 @@ const currentUser = useAuth().currentUser
           </p>
           <ul className="flex">
             <li>
-              <Link to="/" className="active">Home</Link>
+              <Link to="/" className="active">
+                Home
+              </Link>
             </li>
-            <li>
-              <Link to="/about">About us</Link>
-              {/* <a href="/about">About us</a> */}
-            </li>
+            {currentUser ? (
+              ""
+            ) : (
+              <li>
+                <a href="/about">About us</a>
+              </li>
+            )}
             <li>
               <Link to="/explore-courses">All courses</Link>
             </li>
           </ul>
-         {currentUser || <div className="nav--buttons">
-            <a href="#" onClick={() => onIsLoginOpen(true)}>Login</a>
-            <button onClick={() => onIsSignupOpen(true)}>Sign up</button>
-          </div>}
+
+          {currentUser ? (
+            <button onClick={handleLogout}>Log out</button>
+          ) : (
+            <div className="nav--buttons">
+              <a href="#" onClick={() => onIsLoginOpen(true)}>
+                Login
+              </a>
+              <button onClick={() => onIsSignupOpen(true)}>Sign up</button>
+            </div>
+          )}
           <div className="toggle_Btn" onClick={() => dropDown()}>
             <svg
               fill="#10C843"
@@ -48,15 +63,26 @@ const currentUser = useAuth().currentUser
           </div>
           <div className="dropdown--menu ">
             <li>
-              <Link className="dropdown--item" to="/">Home</Link>
+              <Link className="dropdown--item" to="/">
+                Home
+              </Link>
             </li>
             <li>
-              <Link className="dropdown--item" to="/about">About us</Link>
+              <Link className="dropdown--item" to="/about">
+                About us
+              </Link>
             </li>
             <li>
-              <Link className="dropdown--item" to="/explore-courses">All courses</Link>
+              <Link className="dropdown--item" to="/explore-courses">
+                All courses
+              </Link>
             </li>
-            <button className="dropdown--item" onClick={() => onIsSignupOpen(true)}>Sign Up</button>
+            <button
+              className="dropdown--item"
+              onClick={() => onIsSignupOpen(true)}
+            >
+              Sign Up
+            </button>
           </div>
         </nav>
       </nav>

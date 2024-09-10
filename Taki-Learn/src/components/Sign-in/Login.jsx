@@ -7,12 +7,14 @@ import { useAuth } from "../AuthProvider";
 
 
 function Login({ onIsLoginOpen, onIsSignupOpen }) {
- 
-const login = useAuth().login
+ const {login} = useAuth()
+
 
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [error, setError] = useState(null); // Store error during login
+const [loading,setLoading] = useState(false)
+
   const navigate = useNavigate();
 
   function handleCloseModal() {
@@ -26,6 +28,7 @@ const login = useAuth().login
     try {
       // Sign in the user
       // await signInWithEmailAndPassword(auth, email, password);
+      setLoading(true)
       login(email,password)
       console.log("User signed in successfully");
       handleCloseModal(); // Close the modal after successful login
@@ -33,6 +36,7 @@ const login = useAuth().login
     } catch (error) {
       setError("Failed to log in: " + error.message);
     }
+    setLoading(false)
   };
 
   return (

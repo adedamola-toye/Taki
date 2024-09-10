@@ -1,22 +1,44 @@
 import CourseCard from "./CoursesCard";
 import Navbar from "../homePage/navbar";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import courses from "./coursesData";
 import { useState } from "react";
+import Login from "../Sign-in/Login";
+import Signup from "../Sign-in/signUp";
+import { useAuth } from "../AuthProvider";
 
 function ExploreCourses() {
+  const { currentUser } = useAuth();
+  const [isSignupOpen, setIsSignupOpen] = useState(false);
+  const [isLoginOpen, setIsLoginOpen] = useState(false);
   const [visibleCourses, setVisibleCourses] = useState(8);
+  const navigate = useNavigate();
+
   const loadMoreCourses = () => {
-    setVisibleCourses(prevCount => prevCount + 8)
+    setVisibleCourses((prevCount) => prevCount + 8);
+  };
+  function handleTakeQuiz() {
+    if (!currentUser) {
+      setIsSignupOpen(true);
+    } else navigate("/quiz");
   }
 
   return (
-
     <>
-      {/* <Navbar /> */}
+      {/* <Navbar onIsSignupOpen={setIsSignupOpen} onIsLoginOpen={setIsLoginOpen} /> */}
+      {isLoginOpen && (
+        <Login
+          onIsLoginOpen={setIsLoginOpen}
+          onIsSignupOpen={setIsSignupOpen}
+        />
+      )}
+      {isSignupOpen && (
+        <Signup
+          onIsLoginOpen={setIsLoginOpen}
+          onIsSignupOpen={setIsSignupOpen}
+        />
+      )}
       <div className="explore-courses-page  courses-page">
-        
-
         <div className="explore-courses-heading  courses-page-heading">
           <h1>Explore Courses</h1>
           <p>
@@ -28,20 +50,25 @@ function ExploreCourses() {
         </div>
 
         {/* CARD */}
-        <CourseCard course = {courses.slice(0, visibleCourses)} />
+        <CourseCard
+          course={courses.slice(0, visibleCourses)}
+          onIsSignupOpen={setIsSignupOpen}
+        />
 
         {visibleCourses < courses.length && (
           <div className="load-more-btn">
             <button onClick={loadMoreCourses}>Load More</button>
           </div>
         )}
-        
+
         <div className="quiz-invitation">
           <p>
             Not sure the course for you? Take this personalized quiz to choose a
             track
           </p>
-          <Link to = "/quiz"><button>Take Quiz</button></Link>
+          {/* <Link  > */}
+          <button onClick={handleTakeQuiz}>Take Quiz</button>
+          {/* </Link> */}
         </div>
       </div>
     </>
