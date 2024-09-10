@@ -6,7 +6,7 @@ import { useAuth } from "../AuthProvider";
 const encodeCourseName = (name) =>
   encodeURIComponent(name.toLowerCase().replace(/\s+/g, "-"));
 
-function CoursesCard({ course,onIsLoginOpen,onIsSignupOpen }) {
+function CoursesCard({ course,onIsSignupOpen }) {
 const {currentUser} = useAuth()
 const navigate = useNavigate()
 
