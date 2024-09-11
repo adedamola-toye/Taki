@@ -1,8 +1,8 @@
-import React, { useState } from 'react';
+import { useState } from 'react';
 import "./App.css";
 import { BrowserRouter, Route, Routes, Navigate } from "react-router-dom";
 import About from "./components/About";
-import ExploreCoursesPage from "./components/Courses/Explore-Courses-Page";
+//import ExploreCoursesPage from "./components/Courses/Explore-Courses-Page";
 import Home from "./components/homePage/home";
 import PersonalizedQuiz from "./components/Quiz/PersonalizedQuiz";
 import Frontend from "./components/Tracks/Frontend";
@@ -11,7 +11,7 @@ import CyberSecurity from "./components/Tracks/CyberSecurity";
 import DataScience from "./components/Tracks/DataScience";
 import Login from "./components/Sign-in/Login";
 import Signup from './components/Sign-in/signUp';
-import WelcomePage from "./components/WelcomePage";
+import WelcomePage from "./components/User/WelcomePage";
 import AuthProvider from "./components/AuthProvider";
 import CoursePage from "./components/Courses/CoursePage";
 import TopicPage from "./components/Courses/TopicPage"

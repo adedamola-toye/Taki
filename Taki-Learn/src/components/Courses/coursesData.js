@@ -65,8 +65,8 @@ const courses = [
         topicName: "Common HTML Tags",
         content: [
           {
-            title: "Common HTML Tags",
-            text: "HTML tags are the building blocks of web content, used to define and structure different elements on a webpage. The <h1> through <h6> tags are used for headings, with <h1> being the most important and <h6> the least. These tags help in organizing content hierarchically and improving readability. The <p> tag is used for paragraphs, ensuring that text is grouped and spaced appropriately. Links are created with the <a> tag, which uses the href attribute to specify the destination URL, enabling navigation between pages or to external sites.",
+            title: "Structuring Content",
+            text: "HTML tags are the building blocks of web content, used to define and structure different elements on a webpage. The <h1> through <h6> tags are used for headings, with <h1> being the most important and <h6> the least. These tags help in organizing content hierarchically and improving readability. The <p> tag is used for paragraphs, ensuring that text is grouped and spaced appropriately. Links are created with the <a> tag, which uses the href attribute to specify the destination URL, enabling navigation between pages or to external sites",
           },
           {
             title: "More on HTML Tags",
@@ -75,7 +75,7 @@ const courses = [
           },
           {
             title: "Additional Resources",
-            text: "Check out this video on the necessary HTML tags: ",
+            text: "Check out this video on essential HTML Tags:",
             videoLink:
               "https://www.youtube.com/watch?v=K_EVuLegRZ0",
           },
@@ -88,26 +88,13 @@ const courses = [
         topicName: "HTML Lists and Tables",
         content: [
           {
-            title: "Lists",
-            text: "HTML lists are essential for presenting information in a structured format. There are two primary types of lists: unordered lists and ordered lists. Unordered lists are created using the <ul> tag, with each list item defined by an <li> tag. This format is ideal for displaying items where the order is not important, such as a list of features or ingredients. Ordered lists, on the other hand, are generated with the <ol> tag and also use <li> tags for each item. Ordered lists are useful when the sequence of items matters, such as steps in a process or ranked items.",
+            title: "HTML lists",
+            text: "HTML lists are essential for presenting information in a structured format. There are two primary types of lists: unordered lists and ordered lists. ",
+          },
+          {
+            title: "Ordered List",
+            text: "An ordered list in HTML is used to display items in a specific sequence where the order matters. Created with the <ol> tag, each item within the list is defined using the <li> tag. This type of list is ideal for presenting steps in a process, instructions, or ranked items where the sequence is important. For example, you might use an ordered list to outline the steps needed to complete a task, such as a recipe or a set of instructions. The items in an ordered list are automatically numbered by the browser, ensuring clarity and organization for the user.",
             exampleCode: `
-            <!DOCTYPE html>
-<html>
-<head>
-    <title>Unordered List Example</title>
-</head>
-<body>
-    <h2>Favorite Fruits</h2>
-    <ul>
-        <li>Apple</li>
-        <li>Banana</li>
-        <li>Cherry</li>
-        <li>Date</li>
-    </ul>
-</body>
-</html>
-
-
 <!DOCTYPE html>
 <html>
 <head>
@@ -117,32 +104,104 @@ const courses = [
     <h2>Steps to Make a Cup of Tea</h2>
     <ol>
         <li>Boil water in a kettle.</li>
-        <li>Add a tea bag to your cup.</li>
-        <li>Pour the boiling water over the tea bag.</li>
-        <li>Steep for 3-5 minutes.</li>
-        <li>Remove the tea bag and enjoy your tea.</li>
+        <li>Add a tea bag to a cup.</li>
+        <li>Pour hot water over the tea bag.</li>
+        <li>Let it steep for 3-5 minutes.</li>
+        <li>Remove the tea bag and enjoy your tea!</li>
     </ol>
 </body>
 </html>
-`
+`,
           },
-        
           {
-            title: "Tables",
-            text: "HTML lists are essential for presenting information in a structured format. There are two primary types of lists: unordered lists and ordered lists. Unordered lists are created using the <ul> tag, with each list item defined by an <li> tag. This format is ideal for displaying items where the order is not important, such as a list of features or ingredients. Ordered lists, on the other hand, are generated with the <ol> tag and also use <li> tags for each item. Ordered lists are useful when the sequence of items matters, such as steps in a process or ranked items.",
-            exampleCode: ``,
+            title: "Unordered List",
+            text: "An unordered list in HTML is a way to present a group of items where the order does not matter. It is created using the <ul> (unordered list) tag, with each item within the list defined by an <li> (list item) tag. Unordered lists are useful for listing items that don't require a specific sequence, such as ingredients for a recipe or features of a product. The items in an unordered list are typically marked with bullet points, making it easy to read and visually organize the content.",
+            exampleCode: `
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Unordered List Example</title>
+</head>
+<body>
+    <h2>Features TakiLearn</h2>
+    <ul>
+        <li>Different Courses</li>
+        <li>Learning paths curated for you</li>
+        <li>Quizzes</li>
+    </ul>
+</body>
+</html>
+
+`,
+          },
+          {
+            title: "HTML Tables",
+            text: "Tables in HTML are used to organize and display data in a tabular format, making complex information easier to understand and compare. A table is created with the <table> tag and consists of rows defined by the <tr> tag. Each row contains data cells represented by the <td> tag, or header cells denoted by the <th> tag. The <thead>, <tbody>, and <tfoot> tags can be used to group the header, body, and footer content respectively, improving the organization and readability of the table. This structure is particularly useful for displaying structured data such as financial reports, schedules, or contact lists, providing a clear and accessible way to present information.",
+            exampleCode: `
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML Table Example</title>
+</head>
+<body>
+
+<h2>Employee Data</h2>
+
+<table>
+    <caption>Company Employee List</caption>
+    <thead>
+        <tr>
+            <th>Employee ID</th>
+            <th>Name</th>
+            <th>Position</th>
+            <th>Department</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>101</td>
+            <td>John Doe</td>
+            <td>Software Engineer</td>
+            <td>Development</td>
+        </tr>
+        <tr>
+            <td>102</td>
+            <td>Jane Smith</td>
+            <td>Product Manager</td>
+            <td>Product</td>
+        </tr>
+        <tr>
+            <td>103</td>
+            <td>Emily Johnson</td>
+            <td>UX Designer</td>
+            <td>Design</td>
+        </tr>
+    </tbody>
+    <tfoot>
+        <tr>
+            <td colspan="4">End of Employee List</td>
+        </tr>
+    </tfoot>
+</table>
+
+</body>
+</html>
+
+`,
           },
           {
             title: "Additional Resources",
-            text: "Check out this video on Lists in HTML : ",
+            text: "Check out this video on  HTML Lists:",
             videoLink:
               "https://www.youtube.com/watch?v=oUm7rvMUNq8",
           },
           {
-            title: "Additional Resources",
-            text: "Check out this video on Tables in HTML : ",
+            title: "",
+            text: "Check out this video on  HTML Tables:",
             videoLink:
-              "https://www.youtube.com/watch?v=oUm7rvMUNq8",
+              "https://www.youtube.com/watch?v=iDA0kF5lrVk",
           },
         ],
       },
@@ -155,7 +214,7 @@ const courses = [
           {
             title: "Adding Images in HTML",
             text: "Images are added to a webpage using the <img> tag. This tag requires the src attribute to specify the path to the image file and the alt attribute to provide alternative text for accessibility and SEO purposes. You can also adjust the image’s size using the width and height attributes.",
-            exampleCode:`
+            exampleCode: `
 <!DOCTYPE html>
 <html>
 <head>
@@ -165,10 +224,9 @@ const courses = [
     <h2>Beautiful Sunset</h2>
     <img src="sunset.jpg" alt="A beautiful sunset over the ocean" width="600" height="400">
 </body>
-</html> `
-          
+</html>
+`
           },
-        
           {
             title: "Embedding Audio in HTML",
             text: "The <audio> tag is used to embed sound files such as music or voice recordings. It supports various audio formats like MP3 and Ogg. Key attributes include controls for displaying playback controls, autoplay to start playback automatically, and loop to repeat the audio. You can include multiple <source> elements for different audio formats.",
@@ -188,10 +246,10 @@ const courses = [
 </html>
 `,
           },
-            {
-              title: "Embedding Video in HTML",
-              text: "The <video> tag is used to include video content on a webpage. It supports multiple video formats like MP4 and WebM. Key attributes include controls for displaying playback controls, autoplay to start playback automatically, and loop to repeat the video. Multiple <source> elements can be used to specify different video formats for better browser compatibility.",
-              exampleCode: `
+          {
+            title: "Embedding Video  in HTML",
+            text: "The <video> tag is used to include video content on a webpage. It supports multiple video formats like MP4 and WebM. Key attributes include controls for displaying playback controls, autoplay to start playback automatically, and loop to repeat the video. Multiple <source> elements can be used to specify different video formats for better browser compatibility.",
+            exampleCode: `
 <!DOCTYPE html>
 <html>
 <head>
@@ -207,15 +265,14 @@ const courses = [
 </body>
 </html>
 
-  `,
-            },
+`,
+          },
           {
             title: "Additional Resources",
-            text: "Check out this video on Multimedia in HTML : ",
+            text: "Check out this video on essential HTML Tags:",
             videoLink:
               "https://www.youtube.com/watch?v=eWb8o0jC9dE",
           },
-          
         ],
       },
 
@@ -225,9 +282,9 @@ const courses = [
         topicName: "HTML Forms",
         content: [
           {
-            title: "Creating HTML Forms: Basics and Structure",
+            title: "Basics and Structure",
             text: "HTML forms are essential for collecting user input and submitting data to a server. Forms are created using the <form> tag, which serves as a container for various form elements. The <form> tag can include attributes such as action, which specifies the URL where the form data will be sent, and method, which defines how the data will be transmitted (e.g., GET or POST).Within the <form> tag, you can use various input elements to gather different types of data. Common input elements include <input> for text fields, <textarea> for multi-line text areas, and <button> for form submission. Each input element is associated with a name attribute that identifies the data when it is submitted. Labels for form elements are added using the <label> tag, which improves accessibility and usability by providing a description for each input field.",
-            exampleCode:`
+            exampleCode: `
 <!DOCTYPE html>
 <html>
 <head>
@@ -249,10 +306,9 @@ const courses = [
     </form>
 </body>
 </html>
- `
-          
+
+`
           },
-        
           {
             title: "Advanced HTML Form Elements and Features",
             text: "HTML forms offer additional elements and attributes for more complex data collection needs. For example, the <select> tag creates a drop-down list, and the <option> tags within it define the selectable options. Radio buttons and checkboxes are created using the <input> tag with the type attribute set to radio or checkbox, respectively, allowing users to select one or multiple options.Forms can also include file upload capabilities using the <input> tag with type='file', which allows users to select files from their device. To enhance user experience, form elements can be grouped using <fieldset> and labeled with <legend>, which provides a description for a group of related inputs. Additionally, HTML5 introduces new input types like date, time, and range, which offer more specialized data entry options and built-in validation.",
@@ -291,13 +347,12 @@ const courses = [
     </form>
 </body>
 </html>
-
 `,
           },
-            
+        
           {
             title: "Additional Resources",
-            text: "Check out this video on HTML Forms in HTML : ",
+            text: "Check out this video on essential Forms:",
             videoLink:
               "https://www.youtube.com/watch?v=2O8pkybH6po",
           },
@@ -306,6 +361,7 @@ const courses = [
     ],
   },
 
+  /* COURSE 2 */
   {
     id: 2,
     name: "CSS Fundamentals",
