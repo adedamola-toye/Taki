@@ -1,5 +1,5 @@
 /* eslint-disable react/prop-types */
-//import { Link } from "react-router-dom";
+import { Link } from "react-router-dom";
 import { useNavigate } from "react-router-dom";
 import { useAuth } from "../AuthProvider";
 
@@ -40,7 +40,9 @@ return (
             <b>Track: </b>
             {course.track}
           </p>
+          <Link to={`/courses/${encodeCourseName(course.name)}`}>
           <button onClick={() => handleClickLearn(course)}>Learn</button>
+          </Link>
         </div>
       ) : (
         <p key={course.id}>Course information is missing.</p>

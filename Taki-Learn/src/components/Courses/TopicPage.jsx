@@ -8,39 +8,43 @@ function TopicPage() {
   const [language, setLanguage] = useState("html");
   const { courseName, topicName } = useParams();
   const [isCompleted, setIsCompleted] = useState(false); // For tracking completed status
-  const navigate = useNavigate(); 
-  useEffect(() => {
-    // Get completion status from local storage
-    const completed = localStorage.getItem(`completed-${topic.topicName}`) === 'true';
-    setIsCompleted(completed);
-  }, [topic.topicName]);
+  const navigate = useNavigate();
+  const [isLastTopic, setIsLastTopic] = useState(false);
 
+  // Decode courseName and topicName
   const decodedCourseName = decodeURIComponent(courseName).replace(/-/g, " ");
   const decodedTopicName = decodeURIComponent(topicName).replace(/-/g, " ");
 
   const course = courses.find(
-    (course) => course.name && typeof course.name === 'string' &&
-    course.name.toLowerCase() === decodedCourseName.toLowerCase()
+    (course) =>
+      course.name &&
+      typeof course.name === "string" &&
+      course.name.toLowerCase() === decodedCourseName.toLowerCase()
   );
+
+  // Find the topic within the selected course
+  const topic = course?.topics?.find(
+    (topic) =>
+      topic.topicName &&
+      typeof topic.topicName === "string" &&
+      topic.topicName.toLowerCase() === decodedTopicName.toLowerCase()
+  );
+
+  useEffect(() => {
+    if (topic) {
+      // Get completion status from local storage
+      const completed = localStorage.getItem(`completed-${topic.topicName}`) === "true";
+      setIsCompleted(completed);
+    }
+  }, [topic]);
 
   if (!course) {
     return <p>Course not found</p>;
   }
 
-  if (!course.topics || course.topics.length === 0) {
-    return <p>This course does not have any topics yet</p>;
-  }
-
-  const topic = course.topics.find(
-    (topic) => topic.topicName && typeof topic.topicName === 'string' &&
-    topic.topicName.toLowerCase() === decodedTopicName.toLowerCase()
-  );
-
   if (!topic) {
     return <p>Topic not found</p>;
   }
-
-  
 
   const handleEditorChange = (value) => {
     setCode(value);
@@ -53,21 +57,25 @@ function TopicPage() {
   const handleComplete = () => {
     setIsCompleted(true);
     // Save completion status in local storage
-    localStorage.setItem(`completed-${topic.topicName}`, 'true');
+    localStorage.setItem(`completed-${topic.topicName}`, "true");
   };
 
   const handleNext = () => {
-    const currTopicIndex = course.topics.findIndex(
-      (t) => t.topicName === topic.topicName
-    );
-    const nextTopic = course.topics[currTopicIndex + 1];
-    if (nextTopic) {
-      const encodedNextTopicName = encodeURIComponent(nextTopic.topicName);
-      navigate(`/courses/${courseName}/topics/${encodedNextTopicName}`);
+    if (isLastTopic) {
+      const encodedCourseName = encodeURIComponent(courseName);
+      navigate(`/congratulations/${encodedCourseName}`);
     } else {
-      alert("Congratulations you've finished the course");
+      const currTopicIndex = course.topics.findIndex(
+        (t) => t.topicName === topic.topicName
+      );
+      const nextTopic = course.topics[currTopicIndex + 1];
+      if (nextTopic) {
+        const encodedNextTopicName = encodeURIComponent(nextTopic.topicName);
+        navigate(`/courses/${courseName}/topics/${encodedNextTopicName}`);
+      }
     }
   };
+  
 
   const handlePrevious = () => {
     const currTopicIndex = course.topics.findIndex(
@@ -145,7 +153,9 @@ function TopicPage() {
 
       <div className="controls">
         <button onClick={handlePrevious}>Previous</button>
-        <button onClick={handleComplete}>{isCompleted ? "Completed" : "Mark as Complete"}</button>
+        <button onClick={handleComplete}>
+          {isCompleted ? "Completed" : "Mark as Complete"}
+        </button>
         <button onClick={handleNext}>Next</button>
       </div>
     </div>
