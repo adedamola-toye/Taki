@@ -1,5 +1,5 @@
 import { useState } from "react";
-import Navbar from "../homePage/navbar.jsx";
+
 import quizQuestions from "./quizQuestions.js";
 import { Navigate } from "react-router-dom";
 import Question from "./Question.jsx";
@@ -120,7 +120,7 @@ function PersonalizedQuiz() {
   
   return (
     <>
-      <Navbar />
+  
 
       {!submitted ? (
         <div className="flex quiz-container">

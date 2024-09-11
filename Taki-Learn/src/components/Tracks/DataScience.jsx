@@ -1,4 +1,4 @@
-import Navbar from "../homePage/navbar";
+
 import CoursesCard from "../Courses/CoursesCard";
 import courses from "../Courses/coursesData";
 
@@ -8,7 +8,7 @@ function DataScience() {
 
   return (
     <>
-      <Navbar />
+      
       <div className="data-science-courses-page   courses-page">
 
         <div className="courses-page-heading">

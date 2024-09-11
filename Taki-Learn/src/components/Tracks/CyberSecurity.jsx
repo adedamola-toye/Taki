@@ -1,4 +1,4 @@
-import Navbar from "../homePage/navbar";
+
 import CoursesCard from "../Courses/CoursesCard";
 import courses from "../Courses/coursesData";
 
@@ -8,7 +8,7 @@ function CyberSecurity() {
   return (
     
     <>
-      <Navbar />
+      
       <div className="cybersecurity-courses-page courses-page">
 
         <div className="courses-page-heading">
