@@ -6,6 +6,7 @@ import Header from "./header";
 import Login from "../Sign-in/Login";
 import Signup from "../Sign-in/signUp";
 import ExploreCourses from "../Courses/Explore-Courses-Page";
+import Footer from "../footer";
 
 function Home({onIsSignupOpen,onIsLoginOpen}) {
 
@@ -22,6 +23,7 @@ function Home({onIsSignupOpen,onIsLoginOpen}) {
       {isSignupOpen && <Signup onIsLoginOpen={setIsLoginOpen} onIsSignupOpen={setIsSignupOpen} />}
       <Band />
       <ExploreCourses />
+      <Footer/>
       {/* <About /> */}
     </>
   );
