@@ -1,6 +1,6 @@
 import CourseCard from "./CoursesCard";
-import Navbar from "../homePage/navbar";
-import { Link, useNavigate } from "react-router-dom";
+//import Navbar from "../homePage/navbar";
+import { /* Link, */ useNavigate } from "react-router-dom";
 import courses from "./coursesData";
 import { useState } from "react";
 import Login from "../Sign-in/Login";
