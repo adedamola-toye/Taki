@@ -12,8 +12,11 @@ function TopicPage() {
   const decodedTopicName = decodeURIComponent(topicName).replace(/-/g, " ");
 
   const course = courses?.find(
-    (course) => course.name.toLowerCase() === decodedCourseName.toLowerCase()
+    (course) => course.name && typeof course.name === 'string' &&
+    course.name.toLowerCase() === decodedCourseName.toLowerCase()
   );
+  
+
 
   if (!course) {
     return <p>Course not found</p>;
@@ -24,8 +27,10 @@ function TopicPage() {
   }
 
   const topic = course.topics.find(
-    (topic) => topic.topicName.toLowerCase() === decodedTopicName.toLowerCase()
+    (topic) => topic.topicName && typeof topic.topicName === 'string' &&
+    topic.topicName.toLowerCase() === decodedTopicName.toLowerCase()
   );
+  
 
   if (!topic) {
     return <p>Topic not found</p>;
