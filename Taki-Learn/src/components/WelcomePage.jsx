@@ -15,6 +15,7 @@ function WelcomeUser(){
             if (currentUser){
                 setUserName(currentUser.displayname)
             }else{
+                // eslint-disable-next-line no-undef
                 setUser()
             }
         })

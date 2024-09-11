@@ -4,6 +4,7 @@ import { auth } from "./config/firebasek";
 
 const AuthContext = createContext();
 
+// eslint-disable-next-line react/prop-types
 export default function AuthProvider({ children }) {
   const [currentUser, setCurrentUser] = useState();
   const [loading, setLoading] = useState(true);
@@ -25,6 +26,7 @@ export default function AuthProvider({ children }) {
   };
   const login = async function (email, password) {
     try {
+      // eslint-disable-next-line no-unused-vars
       const userCredential = await signInWithEmailAndPassword(
         auth,
         email,
