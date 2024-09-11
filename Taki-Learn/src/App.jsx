@@ -2,7 +2,7 @@ import { useState } from 'react';
 import "./App.css";
 import { BrowserRouter, Route, Routes, Navigate } from "react-router-dom";
 import About from "./components/About";
-//import ExploreCoursesPage from "./components/Courses/Explore-Courses-Page";
+import ExploreCoursesPage from "./components/Courses/Explore-Courses-Page";
 import Home from "./components/homePage/home";
 import PersonalizedQuiz from "./components/Quiz/PersonalizedQuiz";
 import Frontend from "./components/Tracks/Frontend";
@@ -34,7 +34,7 @@ function App() {
         <Route path="/" element={<Home />} />
         
         <Route path="/about" element={<About onIsSignupOpen={setIsSignupOpen} onIsLoginOpen={setIsLoginOpen} />} />
-        {/* <Route path="/explore-courses" element={<ExploreCoursesPage />} /> */}
+        {<Route path="/explore-courses" element={<ExploreCoursesPage />} />}
         <Route path="/quiz" element={<PersonalizedQuiz />} />
         <Route path = "/login" element = {<Login/>}/>
         <Route path = "/welcomeUser" element = {<WelcomePage/>}/>

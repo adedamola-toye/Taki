@@ -1,7 +1,7 @@
 import { useParams } from "react-router-dom";
 import courses from "./coursesData";
 import { Link } from "react-router-dom";
-import Navbar from "../homePage/navbar";
+
 
 function CoursePage() {
   const { courseName } = useParams();
@@ -23,7 +23,6 @@ function CoursePage() {
 
   return (
     <>
-      <Navbar />
       <div className="course-page">
         <h1 className="courseHead">{course.name}</h1>
         <p className="courseDescription">{course.description}</p>

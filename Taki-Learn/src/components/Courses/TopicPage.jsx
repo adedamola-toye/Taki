@@ -1,6 +1,6 @@
 import { useParams } from "react-router-dom";
 import courses from "./coursesData";
-import Navbar from "../homePage/navbar";
+
 import { useState } from "react";
 import MonacoEditor from "@monaco-editor/react";
 
@@ -46,7 +46,7 @@ function TopicPage() {
 
   return (
     <>
-      <Navbar />
+
       <div className="topic-page">
         <h1>{topic.topicName}</h1>
         {topic.content.map((contentItem, index) => (
