@@ -1080,6 +1080,28 @@ footer ul{
   font-weight: bold; 
 }
 
+.completed-status {
+  color: green;
+  font-weight: bold;
+  margin-left: 10px;
+}
+
+.not-completed-status {
+  color: red;
+  font-weight: bold;
+  margin-left: 10px;
+}
+
+.course-completion-status{
+  margin-bottom: 20px;
+}
+
+progress {
+  width: 100%;
+  height: 20px;
+  margin-top: 10px;
+}
+
 
 /*TOPIC PAGE STYLING*/
 .topic-page {
