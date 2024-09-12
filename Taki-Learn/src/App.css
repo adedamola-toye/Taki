@@ -1102,6 +1102,18 @@ progress {
   margin-top: 10px;
 }
 
+.additional-resource{
+  margin-top: 5rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+}
+
+.additional-resource-link{
+  text-decoration: none;
+}
 
 /*TOPIC PAGE STYLING*/
 .topic-page {
@@ -1210,29 +1222,33 @@ progress {
   gap: 1rem;
   margin-top: 5rem;
   padding: 0 1rem;
+  margin-bottom: 4rem;
+  overflow-x: hidden; /* Prevent horizontal overflow */
+  overflow-y: auto; /* Allow vertical scrolling only if necessary */
 }
 
 .congratulations-page h1 {
   margin-bottom: 2rem;
   font-size: 2.5rem;
+  text-align: center; /* Center the text for better alignment */
 }
 
 .controls {
   display: flex;
   gap: 2rem;
+  flex-wrap: wrap; /* Allow buttons to wrap if there's not enough space */
+  justify-content: center; /* Center align buttons */
 }
 
-.controls button {
+.controls button{
   width: 10rem;
-  padding: 0.75rem;
-  font-size: 1rem;
+  padding: 10px
 }
 
 .congratulations-page p span {
   font-weight: bold;
   text-transform: uppercase;
 }
-
 
 @media (max-width: 1024px) {
   .congratulations-page {
@@ -1296,4 +1312,3 @@ progress {
     font-size: 0.75rem;
   }
 }
-

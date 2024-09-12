@@ -6,6 +6,15 @@ const courses = [
     description:
       "Learn the basics of HTML to build and structure simple web pages.",
     track: "Frontend Web Development",
+    additonalResource: {
+      title: "Additional Resource",
+      videoLink:
+        "https://www.youtube.com/watch?v=kUMe1FH4CHE",
+      websiteLink: {
+        title: "HTML Tutorial",
+        link: "https://www.w3schools.com/html/default.asp",
+      },
+    },
     topics: [
       //TOPIC 1
       {
@@ -34,19 +43,17 @@ const courses = [
           {
             title: "HTML Syntax and Comments",
             text: "HTML uses a combination of opening and closing tags to define elements. Comments can be added using <!-- --> to leave notes in your code. Comments are not displayed in the browser and are useful for documentation or reminders.",
-            exampleCode:
-            `<!-- This is a comment --> 
-            <p>This is a paragraph of text.</p>`,
+            exampleCode: `<!-- This is a comment --> 
+<p>This is a paragraph of text.</p>`,
           },
           {
             title: "HTML Document MetaData",
             text: "",
-            exampleCode: 
-            `<head> 
-              <meta charset="UTF-8"> 
-              <title>Document Title</title> 
-              <link rel="stylesheet" href="styles.css">
-            </head>`,
+            exampleCode: `<head> 
+  <meta charset="UTF-8"> 
+  <title>Document Title</title> 
+  <link rel="stylesheet" href="styles.css">
+</head>`,
           },
           {
             title: "Best Practices",
@@ -76,8 +83,7 @@ const courses = [
           {
             title: "Additional Resources",
             text: "Check out this video on essential HTML Tags:",
-            videoLink:
-              "https://www.youtube.com/watch?v=K_EVuLegRZ0",
+            videoLink: "https://www.youtube.com/watch?v=K_EVuLegRZ0",
           },
         ],
       },
@@ -194,14 +200,12 @@ const courses = [
           {
             title: "Additional Resources",
             text: "Check out this video on  HTML Lists:",
-            videoLink:
-              "https://www.youtube.com/watch?v=oUm7rvMUNq8",
+            videoLink: "https://www.youtube.com/watch?v=oUm7rvMUNq8",
           },
           {
             title: "",
             text: "Check out this video on  HTML Tables:",
-            videoLink:
-              "https://www.youtube.com/watch?v=iDA0kF5lrVk",
+            videoLink: "https://www.youtube.com/watch?v=iDA0kF5lrVk",
           },
         ],
       },
@@ -215,17 +219,17 @@ const courses = [
             title: "Adding Images in HTML",
             text: "Images are added to a webpage using the <img> tag. This tag requires the src attribute to specify the path to the image file and the alt attribute to provide alternative text for accessibility and SEO purposes. You can also adjust the image’s size using the width and height attributes.",
             exampleCode: `
-            <!DOCTYPE html>
-            <html>
-            <head>
-                <title>Image Example</title>
-            </head>
-            <body>
-                <h2>Beautiful Sunset</h2>
-                <img src="sunset.jpg" alt="A beautiful sunset over the ocean" width="600" height="400">
-            </body>
-            </html>
-            `
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Image Example</title>
+</head>
+<body>
+    <h2>Beautiful Sunset</h2>
+    <img src="sunset.jpg" alt="A beautiful sunset over the ocean" width="600" height="400">
+</body>
+</html>
+`,
           },
           {
             title: "Embedding Audio in HTML",
@@ -270,8 +274,7 @@ const courses = [
           {
             title: "Additional Resources",
             text: "Check out this video on essential HTML Tags:",
-            videoLink:
-              "https://www.youtube.com/watch?v=eWb8o0jC9dE",
+            videoLink: "https://www.youtube.com/watch?v=eWb8o0jC9dE",
           },
         ],
       },
@@ -349,12 +352,11 @@ const courses = [
             </html>
             `,
           },
-        
+
           {
             title: "Additional Resources",
             text: "Check out this video on essential Forms:",
-            videoLink:
-              "https://www.youtube.com/watch?v=2O8pkybH6po",
+            videoLink: "https://www.youtube.com/watch?v=2O8pkybH6po",
           },
         ],
       },
@@ -368,6 +370,15 @@ const courses = [
     description:
       "Understand how to style websites with CSS and create beautiful web pages.",
     track: "Frontend Web Development",
+    additonalResource: {
+      title: "Additional Resource",
+      videoLink:
+        "https://www.youtube.com/watch?v=OXGznpKZ_sA",
+      websiteLink: {
+        title: "CSS Tutorial",
+        link: "https://www.w3schools.com/css/default.asp",
+      },
+    },
     topics:[
       //TOPIC 1
       {
@@ -1545,27 +1556,736 @@ You can also have values like flex-start, self-start or start and flex-end, self
   },
     /* COURSE 3 */
 
-  {
-    id: 3,
-    name: "JavaScript for Beginners",
-    description:
-      "Learn JavaScript from scratch, focusing on interactivity for web development.",
-    track: "Frontend Web Development",
+    {
+
+      id: 2,
+      
+      name: "JavaScript for Beginners",
+      
+      description:
+      
+      "Master the basics of JavaScript to build interactive web applications.",
+      
+      track: "Frontend Web Development",
+      
+      additonalResource: {
+      
+      title: "Additional Resource",
+      
+      videoLink:
+      
+      "https://www.youtube.com/watch?v=jS4aFq5-91M&t=6125s",
+      
+      websiteLink: {
+      
+      title: "JavaScript Tutorial",
+      
+      link: "https://www.w3schools.com/js/default.asp",
+      
+      },
+      
+      },
+      
+      topics: [
+      
+      //Topic 1
+      
+      {
+      
+      id: 1,
+      
+      topicName: "JavaScript Basics",
+      
+      content: [
+      
+      {
+      
+      title: "Introduction to JavaScript",
+      
+      text: "JavaScript is a versatile programming language used for adding interactivity to web pages. From handling user input to updating content dynamically, JavaScript powers many of the features we use every day on the web.",
+      
+      },
+      
+      {
+      
+      title: "Variables and Data Types",
+      
+      text: "In JavaScript, variables are used to store data. You can declare a variable using `var`, `let`, or `const`. JavaScript supports various data types including strings, numbers, booleans, arrays, and objects.",
+      
+      exampleCode: `
+      
+      // Declaring variables
+      
+      let name = 'John'; // String
+      
+      console.log(name); // output: John
+      
+      let age = 30; // Number
+      
+      console.log(age); // output: 30
+      
+      let isStudent = true; // Boolean
+      
+      console.log(isStudent); // output: true
+      
+      let hobbies = ['Reading', 'Cycling']; // Array
+      
+      console.log(hobbies); // output: ['Reading', 'Cycling']
+      
+      let person = { name: 'John', age: 30 }; // Object
+      
+      console.log(person); // output: { name: 'John', age: 30 }
+      
+      `,
+      
+      },
+      
+      {
+      
+      title: "JavaScript Syntax",
+      
+      text: "JavaScript syntax includes rules on how to write code that the browser can understand. Proper syntax ensures that your code runs without errors and behaves as expected.",
+      
+      },
+      
+      {
+      
+      title: "Additional Resources",
+      
+      text: "Check out this video on Javascript basics:",
+      
+      videoLink: "https://www.youtube.com/watch?v=xwKbtUP87Dk",
+      
+      },
+      
+      ],
+      
+      },
+      
+      // TOPIC 2: Functions and Control Flow
+      
+      {
+      
+      id: 2,
+      
+      topicName: "Functions and Control Flow",
+      
+      content: [
+      
+      {
+      
+      title: "Functions",
+      
+      text: "A function is a block of reusable code that performs a specific task. You can define a function using the `function` keyword, followed by the function name and parentheses.",
+      
+      exampleCode: `
+      
+      // Function declaration
+      
+      function greet(name) {
+      
+      return 'Hello, ' + name + '!';
+      
+      }
+      
+      // Calling the function
+      
+      console.log(greet('Alice')); // output: Hello, Alice!
+      
+      `,
+      
+      },
+      
+      {
+      
+      title: "If-Else Statements",
+      
+      text: "JavaScript allows you to control the flow of your program using conditional statements like `if-else`. These are used to execute code based on certain conditions.",
+      
+      exampleCode: `
+      
+      let age = 18;
+       `,
+          },
+
+          {
+            title: "Additional Resources",
+            text: "Check out this video on Javascript Functions:",
+            videoLink: "https://www.youtube.com/watch?v=N8ap4k_1QEQ",
+          },
+
+          {
+            title: "Additional Resources",
+            text: "Check out this video on Javascript Controls:",
+            videoLink: "https://www.youtube.com/watch?v=JloLGV9DmtQ",
+          },
+        ],
+      },
+      // TOPIC 3: Arrays and Objects
+      {
+        id: 3,
+        topicName: "Arrays and Objects",
+        content: [
+          {
+            title: "Working with Arrays",
+            text: "Arrays are a special type of object used to store multiple values in a single variable. You can access and manipulate array elements using their index.",
+            exampleCode: `
+            let fruits = ['Apple', 'Banana', 'Mango'];
+             // Looping through an array
+            for (let i = 0; i < fruits.length; i++) {
+              console.log(fruits[i]);
+            } 
+            // output:
+            // Apple
+            // Banana
+            // Mango
+            // Orange
+          `,
+          },
+          {
+            title: "Objects in JavaScript",
+            text: "Objects are collections of key-value pairs. Each key (or property) is associated with a value, which can be any data type, including other objects or functions.",
+            exampleCode: `
+            let person = {
+              name: 'Alice',
+              age: 25,
+              greet: function() {
+                console.log('Hello, my name is ' + this.name);
+              // Calling a method
+            person.greet(); // output: Hello, my name is Alice
+          `,
+          },
+          {
+            title: "Additional Resources",
+            text: "Check out this video on Javascript Arrays:",
+            videoLink: "https://www.youtube.com/watch?v=oigfaZ5ApsM",
+          },
+          {
+            title: "Additional Resources",
+            text: "Check out this video on Javascript Objects:",
+            videoLink: "https://www.youtube.com/watch?v=lo7o91qLzxc",
+          },
+        ],
+      },
+      // TOPIC 4: String Methods
+      {
+        id: 4,
+        topicName: "String Methods",
+        content: [
+          {
+            title: "Common String Methods",
+            text: "JavaScript provides various methods for manipulating strings, such as `length`, `toUpperCase()`, `toLowerCase()`, `indexOf()`, and `slice()`.",
+            exampleCode: `
+            let text = 'JavaScript is awesome!';
+            // Extracting a substring
+            console.log(text.slice(0, 10)); // output: JavaScript
+          `,
+          },
+          {
+            title: "Additional Resources",
+            text: "Check out this video on Javascript Strings",
+            videoLink: "https://www.youtube.com/watch?v=09BwruU4kiY",
+          },
+        ],
+      },
+      // TOPIC 5: Loops
+      {
+        id: 5,
+        topicName: "Loops",
+        content: [
+          {
+            title: "For Loops",
+            text: "The `for` loop is used to repeat a block of code a specified number of times. It consists of three parts: initialization, condition, and increment.",
+            exampleCode: `
+            for (let i = 0; i < 5; i++) {
+              console.log(i);
+            }
+            // output:
+            // 0
+            // 1
+            // 2
+            // 3
+            // 4
+          `,
+          },
+          {
+            title: "While Loops",
+            text: "The `while` loop repeats a block of code as long as a specified condition is true. It’s useful when you don’t know beforehand how many times you need to loop.",
+            exampleCode: `
+            let count = 0;
+
+            while (count < 5) {
+              console.log(count);
+              count++;
+            }
+            // output:
+            // 0
+            // 1
+            // 2
+            // 3
+            // 4
+          `,
+          },
+          {
+            title: "Additional Resources",
+            text: "Check out this video on Javascript Loops",
+            videoLink: "https://www.youtube.com/watch?v=s9wW2PpJsmQ",
+          },
+        ],
+      },
+      // TOPIC 6: Error Handling
+      {
+        id: 6,
+        topicName: "Error Handling",
+        content: [
+          {
+            title: "Try-Catch Statement",
+            text: "The `try-catch` statement is used to handle errors that occur during the execution of code. It allows you to test a block of code for errors and catch those errors if they occur.",
+            exampleCode: `
+            try {
+              let result = riskyOperation(); // This function does not exist
+              console.log(result);
+            } catch (error) {
+              console.error('An error occurred:', error.message);
+            }
+            // output: An error occurred: riskyOperation is not defined
+          `,
+          },
+          {
+            title: "Additional Resources",
+            text: "Check out this video on Javascript Loops",
+            videoLink: "https://www.youtube.com/watch?v=cFTFtuEQ-10",
+          },
+        ],
+      },
+    ],
   },
+
   {
     id: 4,
     name: "React Basics",
     description:
       "Dive into React and learn how to build modern web applications.",
     track: "Frontend Web Development",
+    additonalResource: {
+      title: "Additional Resource",
+      videoLink:
+        "https://www.youtube.com/watch?v=4UZrsTqkcW4&list=WL&index=3&t=13143s",
+      websiteLink: {
+        title: "React Tutorial",
+        link: "https://www.w3schools.com/REACT/DEFAULT.ASP",
+      },
+    },
+    topics: [
+      // TOPIC 1: Introduction to React
+      {
+        id: 1,
+        topicName: "Introduction to React",
+        content: [
+          {
+            title: "What is React?",
+            text: "React is a JavaScript library for building user interfaces. It allows developers to create large web applications that can change data, without reloading the page.",
+          },
+          {
+            title: "Components and Props",
+            text: "In React, the UI is divided into components. Components are reusable pieces of code that return React elements. Props are used to pass data from parent to child components.",
+            exampleCode: `
+            // A functional component in React
+            function Greeting(props) {
+              return <h1>Hello, {props.name}!</h1>;
+            }
+
+            // Using the component
+            <Greeting name="Alice" />
+          `,
+          },
+          {
+            title: "Additional Resources",
+            text: "Check out this video on  Introduction to React",
+            videoLink: "https://www.youtube.com/watch?v=Y6aYx_KKM7A",
+          },
+        ],
+      },
+      // TOPIC 2: State Management
+      {
+        id: 2,
+        topicName: "State Management",
+        content: [
+          {
+            title: "useState Hook",
+            text: "The useState hook is used to add state to functional components. It returns an array with the current state and a function to update it.",
+            exampleCode: `
+            import React, { useState } from 'react';
+
+            function Counter() {
+              const [count, setCount] = useState(0);
+
+              return (
+                <div>
+                  <p>You clicked {count} times</p>
+                  <button onClick={() => setCount(count + 1)}>Click me</button>
+                </div>
+              );
+            }
+          `,
+          },
+          {
+            title: "Additional Resources",
+            text: "Check out this video on  React State Management",
+            videoLink: "https://www.youtube.com/watch?v=-bEzt5ISACA",
+          },
+        ],
+      },
+      // TOPIC 3: Event Handling
+      {
+        id: 3,
+        topicName: "Event Handling",
+        content: [
+          {
+            title: "Handling Events",
+            text: "In React, events are handled using camelCase syntax. You pass a function as the event handler.",
+            exampleCode: `
+            function handleClick() {
+              alert('Button clicked!');
+            }
+
+            function App() {
+              return (
+                <button onClick={handleClick}>Click me</button>
+              );
+            }
+          `,
+          },
+          {
+            title: "Additional Resources",
+            text: "Check out this video on  Event Handling in React",
+            videoLink: "https://www.youtube.com/watch?v=dqlsGTHGcF0",
+          },
+        ],
+      },
+      // TOPIC 4: Conditional Rendering
+      {
+        id: 4,
+        topicName: "Conditional Rendering",
+        content: [
+          {
+            title: "Rendering Elements Conditionally",
+            text: "You can render elements conditionally using JavaScript operators like `if` or the conditional (ternary) operator.",
+            exampleCode: `
+            function App() {
+              const isLoggedIn = true;
+
+              return (
+                <div>
+                  {isLoggedIn ? <p>Welcome back!</p> : <p>Please sign up.</p>}
+                </div>
+              );
+            }
+          `,
+          },
+          {
+            title: "Additional Resources",
+            text: "Check out this video on  Event Handling in React",
+            videoLink: "https://www.youtube.com/watch?v=XvURBpFxdGw",
+          },
+        ],
+      },
+      // TOPIC 5: Lists and Keys
+      {
+        id: 5,
+        topicName: "Lists and Keys",
+        content: [
+          {
+            title: "Rendering Lists",
+            text: "You can render lists in React by using the `map()` method to iterate over an array of items. Each item needs a unique `key` prop.",
+            exampleCode: `
+            function ListItem(props) {
+              return <li>{props.value}</li>;
+            }
+
+            function NumberList(props) {
+              const numbers = props.numbers;
+              const listItems = numbers.map((number) =>
+                <ListItem key={number.toString()} value={number} />
+              );
+
+              return (
+                <ul>{listItems}</ul>
+              );
+            }
+          `,
+          },
+          {
+            title: "Additional Resources",
+            text: "Check out this video on Rendering Lists and Keys in React",
+            videoLink: "https://www.youtube.com/watch?v=fkl1Kn_QWCI",
+          },
+        ],
+      },
+      // TOPIC 6: Forms
+      {
+        id: 6,
+        topicName: "Forms",
+        content: [
+          {
+            title: "Handling Form Inputs",
+            text: "In React, form elements maintain their state using controlled components. This means React is responsible for updating the form elements' values.",
+            exampleCode: `
+            import React, { useState } from 'react';
+
+            function Form() {
+              const [value, setValue] = useState('');
+
+              function handleChange(event) {
+                setValue(event.target.value);
+              }
+
+              function handleSubmit(event) {
+                alert('A name was submitted: ' + value);
+                event.preventDefault();
+              }
+
+              return (
+                <form onSubmit={handleSubmit}>
+                  <label>
+                    Name:
+                    <input type="text" value={value} onChange={handleChange} />
+                  </label>
+                  <button type="submit">Submit</button>
+                </form>
+              );
+            }
+          `,
+          },
+          {
+            title: "Additional Resources",
+            text: "Check out this video on Rendering Forms in React",
+            videoLink: "https://www.youtube.com/watch?v=CT-72lTXdPg",
+          },
+        ],
+      },
+    ],
   },
+
   {
     id: 5,
     name: "Advanced CSS & Sass",
     description:
       "Enhance your CSS skills by mastering advanced techniques and Sass.",
     track: "Frontend Web Development",
+    additonalResource: {
+      title: "Additional Resource",
+      videoLink: "https://www.youtube.com/watch?v=_a5j7KoflTs", // Example link
+      websiteLink: {
+        title: "CSS Tricks",
+        link: "https://css-tricks.com",
+      },
+    },
+    topics: [
+      // TOPIC 1: Advanced Selectors
+      {
+        id: 1,
+        topicName: "Advanced Selectors",
+        content: [
+          {
+            title: "Attribute Selectors",
+            text: "CSS attribute selectors allow you to target elements based on their attributes. This makes it easier to style elements dynamically.",
+            exampleCode: `
+            /* Select elements with a specific attribute */
+            input[type="text"] {
+              background-color: lightblue;
+            }
+          `,
+          },
+          {
+            title: "Pseudo-Classes and Pseudo-Elements",
+            text: "Pseudo-classes like `:hover` and pseudo-elements like `::before` allow you to style elements in ways that aren't possible with regular selectors.",
+            exampleCode: `
+            /* Change color on hover */
+            a:hover {
+              color: red;
+            }
+  
+            /* Add content before an element */
+            p::before {
+              content: "Note: ";
+            }
+          `,
+          },
+          {
+            title: "Additional Resources",
+            text: "Check out this video on Advanced CSS Selectors",
+            videoLink: "https://www.youtube.com/watch?v=Bcr70LIJcOk",
+          },
+        ],
+      },
+      // TOPIC 2: Flexbox and Grid Layouts
+      {
+        id: 2,
+        topicName: "Flexbox and Grid Layouts",
+        content: [
+          {
+            title: "Flexbox",
+            text: "Flexbox is a one-dimensional layout model that provides an efficient way to align and distribute space among items in a container.",
+            exampleCode: `
+            .container {
+              display: flex;
+              justify-content: space-between;
+              align-items: center;
+            }
+          `,
+          },
+          {
+            title: "CSS Grid",
+            text: "CSS Grid Layout is a two-dimensional system for creating responsive web layouts. It allows you to align items into rows and columns.",
+            exampleCode: `
+            .grid-container {
+              display: grid;
+              grid-template-columns: 1fr 2fr;
+              grid-gap: 10px;
+            }
+          `,
+          },
+          {
+            title: "Additional Resources",
+            text: "Check out this video on CSS Flexbox",
+            videoLink: "https://www.youtube.com/watch?v=tXIhdp5R7sc",
+          },
+          {
+            title: "Additional Resources",
+            text: "Check out this video on CSS Grid",
+            videoLink: "https://www.youtube.com/watch?v=t6CBKf8K_Ac&t=1519s",
+          },
+        ],
+      },
+      // TOPIC 3: Sass Basics
+      {
+        id: 3,
+        topicName: "Sass Basics",
+        content: [
+          {
+            title: "Variables and Nesting",
+            text: "Sass allows you to use variables to store values and enables nested syntax for cleaner, more readable CSS.",
+            exampleCode: `
+            $primary-color: #3498db;
+  
+            nav {
+              background-color: $primary-color;
+              ul {
+                list-style: none;
+                li {
+                  display: inline-block;
+                  margin-right: 20px;
+                }
+              }
+            }
+          `,
+          },
+          {
+            title: "Mixins",
+            text: "Mixins in Sass are reusable blocks of CSS that can be included in other selectors.",
+            exampleCode: `
+            @mixin border-radius($radius) {
+              -webkit-border-radius: $radius;
+              -moz-border-radius: $radius;
+              border-radius: $radius;
+            }
+  
+            .box { @include border-radius(10px); }
+          `,
+          },
+          {
+            title: "Additional Resources",
+            text: "Check out this playlist on Sass Basics",
+            videoLink: "https://www.youtube.com/playlist?list=PL4-IK0AVhVjNiZpLY-3ILQFyRF0Bs914J",
+          },
+        ],
+      },
+      // TOPIC 4: Responsive Design
+      {
+        id: 4,
+        topicName: "Responsive Design",
+        content: [
+          {
+            title: "Media Queries",
+            text: "Media queries allow you to apply CSS rules based on the size of the screen or device being used to view your content.",
+            exampleCode: `
+            @media (max-width: 600px) {
+              .container {
+                flex-direction: column;
+              }
+            }
+          `,
+          },
+          {
+            title: "Mobile-First Design",
+            text: "Mobile-first design means writing your styles for small screens first and then applying larger screen styles with media queries.",
+            exampleCode: `
+            /* Base styles for mobile */
+            .container {
+              padding: 10px;
+            }
+  
+            /* Larger screen styles */
+            @media (min-width: 768px) {
+              .container {
+                padding: 20px;
+              }
+            }
+          `,
+          },
+          {
+            title: "Additional Resources",
+            text: "Check out this video on Responsive Web Design",
+            videoLink: "https://www.youtube.com/watch?v=srvUrASNj0s",
+          },
+        ],
+      },
+      // TOPIC 5: Animations and Transitions
+      {
+        id: 5,
+        topicName: "Animations and Transitions",
+        content: [
+          {
+            title: "CSS Transitions",
+            text: "CSS transitions allow you to change property values smoothly over a specified duration.",
+            exampleCode: `
+            .box {
+              width: 100px;
+              height: 100px;
+              background-color: blue;
+              transition: background-color 0.5s ease;
+            }
+  
+            .box:hover {
+              background-color: green;
+            }
+          `,
+          },
+          {
+            title: "CSS Animations",
+            text: "CSS animations allow you to animate changes to CSS properties over a series of keyframes.",
+            exampleCode: `
+            @keyframes example {
+              from {background-color: red;}
+              to {background-color: yellow;}
+            }
+  
+            .animated-box {
+              animation: example 3s infinite;
+            }
+          `,
+          },
+          {
+            title: "Additional Resources",
+            text: "Check out this video on CSS Animations",
+            videoLink: "https://www.youtube.com/watch?v=Nloq6uzF8RQ",
+          },
+        ],
+      },
+    ],
   },
+  
   {
     id: 6,
     name: "Responsive Web Design",
@@ -1574,12 +2294,190 @@ You can also have values like flex-start, self-start or start and flex-end, self
     track: "Frontend Web Development",
   },
   {
-    id: 7,
-    name: "JavaScript ES6+",
+    id: 6,
+    name: "Responsive Web Design",
     description:
-      "Get comfortable with modern JavaScript ES6+ features to enhance your web apps.",
+      "Master the art of creating web pages that adapt to different screen sizes.",
     track: "Frontend Web Development",
+    additonalResource: {
+      title: "Additional Resource",
+      videoLink:
+        "https://www.youtube.com/watch?v=srvUrASNj0s", // Placeholder link
+      websiteLink: {
+        title: "MDN Responsive Design Tutorial",
+        link: "https://developer.mozilla.org/en-US/docs/Learn/CSS/CSS_layout/Responsive_Design",
+      },
+    },
+    topics: [
+      // TOPIC 1: Introduction to Responsive Design
+      {
+        id: 1,
+        topicName: "Introduction to Responsive Design",
+        content: [
+          {
+            title: "What is Responsive Web Design?",
+            text: "Responsive web design is an approach to web development where websites are crafted to provide an optimal viewing experience across a wide range of devices, from desktop monitors to mobile phones.",
+          },
+          {
+            title: "Fluid Grids",
+            text: "Fluid grids are layouts that use relative units like percentages, instead of fixed units like pixels, to create flexible and adaptive layouts.",
+          },
+          {
+            title: "Additional Resources",
+            text: "Watch this introduction video on Responsive Web Design",
+            videoLink: "https://www.youtube.com/watch?v=VQraviuwbzU", // Placeholder link
+          },
+        ],
+      },
+      // TOPIC 2: Media Queries
+      {
+        id: 2,
+        topicName: "Media Queries",
+        content: [
+          {
+            title: "Using Media Queries",
+            text: "Media queries allow you to apply CSS styles based on the size of the viewport or device screen, making your site responsive to various screen sizes.",
+            exampleCode: `
+            /* Example of a media query for mobile devices */
+            @media (max-width: 600px) {
+              body {
+                background-color: lightblue;
+              }
+            }
+            `,
+          },
+          {
+            title: "Additional Resources",
+            text: "Watch this video on using Media Queries",
+            videoLink: "https://www.youtube.com/watch?v=xV7S8BhIeBo", // Placeholder link
+          },
+        ],
+      },
+      // TOPIC 3: Flexible Images
+      {
+        id: 3,
+        topicName: "Flexible Images",
+        content: [
+          {
+            title: "Making Images Responsive",
+            text: "In responsive web design, images should resize based on the width of the parent container using techniques like the `max-width: 100%` rule.",
+            exampleCode: `
+            img {
+              max-width: 100%;
+              height: auto;
+            }
+            `,
+          },
+          {
+            title: "Additional Resources",
+            text: "Watch this video on how to make images responsive",
+            videoLink: "https://www.youtube.com/watch?v=hccgkQU-VlI", // Placeholder link
+          },
+        ],
+      },
+      // TOPIC 4: Mobile-First Design
+      {
+        id: 4,
+        topicName: "Mobile-First Design",
+        content: [
+          {
+            title: "What is Mobile-First Design?",
+            text: "Mobile-first design is an approach where web designers start by designing for the smallest screen sizes, and progressively enhance the layout for larger screens.",
+          },
+          {
+            title: "Mobile-First CSS",
+            text: "In mobile-first design, you write styles for small screens first, and then use media queries to add styles for larger screens.",
+            exampleCode: `
+            /* Base styles for mobile */
+            body {
+              font-size: 16px;
+            }
+  
+            /* Media query for tablets */
+            @media (min-width: 768px) {
+              body {
+                font-size: 18px;
+              }
+            }
+  
+            /* Media query for desktops */
+            @media (min-width: 1024px) {
+              body {
+                font-size: 20px;
+              }
+            }
+            `,
+          },
+          {
+            title: "Additional Resources",
+            text: "Watch this video on Mobile-First Design",
+            videoLink: "https://www.youtube.com/watch?v=U4KU3e7xi_E", // Placeholder link
+          },
+        ],
+      },
+      // TOPIC 5: Responsive Typography
+      {
+        id: 5,
+        topicName: "Responsive Typography",
+        content: [
+          {
+            title: "Scaling Typography with Viewport Units",
+            text: "Responsive typography adjusts the font size based on the screen size. You can achieve this using viewport units like `vw` and `vh`.",
+            exampleCode: `
+            h1 {
+              font-size: 5vw;
+            }
+            `,
+          },
+          {
+            title: "Additional Resources",
+            text: "Watch this video on Responsive Typography",
+            videoLink: "https://www.youtube.com/watch?v=R_aFgFbo3G4", // Placeholder link
+          },
+        ],
+      },
+      // TOPIC 6: CSS Flexbox and Grid for Responsive Layouts
+      {
+        id: 6,
+        topicName: "CSS Flexbox and Grid for Responsive Layouts",
+        content: [
+          {
+            title: "Flexbox",
+            text: "Flexbox is a layout model that allows you to design complex and flexible layouts with ease, especially when creating responsive designs.",
+            exampleCode: `
+            .container {
+              display: flex;
+              flex-wrap: wrap;
+            }
+  
+            .item {
+              flex: 1;
+              min-width: 200px;
+            }
+            `,
+          },
+          {
+            title: "CSS Grid",
+            text: "CSS Grid is a powerful layout system for creating two-dimensional grid-based layouts, which are particularly useful for responsive web design.",
+            exampleCode: `
+            .container {
+              display: grid;
+              grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            }
+            `,
+          },
+          {
+            title: "Additional Resources",
+            text: "Watch this video on CSS Flexbox and Grid",
+            videoLink: "https://www.youtube.com/watch?v=0xMQfnTU6oo", 
+          },
+        ],
+      },
+    ],
   },
+  
+
+
   {
     id: 8,
     name: "Building Interactive UIs with React",
