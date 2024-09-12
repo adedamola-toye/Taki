@@ -16,6 +16,7 @@ import AuthProvider from "./components/AuthProvider";
 import CoursePage from "./components/Courses/CoursePage";
 import TopicPage from "./components/Courses/TopicPage"
 import Navbar from './components/homePage/navbar';
+import Footer from './components/footer';
 
 function App() {
 
@@ -46,6 +47,7 @@ function App() {
         <Route path = "/courses/:courseName/topics/:topicName" element={<TopicPage/>}/>
         <Route path="*" element={<Navigate to="/" />} />
       </Routes>
+       <Footer/>
       {/* <About id = 'about' /> */}
     </BrowserRouter>
   
