@@ -8,8 +8,8 @@ function TopicPage() {
   const [language, setLanguage] = useState("html");
   const { courseName, topicName } = useParams();
   const [isCompleted, setIsCompleted] = useState(false); // For tracking completed status
-  const navigate = useNavigate();
   const [isLastTopic, setIsLastTopic] = useState(false);
+  const navigate = useNavigate();
 
   // Decode courseName and topicName
   const decodedCourseName = decodeURIComponent(courseName).replace(/-/g, " ");
@@ -35,8 +35,14 @@ function TopicPage() {
       // Get completion status from local storage
       const completed = localStorage.getItem(`completed-${topic.topicName}`) === "true";
       setIsCompleted(completed);
+
+      // Check if this is the last topic
+      const currTopicIndex = course.topics.findIndex(
+        (t) => t.topicName === topic.topicName
+      );
+      setIsLastTopic(currTopicIndex === course.topics.length - 1);
     }
-  }, [topic]);
+  }, [topic, course]);
 
   if (!course) {
     return <p>Course not found</p>;
@@ -75,7 +81,6 @@ function TopicPage() {
       }
     }
   };
-  
 
   const handlePrevious = () => {
     const currTopicIndex = course.topics.findIndex(
