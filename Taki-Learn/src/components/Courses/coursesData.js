@@ -2115,7 +2115,7 @@ You can also have values like flex-start, self-start or start and flex-end, self
           {
             title: "Additional Resources",
             text: "Check out this video on Advanced CSS Selectors",
-            videoLink: "https://www.youtube.com/watch?v=lXQdKcb7QEA",
+            videoLink: "https://www.youtube.com/watch?v=Bcr70LIJcOk",
           },
         ],
       },
@@ -2148,8 +2148,13 @@ You can also have values like flex-start, self-start or start and flex-end, self
           },
           {
             title: "Additional Resources",
-            text: "Check out this video on CSS Flexbox and Grid",
-            videoLink: "https://www.youtube.com/watch?v=rg7Fvvl3taU",
+            text: "Check out this video on CSS Flexbox",
+            videoLink: "https://www.youtube.com/watch?v=tXIhdp5R7sc",
+          },
+          {
+            title: "Additional Resources",
+            text: "Check out this video on CSS Grid",
+            videoLink: "https://www.youtube.com/watch?v=t6CBKf8K_Ac&t=1519s",
           },
         ],
       },
@@ -2191,8 +2196,8 @@ You can also have values like flex-start, self-start or start and flex-end, self
           },
           {
             title: "Additional Resources",
-            text: "Check out this video on Sass Basics",
-            videoLink: "https://www.youtube.com/watch?v=_a5j7KoflTs",
+            text: "Check out this playlist on Sass Basics",
+            videoLink: "https://www.youtube.com/playlist?list=PL4-IK0AVhVjNiZpLY-3ILQFyRF0Bs914J",
           },
         ],
       },
@@ -2274,7 +2279,7 @@ You can also have values like flex-start, self-start or start and flex-end, self
           {
             title: "Additional Resources",
             text: "Check out this video on CSS Animations",
-            videoLink: "https://www.youtube.com/watch?v=zHUpx90NerM",
+            videoLink: "https://www.youtube.com/watch?v=Nloq6uzF8RQ",
           },
         ],
       },
