@@ -5,6 +5,7 @@ import About from "./components/About";
 import ExploreCoursesPage from "./components/Courses/Explore-Courses-Page";
 import Home from "./components/homePage/home";
 import PersonalizedQuiz from "./components/Quiz/PersonalizedQuiz";
+
 import Frontend from "./components/Tracks/Frontend";
 import Backend from "./components/Tracks/Backend"
 import CyberSecurity from "./components/Tracks/CyberSecurity";
@@ -15,8 +16,9 @@ import WelcomePage from "./components/User/WelcomePage";
 import AuthProvider from "./components/AuthProvider";
 import CoursePage from "./components/Courses/CoursePage";
 import TopicPage from "./components/Courses/TopicPage"
-import Navbar from './components/homePage/navbar';
 import CourseCompletionCongratulationsPage from './components/Courses/CourseCompletionCongratulationsPage'
+import Navbar from './components/homePage/navbar';
+import Footer from './components/footer';
 
 function App() {
 
@@ -49,6 +51,7 @@ function App() {
 
         <Route path="*" element={<Navigate to="/" />} />
       </Routes>
+       <Footer/>
       {/* <About id = 'about' /> */}
     </BrowserRouter>
   

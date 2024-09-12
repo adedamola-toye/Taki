@@ -1,5 +1,10 @@
-import { useState, useContext, createContext, useEffect, } from "react";
-import { createUserWithEmailAndPassword, signOut, signInWithEmailAndPassword , onAuthStateChanged} from "firebase/auth";
+import { useState, useContext, createContext, useEffect } from "react";
+import {
+  createUserWithEmailAndPassword,
+  signOut,
+  signInWithEmailAndPassword,
+  onAuthStateChanged,
+} from "firebase/auth";
 import { auth } from "./config/firebasek";
 
 const AuthContext = createContext();
@@ -8,6 +13,7 @@ const AuthContext = createContext();
 export default function AuthProvider({ children }) {
   const [currentUser, setCurrentUser] = useState();
   const [loading, setLoading] = useState(true);
+  const [error2, setError] = useState();
 
   const signup = async function (email, password) {
     try {
@@ -21,7 +27,11 @@ export default function AuthProvider({ children }) {
       );
       console.log("User signed up successfully", userCredential);
     } catch (e) {
-      console.log(e.message);
+      throw {
+        e,
+        
+      };
+      console.log(e.code);
     }
   };
   const login = async function (email, password) {
@@ -32,7 +42,6 @@ export default function AuthProvider({ children }) {
         email,
         password
       );
-   
     } catch (e) {
       console.log(e.message);
     }
@@ -40,8 +49,8 @@ export default function AuthProvider({ children }) {
   const logout = async function () {
     try {
       await signOut(auth);
-      
     } catch (e) {
+      throw {e}
       console.log(e.message);
     }
   };
@@ -53,9 +62,7 @@ export default function AuthProvider({ children }) {
     return unsubscribe;
   }, []);
 
- 
-
-  const value = { signup, login, currentUser, setCurrentUser, logout };
+  const value = { signup, login, currentUser, setCurrentUser, logout, error2 };
 
   return (
     <AuthContext.Provider value={value}>

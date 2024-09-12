@@ -3,7 +3,7 @@ import { useState } from 'react';
 import Navbar from "../components/homePage/navbar";
 import PropTypes from "prop-types";
 
-const About = ({onIsSignupOpen,onIsLoginOpen}) => {
+const About = () => {
 
   
   
@@ -102,9 +102,5 @@ const About = ({onIsSignupOpen,onIsLoginOpen}) => {
   );
 };
 
-About.propTypes = {
-  onIsSignupOpen: PropTypes.func.isRequired,
-  onIsLoginOpen: PropTypes.func.isRequired,
-};
 
 export default About;

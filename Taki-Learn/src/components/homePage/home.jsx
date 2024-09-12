@@ -21,7 +21,7 @@ function Home(){
       {isSignupOpen && <Signup onIsLoginOpen={setIsLoginOpen} onIsSignupOpen={setIsSignupOpen} />}
       <Band />
       <About />
-      <Footer/>
+      {/* <Footer/> */}
     </>
   )
 }

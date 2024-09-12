@@ -29,12 +29,13 @@ const [loading,setLoading] = useState(false)
       // Sign in the user
       // await signInWithEmailAndPassword(auth, email, password);
       setLoading(true)
-      login(email,password)
+      await login(email,password)
       console.log("User signed in successfully");
       handleCloseModal(); // Close the modal after successful login
       navigate("/welcomeUser"); // Redirect to the welcome page
     } catch (error) {
-      setError("Failed to log in: " + error.message);
+      setError("Failed to log in: " + error.e?.message);
+      setError("Failed to log in: " + error?.message);
     }
     setLoading(false)
   };
