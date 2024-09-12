@@ -3,14 +3,14 @@ import { useNavigate } from "react-router-dom";
 import { useAuth } from "../AuthProvider";
 
 function Signup({ onIsSignupOpen, onIsLoginOpen }) {
-  const {signup } = useAuth()
+  const { signup } = useAuth();
 
   const [userName, setUserName] = useState("");
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [confirmPassword, setConfirmPassword] = useState("");
   const [error, setError] = useState(null);
-  const [loading,setLoading] = useState(false)
+  const [loading, setLoading] = useState(false);
 
   const navigate = useNavigate();
 
@@ -80,10 +80,10 @@ function Signup({ onIsSignupOpen, onIsLoginOpen }) {
     // }
 
     try {
-      console.log(userName)      
-      setLoading(true)
-     await signup(email, password);
-      
+      console.log(userName);
+      setLoading(true);
+      await signup(email, password);
+
       // console.log(auth,email,password)
       handleCloseModal();
       navigate("/welcomeUser");
@@ -91,9 +91,10 @@ function Signup({ onIsSignupOpen, onIsLoginOpen }) {
       // navigate('./login')
     } catch (error) {
       console.error("Error signing up:", error);
-      setError(getErrorMessage(error.code));
+      setError(getErrorMessage(error.e?.code));
+      setError(getErrorMessage(error?.code));
     }
-    setLoading(false)
+    setLoading(false);
   };
 
   return (
@@ -104,7 +105,7 @@ function Signup({ onIsSignupOpen, onIsLoginOpen }) {
             &times;
           </span>
           <h1>Signup</h1>
-          
+
           <label htmlFor="password" className="fa fa-envelope"></label>
           <input
             name="username"
@@ -166,7 +167,7 @@ function Signup({ onIsSignupOpen, onIsLoginOpen }) {
           <br />
           <br />
           <p style={{ color: "grey" }}>
-           Already have an account?{" "}
+            Already have an account?{" "}
             <a
               className="link"
               href="#"

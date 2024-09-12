@@ -13,7 +13,9 @@ function WelcomeUser(){
     useEffect(() => {
         const unsubscribe = onAuthStateChanged(auth, (currentUser) => {
             if (currentUser){
-                setUserName(currentUser.displayname)
+                setUserName(currentUser.displayName)
+                console.log(userName)
+                console.log(currentUser)
             }else{
                 // eslint-disable-next-line no-undef
                 setUser()
