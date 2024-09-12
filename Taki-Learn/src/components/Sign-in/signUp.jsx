@@ -92,7 +92,7 @@ function Signup({ onIsSignupOpen, onIsLoginOpen }) {
     } catch (error) {
       console.error("Error signing up:", error);
       setError(getErrorMessage(error.e?.code));
-      setError(getErrorMessage(error?.code));
+      // setError(getErrorMessage(error?.code));
     }
     setLoading(false);
   };

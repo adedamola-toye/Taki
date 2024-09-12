@@ -35,7 +35,7 @@ const [loading,setLoading] = useState(false)
       navigate("/welcomeUser"); // Redirect to the welcome page
     } catch (error) {
       setError("Failed to log in: " + error.e?.message);
-      setError("Failed to log in: " + error?.message);
+      // setError("Failed to log in: " + error?.message);
     }
     setLoading(false)
   };
