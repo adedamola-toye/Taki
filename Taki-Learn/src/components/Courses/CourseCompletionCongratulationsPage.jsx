@@ -44,7 +44,7 @@ function CongratulationsPage() {
   return (
     <div className="congratulations-page">
       <h1>Congratulations!</h1>
-      <p>You have completed the course: {decodedCourseName}</p>
+      <p>You have completed the course: <span>{decodedCourseName}</span></p>
       <div className="balloons">
         
       </div>

@@ -16,6 +16,7 @@ import AuthProvider from "./components/AuthProvider";
 import CoursePage from "./components/Courses/CoursePage";
 import TopicPage from "./components/Courses/TopicPage"
 import Navbar from './components/homePage/navbar';
+import CourseCompletionCongratulationsPage from './components/Courses/CourseCompletionCongratulationsPage'
 
 function App() {
 
@@ -44,6 +45,8 @@ function App() {
         <Route path="/data-science" element={<DataScience />} />
         <Route path = "/courses/:courseName" element = {<CoursePage/>}/>
         <Route path = "/courses/:courseName/topics/:topicName" element={<TopicPage/>}/>
+        <Route path="/congratulations/:courseName" element={<CourseCompletionCongratulationsPage />} />
+
         <Route path="*" element={<Navigate to="/" />} />
       </Routes>
       {/* <About id = 'about' /> */}
