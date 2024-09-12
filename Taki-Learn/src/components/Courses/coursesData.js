@@ -2484,7 +2484,196 @@ You can also have values like flex-start, self-start or start and flex-end, self
     description:
       "Learn how to create dynamic user interfaces using React's component system.",
     track: "Frontend Web Development",
+    additonalResource: {
+      title: "Additional Resource",
+      videoLink:
+        "https://youtu.be/CgkZ7MvWUAA?si=R-NQ2bSztqoekCa4", // Placeholder link
+      websiteLink: {
+        title: "Building Interactive UIs With Ease",
+        link: "https://cyberogism.com/rise-of-react-ui-development/",
+      },
+    },
+    topics: [
+      // TOPIC 1: Introduction to React
+      {
+        id: 1,
+        topicName: "Introduction to React",
+        content: [
+          {
+            title: "What is React?",
+            text: "React is a JavaScript library for building user interfaces (UIs) on the web. React is a declarative, component based library that allows developers to build reusable UI components and It follows the Virtual DOM (Document Object Model) approach, which optimizes rendering performance by minimizing DOM updates. React is fast and works well with other tools and libraries. React is recommended in creating SPAs, allowing smooth content updates without page reloads. Its focus on reusable components makes it ideal for real-time applications.",
+          },
+          {
+            title: "Installation",
+            text: "Before embarking on your React journey, ensure you have a suitable development environment set up. Here’s a roadmap to get you started: Node.js and npm: Download and install Node.js (https://nodejs.org/en/download/package-manager/current) as it provides the runtime environment for JavaScript code execution. npm (Node Package Manager) is bundled with Node.js and is used to manage project dependencies.",
+            exampleCode: `
+            // run this in your terminal after downloading node.js
+            npx create-react-app my-react-app
+            cd my-react-app
+            npm start
+            `
+          },
+          {
+            title: "Additional Resources",
+            text: "Watch this step by step video on how to install react",
+            videoLink: "https://youtu.be/HIdPpm-0ZNQ?si=3FIT7SwGpFceRQGG", // Placeholder link
+          },
+        ],
+      },
+      // TOPIC 2: React Components
+      {
+        id: 2,
+        topicName: "React Components",
+        content: [
+          {
+            title: "Components",
+            text: "Components in React serve as independent and reusable code blocks for UI elements. They represent different parts of a web page and contain both structure and behavior. They are similar to JavaScript functions and make creating and managing complex user interfaces easier by breaking them down into smaller, reusable pieces..",
+            exampleCode: `
+            /* Example of a functional component */
+            function demoComponent() {
+              return (<h1>
+                  Welcome Message!
+                </h1>
+              );
+            }
+
+            /* Example of a Class component */ 
+            class Democomponent extends React.Component {
+              render() {
+                return <h1>Welcome Message!</h1>;
+              }
+            }
+            `,
+          },
+          {
+            title: "Additional Resources",
+            text: "Watch this video on creating components in react",
+            videoLink: "https://youtu.be/oYspSD04HJE?si=1iAWnxYlQI7fmi1o", // Placeholder link
+          },
+        ],
+      },
+      // TOPIC 3: Hooks
+      {
+        id: 3,
+        topicName: "Hooks",
+        content: [
+          {
+            title: "What are react hooks?",
+            text: "In React, Hooks are reusable functions that provide access to state in React Applications. Hooks were introduced in the 16.8 version of React. Hooks give access to states for functional components while creating a React application. It allows you to use state and other React features without writing a class.",
+            
+          },
+          {
+            title: "Types of hooks",
+            text: "The Built-in React Hooks are: - State Hooks - Context Hooks - Ref Hooks - Effect Hooks - Performance Hooks - Resource Hooks - Other Hooks",
+            websiteLink: "https://www.geeksforgeeks.org/reactjs-hooks/"
+          },
+
+          {
+            title: "Additional Resources",
+            text: "Watch this video on react hooks and how to make your own hook",
+            videoLink: "https://youtu.be/TNhaISOUy6Q?si=lGqbhf8HkiX7eqOJ", // Placeholder link
+          },
+        ],
+      },
+      // TOPIC 4: Props Drilling
+      {
+        id: 4,
+        topicName: "Props Drilling",
+        content: [
+          {
+            title: "What are props?",
+            text: "In React, components can receive information from a parent component by utilizing props (short for properties). A prop is an object accessible to all React components. It serves as a means to pass data from a parent component to a child component.",
+          },
+          {
+            title: "What is prop drilling?",
+            text: "Prop drilling is basically a situation when the same data is being sent at almost every level due to requirements in the final level. Here is a diagram to demonstrate it better. Data needed to be sent from Parent to ChildC.",
+            exampleCode: `
+            /* Example using prop drilling */
+            //without_useContext.js
+ 
+            import React, { useState } from "react";
+            
+            function Parent() {
+                const [fName, setfName] = useState("firstName");
+                const [lName, setlName] = useState("LastName");
+                return (
+                    <>
+                        <div>This is a Parent component</div>
+                        <br />
+                        <ChildA fName={fName} lName={lName} />
+                    </>
+                );
+            }
+            
+            function ChildA({ fName, lName }) {
+                return (
+                    <>
+                        This is ChildA Component.
+                        <br />
+                        <ChildB fName={fName} lName={lName} />
+                    </>
+                );
+            }
+            
+            function ChildB({ fName, lName }) {
+                return (
+                    <>
+                        This is ChildB Component.
+                        <br />
+                        <ChildC fName={fName} lName={lName} />
+                    </>
+                );
+            }
+            
+            function ChildC({ fName, lName }) {
+                return (
+                    <>
+                        This is ChildC component.
+                        <br />
+                        <h3> Data from Parent component is as follows:</h3>
+                        <h4>{fName}</h4>
+                        <h4>{lName}</h4>
+                    </>
+                );
+            }
+            
+            export default Parent;
+            `,
+          },
+          {
+            title: "Additional Resources",
+            text: "Watch this video on props and prop drilling.",
+            videoLink: "https://youtu.be/XyIXMQ9SZmI?si=gUkYx_vROaLgS-sv", // Placeholder link
+          },
+        ],
+      },
+      // TOPIC 5: Context API
+      {
+        id: 5,
+        topicName: "Context API",
+        content: [
+          {
+            title: "What is Context API?",
+            text: "Context API is used to pass global variables anywhere in the code. It helps when there is a need for sharing state between a lot of nested components. It is light in weight and easier to use, to create a context just need to call React.createContext(). No need to install other dependencies or third-party libraries like redux for state management.",
+           
+          },
+          {
+            title: "Implementing Context API",
+            text: "The link shows how to implement context APIs",
+            websiteLink: "https://www.geeksforgeeks.org/explain-new-context-api-in-react/"
+          },
+          {
+            title: "Additional Resources",
+            text: "Watch this video on the basic concept of context APIs",
+            videoLink: "https://youtu.be/aAcI_FdfkA8?si=eIu7acpfhhugNgjb", // Placeholder link
+          },
+        ],
+      },
+    ],
   },
+
+
+
   {
     id: 9,
     name: "JavaScript for Backend",
