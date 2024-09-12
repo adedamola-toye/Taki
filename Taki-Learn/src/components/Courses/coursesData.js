@@ -6,6 +6,15 @@ const courses = [
     description:
       "Learn the basics of HTML to build and structure simple web pages.",
     track: "Frontend Web Development",
+    additonalResource: {
+      title: "Additional Resource",
+      videoLink:
+        "https://www.youtube.com/watch?v=kUMe1FH4CHE",
+      websiteLink: {
+        title: "HTML Tutorial",
+        link: "https://www.w3schools.com/html/default.asp",
+      },
+    },
     topics: [
       //TOPIC 1
       {
@@ -34,15 +43,13 @@ const courses = [
           {
             title: "HTML Syntax and Comments",
             text: "HTML uses a combination of opening and closing tags to define elements. Comments can be added using <!-- --> to leave notes in your code. Comments are not displayed in the browser and are useful for documentation or reminders.",
-            exampleCode:
-              `<!-- This is a comment --> 
+            exampleCode: `<!-- This is a comment --> 
 <p>This is a paragraph of text.</p>`,
           },
           {
             title: "HTML Document MetaData",
             text: "",
-            exampleCode: 
-`<head> 
+            exampleCode: `<head> 
   <meta charset="UTF-8"> 
   <title>Document Title</title> 
   <link rel="stylesheet" href="styles.css">
@@ -76,8 +83,7 @@ const courses = [
           {
             title: "Additional Resources",
             text: "Check out this video on essential HTML Tags:",
-            videoLink:
-              "https://www.youtube.com/watch?v=K_EVuLegRZ0",
+            videoLink: "https://www.youtube.com/watch?v=K_EVuLegRZ0",
           },
         ],
       },
@@ -194,14 +200,12 @@ const courses = [
           {
             title: "Additional Resources",
             text: "Check out this video on  HTML Lists:",
-            videoLink:
-              "https://www.youtube.com/watch?v=oUm7rvMUNq8",
+            videoLink: "https://www.youtube.com/watch?v=oUm7rvMUNq8",
           },
           {
             title: "",
             text: "Check out this video on  HTML Tables:",
-            videoLink:
-              "https://www.youtube.com/watch?v=iDA0kF5lrVk",
+            videoLink: "https://www.youtube.com/watch?v=iDA0kF5lrVk",
           },
         ],
       },
@@ -225,7 +229,7 @@ const courses = [
     <img src="sunset.jpg" alt="A beautiful sunset over the ocean" width="600" height="400">
 </body>
 </html>
-`
+`,
           },
           {
             title: "Embedding Audio in HTML",
@@ -270,8 +274,7 @@ const courses = [
           {
             title: "Additional Resources",
             text: "Check out this video on essential HTML Tags:",
-            videoLink:
-              "https://www.youtube.com/watch?v=eWb8o0jC9dE",
+            videoLink: "https://www.youtube.com/watch?v=eWb8o0jC9dE",
           },
         ],
       },
@@ -307,7 +310,7 @@ const courses = [
 </body>
 </html>
 
-`
+`,
           },
           {
             title: "Advanced HTML Form Elements and Features",
@@ -349,12 +352,11 @@ const courses = [
 </html>
 `,
           },
-        
+
           {
             title: "Additional Resources",
             text: "Check out this video on essential Forms:",
-            videoLink:
-              "https://www.youtube.com/watch?v=2O8pkybH6po",
+            videoLink: "https://www.youtube.com/watch?v=2O8pkybH6po",
           },
         ],
       },
@@ -362,38 +364,47 @@ const courses = [
   },
 
   /* COURSE 2 */
- //COURSE 2 = CSS FOR BEGINNERS
-{
-  id: 2,
-  name: "CSS for Beginners",
-  description: "Learn the fundamentals of CSS to style and layout web pages effectively.",
-  track: "Frontend Web Development",
-  topics: [
-    //TOPIC 1
-  ]
-},
+  //COURSE 2 = CSS FOR BEGINNERS
+  {
+    id: 2,
+    name: "CSS for Beginners",
+    description:
+      "Learn the fundamentals of CSS to style and layout web pages effectively.",
+    track: "Frontend Web Development",
+    topics: [
+      //TOPIC 1
+    ],
+  },
 
-      
-
-{
-  "id": 2,
-  "name": "JavaScript for Beginners",
-  "description": "Master the basics of JavaScript to build interactive web applications.",
-  "track": "Frontend Web Development",
-  "topics": [
-    // TOPIC 1: JavaScript Basics
-    {
-      "id": 1,
-      "topicName": "JavaScript Basics",
-      "content": [
-        {
-          "title": "Introduction to JavaScript",
-          "text": "JavaScript is a versatile programming language used for adding interactivity to web pages. From handling user input to updating content dynamically, JavaScript powers many of the features we use every day on the web."
-        },
-        {
-          "title": "Variables and Data Types",
-          "text": "In JavaScript, variables are used to store data. You can declare a variable using `var`, `let`, or `const`. JavaScript supports various data types including strings, numbers, booleans, arrays, and objects.",
-          "exampleCode": `
+  {
+    id: 2,
+    name: "JavaScript for Beginners",
+    description:
+      "Master the basics of JavaScript to build interactive web applications.",
+    track: "Frontend Web Development",
+    additonalResource: {
+      title: "Additional Resource",
+      videoLink:
+        "https://www.youtube.com/watch?v=jS4aFq5-91M&t=6125s",
+      websiteLink: {
+        title: "JavaScript Tutorial",
+        link: "https://www.w3schools.com/js/default.asp",
+      },
+    },
+    topics: [
+      // TOPIC 1: JavaScript Basics
+      {
+        id: 1,
+        topicName: "JavaScript Basics",
+        content: [
+          {
+            title: "Introduction to JavaScript",
+            text: "JavaScript is a versatile programming language used for adding interactivity to web pages. From handling user input to updating content dynamically, JavaScript powers many of the features we use every day on the web.",
+          },
+          {
+            title: "Variables and Data Types",
+            text: "In JavaScript, variables are used to store data. You can declare a variable using `var`, `let`, or `const`. JavaScript supports various data types including strings, numbers, booleans, arrays, and objects.",
+            exampleCode: `
             // Declaring variables
             let name = 'John'; // String
             console.log(name); // output: John
@@ -409,23 +420,28 @@ const courses = [
 
             let person = { name: 'John', age: 30 }; // Object
             console.log(person); // output: { name: 'John', age: 30 }
-          `
-        },
-        {
-          "title": "JavaScript Syntax",
-          "text": "JavaScript syntax includes rules on how to write code that the browser can understand. Proper syntax ensures that your code runs without errors and behaves as expected."
-        }
-      ]
-    },
-    // TOPIC 2: Functions and Control Flow
-    {
-      "id": 2,
-      "topicName": "Functions and Control Flow",
-      "content": [
-        {
-          "title": "Functions",
-          "text": "A function is a block of reusable code that performs a specific task. You can define a function using the `function` keyword, followed by the function name and parentheses.",
-          "exampleCode": `
+          `,
+          },
+          {
+            title: "JavaScript Syntax",
+            text: "JavaScript syntax includes rules on how to write code that the browser can understand. Proper syntax ensures that your code runs without errors and behaves as expected.",
+          },
+          {
+            title: "Additional Resources",
+            text: "Check out this video on Javascript basics:",
+            videoLink: "https://www.youtube.com/watch?v=xwKbtUP87Dk",
+          },
+        ],
+      },
+      // TOPIC 2: Functions and Control Flow
+      {
+        id: 2,
+        topicName: "Functions and Control Flow",
+        content: [
+          {
+            title: "Functions",
+            text: "A function is a block of reusable code that performs a specific task. You can define a function using the `function` keyword, followed by the function name and parentheses.",
+            exampleCode: `
             // Function declaration
             function greet(name) {
               return 'Hello, ' + name + '!';
@@ -433,12 +449,12 @@ const courses = [
 
             // Calling the function
             console.log(greet('Alice')); // output: Hello, Alice!
-          `
-        },
-        {
-          "title": "If-Else Statements",
-          "text": "JavaScript allows you to control the flow of your program using conditional statements like `if-else`. These are used to execute code based on certain conditions.",
-          "exampleCode": `
+          `,
+          },
+          {
+            title: "If-Else Statements",
+            text: "JavaScript allows you to control the flow of your program using conditional statements like `if-else`. These are used to execute code based on certain conditions.",
+            exampleCode: `
             let age = 18;
 
             if (age >= 18) {
@@ -446,19 +462,31 @@ const courses = [
             } else {
               console.log('You are a minor.');
             }
-          `
-        }
-      ]
-    },
-    // TOPIC 3: Arrays and Objects
-    {
-      "id": 3,
-      "topicName": "Arrays and Objects",
-      "content": [
-        {
-          "title": "Working with Arrays",
-          "text": "Arrays are a special type of object used to store multiple values in a single variable. You can access and manipulate array elements using their index.",
-          "exampleCode": `
+          `,
+          },
+
+          {
+            title: "Additional Resources",
+            text: "Check out this video on Javascript Functions:",
+            videoLink: "https://www.youtube.com/watch?v=N8ap4k_1QEQ",
+          },
+
+          {
+            title: "Additional Resources",
+            text: "Check out this video on Javascript Controls:",
+            videoLink: "https://www.youtube.com/watch?v=JloLGV9DmtQ",
+          },
+        ],
+      },
+      // TOPIC 3: Arrays and Objects
+      {
+        id: 3,
+        topicName: "Arrays and Objects",
+        content: [
+          {
+            title: "Working with Arrays",
+            text: "Arrays are a special type of object used to store multiple values in a single variable. You can access and manipulate array elements using their index.",
+            exampleCode: `
             let fruits = ['Apple', 'Banana', 'Mango'];
 
             // Accessing array elements
@@ -477,12 +505,12 @@ const courses = [
             // Banana
             // Mango
             // Orange
-          `
-        },
-        {
-          "title": "Objects in JavaScript",
-          "text": "Objects are collections of key-value pairs. Each key (or property) is associated with a value, which can be any data type, including other objects or functions.",
-          "exampleCode": `
+          `,
+          },
+          {
+            title: "Objects in JavaScript",
+            text: "Objects are collections of key-value pairs. Each key (or property) is associated with a value, which can be any data type, including other objects or functions.",
+            exampleCode: `
             let person = {
               name: 'Alice',
               age: 25,
@@ -496,19 +524,29 @@ const courses = [
 
             // Calling a method
             person.greet(); // output: Hello, my name is Alice
-          `
-        }
-      ]
-    },
-    // TOPIC 4: String Methods
-    {
-      "id": 4,
-      "topicName": "String Methods",
-      "content": [
-        {
-          "title": "Common String Methods",
-          "text": "JavaScript provides various methods for manipulating strings, such as `length`, `toUpperCase()`, `toLowerCase()`, `indexOf()`, and `slice()`.",
-          "exampleCode": `
+          `,
+          },
+          {
+            title: "Additional Resources",
+            text: "Check out this video on Javascript Arrays:",
+            videoLink: "https://www.youtube.com/watch?v=oigfaZ5ApsM",
+          },
+          {
+            title: "Additional Resources",
+            text: "Check out this video on Javascript Objects:",
+            videoLink: "https://www.youtube.com/watch?v=lo7o91qLzxc",
+          },
+        ],
+      },
+      // TOPIC 4: String Methods
+      {
+        id: 4,
+        topicName: "String Methods",
+        content: [
+          {
+            title: "Common String Methods",
+            text: "JavaScript provides various methods for manipulating strings, such as `length`, `toUpperCase()`, `toLowerCase()`, `indexOf()`, and `slice()`.",
+            exampleCode: `
             let text = 'JavaScript is awesome!';
 
             // String length
@@ -522,19 +560,24 @@ const courses = [
 
             // Extracting a substring
             console.log(text.slice(0, 10)); // output: JavaScript
-          `
-        }
-      ]
-    },
-    // TOPIC 5: Loops
-    {
-      "id": 5,
-      "topicName": "Loops",
-      "content": [
-        {
-          "title": "For Loops",
-          "text": "The `for` loop is used to repeat a block of code a specified number of times. It consists of three parts: initialization, condition, and increment.",
-          "exampleCode": `
+          `,
+          },
+          {
+            title: "Additional Resources",
+            text: "Check out this video on Javascript Strings",
+            videoLink: "https://www.youtube.com/watch?v=09BwruU4kiY",
+          },
+        ],
+      },
+      // TOPIC 5: Loops
+      {
+        id: 5,
+        topicName: "Loops",
+        content: [
+          {
+            title: "For Loops",
+            text: "The `for` loop is used to repeat a block of code a specified number of times. It consists of three parts: initialization, condition, and increment.",
+            exampleCode: `
             for (let i = 0; i < 5; i++) {
               console.log(i);
             }
@@ -544,12 +587,12 @@ const courses = [
             // 2
             // 3
             // 4
-          `
-        },
-        {
-          "title": "While Loops",
-          "text": "The `while` loop repeats a block of code as long as a specified condition is true. It’s useful when you don’t know beforehand how many times you need to loop.",
-          "exampleCode": `
+          `,
+          },
+          {
+            title: "While Loops",
+            text: "The `while` loop repeats a block of code as long as a specified condition is true. It’s useful when you don’t know beforehand how many times you need to loop.",
+            exampleCode: `
             let count = 0;
 
             while (count < 5) {
@@ -562,19 +605,24 @@ const courses = [
             // 2
             // 3
             // 4
-          `
-        }
-      ]
-    },
-    // TOPIC 6: Error Handling
-    {
-      "id": 6,
-      "topicName": "Error Handling",
-      "content": [
-        {
-          "title": "Try-Catch Statement",
-          "text": "The `try-catch` statement is used to handle errors that occur during the execution of code. It allows you to test a block of code for errors and catch those errors if they occur.",
-          "exampleCode": `
+          `,
+          },
+          {
+            title: "Additional Resources",
+            text: "Check out this video on Javascript Loops",
+            videoLink: "https://www.youtube.com/watch?v=s9wW2PpJsmQ",
+          },
+        ],
+      },
+      // TOPIC 6: Error Handling
+      {
+        id: 6,
+        topicName: "Error Handling",
+        content: [
+          {
+            title: "Try-Catch Statement",
+            text: "The `try-catch` statement is used to handle errors that occur during the execution of code. It allows you to test a block of code for errors and catch those errors if they occur.",
+            exampleCode: `
             try {
               let result = riskyOperation(); // This function does not exist
               console.log(result);
@@ -582,14 +630,17 @@ const courses = [
               console.error('An error occurred:', error.message);
             }
             // output: An error occurred: riskyOperation is not defined
-          `
-        }
-      ]
-    }
-  ]
-},
-
-
+          `,
+          },
+          {
+            title: "Additional Resources",
+            text: "Check out this video on Javascript Loops",
+            videoLink: "https://www.youtube.com/watch?v=cFTFtuEQ-10",
+          },
+        ],
+      },
+    ],
+  },
 
   {
     id: 4,
@@ -597,7 +648,206 @@ const courses = [
     description:
       "Dive into React and learn how to build modern web applications.",
     track: "Frontend Web Development",
+    additonalResource: {
+      title: "Additional Resource",
+      videoLink:
+        "https://www.youtube.com/watch?v=4UZrsTqkcW4&list=WL&index=3&t=13143s",
+      websiteLink: {
+        title: "React Tutorial",
+        link: "https://www.w3schools.com/REACT/DEFAULT.ASP",
+      },
+    },
+    topics: [
+      // TOPIC 1: Introduction to React
+      {
+        id: 1,
+        topicName: "Introduction to React",
+        content: [
+          {
+            title: "What is React?",
+            text: "React is a JavaScript library for building user interfaces. It allows developers to create large web applications that can change data, without reloading the page.",
+          },
+          {
+            title: "Components and Props",
+            text: "In React, the UI is divided into components. Components are reusable pieces of code that return React elements. Props are used to pass data from parent to child components.",
+            exampleCode: `
+            // A functional component in React
+            function Greeting(props) {
+              return <h1>Hello, {props.name}!</h1>;
+            }
+
+            // Using the component
+            <Greeting name="Alice" />
+          `,
+          },
+          {
+            title: "Additional Resources",
+            text: "Check out this video on  Introduction to React",
+            videoLink: "https://www.youtube.com/watch?v=Y6aYx_KKM7A",
+          },
+        ],
+      },
+      // TOPIC 2: State Management
+      {
+        id: 2,
+        topicName: "State Management",
+        content: [
+          {
+            title: "useState Hook",
+            text: "The useState hook is used to add state to functional components. It returns an array with the current state and a function to update it.",
+            exampleCode: `
+            import React, { useState } from 'react';
+
+            function Counter() {
+              const [count, setCount] = useState(0);
+
+              return (
+                <div>
+                  <p>You clicked {count} times</p>
+                  <button onClick={() => setCount(count + 1)}>Click me</button>
+                </div>
+              );
+            }
+          `,
+          },
+          {
+            title: "Additional Resources",
+            text: "Check out this video on  React State Management",
+            videoLink: "https://www.youtube.com/watch?v=-bEzt5ISACA",
+          },
+        ],
+      },
+      // TOPIC 3: Event Handling
+      {
+        id: 3,
+        topicName: "Event Handling",
+        content: [
+          {
+            title: "Handling Events",
+            text: "In React, events are handled using camelCase syntax. You pass a function as the event handler.",
+            exampleCode: `
+            function handleClick() {
+              alert('Button clicked!');
+            }
+
+            function App() {
+              return (
+                <button onClick={handleClick}>Click me</button>
+              );
+            }
+          `,
+          },
+          {
+            title: "Additional Resources",
+            text: "Check out this video on  Event Handling in React",
+            videoLink: "https://www.youtube.com/watch?v=dqlsGTHGcF0",
+          },
+        ],
+      },
+      // TOPIC 4: Conditional Rendering
+      {
+        id: 4,
+        topicName: "Conditional Rendering",
+        content: [
+          {
+            title: "Rendering Elements Conditionally",
+            text: "You can render elements conditionally using JavaScript operators like `if` or the conditional (ternary) operator.",
+            exampleCode: `
+            function App() {
+              const isLoggedIn = true;
+
+              return (
+                <div>
+                  {isLoggedIn ? <p>Welcome back!</p> : <p>Please sign up.</p>}
+                </div>
+              );
+            }
+          `,
+          },
+          {
+            title: "Additional Resources",
+            text: "Check out this video on  Event Handling in React",
+            videoLink: "https://www.youtube.com/watch?v=XvURBpFxdGw",
+          },
+        ],
+      },
+      // TOPIC 5: Lists and Keys
+      {
+        id: 5,
+        topicName: "Lists and Keys",
+        content: [
+          {
+            title: "Rendering Lists",
+            text: "You can render lists in React by using the `map()` method to iterate over an array of items. Each item needs a unique `key` prop.",
+            exampleCode: `
+            function ListItem(props) {
+              return <li>{props.value}</li>;
+            }
+
+            function NumberList(props) {
+              const numbers = props.numbers;
+              const listItems = numbers.map((number) =>
+                <ListItem key={number.toString()} value={number} />
+              );
+
+              return (
+                <ul>{listItems}</ul>
+              );
+            }
+          `,
+          },
+          {
+            title: "Additional Resources",
+            text: "Check out this video on Rendering Lists and Keys in React",
+            videoLink: "https://www.youtube.com/watch?v=fkl1Kn_QWCI",
+          },
+        ],
+      },
+      // TOPIC 6: Forms
+      {
+        id: 6,
+        topicName: "Forms",
+        content: [
+          {
+            title: "Handling Form Inputs",
+            text: "In React, form elements maintain their state using controlled components. This means React is responsible for updating the form elements' values.",
+            exampleCode: `
+            import React, { useState } from 'react';
+
+            function Form() {
+              const [value, setValue] = useState('');
+
+              function handleChange(event) {
+                setValue(event.target.value);
+              }
+
+              function handleSubmit(event) {
+                alert('A name was submitted: ' + value);
+                event.preventDefault();
+              }
+
+              return (
+                <form onSubmit={handleSubmit}>
+                  <label>
+                    Name:
+                    <input type="text" value={value} onChange={handleChange} />
+                  </label>
+                  <button type="submit">Submit</button>
+                </form>
+              );
+            }
+          `,
+          },
+          {
+            title: "Additional Resources",
+            text: "Check out this video on Rendering Forms in React",
+            videoLink: "https://www.youtube.com/watch?v=CT-72lTXdPg",
+          },
+        ],
+      },
+    ],
   },
+
   {
     id: 5,
     name: "Advanced CSS & Sass",
