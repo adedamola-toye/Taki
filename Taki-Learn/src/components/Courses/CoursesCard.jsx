@@ -40,9 +40,9 @@ return (
             <b>Track: </b>
             {course.track}
           </p>
-          <Link to={`/courses/${encodeCourseName(course.name)}`}>
+          <Link to={`/courses/${encodeCourseName(course.name)}`}> 
           <button onClick={() => handleClickLearn(course)}>Learn</button>
-          </Link>
+        </Link>
         </div>
       ) : (
         <p key={course.id}>Course information is missing.</p>

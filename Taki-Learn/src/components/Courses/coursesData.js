@@ -362,20 +362,235 @@ const courses = [
   },
 
   /* COURSE 2 */
-  {
-    id: 2,
-    name: "CSS Fundamentals",
-    description:
-      "Understand how to style websites with CSS and create beautiful web pages.",
-    track: "Frontend Web Development",
-  },
-  {
-    id: 3,
-    name: "JavaScript for Beginners",
-    description:
-      "Learn JavaScript from scratch, focusing on interactivity for web development.",
-    track: "Frontend Web Development",
-  },
+ //COURSE 2 = CSS FOR BEGINNERS
+{
+  id: 2,
+  name: "CSS for Beginners",
+  description: "Learn the fundamentals of CSS to style and layout web pages effectively.",
+  track: "Frontend Web Development",
+  topics: [
+    //TOPIC 1
+  ]
+},
+
+      
+
+{
+  "id": 2,
+  "name": "JavaScript for Beginners",
+  "description": "Master the basics of JavaScript to build interactive web applications.",
+  "track": "Frontend Web Development",
+  "topics": [
+    // TOPIC 1: JavaScript Basics
+    {
+      "id": 1,
+      "topicName": "JavaScript Basics",
+      "content": [
+        {
+          "title": "Introduction to JavaScript",
+          "text": "JavaScript is a versatile programming language used for adding interactivity to web pages. From handling user input to updating content dynamically, JavaScript powers many of the features we use every day on the web."
+        },
+        {
+          "title": "Variables and Data Types",
+          "text": "In JavaScript, variables are used to store data. You can declare a variable using `var`, `let`, or `const`. JavaScript supports various data types including strings, numbers, booleans, arrays, and objects.",
+          "exampleCode": `
+            // Declaring variables
+            let name = 'John'; // String
+            console.log(name); // output: John
+
+            let age = 30; // Number
+            console.log(age); // output: 30
+
+            let isStudent = true; // Boolean
+            console.log(isStudent); // output: true
+
+            let hobbies = ['Reading', 'Cycling']; // Array
+            console.log(hobbies); // output: ['Reading', 'Cycling']
+
+            let person = { name: 'John', age: 30 }; // Object
+            console.log(person); // output: { name: 'John', age: 30 }
+          `
+        },
+        {
+          "title": "JavaScript Syntax",
+          "text": "JavaScript syntax includes rules on how to write code that the browser can understand. Proper syntax ensures that your code runs without errors and behaves as expected."
+        }
+      ]
+    },
+    // TOPIC 2: Functions and Control Flow
+    {
+      "id": 2,
+      "topicName": "Functions and Control Flow",
+      "content": [
+        {
+          "title": "Functions",
+          "text": "A function is a block of reusable code that performs a specific task. You can define a function using the `function` keyword, followed by the function name and parentheses.",
+          "exampleCode": `
+            // Function declaration
+            function greet(name) {
+              return 'Hello, ' + name + '!';
+            }
+
+            // Calling the function
+            console.log(greet('Alice')); // output: Hello, Alice!
+          `
+        },
+        {
+          "title": "If-Else Statements",
+          "text": "JavaScript allows you to control the flow of your program using conditional statements like `if-else`. These are used to execute code based on certain conditions.",
+          "exampleCode": `
+            let age = 18;
+
+            if (age >= 18) {
+              console.log('You are an adult.'); // output: You are an adult.
+            } else {
+              console.log('You are a minor.');
+            }
+          `
+        }
+      ]
+    },
+    // TOPIC 3: Arrays and Objects
+    {
+      "id": 3,
+      "topicName": "Arrays and Objects",
+      "content": [
+        {
+          "title": "Working with Arrays",
+          "text": "Arrays are a special type of object used to store multiple values in a single variable. You can access and manipulate array elements using their index.",
+          "exampleCode": `
+            let fruits = ['Apple', 'Banana', 'Mango'];
+
+            // Accessing array elements
+            console.log(fruits[0]); // output: Apple
+
+            // Adding elements
+            fruits.push('Orange');
+            console.log(fruits); // output: ['Apple', 'Banana', 'Mango', 'Orange']
+
+            // Looping through an array
+            for (let i = 0; i < fruits.length; i++) {
+              console.log(fruits[i]);
+            } 
+            // output:
+            // Apple
+            // Banana
+            // Mango
+            // Orange
+          `
+        },
+        {
+          "title": "Objects in JavaScript",
+          "text": "Objects are collections of key-value pairs. Each key (or property) is associated with a value, which can be any data type, including other objects or functions.",
+          "exampleCode": `
+            let person = {
+              name: 'Alice',
+              age: 25,
+              greet: function() {
+                console.log('Hello, my name is ' + this.name);
+              }
+            };
+
+            // Accessing object properties
+            console.log(person.name); // output: Alice
+
+            // Calling a method
+            person.greet(); // output: Hello, my name is Alice
+          `
+        }
+      ]
+    },
+    // TOPIC 4: String Methods
+    {
+      "id": 4,
+      "topicName": "String Methods",
+      "content": [
+        {
+          "title": "Common String Methods",
+          "text": "JavaScript provides various methods for manipulating strings, such as `length`, `toUpperCase()`, `toLowerCase()`, `indexOf()`, and `slice()`.",
+          "exampleCode": `
+            let text = 'JavaScript is awesome!';
+
+            // String length
+            console.log(text.length); // output: 22
+
+            // Converting to uppercase
+            console.log(text.toUpperCase()); // output: JAVASCRIPT IS AWESOME!
+
+            // Finding the position of a substring
+            console.log(text.indexOf('awesome')); // output: 15
+
+            // Extracting a substring
+            console.log(text.slice(0, 10)); // output: JavaScript
+          `
+        }
+      ]
+    },
+    // TOPIC 5: Loops
+    {
+      "id": 5,
+      "topicName": "Loops",
+      "content": [
+        {
+          "title": "For Loops",
+          "text": "The `for` loop is used to repeat a block of code a specified number of times. It consists of three parts: initialization, condition, and increment.",
+          "exampleCode": `
+            for (let i = 0; i < 5; i++) {
+              console.log(i);
+            }
+            // output:
+            // 0
+            // 1
+            // 2
+            // 3
+            // 4
+          `
+        },
+        {
+          "title": "While Loops",
+          "text": "The `while` loop repeats a block of code as long as a specified condition is true. It’s useful when you don’t know beforehand how many times you need to loop.",
+          "exampleCode": `
+            let count = 0;
+
+            while (count < 5) {
+              console.log(count);
+              count++;
+            }
+            // output:
+            // 0
+            // 1
+            // 2
+            // 3
+            // 4
+          `
+        }
+      ]
+    },
+    // TOPIC 6: Error Handling
+    {
+      "id": 6,
+      "topicName": "Error Handling",
+      "content": [
+        {
+          "title": "Try-Catch Statement",
+          "text": "The `try-catch` statement is used to handle errors that occur during the execution of code. It allows you to test a block of code for errors and catch those errors if they occur.",
+          "exampleCode": `
+            try {
+              let result = riskyOperation(); // This function does not exist
+              console.log(result);
+            } catch (error) {
+              console.error('An error occurred:', error.message);
+            }
+            // output: An error occurred: riskyOperation is not defined
+          `
+        }
+      ]
+    }
+  ]
+},
+
+
+
   {
     id: 4,
     name: "React Basics",
