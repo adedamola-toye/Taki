@@ -2073,7 +2073,214 @@ You can also have values like flex-start, self-start or start and flex-end, self
     description:
       "Enhance your CSS skills by mastering advanced techniques and Sass.",
     track: "Frontend Web Development",
+    additonalResource: {
+      title: "Additional Resource",
+      videoLink: "https://www.youtube.com/watch?v=_a5j7KoflTs", // Example link
+      websiteLink: {
+        title: "CSS Tricks",
+        link: "https://css-tricks.com",
+      },
+    },
+    topics: [
+      // TOPIC 1: Advanced Selectors
+      {
+        id: 1,
+        topicName: "Advanced Selectors",
+        content: [
+          {
+            title: "Attribute Selectors",
+            text: "CSS attribute selectors allow you to target elements based on their attributes. This makes it easier to style elements dynamically.",
+            exampleCode: `
+            /* Select elements with a specific attribute */
+            input[type="text"] {
+              background-color: lightblue;
+            }
+          `,
+          },
+          {
+            title: "Pseudo-Classes and Pseudo-Elements",
+            text: "Pseudo-classes like `:hover` and pseudo-elements like `::before` allow you to style elements in ways that aren't possible with regular selectors.",
+            exampleCode: `
+            /* Change color on hover */
+            a:hover {
+              color: red;
+            }
+  
+            /* Add content before an element */
+            p::before {
+              content: "Note: ";
+            }
+          `,
+          },
+          {
+            title: "Additional Resources",
+            text: "Check out this video on Advanced CSS Selectors",
+            videoLink: "https://www.youtube.com/watch?v=lXQdKcb7QEA",
+          },
+        ],
+      },
+      // TOPIC 2: Flexbox and Grid Layouts
+      {
+        id: 2,
+        topicName: "Flexbox and Grid Layouts",
+        content: [
+          {
+            title: "Flexbox",
+            text: "Flexbox is a one-dimensional layout model that provides an efficient way to align and distribute space among items in a container.",
+            exampleCode: `
+            .container {
+              display: flex;
+              justify-content: space-between;
+              align-items: center;
+            }
+          `,
+          },
+          {
+            title: "CSS Grid",
+            text: "CSS Grid Layout is a two-dimensional system for creating responsive web layouts. It allows you to align items into rows and columns.",
+            exampleCode: `
+            .grid-container {
+              display: grid;
+              grid-template-columns: 1fr 2fr;
+              grid-gap: 10px;
+            }
+          `,
+          },
+          {
+            title: "Additional Resources",
+            text: "Check out this video on CSS Flexbox and Grid",
+            videoLink: "https://www.youtube.com/watch?v=rg7Fvvl3taU",
+          },
+        ],
+      },
+      // TOPIC 3: Sass Basics
+      {
+        id: 3,
+        topicName: "Sass Basics",
+        content: [
+          {
+            title: "Variables and Nesting",
+            text: "Sass allows you to use variables to store values and enables nested syntax for cleaner, more readable CSS.",
+            exampleCode: `
+            $primary-color: #3498db;
+  
+            nav {
+              background-color: $primary-color;
+              ul {
+                list-style: none;
+                li {
+                  display: inline-block;
+                  margin-right: 20px;
+                }
+              }
+            }
+          `,
+          },
+          {
+            title: "Mixins",
+            text: "Mixins in Sass are reusable blocks of CSS that can be included in other selectors.",
+            exampleCode: `
+            @mixin border-radius($radius) {
+              -webkit-border-radius: $radius;
+              -moz-border-radius: $radius;
+              border-radius: $radius;
+            }
+  
+            .box { @include border-radius(10px); }
+          `,
+          },
+          {
+            title: "Additional Resources",
+            text: "Check out this video on Sass Basics",
+            videoLink: "https://www.youtube.com/watch?v=_a5j7KoflTs",
+          },
+        ],
+      },
+      // TOPIC 4: Responsive Design
+      {
+        id: 4,
+        topicName: "Responsive Design",
+        content: [
+          {
+            title: "Media Queries",
+            text: "Media queries allow you to apply CSS rules based on the size of the screen or device being used to view your content.",
+            exampleCode: `
+            @media (max-width: 600px) {
+              .container {
+                flex-direction: column;
+              }
+            }
+          `,
+          },
+          {
+            title: "Mobile-First Design",
+            text: "Mobile-first design means writing your styles for small screens first and then applying larger screen styles with media queries.",
+            exampleCode: `
+            /* Base styles for mobile */
+            .container {
+              padding: 10px;
+            }
+  
+            /* Larger screen styles */
+            @media (min-width: 768px) {
+              .container {
+                padding: 20px;
+              }
+            }
+          `,
+          },
+          {
+            title: "Additional Resources",
+            text: "Check out this video on Responsive Web Design",
+            videoLink: "https://www.youtube.com/watch?v=srvUrASNj0s",
+          },
+        ],
+      },
+      // TOPIC 5: Animations and Transitions
+      {
+        id: 5,
+        topicName: "Animations and Transitions",
+        content: [
+          {
+            title: "CSS Transitions",
+            text: "CSS transitions allow you to change property values smoothly over a specified duration.",
+            exampleCode: `
+            .box {
+              width: 100px;
+              height: 100px;
+              background-color: blue;
+              transition: background-color 0.5s ease;
+            }
+  
+            .box:hover {
+              background-color: green;
+            }
+          `,
+          },
+          {
+            title: "CSS Animations",
+            text: "CSS animations allow you to animate changes to CSS properties over a series of keyframes.",
+            exampleCode: `
+            @keyframes example {
+              from {background-color: red;}
+              to {background-color: yellow;}
+            }
+  
+            .animated-box {
+              animation: example 3s infinite;
+            }
+          `,
+          },
+          {
+            title: "Additional Resources",
+            text: "Check out this video on CSS Animations",
+            videoLink: "https://www.youtube.com/watch?v=zHUpx90NerM",
+          },
+        ],
+      },
+    ],
   },
+  
   {
     id: 6,
     name: "Responsive Web Design",

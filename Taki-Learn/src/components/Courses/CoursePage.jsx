@@ -111,7 +111,7 @@ function CoursePage() {
     rel="noopener noreferrer"
     className="additional-resource-link"
   >
-  Click this link to a detailed tutorial: {course.additonalResource.websiteLink.title}
+  <b>Click this link to a detailed tutorial</b>: {course.additonalResource.websiteLink.title}
   </a>
 )}
 
