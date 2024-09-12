@@ -51,6 +51,7 @@ function ExploreCourses() {
 
         {/* CARD */}
         <CourseCard
+        
           course={courses.slice(0, visibleCourses)}
           onIsSignupOpen={setIsSignupOpen}
         />
