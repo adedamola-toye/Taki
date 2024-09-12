@@ -2294,12 +2294,190 @@ You can also have values like flex-start, self-start or start and flex-end, self
     track: "Frontend Web Development",
   },
   {
-    id: 7,
-    name: "JavaScript ES6+",
+    id: 6,
+    name: "Responsive Web Design",
     description:
-      "Get comfortable with modern JavaScript ES6+ features to enhance your web apps.",
+      "Master the art of creating web pages that adapt to different screen sizes.",
     track: "Frontend Web Development",
+    additonalResource: {
+      title: "Additional Resource",
+      videoLink:
+        "https://www.youtube.com/watch?v=srvUrASNj0s", // Placeholder link
+      websiteLink: {
+        title: "MDN Responsive Design Tutorial",
+        link: "https://developer.mozilla.org/en-US/docs/Learn/CSS/CSS_layout/Responsive_Design",
+      },
+    },
+    topics: [
+      // TOPIC 1: Introduction to Responsive Design
+      {
+        id: 1,
+        topicName: "Introduction to Responsive Design",
+        content: [
+          {
+            title: "What is Responsive Web Design?",
+            text: "Responsive web design is an approach to web development where websites are crafted to provide an optimal viewing experience across a wide range of devices, from desktop monitors to mobile phones.",
+          },
+          {
+            title: "Fluid Grids",
+            text: "Fluid grids are layouts that use relative units like percentages, instead of fixed units like pixels, to create flexible and adaptive layouts.",
+          },
+          {
+            title: "Additional Resources",
+            text: "Watch this introduction video on Responsive Web Design",
+            videoLink: "https://www.youtube.com/watch?v=VQraviuwbzU", // Placeholder link
+          },
+        ],
+      },
+      // TOPIC 2: Media Queries
+      {
+        id: 2,
+        topicName: "Media Queries",
+        content: [
+          {
+            title: "Using Media Queries",
+            text: "Media queries allow you to apply CSS styles based on the size of the viewport or device screen, making your site responsive to various screen sizes.",
+            exampleCode: `
+            /* Example of a media query for mobile devices */
+            @media (max-width: 600px) {
+              body {
+                background-color: lightblue;
+              }
+            }
+            `,
+          },
+          {
+            title: "Additional Resources",
+            text: "Watch this video on using Media Queries",
+            videoLink: "https://www.youtube.com/watch?v=xV7S8BhIeBo", // Placeholder link
+          },
+        ],
+      },
+      // TOPIC 3: Flexible Images
+      {
+        id: 3,
+        topicName: "Flexible Images",
+        content: [
+          {
+            title: "Making Images Responsive",
+            text: "In responsive web design, images should resize based on the width of the parent container using techniques like the `max-width: 100%` rule.",
+            exampleCode: `
+            img {
+              max-width: 100%;
+              height: auto;
+            }
+            `,
+          },
+          {
+            title: "Additional Resources",
+            text: "Watch this video on how to make images responsive",
+            videoLink: "https://www.youtube.com/watch?v=hccgkQU-VlI", // Placeholder link
+          },
+        ],
+      },
+      // TOPIC 4: Mobile-First Design
+      {
+        id: 4,
+        topicName: "Mobile-First Design",
+        content: [
+          {
+            title: "What is Mobile-First Design?",
+            text: "Mobile-first design is an approach where web designers start by designing for the smallest screen sizes, and progressively enhance the layout for larger screens.",
+          },
+          {
+            title: "Mobile-First CSS",
+            text: "In mobile-first design, you write styles for small screens first, and then use media queries to add styles for larger screens.",
+            exampleCode: `
+            /* Base styles for mobile */
+            body {
+              font-size: 16px;
+            }
+  
+            /* Media query for tablets */
+            @media (min-width: 768px) {
+              body {
+                font-size: 18px;
+              }
+            }
+  
+            /* Media query for desktops */
+            @media (min-width: 1024px) {
+              body {
+                font-size: 20px;
+              }
+            }
+            `,
+          },
+          {
+            title: "Additional Resources",
+            text: "Watch this video on Mobile-First Design",
+            videoLink: "https://www.youtube.com/watch?v=U4KU3e7xi_E", // Placeholder link
+          },
+        ],
+      },
+      // TOPIC 5: Responsive Typography
+      {
+        id: 5,
+        topicName: "Responsive Typography",
+        content: [
+          {
+            title: "Scaling Typography with Viewport Units",
+            text: "Responsive typography adjusts the font size based on the screen size. You can achieve this using viewport units like `vw` and `vh`.",
+            exampleCode: `
+            h1 {
+              font-size: 5vw;
+            }
+            `,
+          },
+          {
+            title: "Additional Resources",
+            text: "Watch this video on Responsive Typography",
+            videoLink: "https://www.youtube.com/watch?v=R_aFgFbo3G4", // Placeholder link
+          },
+        ],
+      },
+      // TOPIC 6: CSS Flexbox and Grid for Responsive Layouts
+      {
+        id: 6,
+        topicName: "CSS Flexbox and Grid for Responsive Layouts",
+        content: [
+          {
+            title: "Flexbox",
+            text: "Flexbox is a layout model that allows you to design complex and flexible layouts with ease, especially when creating responsive designs.",
+            exampleCode: `
+            .container {
+              display: flex;
+              flex-wrap: wrap;
+            }
+  
+            .item {
+              flex: 1;
+              min-width: 200px;
+            }
+            `,
+          },
+          {
+            title: "CSS Grid",
+            text: "CSS Grid is a powerful layout system for creating two-dimensional grid-based layouts, which are particularly useful for responsive web design.",
+            exampleCode: `
+            .container {
+              display: grid;
+              grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            }
+            `,
+          },
+          {
+            title: "Additional Resources",
+            text: "Watch this video on CSS Flexbox and Grid",
+            videoLink: "https://www.youtube.com/watch?v=0xMQfnTU6oo", 
+          },
+        ],
+      },
+    ],
   },
+  
+
+
   {
     id: 8,
     name: "Building Interactive UIs with React",
