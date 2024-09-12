@@ -43,6 +43,9 @@ export default function AuthProvider({ children }) {
         password
       );
     } catch (e) {
+      throw{
+        e
+      }
       console.log(e.message);
     }
   };
