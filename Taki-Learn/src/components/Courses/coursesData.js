@@ -370,6 +370,15 @@ const courses = [
     description:
       "Understand how to style websites with CSS and create beautiful web pages.",
     track: "Frontend Web Development",
+    additonalResource: {
+      title: "Additional Resource",
+      videoLink:
+        "https://www.youtube.com/watch?v=OXGznpKZ_sA",
+      websiteLink: {
+        title: "CSS Tutorial",
+        link: "https://www.w3schools.com/css/default.asp",
+      },
+    },
     topics:[
       //TOPIC 1
       {
