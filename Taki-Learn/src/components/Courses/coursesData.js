@@ -6478,21 +6478,437 @@ You can also have values like flex-start, self-start or start and flex-end, self
     description:
       "Understand how to identify, assess, and mitigate security risks.",
     track: "Cybersecurity",
+    additionalResource: {
+      title: "Additional Resource",
+      videoLink: "https://www.youtube.com/watch?v=8qKMjR7cSjk",
+      websiteLink: {
+        title: "Comprehensive Risk Management Guide",
+        link: "https://www.nist.gov/risk-management-framework",
+      },
+    },
+    topics: [
+      // TOPIC 1: Introduction to Risk Management
+      {
+        id: 1,
+        topicName: "Introduction to Risk Management",
+        content: [
+          {
+            title: "What is Risk Management?",
+            text: "Risk management involves identifying, assessing, and controlling threats to an organization's capital and earnings. These threats could stem from various sources such as financial uncertainty, legal liabilities, or cybersecurity breaches.",
+          },
+          {
+            title: "Importance of Risk Management in Cybersecurity",
+            text: "In cybersecurity, risk management helps organizations identify and protect against potential threats, ensuring that resources are used efficiently to mitigate risks and minimize impact.",
+          },
+          {
+            title: "Additional Resources",
+            text: "Learn about risk management in cybersecurity with this video",
+            videoLink: "https://www.youtube.com/watch?v=QaQzv-lGiN4",
+          },
+        ],
+      },
+      // TOPIC 2: Risk Identification
+      {
+        id: 2,
+        topicName: "Risk Identification",
+        content: [
+          {
+            title: "How to Identify Risks",
+            text: "Risk identification involves recognizing potential risks before they occur. In cybersecurity, this includes understanding the organization's assets, vulnerabilities, and potential threat vectors.",
+          },
+          {
+            title: "Techniques for Risk Identification",
+            text: "Common techniques include brainstorming, SWOT analysis (Strengths, Weaknesses, Opportunities, and Threats), and risk assessment frameworks such as ISO 27001 and NIST SP 800-30.",
+          },
+          {
+            title: "Common Cybersecurity Risks",
+            text: "Some of the most common risks in cybersecurity include phishing attacks, ransomware, insider threats, data breaches, and vulnerabilities in software and hardware systems.",
+          },
+          {
+            title: "Additional Resources",
+            text: "For more on identifying risks, check out this guide",
+            videoLink: "https://www.youtube.com/watch?v=2QceSJSaGOA",
+          },
+        ],
+      },
+      // TOPIC 3: Risk Assessment and Analysis
+      {
+        id: 3,
+        topicName: "Risk Assessment and Analysis",
+        content: [
+          {
+            title: "Risk Assessment Process",
+            text: "Risk assessment involves evaluating the likelihood of a risk occurring and the potential impact it would have on the organization. This includes both quantitative and qualitative approaches.",
+          },
+          {
+            title: "Tools for Risk Assessment",
+            text: "Popular tools include risk matrices, heat maps, and probability-impact charts. These tools help organizations prioritize risks based on their severity and likelihood.",
+          },
+          {
+            title: "Conducting a Risk Analysis",
+            text: "Risk analysis includes understanding the potential consequences of an incident and determining appropriate mitigation strategies. It often involves cost-benefit analysis to decide on the best course of action.",
+          },
+          {
+            title: "Additional Resources",
+            text: "Watch this video on risk assessment techniques",
+            videoLink: "https://www.youtube.com/watch?v=f94ew9CjRPI",
+          },
+        ],
+      },
+      // TOPIC 4: Risk Mitigation Strategies
+      {
+        id: 4,
+        topicName: "Risk Mitigation Strategies",
+        content: [
+          {
+            title: "Approaches to Risk Mitigation",
+            text: "Risk mitigation strategies aim to reduce the likelihood of a threat or minimize its impact. Common approaches include avoiding the risk, transferring it (e.g., via insurance), reducing its likelihood, or accepting the risk if its impact is low.",
+          },
+          {
+            title: "Implementing Security Controls",
+            text: "Security controls, such as firewalls, encryption, and multi-factor authentication, can mitigate risks by reducing vulnerabilities in systems and data.",
+          },
+          {
+            title: "Monitoring and Continuous Improvement",
+            text: "Risk management is an ongoing process. Continuous monitoring helps organizations identify new risks and adjust their risk management strategies as needed.",
+          },
+          {
+            title: "Additional Resources",
+            text: "Learn about risk mitigation techniques in this video",
+            videoLink: "https://www.youtube.com/watch?v=MLHd0rlTqwo",
+          },
+        ],
+      },
+      // TOPIC 5: Risk Governance and Compliance
+      {
+        id: 5,
+        topicName: "Risk Governance and Compliance",
+        content: [
+          {
+            title: "Establishing Risk Governance Framework",
+            text: "Risk governance involves setting up the organizational structure and processes for managing risks. This includes defining roles, responsibilities, and oversight mechanisms.",
+          },
+          {
+            title: "Compliance and Regulatory Requirements",
+            text: "Organizations must ensure that their risk management practices comply with relevant regulations such as GDPR, HIPAA, or PCI-DSS. Compliance frameworks help to align risk management with legal requirements.",
+          },
+          {
+            title: "Reporting and Risk Communication",
+            text: "Clear communication of risks to stakeholders, such as executives and board members, is crucial for ensuring that risk management strategies are understood and supported at all levels of the organization.",
+          },
+          {
+            title: "Additional Resources",
+            text: "Explore governance and compliance best practices",
+            videoLink: "https://www.youtube.com/watch?v=xbJu_vYUgXg",
+          },
+        ],
+      },
+      // TOPIC 6: Emerging Risks and Trends in Cybersecurity
+      {
+        id: 6,
+        topicName: "Emerging Risks and Trends in Cybersecurity",
+        content: [
+          {
+            title: "New and Emerging Threats",
+            text: "As technology evolves, so do cybersecurity risks. Emerging threats such as AI-powered attacks, deepfakes, and quantum computing require organizations to adapt their risk management strategies.",
+          },
+          {
+            title: "Future Trends in Risk Management",
+            text: "Risk management is increasingly focusing on proactive approaches, such as threat intelligence and automation, to better predict and respond to evolving threats.",
+          },
+          {
+            title: "Preparing for the Future",
+            text: "Organizations should stay updated with the latest cybersecurity trends, invest in training, and implement advanced technologies to mitigate future risks effectively.",
+          },
+          {
+            title: "Additional Resources",
+            text: "Watch this video to understand the future of cybersecurity risks",
+            videoLink: "https://www.youtube.com/watch?v=gFyJw1sMiYA",
+          },
+        ],
+      },
+    ],
   },
+  
   {
     id: 31,
     name: "Security Auditing & Compliance",
     description:
       "Learn the essentials of auditing and ensuring compliance with security standards.",
     track: "Cybersecurity",
+    additionalResource: {
+      title: "Additional Resource",
+      videoLink: "https://www.youtube.com/watch?v=AEjFi8jZgkA",
+      websiteLink: {
+        title: "Comprehensive Guide to Security Auditing",
+        link: "https://www.isaca.org/resources",
+      },
+    },
+    topics: [
+      // TOPIC 1: Introduction to Security Auditing
+      {
+        id: 1,
+        topicName: "Introduction to Security Auditing",
+        content: [
+          {
+            title: "What is Security Auditing?",
+            text: "Security auditing involves evaluating an organization's security measures to ensure they meet regulatory standards and protect assets from threats. It is a systematic process that identifies security gaps.",
+          },
+          {
+            title: "The Importance of Security Audits",
+            text: "Regular security audits help organizations ensure compliance with legal regulations, mitigate security risks, and improve their overall security posture.",
+          },
+          {
+            title: "Additional Resources",
+            text: "Learn more about security auditing with this video",
+            videoLink: "https://www.youtube.com/watch?v=AEjFi8jZgkA",
+          },
+        ],
+      },
+      // TOPIC 2: Security Standards and Compliance Frameworks
+      {
+        id: 2,
+        topicName: "Security Standards and Compliance Frameworks",
+        content: [
+          {
+            title: "Understanding Compliance Standards",
+            text: "Organizations must comply with security standards such as ISO/IEC 27001, GDPR, HIPAA, and PCI-DSS. These frameworks guide the implementation of security measures and protect sensitive information.",
+          },
+          {
+            title: "Key Security Frameworks",
+            text: "Common frameworks include the NIST Cybersecurity Framework, COBIT, and ISO/IEC 27001. These frameworks provide best practices for managing information security and ensuring compliance.",
+          },
+          {
+            title: "Additional Resources",
+            text: "Explore various compliance frameworks",
+            videoLink: "https://www.youtube.com/watch?v=aIX_8lDBaA0",
+          },
+        ],
+      },
+      // TOPIC 3: Conducting Security Audits
+      {
+        id: 3,
+        topicName: "Conducting Security Audits",
+        content: [
+          {
+            title: "Steps in a Security Audit",
+            text: "A security audit involves planning, assessing current security practices, identifying risks, and creating recommendations for improvements. It also includes reviewing policies, procedures, and systems.",
+          },
+          {
+            title: "Types of Security Audits",
+            text: "There are various types of security audits, including internal audits, external audits, and compliance audits. Each focuses on ensuring that security practices are effective and compliant with regulations.",
+          },
+          {
+            title: "Using Auditing Tools",
+            text: "Auditing tools like Nessus, OpenVAS, and Splunk help in the automated evaluation of system vulnerabilities, log analysis, and tracking compliance issues.",
+          },
+          {
+            title: "Additional Resources",
+            text: "Learn about conducting audits in this guide",
+            videoLink: "https://www.youtube.com/watch?v=WrDV-1ODzGc",
+          },
+        ],
+      },
+      // TOPIC 4: Managing Compliance
+      {
+        id: 4,
+        topicName: "Managing Compliance",
+        content: [
+          {
+            title: "Compliance Management Process",
+            text: "Managing compliance involves ensuring that the organization adheres to security regulations and frameworks. This includes staying updated on new regulations and adjusting security policies as needed.",
+          },
+          {
+            title: "Tools for Compliance Management",
+            text: "Compliance management tools, such as TrustArc and ZenGRC, help organizations track and document compliance efforts, assess risks, and prepare for audits.",
+          },
+          {
+            title: "Monitoring and Reporting Compliance",
+            text: "Continuous monitoring of compliance ensures that security measures remain effective. Regular reporting to stakeholders and regulatory bodies is crucial to maintaining transparency.",
+          },
+          {
+            title: "Additional Resources",
+            text: "Watch this video on compliance management",
+            videoLink: "https://www.youtube.com/watch?v=3bzxwCzm1ZI",
+          },
+        ],
+      },
+      // TOPIC 5: Remediation and Continuous Improvement
+      {
+        id: 5,
+        topicName: "Remediation and Continuous Improvement",
+        content: [
+          {
+            title: "Identifying Gaps and Remediation",
+            text: "After an audit, remediation involves addressing identified security gaps and implementing necessary changes to strengthen the security posture. This could include upgrading security controls or revising policies.",
+          },
+          {
+            title: "Continuous Improvement in Security",
+            text: "Security is not a one-time effort. Continuous improvement involves regularly updating security measures, adopting new technologies, and staying informed about evolving threats.",
+          },
+          {
+            title: "Additional Resources",
+            text: "Learn about remediation strategies in this video",
+            videoLink: "https://www.youtube.com/watch?v=JwJv_zgyDa0",
+          },
+        ],
+      },
+      // TOPIC 6: Future Trends in Security Auditing
+      {
+        id: 6,
+        topicName: "Future Trends in Security Auditing",
+        content: [
+          {
+            title: "Automating Audits with AI",
+            text: "The future of auditing involves the increasing use of AI and machine learning to automate auditing processes, detect anomalies, and identify security risks more efficiently.",
+          },
+          {
+            title: "Risk-based Auditing",
+            text: "Risk-based auditing focuses on prioritizing high-risk areas to ensure that critical vulnerabilities are addressed first. This approach allows for more targeted and efficient audits.",
+          },
+          {
+            title: "Preparing for Emerging Regulations",
+            text: "As regulations evolve, organizations must be prepared for new compliance requirements, particularly in areas such as data privacy, AI ethics, and cloud security.",
+          },
+          {
+            title: "Additional Resources",
+            text: "Watch this video on future trends in auditing",
+            videoLink: "https://www.youtube.com/watch?v=dPZh9bgblP0",
+          },
+        ],
+      },
+    ],
   },
+  
   {
     id: 32,
     name: "Cloud Security Basics",
-    description:
-      "Discover how to secure cloud-based systems and infrastructure.",
+    description: "Discover how to secure cloud-based systems and infrastructure.",
     track: "Cybersecurity",
-  },
+    additionalResource: {
+      title: "Additional Resource",
+      videoLink: "https://www.youtube.com/watch?v=kpSKEkTKw_s", // Cloud Security basics
+      websiteLink: {
+        title: "Cloud Security Best Practices",
+        link: "https://cloudsecurityalliance.org/",
+      },
+    },
+    topics: [
+      // TOPIC 1: Introduction to Cloud Security
+      {
+        id: 1,
+        topicName: "Introduction to Cloud Security",
+        content: [
+          {
+            title: "What is Cloud Security?",
+            text: "Cloud security involves securing cloud-based systems, data, and infrastructure against threats. It covers data protection, compliance, and security management in cloud environments.",
+          },
+          {
+            title: "Types of Cloud Models",
+            text: "Cloud models include public, private, and hybrid clouds. Security needs and implementations vary depending on the model used by the organization.",
+          },
+          {
+            title: "Additional Resources",
+            text: "Learn more about the basics of cloud security",
+            videoLink: "https://www.youtube.com/watch?v=F0p8YEM1g0I",
+          },
+        ],
+      },
+      // TOPIC 2: Cloud Security Threats and Risks
+      {
+        id: 2,
+        topicName: "Cloud Security Threats and Risks",
+        content: [
+          {
+            title: "Common Threats in Cloud Environments",
+            text: "Some common cloud security threats include data breaches, insider threats, insecure interfaces, and account hijacking. These risks require constant monitoring and appropriate security measures.",
+          },
+          {
+            title: "Understanding Shared Responsibility",
+            text: "In cloud security, the shared responsibility model divides the security roles between the cloud provider and the customer. Understanding who is responsible for what is crucial in mitigating security risks.",
+          },
+          {
+            title: "Additional Resources",
+            text: "Explore more on cloud security risks in this video",
+            videoLink: "https://www.youtube.com/watch?v=2xz_nIvn2pM", // Cloud security risks and how to mitigate
+          },
+        ],
+      },
+      // TOPIC 3: Data Encryption in the Cloud
+      {
+        id: 3,
+        topicName: "Data Encryption in the Cloud",
+        content: [
+          {
+            title: "Encrypting Data at Rest and in Transit",
+            text: "Encryption is essential to securing data in the cloud. Data can be encrypted at rest (stored data) and in transit (data being transmitted) using various cryptographic methods.",
+          },
+          {
+            title: "Cloud Encryption Tools",
+            text: "There are a number of encryption tools available for securing cloud data, such as AWS KMS (Key Management Service), Google Cloud KMS, and Azure Key Vault.",
+          },
+          {
+            title: "Additional Resources",
+            text: "Watch this video to understand cloud encryption",
+            videoLink: "https://www.youtube.com/watch?v=y5k1BUEzrTo", // Explanation of encryption in the cloud
+          },
+        ],
+      },
+      // TOPIC 4: Identity and Access Management (IAM)
+      {
+        id: 4,
+        topicName: "Identity and Access Management (IAM)",
+        content: [
+          {
+            title: "Securing Access in the Cloud",
+            text: "IAM systems ensure that the right people and devices have the right access to cloud resources. This includes authentication, authorization, and auditing.",
+          },
+          {
+            title: "IAM Best Practices",
+            text: "Best practices for IAM include using multi-factor authentication (MFA), least privilege access, and regular audits of user permissions.",
+          },
+          {
+            title: "Additional Resources",
+            text: "Learn about IAM in this cloud security video",
+            videoLink: "https://www.youtube.com/watch?v=ts8xlXc0Zs4", // Introduction to IAM in the cloud
+          },
+        ],
+      },
+      // TOPIC 5: Cloud Security Tools and Solutions
+      {
+        id: 5,
+        topicName: "Cloud Security Tools and Solutions",
+        content: [
+          {
+            title: "Popular Cloud Security Tools",
+            text: "Popular tools for cloud security include AWS Security Hub, Azure Security Center, and Google Cloud Security Command Center. These tools help monitor and secure cloud environments.",
+          },
+          {
+            title: "Additional Resources",
+            text: "Watch this video to explore cloud security tools",
+            videoLink: "https://www.youtube.com/watch?v=h5NiD_lhA7A", // Overview of popular cloud security tools
+          },
+        ],
+      },
+      // TOPIC 6: Compliance and Regulatory Requirements in the Cloud
+      {
+        id: 6,
+        topicName: "Compliance and Regulatory Requirements in the Cloud",
+        content: [
+          {
+            title: "Ensuring Cloud Compliance",
+            text: "Cloud providers and customers must comply with various regulations such as GDPR, HIPAA, and PCI DSS. Regular audits and compliance checks ensure that cloud environments meet legal requirements.",
+          },
+          {
+            title: "Additional Resources",
+            text: "Learn about cloud compliance regulations",
+            videoLink: "https://www.youtube.com/watch?v=Zbg6RUrgALw", // Cloud compliance and regulatory framework explained
+          },
+        ],
+      },
+    ],
+  }
+  
 ];
 
 export default courses;
