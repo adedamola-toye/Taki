@@ -94,10 +94,10 @@ const About = () => {
             <ul>
               <li>Planning and Ideation</li>
               <li>About us section</li>
-              <li>Course content</li>
+              <li>Worked on CSS course</li>
             </ul>
           </div>
-          
+
           <div className="member-card">
             <h3>Abdullah</h3>
             <ul>

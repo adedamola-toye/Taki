@@ -1779,7 +1779,7 @@ You can also have values like flex-start, self-start or start and flex-end, self
     description:
       "Dive into React and learn how to build modern web applications.",
     track: "Frontend Web Development",
-    additonalResource: {
+    additionalResource: {
       title: "Additional Resource",
       videoLink:
         "https://www.youtube.com/watch?v=4UZrsTqkcW4&list=WL&index=3&t=13143s",
@@ -4299,94 +4299,2179 @@ You can also have values like flex-start, self-start or start and flex-end, self
   {
     id: 17,
     name: "Python for Data Science",
-    description:
-      "Learn Python programming with a focus on data science applications.",
+    description: "Learn Python programming with a focus on data science applications.",
     track: "Data Science",
+    additionalResource: {
+      title: "Additional Resource",
+      videoLink: "https://www.youtube.com/watch?v=rfscVS0vtbw",
+      websiteLink: {
+        title: "Python for Data Science",
+        link: "https://www.datacamp.com/courses/intro-to-python-for-data-science"
+      }
+    },
+    topics: [
+      {
+        id: 1,
+        topicName: "Introduction to Python",
+        content: [
+          {
+            title: "What is Python?",
+            text: "Python is a versatile, high-level programming language widely used in data science, machine learning, and automation. In this topic, you will learn the basics of Python and its applications in data science."
+          },
+          {
+            title: "Setting Up Python for Data Science",
+            text: "To start working with Python for data science, you need to install Python, set up Jupyter Notebooks, and install important libraries like NumPy, Pandas, and Matplotlib."
+          },
+          {
+            title: "Additional Resources",
+            text: "Watch this beginner’s guide to Python programming",
+            videoLink: "https://www.youtube.com/watch?v=rfscVS0vtbw"
+          }
+        ]
+      },
+      {
+        id: 2,
+        topicName: "Data Types and Variables",
+        content: [
+          {
+            title: "Python Data Types",
+            text: "Python supports various data types like integers, floats, strings, lists, and dictionaries, which are commonly used to store and manipulate data in data science projects."
+          },
+          {
+            title: "Using Variables in Python",
+            text: "Variables are used to store data values. In Python, you can easily assign values to variables and use them in calculations or functions."
+          },
+          {
+            title: "Example: Defining Variables in Python",
+            exampleCode: `
+              # Integer
+              age = 25
+              
+              # Float
+              height = 5.9
+              
+              # String
+              name = "Alice"
+              
+              # List
+              scores = [88, 92, 79]
+              
+              # Dictionary
+              student = {"name": "Alice", "age": 25}
+            `
+          },
+          {
+            title: "Additional Resources",
+            text: "Learn more about Python data types and variables",
+            videoLink: "https://www.youtube.com/watch?v=rfscVS0vtbw"
+          }
+        ]
+      },
+      {
+        id: 3,
+        topicName: "Control Flow in Python",
+        content: [
+          {
+            title: "Using If-Else Statements",
+            text: "Control flow allows you to control the execution of code based on certain conditions. Python's `if`, `else`, and `elif` statements are used to implement decision-making logic."
+          },
+          {
+            title: "Loops in Python",
+            text: "Loops such as `for` and `while` are used to repeat a block of code multiple times. Loops are particularly useful when working with large datasets in data science."
+          },
+          {
+            title: "Example: Implementing Control Flow",
+            exampleCode: `
+              # If-Else statement
+              score = 85
+              if score >= 90:
+                  grade = 'A'
+              elif score >= 80:
+                  grade = 'B'
+              else:
+                  grade = 'C'
+  
+              # For loop
+              for i in range(5):
+                  print(i)
+  
+              # While loop
+              count = 0
+              while count < 5:
+                  print(count)
+                  count += 1
+            `
+          },
+          {
+            title: "Additional Resources",
+            text: "Watch this tutorial on control flow and loops in Python",
+            videoLink: "https://www.youtube.com/watch?v=rfscVS0vtbw"
+          }
+        ]
+      },
+      {
+        id: 4,
+        topicName: "Data Manipulation with Pandas",
+        content: [
+          {
+            title: "Introduction to Pandas",
+            text: "Pandas is a Python library used for data manipulation and analysis. It provides powerful tools for handling structured data, such as data frames and series."
+          },
+          {
+            title: "Working with DataFrames",
+            text: "DataFrames are 2-dimensional labeled data structures in Pandas. You can perform data manipulation tasks such as filtering, grouping, and merging data using DataFrames."
+          },
+          {
+            title: "Example: Loading and Manipulating Data with Pandas",
+            exampleCode: `
+              import pandas as pd
+  
+              # Load a dataset
+              df = pd.read_csv("data.csv")
+  
+              # Display the first few rows
+              print(df.head())
+  
+              # Filter data
+              filtered_df = df[df['age'] > 30]
+  
+              # Group data
+              grouped_df = df.groupby('gender').mean()
+            `
+          },
+          {
+            title: "Additional Resources",
+            text: "Watch this introduction to Pandas for data manipulation",
+            videoLink: "https://www.youtube.com/watch?v=rfscVS0vtbw"
+          }
+        ]
+      },
+      {
+        id: 5,
+        topicName: "Data Visualization with Matplotlib",
+        content: [
+          {
+            title: "Introduction to Matplotlib",
+            text: "Matplotlib is a Python library used for creating visualizations, such as line graphs, bar charts, and scatter plots, which are essential for data analysis and reporting."
+          },
+          {
+            title: "Creating Visualizations with Matplotlib",
+            text: "You can use Matplotlib to create a wide range of visualizations. Data visualizations help you gain insights into patterns and trends in data."
+          },
+          {
+            title: "Example: Plotting a Simple Graph with Matplotlib",
+            exampleCode: `
+              import matplotlib.pyplot as plt
+  
+              # Data for plotting
+              x = [1, 2, 3, 4, 5]
+              y = [10, 12, 8, 15, 7]
+  
+              # Create a line plot
+              plt.plot(x, y)
+              plt.xlabel('X Axis')
+              plt.ylabel('Y Axis')
+              plt.title('Simple Line Plot')
+              plt.show()
+            `
+          },
+          {
+            title: "Additional Resources",
+            text: "Learn more about creating visualizations using Matplotlib",
+            videoLink: "https://www.youtube.com/watch?v=rfscVS0vtbw"
+          }
+        ]
+      },
+      {
+        id: 6,
+        topicName: "Introduction to NumPy",
+        content: [
+          {
+            title: "What is NumPy?",
+            text: "NumPy is a core library in Python used for numerical and scientific computing. It provides support for working with large, multi-dimensional arrays and matrices."
+          },
+          {
+            title: "Working with Arrays in NumPy",
+            text: "NumPy arrays are similar to Python lists but provide more efficient storage and operations. You can perform mathematical operations on entire arrays at once."
+          },
+          {
+            title: "Example: Creating and Manipulating Arrays in NumPy",
+            exampleCode: `
+              import numpy as np
+  
+              # Create a NumPy array
+              arr = np.array([1, 2, 3, 4, 5])
+  
+              # Perform mathematical operations
+              print(arr + 5)
+              print(arr * 2)
+  
+              # Create a multi-dimensional array
+              matrix = np.array([[1, 2, 3], [4, 5, 6]])
+              print(matrix)
+            `
+          },
+          {
+            title: "Additional Resources",
+            text: "Watch this guide on using NumPy for scientific computing",
+            videoLink: "https://www.youtube.com/watch?v=rfscVS0vtbw"
+          }
+        ]
+      },
+      {
+        id: 7,
+        topicName: "Working with APIs in Python",
+        content: [
+          {
+            title: "What is an API?",
+            text: "An API (Application Programming Interface) allows your Python programs to communicate with external services and retrieve or send data. Many data science projects involve working with APIs to gather real-world data."
+          },
+          {
+            title: "Using the Requests Library",
+            text: "The `requests` library in Python is used to make HTTP requests to APIs. You can send GET or POST requests to interact with external APIs."
+          },
+          {
+            title: "Example: Fetching Data from an API",
+            exampleCode: `
+              import requests
+  
+              # Send a GET request to an API
+              response = requests.get('https://api.example.com/data')
+  
+              # Convert the response to JSON format
+              data = response.json()
+  
+              # Print the fetched data
+              print(data)
+            `
+          },
+          {
+            title: "Additional Resources",
+            text: "Learn how to work with APIs using Python",
+            videoLink: "https://www.youtube.com/watch?v=rfscVS0vtbw"
+          }
+        ]
+      },
+      {
+        id: 8,
+        topicName: "Introduction to Machine Learning with Python",
+        content: [
+          {
+            title: "What is Machine Learning?",
+            text: "Machine learning is a branch of artificial intelligence that allows computers to learn patterns from data without being explicitly programmed. Python provides many libraries, such as scikit-learn, for building machine learning models."
+          },
+          {
+            title: "Building a Simple Machine Learning Model",
+            text: "You can use libraries like scikit-learn to build, train, and evaluate machine learning models. Common models include linear regression, decision trees, and neural networks."
+          },
+          {
+            title: "Example: Building a Simple Linear Regression Model",
+            exampleCode: `
+              from sklearn.linear_model import LinearRegression
+              import numpy as np
+  
+              # Data for the model
+              X = np.array([[1], [2], [3], [4], [5]])
+              y = np.array([10, 12, 8, 15, 7])
+  
+              # Create a linear regression model
+              model = LinearRegression()
+  
+              # Train the model
+              model.fit(X, y)
+  
+              # Make predictions
+              predictions = model.predict(X)
+              print(predictions)
+            `
+          },
+          {
+            title: "Additional Resources",
+            text: "Watch this introduction to machine learning with Python",
+            videoLink: "https://www.youtube.com/watch?v=rfscVS0vtbw"
+          }
+        ]
+      }
+    ]
   },
+  
   {
     id: 18,
     name: "Data Analysis with Pandas",
-    description:
-      "Use the Pandas library to manipulate and analyze data efficiently.",
+    description: "Use the Pandas library to manipulate and analyze data efficiently.",
     track: "Data Science",
+    additionalResource: {
+      title: "Additional Resource",
+      videoLink: "https://www.youtube.com/watch?v=vmEHCJofslg",
+      websiteLink: {
+        title: "Pandas Documentation",
+        link: "https://pandas.pydata.org/pandas-docs/stable/"
+      }
+    },
+    topics: [
+      {
+        id: 1,
+        topicName: "Introduction to Pandas",
+        content: [
+          {
+            title: "What is Pandas?",
+            text: "Pandas is a powerful Python library for data manipulation and analysis. It provides data structures such as Series and DataFrames to efficiently store and manipulate structured data."
+          },
+          {
+            title: "Installing Pandas",
+            text: "To use Pandas, you need to install it using the command: `pip install pandas`. It’s widely used for data analysis in Python."
+          },
+          {
+            title: "Additional Resources",
+            text: "Watch this introduction to Pandas",
+            videoLink: "https://www.youtube.com/watch?v=vmEHCJofslg"
+          }
+        ]
+      },
+      {
+        id: 2,
+        topicName: "DataFrames in Pandas",
+        content: [
+          {
+            title: "Understanding DataFrames",
+            text: "DataFrames are 2-dimensional labeled data structures in Pandas. They are similar to Excel spreadsheets or SQL tables, making them perfect for working with tabular data."
+          },
+          {
+            title: "Creating DataFrames",
+            text: "You can create DataFrames from various sources like CSV files, SQL databases, or dictionaries in Python."
+          },
+          {
+            title: "Example: Creating a DataFrame from a CSV file",
+            exampleCode: `
+              import pandas as pd
+  
+              # Load data from a CSV file
+              df = pd.read_csv('data.csv')
+  
+              # Display the first few rows of the DataFrame
+              print(df.head())
+            `
+          },
+          {
+            title: "Additional Resources",
+            text: "Learn more about DataFrames in Pandas",
+            videoLink: "https://www.youtube.com/watch?v=vmEHCJofslg"
+          }
+        ]
+      },
+      {
+        id: 3,
+        topicName: "Basic Data Manipulation",
+        content: [
+          {
+            title: "Selecting Data",
+            text: "In Pandas, you can select specific columns or rows from a DataFrame using labels or indices."
+          },
+          {
+            title: "Filtering Data",
+            text: "You can filter data in a DataFrame using conditional statements, which allow you to analyze specific subsets of data."
+          },
+          {
+            title: "Example: Filtering Data Based on Conditions",
+            exampleCode: `
+              # Select a column
+              age_column = df['age']
+  
+              # Filter rows where age is greater than 30
+              filtered_data = df[df['age'] > 30]
+              print(filtered_data)
+            `
+          },
+          {
+            title: "Additional Resources",
+            text: "Explore how to select and filter data in Pandas",
+            videoLink: "https://www.youtube.com/watch?v=vmEHCJofslg"
+          }
+        ]
+      },
+      {
+        id: 4,
+        topicName: "Data Aggregation and Grouping",
+        content: [
+          {
+            title: "Grouping Data",
+            text: "Pandas allows you to group data by one or more columns to perform operations like sum, mean, or count on grouped data."
+          },
+          {
+            title: "Aggregating Data",
+            text: "Aggregation functions like `sum()`, `mean()`, `min()`, and `max()` can be applied to grouped data to get meaningful insights."
+          },
+          {
+            title: "Example: Grouping and Aggregating Data",
+            exampleCode: `
+              # Group data by the 'gender' column and calculate the mean age
+              grouped_data = df.groupby('gender')['age'].mean()
+              print(grouped_data)
+            `
+          },
+          {
+            title: "Additional Resources",
+            text: "Watch a tutorial on grouping and aggregating data",
+            videoLink: "https://www.youtube.com/watch?v=vmEHCJofslg"
+          }
+        ]
+      },
+      {
+        id: 5,
+        topicName: "Data Cleaning",
+        content: [
+          {
+            title: "Handling Missing Data",
+            text: "In real-world datasets, missing data is common. Pandas provides functions to handle missing values, such as filling them with a default value or dropping rows/columns with missing data."
+          },
+          {
+            title: "Renaming and Removing Columns",
+            text: "Pandas allows you to easily rename columns, drop unnecessary ones, and clean the dataset for analysis."
+          },
+          {
+            title: "Example: Handling Missing Data",
+            exampleCode: `
+              # Fill missing values with the mean
+              df['age'].fillna(df['age'].mean(), inplace=True)
+  
+              # Drop rows with missing values
+              df.dropna(inplace=True)
+            `
+          },
+          {
+            title: "Additional Resources",
+            text: "Learn about handling missing data in Pandas",
+            videoLink: "https://www.youtube.com/watch?v=vmEHCJofslg"
+          }
+        ]
+      },
+      {
+        id: 6,
+        topicName: "Merging and Joining Data",
+        content: [
+          {
+            title: "Merging DataFrames",
+            text: "You can merge multiple DataFrames in Pandas, similar to SQL joins, which is useful when combining different datasets."
+          },
+          {
+            title: "Concatenating DataFrames",
+            text: "Pandas also provides functions to concatenate DataFrames vertically or horizontally."
+          },
+          {
+            title: "Example: Merging Two DataFrames",
+            exampleCode: `
+              # Merge two DataFrames on a common column
+              df_merged = pd.merge(df1, df2, on='id')
+              print(df_merged)
+            `
+          },
+          {
+            title: "Additional Resources",
+            text: "Watch a guide on merging and joining data",
+            videoLink: "https://www.youtube.com/watch?v=vmEHCJofslg"
+          }
+        ]
+      },
+      {
+        id: 7,
+        topicName: "Data Visualization with Pandas",
+        content: [
+          {
+            title: "Plotting Data with Pandas",
+            text: "Pandas integrates well with Matplotlib, allowing you to quickly visualize your data using simple commands."
+          },
+          {
+            title: "Creating Different Plots",
+            text: "You can create bar plots, line plots, scatter plots, and histograms directly from your DataFrames."
+          },
+          {
+            title: "Example: Plotting a Line Chart",
+            exampleCode: `
+              # Plot a line chart for the 'age' column
+              df['age'].plot(kind='line')
+              plt.show()
+            `
+          },
+          {
+            title: "Additional Resources",
+            text: "Learn more about data visualization in Pandas",
+            videoLink: "https://www.youtube.com/watch?v=vmEHCJofslg"
+          }
+        ]
+      }
+    ]
   },
+  
   {
     id: 19,
     name: "Machine Learning Basics",
-    description:
-      "Introduction to machine learning concepts and how to implement them with Python.",
+    description: "Introduction to machine learning concepts and how to implement them with Python.",
     track: "Data Science",
+    additionalResource: {
+      title: "Additional Resource",
+      videoLink: "https://www.youtube.com/watch?v=i_LwzRVP7bg&t=4018s", // Placeholder link
+      websiteLink: {
+        title: "Machine Learning with Python - Freecodecamp",
+        link: "https://www.freecodecamp.org/learn/machine-learning-with-python/"
+      }
+    },
+    topics: [
+      {
+        id: 1,
+        topicName: "Introduction to Machine Learning",
+        content: [
+          {
+            title: "What is Machine Learning?",
+            text: "Machine Learning (ML) is a field of artificial intelligence (AI) that enables systems to learn and improve from experience without being explicitly programmed.",
+            exampleCode: ""
+          },
+          {
+            title: "Types of Machine Learning",
+            text: "The main types of machine learning are supervised learning, unsupervised learning, and reinforcement learning. Each type serves different purposes and uses various algorithms.",
+            exampleCode: ""
+          },
+          {
+            title: "Additional Resources",
+            text: "Watch this video for an introduction to Machine Learning",
+            videoLink: "https://www.youtube.com/watch?v=ukzFI9rgwfU"
+          }
+        ]
+      },
+      {
+        id: 2,
+        topicName: "Supervised Learning",
+        content: [
+          {
+            title: "Overview of Supervised Learning",
+            text: "Supervised learning involves training a model on a labeled dataset, meaning the model learns from input-output pairs.",
+            exampleCode: `
+              from sklearn.model_selection import train_test_split
+              from sklearn.linear_model import LinearRegression
+              from sklearn.metrics import mean_squared_error
+  
+              # Sample code for linear regression
+              X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=42)
+              model = LinearRegression()
+              model.fit(X_train, y_train)
+              predictions = model.predict(X_test)
+              mse = mean_squared_error(y_test, predictions)
+              print("Mean Squared Error:", mse)
+            `
+          },
+          {
+            title: "Additional Resources",
+            text: "Watch this video on Supervised Learning",
+            videoLink: "https://www.youtube.com/watch?v=4qVRBYAdLAo"
+          }
+        ]
+      },
+      {
+        id: 3,
+        topicName: "Unsupervised Learning",
+        content: [
+          {
+            title: "Overview of Unsupervised Learning",
+            text: "Unsupervised learning deals with finding hidden patterns or intrinsic structures in input data without labeled responses.",
+            exampleCode: `
+              from sklearn.cluster import KMeans
+              import matplotlib.pyplot as plt
+  
+              # Sample code for K-means clustering
+              kmeans = KMeans(n_clusters=3)
+              kmeans.fit(X)
+              plt.scatter(X[:, 0], X[:, 1], c=kmeans.labels_)
+              plt.show()
+            `
+          },
+          {
+            title: "Additional Resources",
+            text: "Watch this video on Unsupervised Learning",
+            videoLink: "https://www.youtube.com/watch?v=JnnaDNNb380"
+          }
+        ]
+      },
+      {
+        id: 4,
+        topicName: "Reinforcement Learning",
+        content: [
+          {
+            title: "Overview of Reinforcement Learning",
+            text: "Reinforcement learning is an area of ML where an agent learns to make decisions by performing certain actions and receiving rewards or penalties.",
+            exampleCode: `
+              import numpy as np
+  
+              # Sample code for simple Q-learning
+              Q = np.zeros((state_space, action_space))
+              for episode in range(num_episodes):
+                  state = env.reset()
+                  done = False
+                  while not done:
+                      action = np.argmax(Q[state])
+                      next_state, reward, done, _ = env.step(action)
+                      Q[state, action] = Q[state, action] + alpha * (reward + gamma * np.max(Q[next_state]) - Q[state, action])
+                      state = next_state
+            `
+          },
+          {
+            title: "Additional Resources",
+            text: "Watch this video on Reinforcement Learning",
+            videoLink: "https://www.youtube.com/watch?v=JgvyzIkgxF0"
+          }
+        ]
+      }
+    ]
   },
+
   {
     id: 20,
     name: "Data Visualization with Matplotlib",
-    description:
-      "Create compelling data visualizations using Python's Matplotlib library.",
+    description: "Create compelling data visualizations using Python's Matplotlib library.",
     track: "Data Science",
+    additionalResource: {
+      title: "Additional Resource",
+      videoLink: "https://www.youtube.com/watch?v=3Xc3CA655Y4", // Placeholder link
+      websiteLink: {
+        title: "Matplotlib Documentation",
+        link: "https://matplotlib.org/stable/contents.html"
+      }
+    },
+    topics: [
+      {
+        id: 1,
+        topicName: "Introduction to Matplotlib",
+        content: [
+          {
+            title: "What is Matplotlib?",
+            text: "Matplotlib is a plotting library for the Python programming language and its numerical mathematics extension NumPy. It provides an object-oriented API for embedding plots into applications.",
+            exampleCode: ""
+          },
+          {
+            title: "Basic Plotting",
+            text: "Matplotlib allows you to create various types of plots including line plots, bar plots, histograms, and scatter plots.",
+            exampleCode: `
+              import matplotlib.pyplot as plt
+  
+              # Sample code for a basic line plot
+              x = [1, 2, 3, 4, 5]
+              y = [2, 3, 5, 7, 11]
+              plt.plot(x, y)
+              plt.xlabel('X-axis')
+              plt.ylabel('Y-axis')
+              plt.title('Basic Line Plot')
+              plt.show()
+            `
+          },
+          {
+            title: "Additional Resources",
+            text: "Watch this video for an introduction to Matplotlib",
+            videoLink: "https://www.youtube.com/watch?v=nzKy9GY12yo"
+          }
+        ]
+      },
+      {
+        id: 2,
+        topicName: "Advanced Plotting Techniques",
+        content: [
+          {
+            title: "Customizing Plots",
+            text: "You can customize plots by adjusting colors, styles, and labels to make them more informative and visually appealing.",
+            exampleCode: `
+              import matplotlib.pyplot as plt
+  
+              # Sample code for customizing a plot
+              x = [1, 2, 3, 4, 5]
+              y = [2, 3, 5, 7, 11]
+              plt.plot(x, y, color='green', linestyle='--', marker='o')
+              plt.xlabel('X-axis')
+              plt.ylabel('Y-axis')
+              plt.title('Customized Line Plot')
+              plt.grid(True)
+              plt.show()
+            `
+          },
+          {
+            title: "Subplots and Layouts",
+            text: "Matplotlib supports creating multiple plots in a single figure with different layouts.",
+            exampleCode: `
+              import matplotlib.pyplot as plt
+  
+              # Sample code for subplots
+              fig, axs = plt.subplots(2, 2)
+              axs[0, 0].plot([1, 2, 3], [1, 4, 9], 'tab:blue')
+              axs[0, 1].bar([1, 2, 3], [1, 4, 9], color='tab:orange')
+              axs[1, 0].scatter([1, 2, 3], [1, 4, 9], color='tab:green')
+              axs[1, 1].hist([1, 2, 3, 1, 2, 3], bins=3, color='tab:red')
+  
+              for ax in axs.flat:
+                  ax.label_outer()
+  
+              plt.show()
+            `
+          },
+          {
+            title: "Additional Resources",
+            text: "Watch this video on advanced Matplotlib techniques",
+            videoLink: "https://www.youtube.com/watch?v=csXmVBw8cdo"
+          }
+        ]
+      },
+      {
+        id: 3,
+        topicName: "Interactive Visualizations",
+        content: [
+          {
+            title: "Creating Interactive Plots",
+            text: "Matplotlib supports interactive plots which can be useful for data exploration.",
+            exampleCode: `
+              import matplotlib.pyplot as plt
+  
+              # Sample code for interactive plotting
+              from matplotlib.widgets import Slider
+  
+              fig, ax = plt.subplots()
+              plt.subplots_adjust(left=0.25, bottom=0.25)
+              t = range(100)
+              s = [i**2 for i in t]
+              l, = plt.plot(t, s, lw=2)
+  
+              axcolor = 'lightgoldenrodyellow'
+              axamp = plt.axes([0.25, 0.1, 0.65, 0.03], facecolor=axcolor)
+              samp = Slider(axamp, 'Scale', 0.1, 10.0, valinit=1)
+  
+              def update(val):
+                  l.set_ydata([i**2 * samp.val for i in t])
+                  fig.canvas.draw_idle()
+  
+              samp.on_changed(update)
+              plt.show()
+            `
+          },
+          {
+            title: "Additional Resources",
+            text: "Watch this video on creating interactive plots with Matplotlib",
+            videoLink: "https://www.youtube.com/watch?v=FBX38xd_SiE"
+          }
+        ]
+      }
+    ]
   },
+  
   {
     id: 21,
     name: "Big Data with Hadoop",
-    description:
-      "Learn how to work with massive datasets using the Hadoop ecosystem.",
+    description: "Learn how to work with massive datasets using the Hadoop ecosystem.",
     track: "Data Science",
+    additionalResource: {
+      title: "Additional Resource",
+      videoLink: "https://www.youtube.com/watch?v=VmO0QgPCbZY", // Placeholder link
+      websiteLink: {
+        title: "Hadoop Documentation",
+        link: "https://hadoop.apache.org/docs/"
+      }
+    },
+    topics: [
+      {
+        id: 1,
+        topicName: "Introduction to Hadoop",
+        content: [
+          {
+            title: "What is Hadoop?",
+            text: "Hadoop is an open-source software framework designed for distributed storage and processing of large datasets across clusters of computers. It enables the handling of massive amounts of data using scalable, fault-tolerant infrastructure, making it a key component in managing big data.",
+            exampleCode: ""
+          },
+          {
+            title: "Hadoop Architecture",
+            text: "The core components of Hadoop are the Hadoop Distributed File System (HDFS), which handles data storage, and MapReduce, a programming model used for data processing. HDFS splits large files into blocks and distributes them across multiple machines. MapReduce breaks data processing into two phases: Map (filtering and sorting) and Reduce (aggregation), enabling efficient large-scale data handling.",
+            exampleCode: ""
+          },
+          {
+            title: "Additional Resources",
+            text: "Watch this video for an introduction to Hadoop",
+            videoLink: "https://www.youtube.com/watch?v=aReuLtY0YMI&t=343s"
+          }
+        ]
+      },
+      {
+        id: 2,
+        topicName: "Working with HDFS",
+        content: [
+          {
+            title: "Basic Commands",
+            text: "HDFS is a distributed file system that allows you to store large files and access them across multiple machines. You can interact with HDFS using basic commands like listing directories, uploading files, and downloading files.",
+            exampleCode: `
+              # List files in HDFS
+              hdfs dfs -ls /
+    
+              # Upload a file to HDFS
+              hdfs dfs -put localfile.txt /user/hadoop/
+    
+              # Download a file from HDFS
+              hdfs dfs -get /user/hadoop/localfile.txt localfile.txt
+            `
+          },
+          {
+            title: "File Storage and Retrieval",
+            text: "In HDFS, data is stored in blocks across multiple machines, with replication to ensure fault tolerance. This allows Hadoop to retrieve data efficiently even if certain machines fail. Understanding block distribution and replication is key to mastering HDFS.",
+            exampleCode: ""
+          },
+          {
+            title: "Additional Resources",
+            text: "Watch this video on working with HDFS",
+            videoLink: "https://www.youtube.com/watch?v=nRX4_3qf3rc"
+          }
+        ]
+      },
+      {
+        id: 3,
+        topicName: "MapReduce Programming",
+        content: [
+          {
+            title: "Introduction to MapReduce",
+            text: "MapReduce is a programming model used to process large datasets in a distributed manner. The Map phase involves breaking down tasks into key-value pairs, and the Reduce phase aggregates these values. This parallel processing enables Hadoop to handle massive datasets efficiently.",
+            exampleCode: ""
+          },
+          {
+            title: "Writing a MapReduce Job",
+            text: "MapReduce jobs can be written in Java, Python, or other supported languages. The key components are the Mapper, which handles the mapping of data, and the Reducer, which processes and aggregates the mapped data. Below is an example of a simple word count program in Java, which is a common introductory exercise for learning MapReduce.",
+            exampleCode: `
+              // Sample MapReduce job in Java
+              public class WordCount {
+                public static class TokenizerMapper extends Mapper<Object, Text, Text, IntWritable> {
+                  private final static IntWritable one = new IntWritable(1);
+                  private Text word = new Text();
+    
+                  public void map(Object key, Text value, Context context) throws IOException, InterruptedException {
+                    StringTokenizer itr = new StringTokenizer(value.toString());
+                    while (itr.hasMoreTokens()) {
+                      word.set(itr.nextToken());
+                      context.write(word, one);
+                    }
+                  }
+                }
+    
+                public static class IntSumReducer extends Reducer<Text, IntWritable, Text, IntWritable> {
+                  private IntWritable result = new IntWritable();
+    
+                  public void reduce(Text key, Iterable<IntWritable> values, Context context) throws IOException, InterruptedException {
+                    int sum = 0;
+                    for (IntWritable val : values) {
+                      sum += val.get();
+                    }
+                    result.set(sum);
+                    context.write(key, result);
+                  }
+                }
+    
+                public static void main(String[] args) throws Exception {
+                  Configuration conf = new Configuration();
+                  Job job = Job.getInstance(conf, "word count");
+                  job.setJarByClass(WordCount.class);
+                  job.setMapperClass(TokenizerMapper.class);
+                  job.setCombinerClass(IntSumReducer.class);
+                  job.setReducerClass(IntSumReducer.class);
+                  job.setOutputKeyClass(Text.class);
+                  job.setOutputValueClass(IntWritable.class);
+                  FileInputFormat.addInputPath(job, new Path(args[0]));
+                  FileOutputFormat.setOutputPath(job, new Path(args[1]));
+                  System.exit(job.waitForCompletion(true) ? 0 : 1);
+                }
+              }
+            `
+          },
+          {
+            title: "Additional Resources",
+            text: "Watch this video on writing MapReduce jobs",
+            videoLink: "https://www.youtube.com/watch?v=UJxFZkWoxA8"
+          }
+        ]
+      },
+      {
+        id: 4,
+        topicName: "Advanced Hadoop Ecosystem",
+        content: [
+          {
+            title: "Hadoop Ecosystem Components",
+            text: "Hadoop's ecosystem includes a variety of tools designed to enhance data processing capabilities. Hive is used for data warehousing, allowing you to query data stored in HDFS using SQL-like syntax. Pig is a scripting tool for processing large datasets, while HBase provides NoSQL storage for real-time access to large volumes of data.",
+            exampleCode: ""
+          },
+          {
+            title: "Integrating Hadoop with Other Tools",
+            text: "Hadoop can be integrated with other tools such as Apache Spark, which provides in-memory data processing for faster computations, and Apache Flume, which ingests large amounts of data from multiple sources. These integrations enhance Hadoop's data processing efficiency and expand its capabilities.",
+            exampleCode: ""
+          },
+          {
+            title: "Additional Resources",
+            text: "Watch this video on advanced Hadoop ecosystem components",
+            videoLink: "https://www.youtube.com/watch?v=eA4yYxLQuWU"
+          }
+        ]
+      }
+    ]
   },
+  
+  
   {
     id: 22,
     name: "Data Cleaning Techniques",
-    description:
-      "Master the art of cleaning messy datasets for accurate analysis.",
+    description: "Master the art of cleaning messy datasets for accurate analysis.",
     track: "Data Science",
+    additionalResource: {
+      title: "Additional Resource",
+      videoLink: "https://www.youtube.com/watch?v=zTaMGQm-T5g",
+      websiteLink: {
+        title: "Data Cleaning Guide",
+        link: "https://towardsdatascience.com/a-guide-to-data-cleaning-3e926be48a43"
+      }
+    },
+    topics: [
+      {
+        id: 1,
+        topicName: "Introduction to Data Cleaning",
+        content: [
+          {
+            title: "Why Data Cleaning is Important",
+            text: "Data cleaning is a fundamental step in the data analysis pipeline. It involves identifying and correcting errors or inconsistencies in data to improve its quality. Clean data ensures more reliable results, better decision-making, and more accurate predictions. Inaccurate or messy data can lead to misleading insights and poor outcomes.",
+            exampleCode: ""
+          },
+          {
+            title: "Common Data Issues",
+            text: "Common issues in datasets include missing values, duplicates, inconsistencies, and outliers. Missing values occur when no data is available for a particular record, which can skew analysis if not handled properly. Duplicates can inflate the data and lead to incorrect results. Inconsistencies arise when data entries differ in format or structure. Understanding these issues helps in selecting the right cleaning techniques.",
+            exampleCode: ""
+          },
+          {
+            title: "Additional Resources",
+            text: "For a deeper understanding of the importance of data cleaning and best practices, watch this video which provides practical insights and examples.",
+            videoLink: "https://www.youtube.com/watch?v=0l_SlOq34Ug"
+          }
+        ]
+      },
+      {
+        id: 2,
+        topicName: "Handling Missing Values",
+        content: [
+          {
+            title: "Identifying Missing Values",
+            text: "Detecting missing values in a dataset is crucial for proper data cleaning. Various methods can be used to identify these missing values, such as checking for null or NaN entries. Tools like Pandas in Python offer built-in functions to help with this task.",
+            exampleCode: `
+              import pandas as pd
+  
+              # Load data
+              df = pd.read_csv('data.csv')
+  
+              # Check for missing values
+              missing_values = df.isnull().sum()
+              print(missing_values)
+            `
+          },
+          {
+            title: "Strategies for Imputation",
+            text: "Once missing values are identified, you need to decide how to handle them. Imputation involves replacing missing values with substitute values, such as the mean, median, or mode of the column. This helps in preserving the dataset's integrity without losing too much information.",
+            exampleCode: `
+              from sklearn.impute import SimpleImputer
+  
+              # Impute missing values
+              imputer = SimpleImputer(strategy='mean')
+              df_imputed = imputer.fit_transform(df)
+              `
+          },
+          {
+            title: "Additional Resources",
+            text: "Learn more about handling missing values and techniques for imputation by watching this informative video.",
+            videoLink: "https://www.youtube.com/watch?v=uDr67HBIPz8"
+          }
+        ]
+      },
+      {
+        id: 3,
+        topicName: "Removing Duplicates",
+        content: [
+          {
+            title: "Identifying Duplicates",
+            text: "Duplicate records in a dataset can lead to overestimation of trends and inaccuracies in analysis. Identifying duplicates involves checking for identical records based on one or more columns. Techniques include using functions that compare rows and flag duplicates.",
+            exampleCode: `
+              # Identify duplicates
+              duplicates = df.duplicated()
+              print(df[duplicates])
+            `
+          },
+          {
+            title: "Removing Duplicates",
+            text: "Once duplicates are identified, they need to be removed to maintain data quality. Removing duplicates involves filtering out the redundant rows while keeping the original or relevant ones. This step ensures that each record is unique and contributes accurately to the analysis.",
+            exampleCode: `
+              # Remove duplicates
+              df_cleaned = df.drop_duplicates()
+              `
+          },
+          {
+            title: "Additional Resources",
+            text: "For practical examples and techniques on removing duplicates, watch this video which demonstrates effective methods for cleaning your data.",
+            videoLink: "https://www.youtube.com/watch?v=e5oOvU0VWBQ"
+          }
+        ]
+      },
+      {
+        id: 4,
+        topicName: "Data Consistency and Validation",
+        content: [
+          {
+            title: "Ensuring Consistency",
+            text: "Maintaining data consistency involves ensuring that data across different datasets or records follows the same format and rules. Consistent data is crucial for accurate analysis and reporting. Techniques include standardizing formats and verifying that related data elements are synchronized.",
+            exampleCode: ""
+          },
+          {
+            title: "Data Validation Techniques",
+            text: "Data validation ensures that data meets specific criteria or constraints before it is used in analysis. Validation techniques include checking data types, ranges, and business rules to ensure data correctness. Implementing validation rules helps prevent errors and ensures data integrity.",
+            exampleCode: `
+              # Example of data validation
+              def validate_data(value):
+                  if value > 0:
+                      return True
+                  return False
+  
+              df['valid'] = df['value'].apply(validate_data)
+              `
+          },
+          {
+            title: "Additional Resources",
+            text: "Watch this video to understand techniques for ensuring data consistency and validating data effectively.",
+            videoLink: "https://www.youtube.com/watch?v=zo4GMXoRkFA"
+          }
+        ]
+      }
+    ]
   },
+  
+  
   {
     id: 23,
     name: "Deep Learning with TensorFlow",
-    description:
-      "Dive into deep learning concepts using TensorFlow and neural networks.",
+    description: "Dive into deep learning concepts using TensorFlow and neural networks.",
     track: "Data Science",
+    additionalResource: {
+      title: "Additional Resource",
+      videoLink: "https://www.youtube.com/watch?v=tPYj3fFJGjk",
+      websiteLink: {
+        title: "TensorFlow Tutorials",
+        link: "https://www.tensorflow.org/tutorials"
+      }
+    },
+    topics: [
+      {
+        id: 1,
+        topicName: "Introduction to Deep Learning",
+        content: [
+          {
+            title: "Understanding Deep Learning",
+            text: "Deep learning is a specialized area of machine learning that uses neural networks with many layers to model complex patterns in data. It has become increasingly important for tasks such as image and speech recognition, natural language processing, and more.",
+            exampleCode: ""
+          },
+          {
+            title: "Basics of Neural Networks",
+            text: "Neural networks are computational models inspired by the human brain's architecture. They consist of layers of interconnected nodes, or 'neurons', where each connection represents a weight that adjusts during training. Basic neural networks include input, hidden, and output layers.",
+            exampleCode: ""
+          },
+          {
+            title: "Additional Resources",
+            text: "Watch this introductory video on deep learning to get a foundational understanding of the topic.",
+            videoLink: "https://www.youtube.com/watch?v=tPYj3fFJGjk"
+          }
+        ]
+      },
+      {
+        id: 2,
+        topicName: "Building Neural Networks with TensorFlow",
+        content: [
+          {
+            title: "Setting Up TensorFlow",
+            text: "TensorFlow is an open-source library developed by Google for numerical computation and machine learning. To get started with TensorFlow, you'll need to install it and set up your development environment.",
+            exampleCode: `
+              # Install TensorFlow
+              !pip install tensorflow
+            `
+          },
+          {
+            title: "Creating a Simple Neural Network",
+            text: "Using TensorFlow, you can build neural networks to solve various problems. A simple neural network typically consists of one or more dense (fully connected) layers. You'll define the architecture, compile the model, and then train it using your data.",
+            exampleCode: `
+              import tensorflow as tf
+              from tensorflow.keras.models import Sequential
+              from tensorflow.keras.layers import Dense
+  
+              # Define a simple neural network
+              model = Sequential([
+                Dense(64, activation='relu', input_shape=(784,)),
+                Dense(10, activation='softmax')
+              ])
+  
+              # Compile the model
+              model.compile(optimizer='adam', loss='sparse_categorical_crossentropy', metrics=['accuracy'])
+              `
+          },
+          {
+            title: "Additional Resources",
+            text: "Watch this tutorial on building neural networks with TensorFlow for a hands-on approach to creating models.",
+            videoLink: "https://www.youtube.com/watch?v=w2b07L6bbd8"
+          }
+        ]
+      },
+      {
+        id: 3,
+        topicName: "Training and Evaluating Models",
+        content: [
+          {
+            title: "Training Neural Networks",
+            text: "Training involves adjusting the weights of the neural network using a dataset. You'll split your data into training and validation sets, then use the training set to adjust weights through backpropagation and the validation set to monitor performance.",
+            exampleCode: `
+              # Train the model
+              history = model.fit(X_train, y_train, epochs=5, validation_split=0.2)
+            `
+          },
+          {
+            title: "Evaluating Model Performance",
+            text: "After training, evaluate the model's performance on a test set to determine its accuracy and generalization capabilities. Metrics such as accuracy, precision, and recall are commonly used to assess model performance.",
+            exampleCode: `
+              # Evaluate the model
+              test_loss, test_acc = model.evaluate(X_test, y_test)
+              print(f'Test accuracy: {test_acc}')
+            `
+          },
+          {
+            title: "Additional Resources",
+            text: "Explore this video for detailed insights into training and evaluating machine learning models.",
+            videoLink: "https://www.youtube.com/watch?v=2C8hSa8hFq8"
+          }
+        ]
+      },
+      {
+        id: 4,
+        topicName: "Advanced Topics in Deep Learning",
+        content: [
+          {
+            title: "Convolutional Neural Networks (CNNs)",
+            text: "CNNs are designed for processing structured grid data like images. They use convolutional layers to automatically and adaptively learn spatial hierarchies of features from input images, making them powerful for tasks like image classification and object detection.",
+            exampleCode: `
+              from tensorflow.keras.layers import Conv2D, MaxPooling2D
+  
+              # Define a CNN
+              cnn_model = Sequential([
+                Conv2D(32, (3, 3), activation='relu', input_shape=(64, 64, 3)),
+                MaxPooling2D(pool_size=(2, 2)),
+                Flatten(),
+                Dense(128, activation='relu'),
+                Dense(10, activation='softmax')
+              ])
+              `
+          },
+          {
+            title: "Recurrent Neural Networks (RNNs)",
+            text: "RNNs are suitable for sequence data, like time series or text. They have loops to maintain information from previous inputs, which makes them effective for tasks such as language modeling and sequence prediction.",
+            exampleCode: `
+              from tensorflow.keras.layers import LSTM
+  
+              # Define an RNN
+              rnn_model = Sequential([
+                LSTM(50, activation='relu', input_shape=(10, 1)),
+                Dense(1)
+              ])
+              `
+          },
+          {
+            title: "Additional Resources",
+            text: "Learn more about advanced deep learning techniques by watching this video on CNNs and RNNs.",
+            videoLink: "https://www.youtube.com/watch?v=_e8F_W0T2o4"
+          }
+        ]
+      }
+    ]
   },
+  
   {
     id: 24,
-    name: "Natural Language Processing (NLP)",
+    name: "Natural Language Processing",
     description:
-      "Learn how to process and analyze text data using Python's NLP libraries.",
+      "Explore the basics of Natural Language Processing (NLP) and how it enables computers to understand and generate human language.",
     track: "Data Science",
+    additionalResource: {
+      title: "Additional Resource",
+      videoLink: "https://www.youtube.com/watch?v=8u73bvm7pQI",
+      websiteLink: {
+        title: "NLP with Python",
+        link: "https://www.nltk.org/book/",
+      },
+    },
+    topics: [
+      // TOPIC 1: Introduction to NLP
+      {
+        id: 1,
+        topicName: "Introduction to NLP",
+        content: [
+          {
+            title: "What is NLP?",
+            text: "Natural Language Processing (NLP) is a field of artificial intelligence that focuses on the interaction between computers and human (natural) languages. It involves using computational techniques to analyze and generate human language data.",
+          },
+          {
+            title: "Applications of NLP",
+            text: "NLP is used in a variety of applications such as sentiment analysis, machine translation, chatbots, and text summarization. It powers voice assistants like Siri and Alexa, and search engines like Google rely on it to understand and process user queries.",
+          },
+          {
+            title: "Additional Resources",
+            text: "Check out this video on Introduction to NLP",
+            videoLink: "https://www.youtube.com/watch?v=xvqsFTUsOmc",
+          },
+        ],
+      },
+      // TOPIC 2: Tokenization
+      {
+        id: 2,
+        topicName: "Tokenization",
+        content: [
+          {
+            title: "What is Tokenization?",
+            text: "Tokenization is the process of breaking down text into smaller units called tokens. These tokens can be words, sentences, or even characters. It is a fundamental step in text preprocessing.",
+          },
+          {
+            title: "Word vs Sentence Tokenization",
+            text: "In word tokenization, text is split into individual words, whereas in sentence tokenization, the text is split into sentences. These are crucial steps for analyzing and understanding the structure of language data.",
+            exampleCode: `
+            // Example using NLTK in Python for word tokenization
+            from nltk.tokenize import word_tokenize
+  
+            sentence = "Natural Language Processing is exciting!"
+            tokens = word_tokenize(sentence)
+            print(tokens)  // Output: ['Natural', 'Language', 'Processing', 'is', 'exciting', '!']
+            `,
+          },
+          {
+            title: "Additional Resources",
+            text: "Check out this video on Tokenization",
+            videoLink: "https://www.youtube.com/watch?v=g2QOL6oD0E8",
+          },
+        ],
+      },
+      // TOPIC 3: Stemming and Lemmatization
+      {
+        id: 3,
+        topicName: "Stemming and Lemmatization",
+        content: [
+          {
+            title: "Understanding Stemming",
+            text: "Stemming is the process of reducing words to their base or root form. For example, 'running' becomes 'run.' However, it might produce non-words like 'happi' from 'happiness'.",
+          },
+          {
+            title: "Understanding Lemmatization",
+            text: "Lemmatization is similar to stemming but ensures that the root word is a valid word in the language. It considers the context and reduces words to their dictionary form, such as 'better' becoming 'good'.",
+            exampleCode: `
+            // Example using NLTK in Python for Lemmatization
+            from nltk.stem import WordNetLemmatizer
+  
+            lemmatizer = WordNetLemmatizer()
+            print(lemmatizer.lemmatize("better", pos="a"))  // Output: 'good'
+            `,
+          },
+          {
+            title: "Additional Resources",
+            text: "Check out this video on Stemming and Lemmatization",
+            videoLink: "https://www.youtube.com/watch?v=TbNymweHW4E",
+          },
+        ],
+      },
+      // TOPIC 4: Part-of-Speech (POS) Tagging
+      {
+        id: 4,
+        topicName: "Part-of-Speech (POS) Tagging",
+        content: [
+          {
+            title: "What is POS Tagging?",
+            text: "POS Tagging is the process of assigning parts of speech, such as nouns, verbs, and adjectives, to each word in a sentence. This helps in understanding the grammatical structure of the text.",
+          },
+          {
+            title: "How POS Tagging Works",
+            text: "POS Tagging uses algorithms to label words based on their definition and context. It is used in various NLP applications such as named entity recognition and syntactic parsing.",
+            exampleCode: `
+            // Example using NLTK in Python for POS tagging
+            import nltk
+            nltk.download('averaged_perceptron_tagger')
+  
+            sentence = "NLP is fascinating!"
+            words = nltk.word_tokenize(sentence)
+            pos_tags = nltk.pos_tag(words)
+            print(pos_tags)  // Output: [('NLP', 'NNP'), ('is', 'VBZ'), ('fascinating', 'VBG'), ('!', '.')]
+            `,
+          },
+          {
+            title: "Additional Resources",
+            text: "Check out this video on POS Tagging",
+            videoLink: "https://www.youtube.com/watch?v=M9Itm95JzL0",
+          },
+        ],
+      },
+      // TOPIC 5: Named Entity Recognition (NER)
+      {
+        id: 5,
+        topicName: "Named Entity Recognition (NER)",
+        content: [
+          {
+            title: "What is NER?",
+            text: "Named Entity Recognition is a technique used to locate and classify entities such as names, organizations, locations, dates, and more in text. It helps in structuring and understanding large datasets.",
+          },
+          {
+            title: "Examples of NER",
+            text: "For example, in the sentence 'John Doe works at Google,' NER would identify 'John Doe' as a person and 'Google' as an organization.",
+            exampleCode: `
+            // Example using SpaCy in Python for NER
+            import spacy
+  
+            nlp = spacy.load("en_core_web_sm")
+            doc = nlp("Google is a tech company based in California.")
+            for ent in doc.ents:
+              print(ent.text, ent.label_)  // Output: ('Google', 'ORG'), ('California', 'GPE')
+            `,
+          },
+          {
+            title: "Additional Resources",
+            text: "Check out this video on NER",
+            videoLink: "https://www.youtube.com/watch?v=A3EjU9pFO7E",
+          },
+        ],
+      },
+      // TOPIC 6: Sentiment Analysis
+      {
+        id: 6,
+        topicName: "Sentiment Analysis",
+        content: [
+          {
+            title: "Understanding Sentiment Analysis",
+            text: "Sentiment Analysis is the process of determining whether a piece of text is positive, negative, or neutral. It is widely used in social media monitoring, customer feedback, and market research.",
+          },
+          {
+            title: "How Sentiment Analysis Works",
+            text: "Sentiment Analysis involves preprocessing text, tokenizing, and then using a model (such as a machine learning or deep learning model) to classify the text's sentiment. Tools like VADER in Python can be used for simple sentiment analysis tasks.",
+            exampleCode: `
+            // Example using NLTK's VADER for Sentiment Analysis
+            from nltk.sentiment.vader import SentimentIntensityAnalyzer
+  
+            sid = SentimentIntensityAnalyzer()
+            sentence = "I love NLP!"
+            print(sid.polarity_scores(sentence))  // Output: {'neg': 0.0, 'neu': 0.3, 'pos': 0.7, 'compound': 0.6369}
+            `,
+          },
+          {
+            title: "Additional Resources",
+            text: "Check out this video on Sentiment Analysis",
+            videoLink: "https://www.youtube.com/watch?v=O5Q7PzWTmeI",
+          },
+        ],
+      },
+    ],
   },
+  
+
+  
   {
     id: 25,
     name: "Introduction to Cybersecurity",
     description:
       "Learn the fundamentals of cybersecurity and how to protect systems from attacks.",
     track: "Cybersecurity",
+    additionalResource: {
+      title: "Additional Resource",
+      videoLink: "https://www.youtube.com/watch?v=JlZCgDPGf6s",
+      websiteLink: {
+        title: "Introduction to Cybersecurity by Cisco",
+        link: "https://www.cisco.com/c/en/us/products/security/what-is-cybersecurity.html",
+      },
+    },
+    topics: [
+      // TOPIC 1: What is Cybersecurity?
+      {
+        id: 1,
+        topicName: "What is Cybersecurity?",
+        content: [
+          {
+            title: "Definition of Cybersecurity",
+            text: "Cybersecurity refers to the practice of protecting networks, systems, and programs from digital attacks. These cyberattacks typically aim to access, change, or destroy sensitive information, extort money from users, or disrupt normal business processes.",
+          },
+          {
+            title: "Importance of Cybersecurity",
+            text: "With increasing amounts of sensitive data stored online, cybersecurity is crucial to protecting personal information, preventing identity theft, and ensuring data integrity. It also helps businesses avoid costly data breaches and ensures trust with customers.",
+          },
+          {
+            title: "Additional Resources",
+            text: "Check out this video on Cybersecurity basics",
+            videoLink: "https://www.youtube.com/watch?v=2Tt-sS28v8g",
+          },
+        ],
+      },
+      // TOPIC 2: Types of Cyber Attacks
+      {
+        id: 2,
+        topicName: "Types of Cyber Attacks",
+        content: [
+          {
+            title: "Common Types of Cyber Attacks",
+            text: "Cyberattacks come in various forms, including phishing, malware, ransomware, denial-of-service (DoS), and man-in-the-middle attacks. Each method aims to compromise security and access confidential data.",
+          },
+          {
+            title: "Phishing Attacks",
+            text: "Phishing involves sending fraudulent communications that appear to come from a trusted source. It is usually performed via email and aims to steal sensitive data like login credentials or credit card numbers.",
+          },
+          {
+            title: "Malware",
+            text: "Malware is software intentionally designed to cause damage to a computer, server, or network. It includes viruses, worms, and trojan horses, which can spread rapidly and cause significant harm.",
+            exampleCode: `
+            // Basic example of malware code (not executable)
+            function malware() {
+              while(true) {
+                // Infinite loop to consume system resources
+                console.log('System crash...');
+              }
+            }
+            malware();
+            `,
+          },
+          {
+            title: "Additional Resources",
+            text: "Explore more about different types of cyberattacks",
+            videoLink: "https://www.youtube.com/watch?v=OVON_Sks03o",
+          },
+        ],
+      },
+      // TOPIC 3: Basic Security Measures
+      {
+        id: 3,
+        topicName: "Basic Security Measures",
+        content: [
+          {
+            title: "Strong Passwords",
+            text: "Using strong and unique passwords for each account is a fundamental step in protecting your digital life. Passwords should contain a mix of letters, numbers, and special characters and be at least 12 characters long.",
+          },
+          {
+            title: "Two-Factor Authentication (2FA)",
+            text: "Two-factor authentication adds an extra layer of security to the login process by requiring two forms of identification: something you know (your password) and something you have (e.g., a phone or authentication app).",
+          },
+          {
+            title: "Firewalls",
+            text: "A firewall is a network security device that monitors and controls incoming and outgoing network traffic. It establishes a barrier between a trusted internal network and untrusted external networks.",
+          },
+          {
+            title: "Additional Resources",
+            text: "Learn more about security measures in this video",
+            videoLink: "https://www.youtube.com/watch?v=Z1qQWWIJlY0",
+          },
+        ],
+      },
+      // TOPIC 4: Encryption and Data Protection
+      {
+        id: 4,
+        topicName: "Encryption and Data Protection",
+        content: [
+          {
+            title: "What is Encryption?",
+            text: "Encryption is the process of converting data into a code to prevent unauthorized access. It ensures that sensitive data like emails, messages, and online transactions are protected from interception by malicious actors.",
+          },
+          {
+            title: "Symmetric vs Asymmetric Encryption",
+            text: "Symmetric encryption uses the same key to encrypt and decrypt data, while asymmetric encryption uses a pair of public and private keys. Asymmetric encryption is commonly used in secure communications like SSL and TLS protocols.",
+            exampleCode: `
+            // Example of basic encryption using Python
+            from cryptography.fernet import Fernet
+  
+            key = Fernet.generate_key()  // Generate key
+            cipher_suite = Fernet(key)
+            text = "Sensitive Data"
+            encrypted_text = cipher_suite.encrypt(text.encode())  // Encrypt data
+            print(encrypted_text)
+            `,
+          },
+          {
+            title: "Additional Resources",
+            text: "Learn more about encryption in this video",
+            videoLink: "https://www.youtube.com/watch?v=ZghMPWGXexs",
+          },
+        ],
+      },
+      // TOPIC 5: Social Engineering
+      {
+        id: 5,
+        topicName: "Social Engineering",
+        content: [
+          {
+            title: "What is Social Engineering?",
+            text: "Social engineering is the art of manipulating people into giving up confidential information. Attackers often use psychological tricks to convince individuals to break standard security protocols.",
+          },
+          {
+            title: "Examples of Social Engineering",
+            text: "Common examples include pretexting (pretending to be someone else), baiting (offering something enticing to get information), and tailgating (following someone into a secure area without proper credentials).",
+          },
+          {
+            title: "Additional Resources",
+            text: "Watch this video on Social Engineering techniques",
+            videoLink: "https://www.youtube.com/watch?v=hhxrwx2qL8o",
+          },
+        ],
+      },
+      // TOPIC 6: Incident Response and Recovery
+      {
+        id: 6,
+        topicName: "Incident Response and Recovery",
+        content: [
+          {
+            title: "What is Incident Response?",
+            text: "Incident response involves identifying, managing, and recovering from a security breach. A well-planned response can minimize damage and ensure that normal operations resume quickly.",
+          },
+          {
+            title: "Steps in Incident Response",
+            text: "The incident response process typically includes preparation, identification, containment, eradication, recovery, and lessons learned. It's essential for organizations to have an incident response plan in place.",
+          },
+          {
+            title: "Additional Resources",
+            text: "Learn more about incident response strategies",
+            videoLink: "https://www.youtube.com/watch?v=qD2AABoOLpY",
+          },
+        ],
+      },
+    ],
   },
+  
+
   {
     id: 26,
     name: "Network Security Basics",
     description:
       "Understand the principles of securing network communications.",
     track: "Cybersecurity",
+    additionalResource: {
+      title: "Additional Resource",
+      videoLink: "https://www.youtube.com/watch?v=Zj2QpXj7Gq4",
+      websiteLink: {
+        title: "Network Security Fundamentals by Cisco",
+        link: "https://www.cisco.com/c/en/us/products/security/what-is-network-security.html",
+      },
+    },
+    topics: [
+      // TOPIC 1: What is Network Security?
+      {
+        id: 1,
+        topicName: "What is Network Security?",
+        content: [
+          {
+            title: "Definition of Network Security",
+            text: "Network security involves practices, tools, and protocols used to prevent and monitor unauthorized access, misuse, or modification of a computer network and its resources. It aims to create a secure environment for communication and data transfer.",
+          },
+          {
+            title: "Why Network Security is Important",
+            text: "In today’s connected world, safeguarding networks is crucial to ensure data integrity, protect against cyberattacks, and maintain business continuity. Securing both internal and external communications is vital to preventing data breaches.",
+          },
+          {
+            title: "Additional Resources",
+            text: "Watch this video to dive into the basics of network security",
+            videoLink: "https://www.youtube.com/watch?v=csGafph2gQ8",
+          },
+        ],
+      },
+      // TOPIC 2: Types of Network Security Threats
+      {
+        id: 2,
+        topicName: "Types of Network Security Threats",
+        content: [
+          {
+            title: "Common Network Security Threats",
+            text: "The most common threats include viruses, worms, Trojan horses, DoS (Denial-of-Service) attacks, man-in-the-middle attacks, and SQL injection. These threats aim to steal, damage, or disrupt data and services on a network.",
+          },
+          {
+            title: "Denial-of-Service (DoS) Attacks",
+            text: "A DoS attack aims to overwhelm a network or website with traffic, rendering it unavailable to users. These attacks can cripple an organization's ability to operate efficiently.",
+          },
+          {
+            title: "Man-in-the-Middle Attack",
+            text: "This occurs when an attacker intercepts communication between two parties, often in real-time, to steal information or inject malicious content. Common examples include intercepting login credentials over unsecured Wi-Fi.",
+          },
+          {
+            title: "Additional Resources",
+            text: "Explore network security threats and how to defend against them",
+            videoLink: "https://www.youtube.com/watch?v=UiIbcN9bzlU",
+          },
+        ],
+      },
+      // TOPIC 3: Firewalls and Their Role
+      {
+        id: 3,
+        topicName: "Firewalls and Their Role",
+        content: [
+          {
+            title: "What is a Firewall?",
+            text: "A firewall is a security device—either software or hardware—that monitors and controls incoming and outgoing network traffic based on predetermined security rules. It acts as a barrier between a trusted internal network and untrusted external networks.",
+          },
+          {
+            title: "Types of Firewalls",
+            text: "There are several types of firewalls: packet-filtering firewalls, stateful inspection firewalls, proxy firewalls, and next-generation firewalls. Each type offers a different level of security and inspection.",
+          },
+          {
+            title: "How Firewalls Protect Networks",
+            text: "Firewalls prevent unauthorized access, mitigate potential threats, and are often the first line of defense against cyberattacks. By analyzing data packets and enforcing security policies, they ensure that only legitimate traffic passes through.",
+          },
+          {
+            title: "Additional Resources",
+            text: "Watch this video on how firewalls work in network security",
+            videoLink: "https://www.youtube.com/watch?v=csOZ9-O5B9I",
+          },
+        ],
+      },
+      // TOPIC 4: Encryption in Network Security
+      {
+        id: 4,
+        topicName: "Encryption in Network Security",
+        content: [
+          {
+            title: "What is Encryption?",
+            text: "Encryption is the process of encoding information in such a way that only authorized parties can access it. In network security, encryption protects sensitive data as it travels across a network, preventing unauthorized access and eavesdropping.",
+          },
+          {
+            title: "End-to-End Encryption",
+            text: "End-to-end encryption ensures that data is encrypted at the sender’s device and only decrypted at the recipient’s device, making it unreadable to anyone in between. This is used in messaging apps, online transactions, and secure communications.",
+            exampleCode: `
+            // Simple encryption using Python (not executable)
+            from cryptography.fernet import Fernet
+  
+            key = Fernet.generate_key()  // Generate a key
+            cipher_suite = Fernet(key)
+            message = "Secure Network Data"
+            encrypted_message = cipher_suite.encrypt(message.encode())  // Encrypt the message
+            print(encrypted_message)
+            `,
+          },
+          {
+            title: "Additional Resources",
+            text: "Learn more about encryption techniques for securing networks",
+            videoLink: "https://www.youtube.com/watch?v=G6SeV4IvQ1E",
+          },
+        ],
+      },
+      // TOPIC 5: Virtual Private Networks (VPNs)
+      {
+        id: 5,
+        topicName: "Virtual Private Networks (VPNs)",
+        content: [
+          {
+            title: "What is a VPN?",
+            text: "A Virtual Private Network (VPN) creates a secure connection over a less secure network, such as the internet. VPNs encrypt your data, ensuring privacy and protection from cybercriminals as it passes through public networks.",
+          },
+          {
+            title: "How VPNs Work",
+            text: "VPNs work by routing your device's internet connection through the VPN's private server rather than your ISP, masking your IP address and encrypting data transferred between your device and the network.",
+          },
+          {
+            title: "Advantages of VPNs",
+            text: "VPNs help protect users when browsing on public Wi-Fi, ensure anonymous web browsing, and allow access to geo-restricted content. They are also widely used by businesses for secure remote work connections.",
+          },
+          {
+            title: "Additional Resources",
+            text: "Watch this video to learn more about VPNs and their role in security",
+            videoLink: "https://www.youtube.com/watch?v=od-vY6W6wS8",
+          },
+        ],
+      },
+      // TOPIC 6: Intrusion Detection Systems (IDS)
+      {
+        id: 6,
+        topicName: "Intrusion Detection Systems (IDS)",
+        content: [
+          {
+            title: "What is an IDS?",
+            text: "An Intrusion Detection System (IDS) monitors a network for malicious activities or policy violations. Once an attack or breach is detected, an alert is generated to allow security personnel to take action.",
+          },
+          {
+            title: "Types of IDS",
+            text: "There are two primary types of IDS: network-based IDS (NIDS), which monitors network traffic, and host-based IDS (HIDS), which monitors individual devices for signs of intrusion.",
+          },
+          {
+            title: "How IDS Improves Security",
+            text: "An IDS helps identify potential threats early, allowing administrators to respond before significant damage is done. It works in conjunction with other security tools like firewalls and antivirus software.",
+          },
+          {
+            title: "Additional Resources",
+            text: "Learn about IDS and how it helps in network security",
+            videoLink: "https://www.youtube.com/watch?v=Q4oHAYm-UBY",
+          },
+        ],
+      },
+    ],
   },
+  
   {
     id: 27,
     name: "Ethical Hacking",
     description:
       "Learn the tools and techniques used in ethical hacking to identify system vulnerabilities.",
     track: "Cybersecurity",
+    additionalResource: {
+      title: "Additional Resource",
+      videoLink: "https://www.youtube.com/watch?v=H17LY6FZdvE",
+      websiteLink: {
+        title: "Ethical Hacking Basics by EC-Council",
+        link: "https://www.eccouncil.org/programs/certified-ethical-hacker-ceh/",
+      },
+    },
+    topics: [
+      // TOPIC 1: What is Ethical Hacking?
+      {
+        id: 1,
+        topicName: "What is Ethical Hacking?",
+        content: [
+          {
+            title: "Definition of Ethical Hacking",
+            text: "Ethical hacking is the authorized practice of bypassing system security to identify potential data breaches and threats in a network. The aim is to improve the security of the system by finding vulnerabilities before malicious attackers do.",
+          },
+          {
+            title: "Role of an Ethical Hacker",
+            text: "An ethical hacker, also known as a white-hat hacker, uses the same tools and techniques as a malicious hacker, but with permission and within legal limits to safeguard systems.",
+          },
+          {
+            title: "Importance of Ethical Hacking",
+            text: "Ethical hacking helps organizations protect their data and ensure that their systems are safe from cybercriminals by identifying vulnerabilities and providing solutions.",
+          },
+          {
+            title: "Additional Resources",
+            text: "Watch this video for a quick overview of ethical hacking",
+            videoLink: "https://www.youtube.com/watch?v=4Wt9wts4ISY",
+          },
+        ],
+      },
+      // TOPIC 2: Types of Hacking
+      {
+        id: 2,
+        topicName: "Types of Hacking",
+        content: [
+          {
+            title: "White Hat Hacking",
+            text: "White-hat hackers are ethical hackers who work with organizations to identify and fix security vulnerabilities. They follow strict rules and legal guidelines in their hacking activities.",
+          },
+          {
+            title: "Black Hat Hacking",
+            text: "Black-hat hackers are malicious attackers who exploit vulnerabilities for personal gain. Their hacking activities are illegal and harmful.",
+          },
+          {
+            title: "Gray Hat Hacking",
+            text: "Gray-hat hackers fall between white-hat and black-hat hacking. While they may not have malicious intent, they often find vulnerabilities without permission, sometimes offering to fix them for a fee.",
+          },
+          {
+            title: "Additional Resources",
+            text: "Learn more about different types of hackers",
+            videoLink: "https://www.youtube.com/watch?v=UGQQqqv5AAc",
+          },
+        ],
+      },
+      // TOPIC 3: Ethical Hacking Tools and Techniques
+      {
+        id: 3,
+        topicName: "Ethical Hacking Tools and Techniques",
+        content: [
+          {
+            title: "Popular Ethical Hacking Tools",
+            text: "Common tools include Nmap, Metasploit, Wireshark, and Burp Suite. These tools help ethical hackers scan networks, find vulnerabilities, capture network packets, and conduct penetration testing.",
+          },
+          {
+            title: "Penetration Testing",
+            text: "Penetration testing (pentesting) involves simulating cyberattacks to identify weaknesses in a system's defenses. This helps organizations understand potential risks and how to mitigate them.",
+          },
+          {
+            title: "Social Engineering",
+            text: "Social engineering involves manipulating people into divulging confidential information. Ethical hackers use this technique to test human vulnerabilities in an organization's security system.",
+          },
+          {
+            title: "Additional Resources",
+            text: "Watch this video on how ethical hackers use various tools",
+            videoLink: "https://www.youtube.com/watch?v=OLyNEPDP9q0",
+          },
+        ],
+      },
+      // TOPIC 4: Stages of Ethical Hacking
+      {
+        id: 4,
+        topicName: "Stages of Ethical Hacking",
+        content: [
+          {
+            title: "Reconnaissance",
+            text: "The first stage of ethical hacking involves gathering information about the target system or network. This is often done using open-source intelligence (OSINT) to understand the system's architecture and vulnerabilities.",
+          },
+          {
+            title: "Scanning",
+            text: "Once reconnaissance is complete, the next step is scanning. Tools like Nmap and Wireshark are used to scan the network for open ports, services, and vulnerabilities.",
+          },
+          {
+            title: "Gaining Access",
+            text: "The ethical hacker attempts to exploit vulnerabilities to gain unauthorized access to the system. This is where penetration testing comes into play.",
+          },
+          {
+            title: "Maintaining Access",
+            text: "Once access is gained, the ethical hacker ensures continued control over the system to gather further data, but without causing harm. This helps in understanding long-term vulnerabilities.",
+          },
+          {
+            title: "Covering Tracks",
+            text: "Finally, ethical hackers mimic malicious attackers by covering their tracks and erasing logs to show how attackers could hide their presence.",
+          },
+          {
+            title: "Additional Resources",
+            text: "Learn about the stages of ethical hacking in this video",
+            videoLink: "https://www.youtube.com/watch?v=zuJjDLOKNJY",
+          },
+        ],
+      },
+      // TOPIC 5: Legal and Ethical Considerations
+      {
+        id: 5,
+        topicName: "Legal and Ethical Considerations",
+        content: [
+          {
+            title: "Why Ethics Matter",
+            text: "Ethical hackers must always work within the bounds of the law. Obtaining consent from the target organization is critical to avoid legal repercussions.",
+          },
+          {
+            title: "The CFAA and GDPR",
+            text: "The Computer Fraud and Abuse Act (CFAA) in the U.S. and the General Data Protection Regulation (GDPR) in Europe set strict guidelines for data security and privacy. Ethical hackers must comply with these regulations.",
+          },
+          {
+            title: "Bug Bounty Programs",
+            text: "Many companies run bug bounty programs, offering rewards to ethical hackers who find and report vulnerabilities. This encourages a collaborative approach to cybersecurity.",
+          },
+          {
+            title: "Additional Resources",
+            text: "Watch this video on the legalities of ethical hacking",
+            videoLink: "https://www.youtube.com/watch?v=sX7rEdU8xiw",
+          },
+        ],
+      },
+    ],
   },
+  
   {
     id: 28,
     name: "Cryptography Essentials",
     description:
       "Understand cryptographic methods for securing data and communications.",
     track: "Cybersecurity",
+    additionalResource: {
+      title: "Additional Resource",
+      videoLink: "https://www.youtube.com/watch?v=iVfw8cHiZ2A",
+      websiteLink: {
+        title: "Cryptography Overview by Stanford",
+        link: "https://crypto.stanford.edu/",
+      },
+    },
+    topics: [
+      // TOPIC 1: Introduction to Cryptography
+      {
+        id: 1,
+        topicName: "Introduction to Cryptography",
+        content: [
+          {
+            title: "What is Cryptography?",
+            text: "Cryptography is the practice of securing communication and information through the use of codes, ensuring that only the intended recipients can access the data. It is a key component in cybersecurity, protecting sensitive information from unauthorized access.",
+          },
+          {
+            title: "History of Cryptography",
+            text: "Cryptography has been used throughout history, from ancient ciphers to modern encryption techniques. The course begins with an overview of its historical development, including the Caesar cipher and the Enigma machine.",
+          },
+          {
+            title: "Applications of Cryptography",
+            text: "Cryptography is essential in securing emails, financial transactions, and confidential communications. Its use in technologies such as SSL/TLS and VPNs ensures the safety of online data transmission.",
+          },
+          {
+            title: "Additional Resources",
+            text: "Watch this video for an overview of cryptography",
+            videoLink: "https://www.youtube.com/watch?v=jmIcxKXZ2YE",
+          },
+        ],
+      },
+      // TOPIC 2: Symmetric Encryption
+      {
+        id: 2,
+        topicName: "Symmetric Encryption",
+        content: [
+          {
+            title: "How Symmetric Encryption Works",
+            text: "Symmetric encryption involves using the same key for both encryption and decryption. Popular algorithms include the Data Encryption Standard (DES) and the Advanced Encryption Standard (AES).",
+          },
+          {
+            title: "Block Ciphers vs. Stream Ciphers",
+            text: "Block ciphers encrypt data in fixed-size blocks, while stream ciphers encrypt data one bit or byte at a time. Both have specific use cases depending on the data size and application.",
+          },
+          {
+            title: "Common Symmetric Encryption Algorithms",
+            text: "AES (Advanced Encryption Standard) is the most widely used symmetric encryption algorithm, securing everything from online transactions to data storage.",
+          },
+          {
+            title: "Additional Resources",
+            text: "Learn more about symmetric encryption in this video",
+            videoLink: "https://www.youtube.com/watch?v=vcT_7mnviXw",
+          },
+        ],
+      },
+      // TOPIC 3: Asymmetric Encryption
+      {
+        id: 3,
+        topicName: "Asymmetric Encryption",
+        content: [
+          {
+            title: "How Asymmetric Encryption Works",
+            text: "Asymmetric encryption uses two keys: a public key for encryption and a private key for decryption. This method is commonly used in secure communication systems, such as SSL certificates.",
+          },
+          {
+            title: "Public and Private Keys",
+            text: "In asymmetric encryption, the public key can be freely shared to encrypt messages, while the private key is kept secret for decrypting them. RSA (Rivest-Shamir-Adleman) is the most well-known algorithm.",
+          },
+          {
+            title: "Applications of Asymmetric Encryption",
+            text: "Asymmetric encryption is used in digital signatures, email encryption, and securing web traffic (e.g., HTTPS). It ensures data authenticity and integrity.",
+          },
+          {
+            title: "Additional Resources",
+            text: "Watch this video explaining public and private keys",
+            videoLink: "https://www.youtube.com/watch?v=AQDCe585Lnc",
+          },
+        ],
+      },
+      // TOPIC 4: Hashing Functions
+      {
+        id: 4,
+        topicName: "Hashing Functions",
+        content: [
+          {
+            title: "What is Hashing?",
+            text: "Hashing is the process of converting data into a fixed-length string of characters, which is typically a hash code. Hash functions are commonly used in data integrity checks and password storage.",
+          },
+          {
+            title: "MD5, SHA-256, and Other Hashing Algorithms",
+            text: "Common hashing algorithms include MD5, SHA-1, and SHA-256. While MD5 and SHA-1 have vulnerabilities, SHA-256 remains widely used in blockchain and security protocols.",
+          },
+          {
+            title: "Uses of Hashing",
+            text: "Hashing is used in password management, digital signatures, and verifying data integrity. Hashing ensures that even small changes in input result in significantly different hash outputs.",
+          },
+          {
+            title: "Additional Resources",
+            text: "Learn more about SHA-256 and its uses",
+            videoLink: "https://www.youtube.com/watch?v=fYjYY47eCyI",
+          },
+        ],
+      },
+      // TOPIC 5: Digital Signatures and Certificates
+      {
+        id: 5,
+        topicName: "Digital Signatures and Certificates",
+        content: [
+          {
+            title: "How Digital Signatures Work",
+            text: "Digital signatures are a form of asymmetric cryptography that provide data integrity, authentication, and non-repudiation. They use the sender's private key to sign messages and the recipient’s public key to verify them.",
+          },
+          {
+            title: "Role of Digital Certificates",
+            text: "Digital certificates authenticate the identity of entities in online transactions. They are issued by certificate authorities (CAs) to ensure the legitimacy of public keys.",
+          },
+          {
+            title: "Applications in SSL/TLS",
+            text: "Digital certificates are used in SSL/TLS to secure web traffic, ensuring the integrity and authenticity of websites.",
+          },
+          {
+            title: "Additional Resources",
+            text: "Watch this video on digital certificates",
+            videoLink: "https://www.youtube.com/watch?v=nbpFVSRZTfo",
+          },
+        ],
+      },
+      // TOPIC 6: Future of Cryptography - Quantum Cryptography
+      {
+        id: 6,
+        topicName: "Future of Cryptography - Quantum Cryptography",
+        content: [
+          {
+            title: "What is Quantum Cryptography?",
+            text: "Quantum cryptography leverages the principles of quantum mechanics to develop secure communication methods. Quantum Key Distribution (QKD) is one such approach that enables secure data transmission.",
+          },
+          {
+            title: "Quantum Threats to Modern Cryptography",
+            text: "The development of quantum computers poses a threat to current encryption algorithms, particularly RSA and ECC. Post-quantum cryptography aims to develop algorithms that are resistant to quantum attacks.",
+          },
+          {
+            title: "Additional Resources",
+            text: "Learn more about the impact of quantum computing on cryptography",
+            videoLink: "https://www.youtube.com/watch?v=F_Riqjdh2oM",
+          },
+        ],
+      },
+    ],
   },
+  
   {
     id: 29,
     name: "Incident Response & Management",
     description:
       "Learn how to handle security breaches and mitigate their impact.",
     track: "Cybersecurity",
+    additionalResource: {
+      title: "Additional Resource",
+      videoLink: "https://www.youtube.com/watch?v=6tCyGmfMVcg",
+      websiteLink: {
+        title: "Incident Response Best Practices",
+        link: "https://www.sans.org/cyber-security-resources/",
+      },
+    },
+    topics: [
+      // TOPIC 1: Introduction to Incident Response
+      {
+        id: 1,
+        topicName: "Introduction to Incident Response",
+        content: [
+          {
+            title: "What is Incident Response?",
+            text: "Incident response (IR) is a structured approach for handling and managing the aftermath of a security breach or cyberattack. The goal is to control the situation and minimize damage, recovery time, and costs.",
+          },
+          {
+            title: "The Importance of Incident Response",
+            text: "Effective incident response can prevent breaches from escalating and causing severe damage. It is essential for maintaining business continuity and protecting sensitive data.",
+          },
+          {
+            title: "Additional Resources",
+            text: "Watch this video for a general overview of incident response processes",
+            videoLink: "https://www.youtube.com/watch?v=CTxunR-LzFQ",
+          },
+        ],
+      },
+      // TOPIC 2: Incident Response Phases
+      {
+        id: 2,
+        topicName: "Incident Response Phases",
+        content: [
+          {
+            title: "1. Preparation",
+            text: "The preparation phase involves establishing and training an incident response team, developing an incident response plan, and setting up detection mechanisms. This step ensures that the organization is ready to respond quickly to incidents.",
+          },
+          {
+            title: "2. Identification",
+            text: "In the identification phase, the security team detects and determines the nature and scope of the incident. This could involve the use of security monitoring tools, such as intrusion detection systems (IDS), to pinpoint breaches or abnormal activities.",
+          },
+          {
+            title: "3. Containment",
+            text: "Once an incident is confirmed, containment strategies are used to prevent further damage. This can involve isolating affected systems or deploying patches to prevent spread.",
+          },
+          {
+            title: "4. Eradication",
+            text: "The eradication phase involves removing the root cause of the incident, whether it's malicious software, unauthorized access, or vulnerabilities exploited during the attack.",
+          },
+          {
+            title: "5. Recovery",
+            text: "After resolving the incident, the recovery phase focuses on restoring systems and operations to normal. It also includes monitoring to ensure that there are no remaining threats.",
+          },
+          {
+            title: "6. Lessons Learned",
+            text: "The lessons learned phase is critical for improving future incident response efforts. Teams analyze the incident, assess what went wrong, and update response plans to prevent recurrence.",
+          },
+          {
+            title: "Additional Resources",
+            text: "Learn about the phases of incident response in this video",
+            videoLink: "https://www.youtube.com/watch?v=7_h9WLnlmdg",
+          },
+        ],
+      },
+      // TOPIC 3: Incident Response Teams and Roles
+      {
+        id: 3,
+        topicName: "Incident Response Teams and Roles",
+        content: [
+          {
+            title: "The Role of Incident Response Teams",
+            text: "Incident response teams are responsible for coordinating responses to security breaches. Teams typically include specialists in network security, forensics, and legal or compliance roles.",
+          },
+          {
+            title: "Team Structure",
+            text: "A typical incident response team consists of a team leader, security analysts, forensic experts, and IT support personnel. Each team member has clearly defined responsibilities during the response process.",
+          },
+          {
+            title: "Coordination with External Stakeholders",
+            text: "In some incidents, it may be necessary to coordinate with law enforcement, public relations, or legal teams to address compliance issues and communicate with affected parties.",
+          },
+          {
+            title: "Additional Resources",
+            text: "Watch this video about incident response teams",
+            videoLink: "https://www.youtube.com/watch?v=AEwop7BuWIo",
+          },
+        ],
+      },
+      // TOPIC 4: Legal and Compliance Considerations
+      {
+        id: 4,
+        topicName: "Legal and Compliance Considerations",
+        content: [
+          {
+            title: "Understanding Compliance Requirements",
+            text: "Incident response must comply with industry regulations such as GDPR, HIPAA, or PCI-DSS, depending on the type of data involved. Organizations need to ensure their response plan includes measures to meet these legal obligations.",
+          },
+          {
+            title: "Legal Implications of Incident Response",
+            text: "Incident response teams may need to collect evidence during a breach investigation. It is important to ensure that evidence is gathered and preserved in a way that complies with legal requirements for court cases or regulatory reviews.",
+          },
+          {
+            title: "Incident Reporting and Notifications",
+            text: "Depending on the incident type, organizations may be required to notify affected individuals and regulatory bodies. Incident response teams should be aware of notification requirements to avoid fines or legal consequences.",
+          },
+          {
+            title: "Additional Resources",
+            text: "Learn about compliance in incident response here",
+            videoLink: "https://www.youtube.com/watch?v=4yY4_fih4Io",
+          },
+        ],
+      },
+      // TOPIC 5: Cybersecurity Tools for Incident Response
+      {
+        id: 5,
+        topicName: "Cybersecurity Tools for Incident Response",
+        content: [
+          {
+            title: "Intrusion Detection and Prevention Systems (IDPS)",
+            text: "IDPS tools monitor network traffic for suspicious activity and provide early warnings to incident response teams.",
+          },
+          {
+            title: "Security Information and Event Management (SIEM)",
+            text: "SIEM systems collect and analyze log data from various sources to identify potential security incidents. They play a key role in incident detection and response.",
+          },
+          {
+            title: "Forensic Tools",
+            text: "Digital forensics tools are used to investigate security breaches, trace attackers' actions, and gather evidence. Tools like FTK (Forensic Toolkit) and Autopsy are commonly used.",
+          },
+          {
+            title: "Additional Resources",
+            text: "Watch this video on incident response tools",
+            videoLink: "https://www.youtube.com/watch?v=q7wd8MDN9Ls",
+          },
+        ],
+      },
+      // TOPIC 6: Post-Incident Reviews and Continuous Improvement
+      {
+        id: 6,
+        topicName: "Post-Incident Reviews and Continuous Improvement",
+        content: [
+          {
+            title: "Why Post-Incident Reviews Matter",
+            text: "Conducting post-incident reviews is essential to learn from the breach, understand the organization's strengths and weaknesses, and make necessary improvements to the incident response plan.",
+          },
+          {
+            title: "Improving Incident Response Plans",
+            text: "Based on lessons learned, organizations can update their incident response procedures, enhance staff training, and invest in more advanced security tools to better prepare for future incidents.",
+          },
+          {
+            title: "Continuous Monitoring and Threat Hunting",
+            text: "Organizations should implement continuous monitoring and proactive threat-hunting strategies to detect security incidents early and respond effectively.",
+          },
+          {
+            title: "Additional Resources",
+            text: "Explore post-incident review techniques",
+            videoLink: "https://www.youtube.com/watch?v=piF9PpqaAgE",
+          },
+        ],
+      },
+    ],
   },
+  
   {
     id: 30,
     name: "Risk Management",
