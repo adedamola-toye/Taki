@@ -87,13 +87,7 @@ const About = () => {
               <li>Course content</li>
             </ul>
           </div>
-          <div className="member-card">
-            <h3>Abdullah</h3>
-            <ul>
-              <li>Planning, Ideation and UX</li>
-              <li>Deployment on vercel</li>
-            </ul>
-          </div>
+
           <div className="member-card">
             
             <h3>Idayat</h3>
@@ -103,6 +97,15 @@ const About = () => {
               <li>Course content</li>
             </ul>
           </div>
+          
+          <div className="member-card">
+            <h3>Abdullah</h3>
+            <ul>
+              <li>Planning, Ideation and UX</li>
+              <li>Deployment on vercel</li>
+            </ul>
+          </div>
+          
         </div>
       </section>
       

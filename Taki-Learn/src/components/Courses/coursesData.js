@@ -6,7 +6,7 @@ const courses = [
     description:
       "Learn the basics of HTML to build and structure simple web pages.",
     track: "Frontend Web Development",
-    additonalResource: {
+    additionalResource: {
       title: "Additional Resource",
       videoLink: "https://www.youtube.com/watch?v=kUMe1FH4CHE",
       websiteLink: {
@@ -369,7 +369,7 @@ const courses = [
     description:
       "Understand how to style websites with CSS and create beautiful web pages.",
     track: "Frontend Web Development",
-    additonalResource: {
+    additionalResource: {
       title: "Additional Resource",
       videoLink: "https://www.youtube.com/watch?v=OXGznpKZ_sA",
       websiteLink: {
@@ -1504,7 +1504,7 @@ You can also have values like flex-start, self-start or start and flex-end, self
 
     track: "Frontend Web Development",
 
-    additonalResource: {
+    additionalResource: {
       title: "Additional Resource",
 
       videoLink: "https://www.youtube.com/watch?v=jS4aFq5-91M&t=6125s",
@@ -1979,13 +1979,14 @@ You can also have values like flex-start, self-start or start and flex-end, self
     ],
   },
 
+  //COURSE 5 - ADVANCED CSS AND SASS
   {
     id: 5,
     name: "Advanced CSS & Sass",
     description:
       "Enhance your CSS skills by mastering advanced techniques and Sass.",
     track: "Frontend Web Development",
-    additonalResource: {
+    additionalResource: {
       title: "Additional Resource",
       videoLink: "https://www.youtube.com/watch?v=_a5j7KoflTs", // Example link
       websiteLink: {
@@ -2199,6 +2200,7 @@ You can also have values like flex-start, self-start or start and flex-end, self
     ],
   },
 
+  //COURSE 6 - RESPONSIVE WEB DESIGN
 
   {
     id: 6,
@@ -2206,9 +2208,9 @@ You can also have values like flex-start, self-start or start and flex-end, self
     description:
       "Master the art of creating web pages that adapt to different screen sizes.",
     track: "Frontend Web Development",
-    additonalResource: {
+    additionalResource: {
       title: "Additional Resource",
-      videoLink: "https://www.youtube.com/watch?v=srvUrASNj0s", // Placeholder link
+      videoLink: "https://www.youtube.com/watch?v=srvUrASNj0s", 
       websiteLink: {
         title: "MDN Responsive Design Tutorial",
         link: "https://developer.mozilla.org/en-US/docs/Learn/CSS/CSS_layout/Responsive_Design",
@@ -2382,12 +2384,21 @@ You can also have values like flex-start, self-start or start and flex-end, self
     ],
   },
 
+  //COURSE 8 - BUILDING INTERACTIVE UIs WITH REACT
   {
     id: 8,
     name: "Building Interactive UIs with React",
     description:
       "Learn how to create dynamic user interfaces using React's component system.",
     track: "Frontend Web Development",
+    additionalResource: {
+      title: "Additional Resource",
+      videoLink: "https://www.youtube.com/watch?v=4UZrsTqkcW4&list=WL&index=3&t=13143s",
+      websiteLink: {
+        title: "React Tutorial",
+        link: "https://www.w3schools.com/REACT/DEFAULT.ASP"
+      }
+    },
     topics: [
       {
         // topic 1
@@ -2632,14 +2643,293 @@ You can also have values like flex-start, self-start or start and flex-end, self
     name: "JavaScript for Backend",
     description: "Master JavaScript for server-side development and APIs.",
     track: "Backend Web Development",
+    additionalResource: {
+      title: "Additional Resource",
+      videoLink: "https://www.youtube.com/watch?v=TlB_eWDSMt4", 
+      websiteLink: {
+        title: "MDN Web Docs - JavaScript on the server",
+        link: "https://developer.mozilla.org/en-US/docs/Learn/Server-side/Node_server_without_framework",
+      },
+    },
+    topics: [
+      // TOPIC 1: Introduction to Node.js
+      {
+        id: 1,
+        topicName: "Introduction to Node.js",
+        content: [
+          {
+            title: "What is Node.js?",
+            text: "Node.js is a JavaScript runtime built on Chrome's V8 JavaScript engine, allowing developers to run JavaScript on the server side.",
+          },
+          {
+            title: "Why Use Node.js for Backend?",
+            text: "Node.js is fast, scalable, and well-suited for building APIs, real-time apps, and handling asynchronous operations.",
+          },
+          {
+            title: "Additional Resources",
+            text: "Watch this video on Node.js basics",
+            videoLink: "https://www.youtube.com/watch?v=TlB_eWDSMt4", // Placeholder link
+          },
+        ],
+      },
+      // TOPIC 2: Working with Express.js
+      {
+        id: 2,
+        topicName: "Working with Express.js",
+        content: [
+          {
+            title: "Introduction to Express.js",
+            text: "Express.js is a minimal and flexible Node.js web application framework that provides a robust set of features to build APIs.",
+          },
+          {
+            title: "Creating Your First Express Server",
+            text: "You can easily create an Express server to handle HTTP requests.",
+            exampleCode: `
+            const express = require('express');
+            const app = express();
+  
+            app.get('/', (req, res) => {
+              res.send('Hello World');
+            });
+  
+            app.listen(3000, () => {
+              console.log('Server is running on port 3000');
+            });
+            `,
+          },
+          {
+            title: "Additional Resources",
+            text: "Watch this video on Express.js",
+            videoLink: "https://www.youtube.com/watch?v=L72fhGm1tfE", // Placeholder link
+          },
+        ],
+      },
+      // TOPIC 3: Working with Databases
+      {
+        id: 3,
+        topicName: "Working with Databases",
+        content: [
+          {
+            title: "Connecting to a Database",
+            text: "You can use libraries like Mongoose or Sequelize to connect your Node.js application to databases like MongoDB or MySQL.",
+          },
+          {
+            title: "Basic CRUD Operations",
+            text: "Learn to perform basic Create, Read, Update, and Delete (CRUD) operations using Node.js.",
+            exampleCode: `
+            // Example using Mongoose for MongoDB
+            const mongoose = require('mongoose');
+            mongoose.connect('mongodb://localhost/mydatabase');
+  
+            const User = mongoose.model('User', { name: String });
+  
+            const newUser = new User({ name: 'John' });
+            newUser.save().then(() => console.log('User saved'));
+            `,
+          },
+          {
+            title: "Additional Resources",
+            text: "Watch this video on connecting to databases in Node.js",
+            videoLink: "https://www.youtube.com/watch?v=fgTGADljAeg", // Placeholder link
+          },
+        ],
+      },
+      // TOPIC 4: RESTful APIs
+      {
+        id: 4,
+        topicName: "RESTful APIs",
+        content: [
+          {
+            title: "What is a RESTful API?",
+            text: "A RESTful API is an architectural style for designing networked applications, relying on stateless communication and standard HTTP methods like GET, POST, PUT, DELETE.",
+          },
+          {
+            title: "Creating a RESTful API with Express",
+            text: "You can use Express to build RESTful APIs that communicate with a client or a front-end application.",
+            exampleCode: `
+            app.get('/users', (req, res) => {
+              res.json([{ id: 1, name: 'John' }]);
+            });
+  
+            app.post('/users', (req, res) => {
+              // Logic to create a new user
+              res.status(201).send('User created');
+            });
+            `,
+          },
+          {
+            title: "Additional Resources",
+            text: "Watch this video on building RESTful APIs",
+            videoLink: "https://www.youtube.com/watch?v=0oXYv3IYlHg", // Placeholder link
+          },
+        ],
+      },
+      // TOPIC 5: Authentication and Authorization
+      {
+        id: 5,
+        topicName: "Authentication and Authorization",
+        content: [
+          {
+            title: "Understanding Authentication",
+            text: "Authentication is the process of verifying the identity of a user. In Node.js, you can implement authentication using libraries like Passport.js or JSON Web Tokens (JWT).",
+          },
+          {
+            title: "Implementing JWT Authentication",
+            text: "JWT is a popular method for securely transmitting information between parties as a JSON object.",
+            exampleCode: `
+            const jwt = require('jsonwebtoken');
+  
+            // Generate a token
+            const token = jwt.sign({ id: user._id }, 'secretKey', { expiresIn: '1h' });
+  
+            // Verify a token
+            jwt.verify(token, 'secretKey', (err, decoded) => {
+              if (err) throw err;
+              console.log(decoded);
+            });
+            `,
+          },
+          {
+            title: "Additional Resources",
+            text: "Watch this video on implementing JWT authentication",
+            videoLink: "https://www.youtube.com/watch?v=2jqok-WgelI", // Placeholder link
+          },
+        ],
+      },
+    ],
   },
+  
   {
     id: 10,
     name: "Node.js for Beginners",
-    description:
-      "Learn how to build scalable server-side applications using Node.js.",
+    description: "Learn how to build scalable server-side applications using Node.js.",
     track: "Backend Web Development",
+    additionalResource: {
+      title: "Additional Resource",
+      videoLink: "https://www.youtube.com/watch?v=TlB_eWDSMt4",  // Placeholder video
+      websiteLink: {
+        title: "Node.js Official Documentation",
+        link: "https://nodejs.org/en/docs/"
+      }
+    },
+    topics: [
+      {
+        id: 1,
+        topicName: "Introduction to Node.js",
+        content: [
+          {
+            title: "What is Node.js?",
+            text: "Node.js is a runtime environment that allows JavaScript to be executed on the server-side, enabling developers to build scalable and high-performance applications."
+          },
+          {
+            title: "V8 Engine",
+            text: "Node.js uses the V8 engine, the same engine used in Google Chrome, to execute JavaScript code outside of a browser environment."
+          },
+          {
+            title: "Additional Resources",
+            text: "Watch this introductory video on Node.js",
+            videoLink: "https://www.youtube.com/watch?v=TlB_eWDSMt4"
+          }
+        ]
+      },
+      {
+        id: 2,
+        topicName: "Setting Up a Node.js Environment",
+        content: [
+          {
+            title: "Installing Node.js",
+            text: "To begin with Node.js, you need to install it on your local machine. You can download the installer from the Node.js official website."
+          },
+          {
+            title: "Verifying Installation",
+            text: "After installing, you can verify the installation by running `node -v` and `npm -v` commands in your terminal."
+          },
+          {
+            title: "Additional Resources",
+            text: "Watch this guide on setting up Node.js",
+            videoLink: "https://www.youtube.com/watch?v=ENrzD9HAZK4"
+          }
+        ]
+      },
+      {
+        id: 3,
+        topicName: "Creating Your First Server",
+        content: [
+          {
+            title: "The HTTP Module",
+            text: "Node.js has a built-in HTTP module that allows you to create a web server. You can use the `http.createServer()` method to create your first server."
+          },
+          {
+            title: "Example Code",
+            exampleCode: `
+              const http = require('http');
+              const server = http.createServer((req, res) => {
+                res.statusCode = 200;
+                res.setHeader('Content-Type', 'text/plain');
+                res.end('Hello, Node.js!');
+              });
+              server.listen(3000, () => {
+                console.log('Server running at http://localhost:3000/');
+              });
+            `
+          },
+          {
+            title: "Additional Resources",
+            text: "Watch this tutorial on creating a Node.js server",
+            videoLink: "https://www.youtube.com/watch?v=ENrzD9HAZK4"
+          }
+        ]
+      },
+      {
+        id: 4,
+        topicName: "Working with NPM",
+        content: [
+          {
+            title: "What is NPM?",
+            text: "NPM (Node Package Manager) is a package manager for Node.js that allows you to install third-party libraries and manage your project's dependencies."
+          },
+          {
+            title: "Installing Packages",
+            text: "You can install a package using the `npm install <package-name>` command. For example, to install the `express` package, you would run `npm install express`."
+          },
+          {
+            title: "Additional Resources",
+            text: "Watch this tutorial on using NPM",
+            videoLink: "https://www.youtube.com/watch?v=ENrzD9HAZK4"
+          }
+        ]
+      },
+      {
+        id: 5,
+        topicName: "Building APIs with Express.js",
+        content: [
+          {
+            title: "What is Express.js?",
+            text: "Express.js is a minimal and flexible Node.js web application framework that provides a robust set of features for building APIs and web applications."
+          },
+          {
+            title: "Example Code",
+            exampleCode: `
+              const express = require('express');
+              const app = express();
+              app.get('/', (req, res) => {
+                res.send('Hello, Express.js!');
+              });
+              app.listen(3000, () => {
+                console.log('Server running on http://localhost:3000');
+              });
+            `
+          },
+          {
+            title: "Additional Resources",
+            text: "Watch this guide on building APIs with Express.js",
+            videoLink: "https://www.youtube.com/watch?v=ENrzD9HAZK4"
+          }
+        ]
+      }
+    ]
   },
+  
   {
     id: 11,
     name: "Express.js Fundamentals",
