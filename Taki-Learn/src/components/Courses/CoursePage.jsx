@@ -86,14 +86,14 @@ function CoursePage() {
         </div>
 
         {/* Embedding the Additional Resource Video */}
-        {course.additonalResource && course.additonalResource.videoLink && (
+        {course.additionalResource && course.additionalResource.videoLink && (
           <div className="additional-resource">
-            <h2>{course.additonalResource.title}</h2>
+            <h2>{course.additionalResource.title}</h2>
             <div className="video-container">
               <iframe
                 width="560"
                 height="315"
-                src={course.additonalResource.videoLink.replace(
+                src={course.additionalResource.videoLink.replace(
                   "watch?v=",
                   "embed/"
                 )}
@@ -104,14 +104,14 @@ function CoursePage() {
               ></iframe>
             </div>
             {/* Optionally, include the website link */}
-{course.additonalResource.websiteLink && (
+{course.additionalResource.websiteLink && (
   <a
-    href={course.additonalResource.websiteLink.link}
+    href={course.additionalResource.websiteLink.link}
     target="_blank"
     rel="noopener noreferrer"
     className="additional-resource-link"
   >
-  <b>Click this link to a detailed tutorial</b>: {course.additonalResource.websiteLink.title}
+  <b>Click this link to a detailed tutorial</b>: {course.additionalResource.websiteLink.title}
   </a>
 )}
 

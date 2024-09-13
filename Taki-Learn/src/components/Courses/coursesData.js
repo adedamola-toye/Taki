@@ -6,7 +6,7 @@ const courses = [
     description:
       "Learn the basics of HTML to build and structure simple web pages.",
     track: "Frontend Web Development",
-    additonalResource: {
+    additionalResource: {
       title: "Additional Resource",
       videoLink:
         "https://www.youtube.com/watch?v=kUMe1FH4CHE",
@@ -370,7 +370,7 @@ const courses = [
     description:
       "Understand how to style websites with CSS and create beautiful web pages.",
     track: "Frontend Web Development",
-    additonalResource: {
+    additionalResource: {
       title: "Additional Resource",
       videoLink: "https://www.youtube.com/watch?v=OXGznpKZ_sA",
       websiteLink: {
@@ -1505,7 +1505,7 @@ You can also have values like flex-start, self-start or start and flex-end, self
 
     track: "Frontend Web Development",
 
-    additonalResource: {
+    additionalResource: {
       title: "Additional Resource",
 
       videoLink: "https://www.youtube.com/watch?v=jS4aFq5-91M&t=6125s",
@@ -1780,7 +1780,7 @@ You can also have values like flex-start, self-start or start and flex-end, self
     description:
       "Dive into React and learn how to build modern web applications.",
     track: "Frontend Web Development",
-    additonalResource: {
+    additionalResource: {
       title: "Additional Resource",
       videoLink:
         "https://www.youtube.com/watch?v=4UZrsTqkcW4&list=WL&index=3&t=13143s",
@@ -1980,13 +1980,14 @@ You can also have values like flex-start, self-start or start and flex-end, self
     ],
   },
 
+  //COURSE 5 - ADVANCED CSS AND SASS
   {
     id: 5,
     name: "Advanced CSS & Sass",
     description:
       "Enhance your CSS skills by mastering advanced techniques and Sass.",
     track: "Frontend Web Development",
-    additonalResource: {
+    additionalResource: {
       title: "Additional Resource",
       videoLink: "https://www.youtube.com/watch?v=_a5j7KoflTs", // Example link
       websiteLink: {
@@ -2200,22 +2201,17 @@ You can also have values like flex-start, self-start or start and flex-end, self
     ],
   },
 
+  //COURSE 6 - RESPONSIVE WEB DESIGN
+
   {
     id: 6,
     name: "Responsive Web Design",
     description:
       "Master the art of creating web pages that adapt to different screen sizes.",
     track: "Frontend Web Development",
-  },
-  {
-    id: 6,
-    name: "Responsive Web Design",
-    description:
-      "Master the art of creating web pages that adapt to different screen sizes.",
-    track: "Frontend Web Development",
-    additonalResource: {
+    additionalResource: {
       title: "Additional Resource",
-      videoLink: "https://www.youtube.com/watch?v=srvUrASNj0s", // Placeholder link
+      videoLink: "https://www.youtube.com/watch?v=srvUrASNj0s", 
       websiteLink: {
         title: "MDN Responsive Design Tutorial",
         link: "https://developer.mozilla.org/en-US/docs/Learn/CSS/CSS_layout/Responsive_Design",
@@ -2389,12 +2385,21 @@ You can also have values like flex-start, self-start or start and flex-end, self
     ],
   },
 
+  //COURSE 8 - BUILDING INTERACTIVE UIs WITH REACT
   {
     id: 8,
     name: "Building Interactive UIs with React",
     description:
       "Learn how to create dynamic user interfaces using React's component system.",
     track: "Frontend Web Development",
+    additionalResource: {
+      title: "Additional Resource",
+      videoLink: "https://www.youtube.com/watch?v=4UZrsTqkcW4&list=WL&index=3&t=13143s",
+      websiteLink: {
+        title: "React Tutorial",
+        link: "https://www.w3schools.com/REACT/DEFAULT.ASP"
+      }
+    },
     topics: [
       {
         // topic 1
@@ -2639,168 +2644,4272 @@ You can also have values like flex-start, self-start or start and flex-end, self
     name: "JavaScript for Backend",
     description: "Master JavaScript for server-side development and APIs.",
     track: "Backend Web Development",
+    additionalResource: {
+      title: "Additional Resource",
+      videoLink: "https://www.youtube.com/watch?v=TlB_eWDSMt4", 
+      websiteLink: {
+        title: "MDN Web Docs - JavaScript on the server",
+        link: "https://developer.mozilla.org/en-US/docs/Learn/Server-side/Node_server_without_framework",
+      },
+    },
+    topics: [
+      // TOPIC 1: Introduction to Node.js
+      {
+        id: 1,
+        topicName: "Introduction to Node.js",
+        content: [
+          {
+            title: "What is Node.js?",
+            text: "Node.js is a JavaScript runtime built on Chrome's V8 JavaScript engine, allowing developers to run JavaScript on the server side.",
+          },
+          {
+            title: "Why Use Node.js for Backend?",
+            text: "Node.js is fast, scalable, and well-suited for building APIs, real-time apps, and handling asynchronous operations.",
+          },
+          {
+            title: "Additional Resources",
+            text: "Watch this video on Node.js basics",
+            videoLink: "https://www.youtube.com/watch?v=TlB_eWDSMt4", // Placeholder link
+          },
+        ],
+      },
+      // TOPIC 2: Working with Express.js
+      {
+        id: 2,
+        topicName: "Working with Express.js",
+        content: [
+          {
+            title: "Introduction to Express.js",
+            text: "Express.js is a minimal and flexible Node.js web application framework that provides a robust set of features to build APIs.",
+          },
+          {
+            title: "Creating Your First Express Server",
+            text: "You can easily create an Express server to handle HTTP requests.",
+            exampleCode: `
+            const express = require('express');
+            const app = express();
+  
+            app.get('/', (req, res) => {
+              res.send('Hello World');
+            });
+  
+            app.listen(3000, () => {
+              console.log('Server is running on port 3000');
+            });
+            `,
+          },
+          {
+            title: "Additional Resources",
+            text: "Watch this video on Express.js",
+            videoLink: "https://www.youtube.com/watch?v=L72fhGm1tfE", // Placeholder link
+          },
+        ],
+      },
+      // TOPIC 3: Working with Databases
+      {
+        id: 3,
+        topicName: "Working with Databases",
+        content: [
+          {
+            title: "Connecting to a Database",
+            text: "You can use libraries like Mongoose or Sequelize to connect your Node.js application to databases like MongoDB or MySQL.",
+          },
+          {
+            title: "Basic CRUD Operations",
+            text: "Learn to perform basic Create, Read, Update, and Delete (CRUD) operations using Node.js.",
+            exampleCode: `
+            // Example using Mongoose for MongoDB
+            const mongoose = require('mongoose');
+            mongoose.connect('mongodb://localhost/mydatabase');
+  
+            const User = mongoose.model('User', { name: String });
+  
+            const newUser = new User({ name: 'John' });
+            newUser.save().then(() => console.log('User saved'));
+            `,
+          },
+          {
+            title: "Additional Resources",
+            text: "Watch this video on connecting to databases in Node.js",
+            videoLink: "https://www.youtube.com/watch?v=fgTGADljAeg", // Placeholder link
+          },
+        ],
+      },
+      // TOPIC 4: RESTful APIs
+      {
+        id: 4,
+        topicName: "RESTful APIs",
+        content: [
+          {
+            title: "What is a RESTful API?",
+            text: "A RESTful API is an architectural style for designing networked applications, relying on stateless communication and standard HTTP methods like GET, POST, PUT, DELETE.",
+          },
+          {
+            title: "Creating a RESTful API with Express",
+            text: "You can use Express to build RESTful APIs that communicate with a client or a front-end application.",
+            exampleCode: `
+            app.get('/users', (req, res) => {
+              res.json([{ id: 1, name: 'John' }]);
+            });
+  
+            app.post('/users', (req, res) => {
+              // Logic to create a new user
+              res.status(201).send('User created');
+            });
+            `,
+          },
+          {
+            title: "Additional Resources",
+            text: "Watch this video on building RESTful APIs",
+            videoLink: "https://www.youtube.com/watch?v=0oXYv3IYlHg", // Placeholder link
+          },
+        ],
+      },
+      // TOPIC 5: Authentication and Authorization
+      {
+        id: 5,
+        topicName: "Authentication and Authorization",
+        content: [
+          {
+            title: "Understanding Authentication",
+            text: "Authentication is the process of verifying the identity of a user. In Node.js, you can implement authentication using libraries like Passport.js or JSON Web Tokens (JWT).",
+          },
+          {
+            title: "Implementing JWT Authentication",
+            text: "JWT is a popular method for securely transmitting information between parties as a JSON object.",
+            exampleCode: `
+            const jwt = require('jsonwebtoken');
+  
+            // Generate a token
+            const token = jwt.sign({ id: user._id }, 'secretKey', { expiresIn: '1h' });
+  
+            // Verify a token
+            jwt.verify(token, 'secretKey', (err, decoded) => {
+              if (err) throw err;
+              console.log(decoded);
+            });
+            `,
+          },
+          {
+            title: "Additional Resources",
+            text: "Watch this video on implementing JWT authentication",
+            videoLink: "https://www.youtube.com/watch?v=2jqok-WgelI", // Placeholder link
+          },
+        ],
+      },
+    ],
   },
+  
   {
     id: 10,
     name: "Node.js for Beginners",
-    description:
-      "Learn how to build scalable server-side applications using Node.js.",
+    description: "Learn how to build scalable server-side applications using Node.js.",
     track: "Backend Web Development",
+    additionalResource: {
+      title: "Additional Resource",
+      videoLink: "https://www.youtube.com/watch?v=TlB_eWDSMt4",  // Placeholder video
+      websiteLink: {
+        title: "Node.js Official Documentation",
+        link: "https://nodejs.org/en/docs/"
+      }
+    },
+    topics: [
+      {
+        id: 1,
+        topicName: "Introduction to Node.js",
+        content: [
+          {
+            title: "What is Node.js?",
+            text: "Node.js is a runtime environment that allows JavaScript to be executed on the server-side, enabling developers to build scalable and high-performance applications."
+          },
+          {
+            title: "V8 Engine",
+            text: "Node.js uses the V8 engine, the same engine used in Google Chrome, to execute JavaScript code outside of a browser environment."
+          },
+          {
+            title: "Additional Resources",
+            text: "Watch this introductory video on Node.js",
+            videoLink: "https://www.youtube.com/watch?v=TlB_eWDSMt4"
+          }
+        ]
+      },
+      {
+        id: 2,
+        topicName: "Setting Up a Node.js Environment",
+        content: [
+          {
+            title: "Installing Node.js",
+            text: "To begin with Node.js, you need to install it on your local machine. You can download the installer from the Node.js official website."
+          },
+          {
+            title: "Verifying Installation",
+            text: "After installing, you can verify the installation by running `node -v` and `npm -v` commands in your terminal."
+          },
+          {
+            title: "Additional Resources",
+            text: "Watch this guide on setting up Node.js",
+            videoLink: "https://www.youtube.com/watch?v=ENrzD9HAZK4"
+          }
+        ]
+      },
+      {
+        id: 3,
+        topicName: "Creating Your First Server",
+        content: [
+          {
+            title: "The HTTP Module",
+            text: "Node.js has a built-in HTTP module that allows you to create a web server. You can use the `http.createServer()` method to create your first server."
+          },
+          {
+            title: "Example Code",
+            exampleCode: `
+              const http = require('http');
+              const server = http.createServer((req, res) => {
+                res.statusCode = 200;
+                res.setHeader('Content-Type', 'text/plain');
+                res.end('Hello, Node.js!');
+              });
+              server.listen(3000, () => {
+                console.log('Server running at http://localhost:3000/');
+              });
+            `
+          },
+          {
+            title: "Additional Resources",
+            text: "Watch this tutorial on creating a Node.js server",
+            videoLink: "https://www.youtube.com/watch?v=ENrzD9HAZK4"
+          }
+        ]
+      },
+      {
+        id: 4,
+        topicName: "Working with NPM",
+        content: [
+          {
+            title: "What is NPM?",
+            text: "NPM (Node Package Manager) is a package manager for Node.js that allows you to install third-party libraries and manage your project's dependencies."
+          },
+          {
+            title: "Installing Packages",
+            text: "You can install a package using the `npm install <package-name>` command. For example, to install the `express` package, you would run `npm install express`."
+          },
+          {
+            title: "Additional Resources",
+            text: "Watch this tutorial on using NPM",
+            videoLink: "https://www.youtube.com/watch?v=ENrzD9HAZK4"
+          }
+        ]
+      },
+      {
+        id: 5,
+        topicName: "Building APIs with Express.js",
+        content: [
+          {
+            title: "What is Express.js?",
+            text: "Express.js is a minimal and flexible Node.js web application framework that provides a robust set of features for building APIs and web applications."
+          },
+          {
+            title: "Example Code",
+            exampleCode: `
+              const express = require('express');
+              const app = express();
+              app.get('/', (req, res) => {
+                res.send('Hello, Express.js!');
+              });
+              app.listen(3000, () => {
+                console.log('Server running on http://localhost:3000');
+              });
+            `
+          },
+          {
+            title: "Additional Resources",
+            text: "Watch this guide on building APIs with Express.js",
+            videoLink: "https://www.youtube.com/watch?v=ENrzD9HAZK4"
+          }
+        ]
+      }
+    ]
   },
+  
   {
     id: 11,
     name: "Express.js Fundamentals",
-    description:
-      "Master the basics of Express.js to build web servers in Node.js.",
+    description: "Master the basics of Express.js to build web servers in Node.js.",
     track: "Backend Web Development",
+    additionalResource: {
+      title: "Additional Resource",
+      videoLink: "https://www.youtube.com/watch?v=L72fhGm1tfE",  // Placeholder video
+      websiteLink: {
+        title: "Express.js Documentation",
+        link: "https://expressjs.com/en/starter/installing.html"
+      }
+    },
+    topics: [
+      {
+        id: 1,
+        topicName: "Introduction to Express.js",
+        content: [
+          {
+            title: "What is Express.js?",
+            text: "Express.js is a fast, unopinionated, and minimalist web framework for Node.js, designed for building web applications and APIs."
+          },
+          {
+            title: "Features of Express.js",
+            text: "Express provides a thin layer of fundamental web application features, without obscuring Node.js features."
+          },
+          {
+            title: "Additional Resources",
+            text: "Watch this introduction video on Express.js",
+            videoLink: "https://www.youtube.com/watch?v=L72fhGm1tfE"
+          }
+        ]
+      },
+      {
+        id: 2,
+        topicName: "Setting Up Express.js",
+        content: [
+          {
+            title: "Installing Express.js",
+            text: "You can install Express.js using NPM by running the command `npm install express`."
+          },
+          {
+            title: "Basic Server Setup",
+            exampleCode: `
+              const express = require('express');
+              const app = express();
+              const port = 3000;
+              
+              app.get('/', (req, res) => {
+                res.send('Hello Express.js!');
+              });
+              
+              app.listen(port, () => {
+                console.log(\`Server running at http://localhost:\${port}\`);
+              });
+            `
+          },
+          {
+            title: "Additional Resources",
+            text: "Watch this tutorial on setting up Express.js",
+            videoLink: "https://www.youtube.com/watch?v=L72fhGm1tfE"
+          }
+        ]
+      },
+      {
+        id: 3,
+        topicName: "Routing in Express.js",
+        content: [
+          {
+            title: "Defining Routes",
+            text: "Express.js allows you to define routes to handle requests of different types (GET, POST, etc.) for specific URLs."
+          },
+          {
+            title: "Example: Basic Routing",
+            exampleCode: `
+              app.get('/about', (req, res) => {
+                res.send('About Page');
+              });
+              
+              app.post('/submit', (req, res) => {
+                res.send('Form submitted');
+              });
+            `
+          },
+          {
+            title: "Additional Resources",
+            text: "Watch this guide on routing in Express.js",
+            videoLink: "https://www.youtube.com/watch?v=L72fhGm1tfE"
+          }
+        ]
+      },
+      {
+        id: 4,
+        topicName: "Middleware in Express.js",
+        content: [
+          {
+            title: "What is Middleware?",
+            text: "Middleware functions are functions that have access to the request and response objects. They can execute any code, modify the request/response, end the request-response cycle, or call the next middleware."
+          },
+          {
+            title: "Using Middleware",
+            exampleCode: `
+              app.use((req, res, next) => {
+                console.log('Request received at:', new Date().toISOString());
+                next();
+              });
+            `
+          },
+          {
+            title: "Additional Resources",
+            text: "Watch this tutorial on using middleware in Express.js",
+            videoLink: "https://www.youtube.com/watch?v=L72fhGm1tfE"
+          }
+        ]
+      },
+      {
+        id: 5,
+        topicName: "Handling Static Files",
+        content: [
+          {
+            title: "Serving Static Files",
+            text: "Express.js can serve static files like HTML, CSS, and images using the `express.static` middleware."
+          },
+          {
+            title: "Example: Serving Static Files",
+            exampleCode: `
+              app.use(express.static('public'));
+  
+              // Now, files in the 'public' directory can be accessed
+              // e.g., http://localhost:3000/images/example.png
+            `
+          },
+          {
+            title: "Additional Resources",
+            text: "Watch this tutorial on serving static files in Express.js",
+            videoLink: "https://www.youtube.com/watch?v=L72fhGm1tfE"
+          }
+        ]
+      },
+      {
+        id: 6,
+        topicName: "Error Handling in Express.js",
+        content: [
+          {
+            title: "Handling Errors",
+            text: "Error-handling middleware is used to handle any errors that occur during request processing."
+          },
+          {
+            title: "Example: Error Handling Middleware",
+            exampleCode: `
+              app.use((err, req, res, next) => {
+                console.error(err.stack);
+                res.status(500).send('Something broke!');
+              });
+            `
+          },
+          {
+            title: "Additional Resources",
+            text: "Watch this tutorial on error handling in Express.js",
+            videoLink: "https://www.youtube.com/watch?v=L72fhGm1tfE"
+          }
+        ]
+      }
+    ]
   },
+  
   {
     id: 12,
     name: "Database Management with MongoDB",
-    description:
-      "Learn how to use MongoDB to store and manage data in your web applications.",
+    description: "Learn how to use MongoDB to store and manage data in your web applications.",
     track: "Backend Web Development",
+    additionalResource: {
+      title: "Additional Resource",
+      videoLink: "https://www.youtube.com/watch?v=ofme2o29ngU",  // Placeholder video
+      websiteLink: {
+        title: "MongoDB Official Documentation",
+        link: "https://docs.mongodb.com/"
+      }
+    },
+    topics: [
+      {
+        id: 1,
+        topicName: "Introduction to MongoDB",
+        content: [
+          {
+            title: "What is MongoDB?",
+            text: "MongoDB is a NoSQL, document-oriented database designed to store data in flexible, JSON-like documents. It allows for efficient scaling and high-performance data storage."
+          },
+          {
+            title: "Advantages of MongoDB",
+            text: "MongoDB offers scalability, flexibility in schema design, and easy integration with various web frameworks, making it ideal for web applications."
+          },
+          {
+            title: "Additional Resources",
+            text: "Watch this introduction to MongoDB video",
+            videoLink: "https://www.youtube.com/watch?v=ofme2o29ngU"
+          }
+        ]
+      },
+      {
+        id: 2,
+        topicName: "Setting Up MongoDB",
+        content: [
+          {
+            title: "Installing MongoDB",
+            text: "To get started, you can install MongoDB locally by downloading it from the official website or use a cloud service like MongoDB Atlas for easy setup."
+          },
+          {
+            title: "Basic MongoDB Commands",
+            exampleCode: `
+              // Start MongoDB server
+              mongod
+  
+              // Connect to MongoDB shell
+              mongo
+  
+              // Show all databases
+              show dbs;
+  
+              // Create or switch to a new database
+              use myDatabase;
+            `
+          },
+          {
+            title: "Additional Resources",
+            text: "Watch this setup guide for MongoDB",
+            videoLink: "https://www.youtube.com/watch?v=ofme2o29ngU"
+          }
+        ]
+      },
+      {
+        id: 3,
+        topicName: "CRUD Operations in MongoDB",
+        content: [
+          {
+            title: "Creating Documents",
+            text: "Documents in MongoDB are created using the `insertOne` or `insertMany` commands to add data into a collection."
+          },
+          {
+            title: "Example: Inserting Data",
+            exampleCode: `
+              db.users.insertOne({
+                name: "John Doe",
+                email: "john@example.com",
+                age: 30
+              });
+            `
+          },
+          {
+            title: "Reading Documents",
+            text: "You can retrieve documents using the `find` command with optional filters to specify which documents to return."
+          },
+          {
+            title: "Updating Documents",
+            exampleCode: `
+              db.users.updateOne(
+                { name: "John Doe" },
+                { $set: { age: 31 } }
+              );
+            `
+          },
+          {
+            title: "Deleting Documents",
+            exampleCode: `
+              db.users.deleteOne({ name: "John Doe" });
+            `
+          },
+          {
+            title: "Additional Resources",
+            text: "Watch this tutorial on MongoDB CRUD operations",
+            videoLink: "https://www.youtube.com/watch?v=ofme2o29ngU"
+          }
+        ]
+      },
+      {
+        id: 4,
+        topicName: "Indexes in MongoDB",
+        content: [
+          {
+            title: "What are Indexes?",
+            text: "Indexes improve the performance of database queries by allowing the database to search efficiently for documents that match certain criteria."
+          },
+          {
+            title: "Creating an Index",
+            exampleCode: `
+              db.users.createIndex({ email: 1 });
+            `
+          },
+          {
+            title: "Example: Using Indexes",
+            text: "Indexes are useful for fields you query often, like user email addresses or product IDs."
+          },
+          {
+            title: "Additional Resources",
+            text: "Watch this guide on indexes in MongoDB",
+            videoLink: "https://www.youtube.com/watch?v=ofme2o29ngU"
+          }
+        ]
+      },
+      {
+        id: 5,
+        topicName: "Aggregation in MongoDB",
+        content: [
+          {
+            title: "What is Aggregation?",
+            text: "Aggregation is a powerful feature in MongoDB that allows you to process data and return computed results, similar to SQL's GROUP BY."
+          },
+          {
+            title: "Example: Aggregation Pipeline",
+            exampleCode: `
+              db.users.aggregate([
+                { $match: { age: { $gte: 18 } } },
+                { $group: { _id: "$age", totalUsers: { $sum: 1 } } }
+              ]);
+            `
+          },
+          {
+            title: "Additional Resources",
+            text: "Watch this tutorial on aggregation in MongoDB",
+            videoLink: "https://www.youtube.com/watch?v=ofme2o29ngU"
+          }
+        ]
+      },
+      {
+        id: 6,
+        topicName: "Working with MongoDB Atlas",
+        content: [
+          {
+            title: "What is MongoDB Atlas?",
+            text: "MongoDB Atlas is a cloud-based service that allows you to host and manage MongoDB databases in a secure and scalable environment."
+          },
+          {
+            title: "Creating a Cluster in MongoDB Atlas",
+            text: "With MongoDB Atlas, you can quickly create clusters, manage backups, and monitor performance through an intuitive interface."
+          },
+          {
+            title: "Additional Resources",
+            text: "Watch this tutorial on getting started with MongoDB Atlas",
+            videoLink: "https://www.youtube.com/watch?v=ofme2o29ngU"
+          }
+        ]
+      }
+    ]
   },
+  
   {
     id: 13,
     name: "RESTful API Development",
-    description:
-      "Learn how to design and build RESTful APIs using Node.js and Express.",
+    description: "Learn how to design and build RESTful APIs using Node.js and Express.",
     track: "Backend Web Development",
+    additionalResource: {
+      title: "Additional Resource",
+      videoLink: "https://www.youtube.com/watch?v=fgTGADljAeg", // Placeholder video
+      websiteLink: {
+        title: "RESTful API Design Guide",
+        link: "https://restfulapi.net/"
+      }
+    },
+    topics: [
+      {
+        id: 1,
+        topicName: "Introduction to RESTful APIs",
+        content: [
+          {
+            title: "What is a RESTful API?",
+            text: "A RESTful API is an architectural style for designing networked applications. It uses HTTP requests to perform CRUD operations (Create, Read, Update, Delete) on resources represented as URLs."
+          },
+          {
+            title: "Principles of RESTful API",
+            text: "Key principles include stateless interactions, use of HTTP methods (GET, POST, PUT, DELETE), and resource identification through URIs."
+          },
+          {
+            title: "Additional Resources",
+            text: "Watch this introductory video on RESTful APIs",
+            videoLink: "https://www.youtube.com/watch?v=fgTGADljAeg"
+          }
+        ]
+      },
+      {
+        id: 2,
+        topicName: "Setting Up Node.js and Express",
+        content: [
+          {
+            title: "Installing Node.js and Express",
+            text: "Learn how to set up a Node.js environment and install Express.js for building RESTful APIs."
+          },
+          {
+            title: "Setting up the Express App",
+            exampleCode: `
+              const express = require('express');
+              const app = express();
+              const PORT = 3000;
+  
+              app.listen(PORT, () => {
+                console.log(\`Server is running on port \${PORT}\`);
+              });
+            `
+          },
+          {
+            title: "Additional Resources",
+            text: "Watch this setup guide for Node.js and Express",
+            videoLink: "https://www.youtube.com/watch?v=fgTGADljAeg"
+          }
+        ]
+      },
+      {
+        id: 3,
+        topicName: "Creating Routes in Express",
+        content: [
+          {
+            title: "Routing in Express",
+            text: "Routes define how the application responds to client requests to different URLs. You can use methods like GET, POST, PUT, and DELETE to handle different requests."
+          },
+          {
+            title: "Example: Creating Basic Routes",
+            exampleCode: `
+              app.get('/', (req, res) => {
+                res.send('Hello, World!');
+              });
+  
+              app.post('/api/resource', (req, res) => {
+                // Handle POST request
+                res.send('Resource created');
+              });
+            `
+          },
+          {
+            title: "Additional Resources",
+            text: "Watch this tutorial on routing in Express",
+            videoLink: "https://www.youtube.com/watch?v=fgTGADljAeg"
+          }
+        ]
+      },
+      {
+        id: 4,
+        topicName: "Working with Middleware",
+        content: [
+          {
+            title: "What is Middleware?",
+            text: "Middleware functions are executed sequentially to handle requests, modify responses, or execute additional logic before sending the response."
+          },
+          {
+            title: "Example: Using Middleware",
+            exampleCode: `
+              const express = require('express');
+              const app = express();
+  
+              // Middleware to log request method and URL
+              app.use((req, res, next) => {
+                console.log(\`\${req.method} \${req.url}\`);
+                next();
+              });
+  
+              app.get('/', (req, res) => {
+                res.send('Middleware Example');
+              });
+            `
+          },
+          {
+            title: "Additional Resources",
+            text: "Watch this video on middleware in Express",
+            videoLink: "https://www.youtube.com/watch?v=fgTGADljAeg"
+          }
+        ]
+      },
+      {
+        id: 5,
+        topicName: "Building CRUD APIs",
+        content: [
+          {
+            title: "Implementing CRUD Operations",
+            text: "Learn how to create APIs that allow clients to perform Create, Read, Update, and Delete operations on resources."
+          },
+          {
+            title: "Example: Basic CRUD API",
+            exampleCode: `
+              const express = require('express');
+              const app = express();
+  
+              let items = [];
+  
+              // Create
+              app.post('/api/items', (req, res) => {
+                const item = { id: items.length + 1, name: req.body.name };
+                items.push(item);
+                res.status(201).send(item);
+              });
+  
+              // Read
+              app.get('/api/items', (req, res) => {
+                res.send(items);
+              });
+  
+              // Update
+              app.put('/api/items/:id', (req, res) => {
+                const item = items.find(i => i.id === parseInt(req.params.id));
+                if (!item) return res.status(404).send('Item not found');
+                item.name = req.body.name;
+                res.send(item);
+              });
+  
+              // Delete
+              app.delete('/api/items/:id', (req, res) => {
+                const item = items.find(i => i.id === parseInt(req.params.id));
+                if (!item) return res.status(404).send('Item not found');
+                items = items.filter(i => i.id !== item.id);
+                res.send(item);
+              });
+            `
+          },
+          {
+            title: "Additional Resources",
+            text: "Watch this tutorial on building CRUD APIs with Express",
+            videoLink: "https://www.youtube.com/watch?v=fgTGADljAeg"
+          }
+        ]
+      },
+      {
+        id: 6,
+        topicName: "Handling API Errors",
+        content: [
+          {
+            title: "Error Handling in Express",
+            text: "Properly handling errors in APIs ensures that clients receive meaningful error messages and the API remains reliable."
+          },
+          {
+            title: "Example: Error Handling Middleware",
+            exampleCode: `
+              app.use((err, req, res, next) => {
+                console.error(err.stack);
+                res.status(500).send('Something went wrong!');
+              });
+            `
+          },
+          {
+            title: "Additional Resources",
+            text: "Watch this guide on error handling in Express",
+            videoLink: "https://www.youtube.com/watch?v=fgTGADljAeg"
+          }
+        ]
+      },
+      {
+        id: 7,
+        topicName: "Securing RESTful APIs",
+        content: [
+          {
+            title: "Securing API Endpoints",
+            text: "Learn how to secure API endpoints using authentication and authorization mechanisms such as JWT (JSON Web Tokens)."
+          },
+          {
+            title: "Example: Implementing JWT Authentication",
+            exampleCode: `
+              const jwt = require('jsonwebtoken');
+  
+              app.post('/api/login', (req, res) => {
+                // Validate user credentials (e.g., using a database)
+                const token = jwt.sign({ userId: user.id }, 'secretKey');
+                res.send({ token });
+              });
+  
+              // Protecting routes using JWT
+              function authenticate(req, res, next) {
+                const token = req.header('Authorization').replace('Bearer ', '');
+                try {
+                  const decoded = jwt.verify(token, 'secretKey');
+                  req.user = decoded;
+                  next();
+                } catch (error) {
+                  res.status(401).send('Unauthorized');
+                }
+              }
+  
+              app.get('/api/protected', authenticate, (req, res) => {
+                res.send('This is a protected route');
+              });
+            `
+          },
+          {
+            title: "Additional Resources",
+            text: "Watch this video on securing APIs with JWT",
+            videoLink: "https://www.youtube.com/watch?v=fgTGADljAeg"
+          }
+        ]
+      }
+    ]
   },
+  
   {
     id: 14,
     name: "GraphQL for Backend",
-    description:
-      "Dive into GraphQL and learn how to build efficient and scalable APIs.",
+    description: "Dive into GraphQL and learn how to build efficient and scalable APIs.",
     track: "Backend Web Development",
+    additionalResource: {
+      title: "Additional Resource",
+      videoLink: "https://www.youtube.com/watch?v=ed8SzALpx1Q", // Placeholder video
+      websiteLink: {
+        title: "GraphQL Official Documentation",
+        link: "https://graphql.org/learn/"
+      }
+    },
+    topics: [
+      {
+        id: 1,
+        topicName: "Introduction to GraphQL",
+        content: [
+          {
+            title: "What is GraphQL?",
+            text: "GraphQL is a query language for APIs and a runtime for executing those queries. It allows clients to specify the shape of the data they need and returns exactly that, making it highly efficient compared to REST."
+          },
+          {
+            title: "Key Concepts",
+            text: "Key concepts of GraphQL include schema, resolvers, queries, and mutations. Schemas define the structure of your API, and resolvers are functions that handle API requests."
+          },
+          {
+            title: "Additional Resources",
+            text: "Watch this introductory video on GraphQL",
+            videoLink: "https://www.youtube.com/watch?v=ed8SzALpx1Q"
+          }
+        ]
+      },
+      {
+        id: 2,
+        topicName: "Setting Up a GraphQL Server with Node.js",
+        content: [
+          {
+            title: "Installing GraphQL and Express",
+            text: "Learn how to set up a GraphQL server using Node.js and Express by installing the required packages like `express`, `express-graphql`, and `graphql`."
+          },
+          {
+            title: "Example: Setting Up a Basic GraphQL Server",
+            exampleCode: `
+              const express = require('express');
+              const { graphqlHTTP } = require('express-graphql');
+              const { buildSchema } = require('graphql');
+  
+              const app = express();
+  
+              // Define the GraphQL schema
+              const schema = buildSchema(\`
+                type Query {
+                  hello: String
+                }
+              \`);
+  
+              // Define the resolver
+              const root = {
+                hello: () => 'Hello, world!'
+              };
+  
+              app.use('/graphql', graphqlHTTP({
+                schema: schema,
+                rootValue: root,
+                graphiql: true
+              }));
+  
+              app.listen(4000, () => {
+                console.log('GraphQL server running on port 4000');
+              });
+            `
+          },
+          {
+            title: "Additional Resources",
+            text: "Watch this setup guide for GraphQL with Node.js",
+            videoLink: "https://www.youtube.com/watch?v=ed8SzALpx1Q"
+          }
+        ]
+      },
+      {
+        id: 3,
+        topicName: "GraphQL Queries and Mutations",
+        content: [
+          {
+            title: "Writing GraphQL Queries",
+            text: "Queries are used to fetch data in GraphQL. You can request specific fields, and the API will return only the data you asked for."
+          },
+          {
+            title: "Writing GraphQL Mutations",
+            text: "Mutations are used to modify data, such as creating, updating, or deleting records. Mutations look similar to queries but have different semantics."
+          },
+          {
+            title: "Example: Creating a Query and Mutation",
+            exampleCode: `
+              const schema = buildSchema(\`
+                type Query {
+                  getMessage: String
+                }
+  
+                type Mutation {
+                  setMessage(message: String): String
+                }
+              \`);
+  
+              let message = 'Hello, world!';
+  
+              const root = {
+                getMessage: () => message,
+                setMessage: ({ message: newMessage }) => {
+                  message = newMessage;
+                  return message;
+                }
+              };
+            `
+          },
+          {
+            title: "Additional Resources",
+            text: "Watch this tutorial on queries and mutations",
+            videoLink: "https://www.youtube.com/watch?v=ed8SzALpx1Q"
+          }
+        ]
+      },
+      {
+        id: 4,
+        topicName: "GraphQL Schema Design",
+        content: [
+          {
+            title: "Designing the GraphQL Schema",
+            text: "Schemas define the shape and structure of your API. Learn how to design schemas to handle complex data relationships efficiently."
+          },
+          {
+            title: "Example: Defining a Schema with Types and Relationships",
+            exampleCode: `
+              const schema = buildSchema(\`
+                type Author {
+                  id: ID
+                  name: String
+                  books: [Book]
+                }
+  
+                type Book {
+                  id: ID
+                  title: String
+                  author: Author
+                }
+  
+                type Query {
+                  books: [Book]
+                  authors: [Author]
+                }
+              \`);
+            `
+          },
+          {
+            title: "Additional Resources",
+            text: "Watch this tutorial on GraphQL schema design",
+            videoLink: "https://www.youtube.com/watch?v=ed8SzALpx1Q"
+          }
+        ]
+      },
+      {
+        id: 5,
+        topicName: "Working with Resolvers",
+        content: [
+          {
+            title: "What are Resolvers?",
+            text: "Resolvers are functions that handle requests for specific fields in the GraphQL schema. They define how and from where to fetch the requested data."
+          },
+          {
+            title: "Example: Creating a Resolver Function",
+            exampleCode: `
+              const root = {
+                books: () => booksList,  // Fetches the list of books
+                authors: () => authorsList  // Fetches the list of authors
+              };
+            `
+          },
+          {
+            title: "Additional Resources",
+            text: "Watch this guide on building resolvers",
+            videoLink: "https://www.youtube.com/watch?v=ed8SzALpx1Q"
+          }
+        ]
+      },
+      {
+        id: 6,
+        topicName: "Handling Complex Data in GraphQL",
+        content: [
+          {
+            title: "Nested Queries and Relations",
+            text: "GraphQL allows you to request deeply nested data. Learn how to define relationships between different data types and handle complex data structures."
+          },
+          {
+            title: "Example: Nested Query",
+            exampleCode: `
+              query {
+                books {
+                  title
+                  author {
+                    name
+                  }
+                }
+              }
+            `
+          },
+          {
+            title: "Additional Resources",
+            text: "Watch this video on handling complex data with GraphQL",
+            videoLink: "https://www.youtube.com/watch?v=ed8SzALpx1Q"
+          }
+        ]
+      },
+      {
+        id: 7,
+        topicName: "Error Handling in GraphQL",
+        content: [
+          {
+            title: "Handling Errors Gracefully",
+            text: "Error handling in GraphQL ensures that the client is informed about what went wrong during data fetching or processing."
+          },
+          {
+            title: "Example: Returning Errors in GraphQL",
+            exampleCode: `
+              const root = {
+                books: () => {
+                  throw new Error('Books data could not be fetched.');
+                }
+              };
+            `
+          },
+          {
+            title: "Additional Resources",
+            text: "Watch this tutorial on error handling in GraphQL",
+            videoLink: "https://www.youtube.com/watch?v=ed8SzALpx1Q"
+          }
+        ]
+      },
+      {
+        id: 8,
+        topicName: "Optimizing GraphQL Performance",
+        content: [
+          {
+            title: "Optimizing Queries for Large Datasets",
+            text: "Learn techniques like batching and caching to optimize GraphQL queries when dealing with large datasets."
+          },
+          {
+            title: "Additional Resources",
+            text: "Watch this video on optimizing GraphQL performance",
+            videoLink: "https://www.youtube.com/watch?v=ed8SzALpx1Q"
+          }
+        ]
+      }
+    ]
   },
+  
   {
     id: 15,
     name: "Authentication & Authorization",
-    description:
-      "Learn how to secure your backend applications with proper user authentication.",
+    description: "Learn how to secure your backend applications with proper user authentication.",
     track: "Backend Web Development",
+    additionalResource: {
+      title: "Additional Resource",
+      videoLink: "https://www.youtube.com/watch?v=2jqok-WgelI", 
+      websiteLink: {
+        title: "JWT Authentication Tutorial",
+        link: "https://jwt.io/introduction/"
+      }
+    },
+    topics: [
+      {
+        id: 1,
+        topicName: "Introduction to Authentication & Authorization",
+        content: [
+          {
+            title: "What is Authentication?",
+            text: "Authentication is the process of verifying the identity of a user or application. It involves checking credentials like usernames, passwords, or tokens."
+          },
+          {
+            title: "What is Authorization?",
+            text: "Authorization is the process of determining what a user is allowed to do. It ensures that the authenticated user has the proper permissions to access specific resources."
+          },
+          {
+            title: "Difference Between Authentication and Authorization",
+            text: "Authentication verifies identity, while authorization determines permissions. Both are crucial in securing backend systems."
+          },
+          {
+            title: "Additional Resources",
+            text: "Watch this overview of Authentication & Authorization",
+            videoLink: "https://www.youtube.com/watch?v=2jqok-WgelI"
+          }
+        ]
+      },
+      {
+        id: 2,
+        topicName: "JWT (JSON Web Tokens) Authentication",
+        content: [
+          {
+            title: "What are JWTs?",
+            text: "JWTs are a secure way to represent user claims between two parties. They are used for stateless authentication, where the server verifies a token without storing session data."
+          },
+          {
+            title: "How JWTs Work",
+            text: "JWTs consist of a header, payload, and signature. The header contains metadata, the payload holds the claims, and the signature ensures data integrity."
+          },
+          {
+            title: "Example: Creating a JWT",
+            exampleCode: `
+              const jwt = require('jsonwebtoken');
+  
+              const user = { id: 1, username: 'exampleUser' };
+              const token = jwt.sign(user, 'yourSecretKey', { expiresIn: '1h' });
+  
+              console.log(token);
+            `
+          },
+          {
+            title: "Additional Resources",
+            text: "Learn more about JWTs in this tutorial",
+            videoLink: "https://www.youtube.com/watch?v=2jqok-WgelI"
+          }
+        ]
+      },
+      {
+        id: 3,
+        topicName: "Implementing Authentication with Passport.js",
+        content: [
+          {
+            title: "What is Passport.js?",
+            text: "Passport.js is a middleware for Node.js that simplifies implementing various authentication strategies, including local and third-party providers like Google or Facebook."
+          },
+          {
+            title: "Example: Setting Up Passport for Local Authentication",
+            exampleCode: `
+              const passport = require('passport');
+              const LocalStrategy = require('passport-local').Strategy;
+  
+              passport.use(new LocalStrategy(
+                (username, password, done) => {
+                  User.findOne({ username: username }, (err, user) => {
+                    if (err) return done(err);
+                    if (!user) return done(null, false, { message: 'Incorrect username.' });
+                    if (!user.verifyPassword(password)) return done(null, false, { message: 'Incorrect password.' });
+                    return done(null, user);
+                  });
+                }
+              ));
+            `
+          },
+          {
+            title: "Additional Resources",
+            text: "Watch this tutorial on Passport.js",
+            videoLink: "https://www.youtube.com/watch?v=2jqok-WgelI"
+          }
+        ]
+      },
+      {
+        id: 4,
+        topicName: "OAuth 2.0 Authentication",
+        content: [
+          {
+            title: "What is OAuth 2.0?",
+            text: "OAuth 2.0 is an authorization framework that allows third-party services to exchange access tokens without sharing credentials. It's commonly used for signing in with services like Google, Facebook, etc."
+          },
+          {
+            title: "How OAuth 2.0 Works",
+            text: "OAuth 2.0 uses access tokens that are granted based on user consent. The token can then be used by applications to access protected resources."
+          },
+          {
+            title: "Example: Implementing OAuth with Google",
+            exampleCode: `
+              const GoogleStrategy = require('passport-google-oauth20').Strategy;
+  
+              passport.use(new GoogleStrategy({
+                clientID: 'yourGoogleClientID',
+                clientSecret: 'yourGoogleClientSecret',
+                callbackURL: 'http://www.example.com/auth/google/callback'
+              },
+              (token, tokenSecret, profile, done) => {
+                User.findOrCreate({ googleId: profile.id }, (err, user) => {
+                  return done(err, user);
+                });
+              }));
+            `
+          },
+          {
+            title: "Additional Resources",
+            text: "Learn how OAuth 2.0 works with Google",
+            videoLink: "https://www.youtube.com/watch?v=2jqok-WgelI"
+          }
+        ]
+      },
+      {
+        id: 5,
+        topicName: "Securing Routes with Middleware",
+        content: [
+          {
+            title: "Using Middleware for Route Protection",
+            text: "Middleware can be used to protect routes by checking if the user is authenticated and authorized to access specific resources."
+          },
+          {
+            title: "Example: Protecting a Route with JWT Middleware",
+            exampleCode: `
+              const jwt = require('jsonwebtoken');
+  
+              const authenticateJWT = (req, res, next) => {
+                const token = req.header('Authorization');
+                if (!token) return res.status(401).send('Access Denied');
+  
+                try {
+                  const verified = jwt.verify(token, 'yourSecretKey');
+                  req.user = verified;
+                  next();
+                } catch (err) {
+                  res.status(400).send('Invalid Token');
+                }
+              };
+  
+              app.get('/protected', authenticateJWT, (req, res) => {
+                res.send('This is a protected route');
+              });
+            `
+          },
+          {
+            title: "Additional Resources",
+            text: "Learn how to secure routes using middleware",
+            videoLink: "https://www.youtube.com/watch?v=2jqok-WgelI"
+          }
+        ]
+      },
+      {
+        id: 6,
+        topicName: "Role-Based Authorization",
+        content: [
+          {
+            title: "What is Role-Based Authorization?",
+            text: "Role-based authorization is a security mechanism that restricts access to certain resources based on the user's role (e.g., admin, user, moderator)."
+          },
+          {
+            title: "Example: Implementing Role-Based Access Control",
+            exampleCode: `
+              const checkRole = (roles) => (req, res, next) => {
+                if (!roles.includes(req.user.role)) {
+                  return res.status(403).send('Access Forbidden');
+                }
+                next();
+              };
+  
+              app.get('/admin', authenticateJWT, checkRole(['admin']), (req, res) => {
+                res.send('Welcome, Admin!');
+              });
+            `
+          },
+          {
+            title: "Additional Resources",
+            text: "Watch this tutorial on role-based authorization",
+            videoLink: "https://www.youtube.com/watch?v=2jqok-WgelI"
+          }
+        ]
+      },
+      {
+        id: 7,
+        topicName: "Two-Factor Authentication (2FA)",
+        content: [
+          {
+            title: "What is Two-Factor Authentication?",
+            text: "Two-factor authentication (2FA) adds an extra layer of security by requiring two forms of identification, typically something the user knows (password) and something they have (OTP or app token)."
+          },
+          {
+            title: "Example: Implementing Two-Factor Authentication with Google Authenticator",
+            exampleCode: `
+              const speakeasy = require('speakeasy');
+              const qrcode = require('qrcode');
+  
+              const secret = speakeasy.generateSecret({ length: 20 });
+              console.log(secret.base32); // Save this in the user's profile
+  
+              // Generate a QR code for the user's app
+              qrcode.toDataURL(secret.otpauth_url, (err, data) => {
+                console.log(data); // Display this QR code to the user
+              });
+  
+              // Verifying the token
+              const verified = speakeasy.totp.verify({
+                secret: secret.base32,
+                encoding: 'base32',
+                token: req.body.token
+              });
+  
+              if (verified) {
+                console.log('Token is valid');
+              } else {
+                console.log('Token is invalid');
+              }
+            `
+          },
+          {
+            title: "Additional Resources",
+            text: "Watch this tutorial on 2FA implementation",
+            videoLink: "https://www.youtube.com/watch?v=2jqok-WgelI"
+          }
+        ]
+      },
+      {
+        id: 8,
+        topicName: "Common Security Best Practices",
+        content: [
+          {
+            title: "Ensuring Secure Authentication",
+            text: "Follow best practices such as using strong encryption, limiting login attempts, and hashing passwords with a secure algorithm like bcrypt."
+          },
+          {
+            title: "Example: Hashing Passwords with bcrypt",
+            exampleCode: `
+              const bcrypt = require('bcrypt');
+  
+              const saltRounds = 10;
+              const plainPassword = 'userPassword';
+  
+              bcrypt.hash(plainPassword, saltRounds, (err, hash) => {
+                console.log('Hashed Password:', hash);
+              });
+            `
+          },
+          {
+            title: "Additional Resources",
+            text: "Watch this tutorial on security best practices",
+            videoLink: "https://www.youtube.com/watch?v=2jqok-WgelI"
+          }
+        ]
+      }
+    ]
   },
+  
   {
     id: 16,
     name: "Deploying Node.js Apps",
-    description:
-      "Learn how to deploy Node.js applications using platforms like Heroku and AWS.",
+    description: "Learn how to deploy Node.js applications using platforms like Heroku and AWS.",
     track: "Backend Web Development",
+    additionalResource: {
+      title: "Additional Resource",
+      videoLink: "https://www.youtube.com/watch?v=G3gnMSyQjGg",
+      websiteLink: {
+        title: "Heroku Deployment Guide",
+        link: "https://devcenter.heroku.com/articles/deploying-nodejs"
+      }
+    },
+    topics: [
+      {
+        id: 1,
+        topicName: "Introduction to Node.js Deployment",
+        content: [
+          {
+            title: "What is Deployment?",
+            text: "Deployment is the process of publishing a web application so that it is accessible to users over the internet. In this topic, you will learn how to deploy Node.js applications to popular platforms like Heroku and AWS."
+          },
+          {
+            title: "Choosing a Deployment Platform",
+            text: "Popular platforms for deploying Node.js apps include Heroku, AWS, DigitalOcean, and Vercel. Each platform offers different services and pricing."
+          },
+          {
+            title: "Additional Resources",
+            text: "Watch this overview of deploying Node.js applications",
+            videoLink: "https://www.youtube.com/watch?v=G3gnMSyQjGg"
+          }
+        ]
+      },
+      {
+        id: 2,
+        topicName: "Deploying on Heroku",
+        content: [
+          {
+            title: "What is Heroku?",
+            text: "Heroku is a cloud platform that allows you to deploy and manage applications with ease. It supports Node.js applications and provides free-tier hosting with some limitations."
+          },
+          {
+            title: "Steps to Deploy a Node.js App on Heroku",
+            steps: [
+              "Install the Heroku CLI and log in to your account.",
+              "Initialize a Git repository in your project folder.",
+              "Run `heroku create` to create a new Heroku app.",
+              "Push your code to Heroku using `git push heroku master`.",
+              "Your app will be deployed and can be accessed at the generated Heroku URL."
+            ]
+          },
+          {
+            title: "Example: Deploying a Simple Node.js App",
+            exampleCode: `
+              // Install Heroku CLI and initialize Git
+              heroku login
+              git init
+              heroku create
+  
+              // Add code and commit changes
+              git add .
+              git commit -m "Initial commit"
+  
+              // Deploy to Heroku
+              git push heroku master
+            `
+          },
+          {
+            title: "Additional Resources",
+            text: "Watch this tutorial on deploying Node.js apps on Heroku",
+            videoLink: "https://www.youtube.com/watch?v=G3gnMSyQjGg"
+          }
+        ]
+      },
+      {
+        id: 3,
+        topicName: "Deploying on AWS Elastic Beanstalk",
+        content: [
+          {
+            title: "What is AWS Elastic Beanstalk?",
+            text: "AWS Elastic Beanstalk is a service provided by Amazon Web Services (AWS) that simplifies the process of deploying and scaling web applications. It automatically manages infrastructure, capacity provisioning, and load balancing."
+          },
+          {
+            title: "Steps to Deploy a Node.js App on AWS Elastic Beanstalk",
+            steps: [
+              "Create an AWS account and install the AWS CLI.",
+              "Run `eb init` to initialize Elastic Beanstalk in your project folder.",
+              "Run `eb create` to create an environment and deploy your app.",
+              "Elastic Beanstalk will handle the deployment, and your app will be accessible via a public URL."
+            ]
+          },
+          {
+            title: "Example: Deploying a Node.js App on AWS Elastic Beanstalk",
+            exampleCode: `
+              // Install AWS CLI and initialize Elastic Beanstalk
+              aws configure
+              eb init
+  
+              // Create an environment and deploy
+              eb create my-node-app-env
+              eb open
+            `
+          },
+          {
+            title: "Additional Resources",
+            text: "Watch this tutorial on deploying Node.js apps on AWS",
+            videoLink: "https://www.youtube.com/watch?v=G3gnMSyQjGg"
+          }
+        ]
+      },
+      {
+        id: 4,
+        topicName: "Environment Variables & Configuration",
+        content: [
+          {
+            title: "Why Use Environment Variables?",
+            text: "Environment variables allow you to store sensitive information, like API keys or database URLs, outside your source code. This makes it easy to switch environments (e.g., development, production) without modifying your code."
+          },
+          {
+            title: "How to Set Up Environment Variables",
+            steps: [
+              "Create a `.env` file in the root directory of your project.",
+              "Store sensitive data in the `.env` file (e.g., `DB_URI=mongodb://...`).",
+              "Use the `dotenv` package to load environment variables into your application."
+            ]
+          },
+          {
+            title: "Example: Using Environment Variables in Node.js",
+            exampleCode: `
+              // Install dotenv
+              npm install dotenv
+  
+              // Load environment variables
+              require('dotenv').config();
+  
+              // Access environment variables
+              const dbUri = process.env.DB_URI;
+              console.log('Database URI:', dbUri);
+            `
+          },
+          {
+            title: "Additional Resources",
+            text: "Watch this guide on using environment variables",
+            videoLink: "https://www.youtube.com/watch?v=G3gnMSyQjGg"
+          }
+        ]
+      },
+      {
+        id: 5,
+        topicName: "Scaling Node.js Apps",
+        content: [
+          {
+            title: "What is Scaling?",
+            text: "Scaling is the process of ensuring that your app can handle increased traffic by distributing the workload across multiple servers or instances."
+          },
+          {
+            title: "Horizontal vs Vertical Scaling",
+            text: "Horizontal scaling involves adding more instances or servers, while vertical scaling involves increasing the resources (e.g., CPU, memory) of a single server."
+          },
+          {
+            title: "Scaling on Heroku",
+            text: "Heroku allows you to scale horizontally by adding 'dynos' (virtual containers) to your app. You can increase the number of dynos to handle more traffic."
+          },
+          {
+            title: "Example: Scaling a Heroku App",
+            exampleCode: `
+              // Scale your Heroku app by increasing the number of dynos
+              heroku ps:scale web=2
+            `
+          },
+          {
+            title: "Additional Resources",
+            text: "Watch this tutorial on scaling Node.js apps",
+            videoLink: "https://www.youtube.com/watch?v=G3gnMSyQjGg"
+          }
+        ]
+      },
+      {
+        id: 6,
+        topicName: "Monitoring and Logging",
+        content: [
+          {
+            title: "Why Monitoring is Important",
+            text: "Monitoring helps you keep track of your application's performance and identify potential issues such as slow response times or high error rates."
+          },
+          {
+            title: "Using Logging Tools",
+            text: "Logging tools like Winston and Morgan can help you capture important information about requests, responses, and errors in your app. Heroku also provides built-in logging services."
+          },
+          {
+            title: "Example: Setting Up Winston Logging",
+            exampleCode: `
+              const winston = require('winston');
+  
+              const logger = winston.createLogger({
+                level: 'info',
+                format: winston.format.json(),
+                transports: [
+                  new winston.transports.Console(),
+                  new winston.transports.File({ filename: 'app.log' })
+                ]
+              });
+  
+              logger.info('Server started');
+            `
+          },
+          {
+            title: "Additional Resources",
+            text: "Learn about monitoring and logging best practices",
+            videoLink: "https://www.youtube.com/watch?v=G3gnMSyQjGg"
+          }
+        ]
+      },
+      {
+        id: 7,
+        topicName: "CI/CD for Node.js Applications",
+        content: [
+          {
+            title: "What is CI/CD?",
+            text: "CI/CD (Continuous Integration/Continuous Deployment) automates the process of testing, building, and deploying your application. It ensures that new changes are quickly integrated and deployed to production."
+          },
+          {
+            title: "Setting Up CI/CD with Heroku and GitHub",
+            text: "You can set up automated deployments from GitHub to Heroku. Every time you push changes to the GitHub repository, Heroku will automatically deploy the latest version."
+          },
+          {
+            title: "Example: Configuring Heroku CI/CD",
+            exampleCode: `
+              // Connect your GitHub repository to Heroku
+              heroku pipelines:connect your-github-repo
+  
+              // Enable automatic deployments
+              heroku pipelines:enable-auto-deploy
+            `
+          },
+          {
+            title: "Additional Resources",
+            text: "Learn how to set up CI/CD pipelines for Node.js",
+            videoLink: "https://www.youtube.com/watch?v=G3gnMSyQjGg"
+          }
+        ]
+      }
+    ]
   },
+  
   {
     id: 17,
     name: "Python for Data Science",
-    description:
-      "Learn Python programming with a focus on data science applications.",
+    description: "Learn Python programming with a focus on data science applications.",
     track: "Data Science",
+    additionalResource: {
+      title: "Additional Resource",
+      videoLink: "https://www.youtube.com/watch?v=rfscVS0vtbw",
+      websiteLink: {
+        title: "Python for Data Science",
+        link: "https://www.datacamp.com/courses/intro-to-python-for-data-science"
+      }
+    },
+    topics: [
+      {
+        id: 1,
+        topicName: "Introduction to Python",
+        content: [
+          {
+            title: "What is Python?",
+            text: "Python is a versatile, high-level programming language widely used in data science, machine learning, and automation. In this topic, you will learn the basics of Python and its applications in data science."
+          },
+          {
+            title: "Setting Up Python for Data Science",
+            text: "To start working with Python for data science, you need to install Python, set up Jupyter Notebooks, and install important libraries like NumPy, Pandas, and Matplotlib."
+          },
+          {
+            title: "Additional Resources",
+            text: "Watch this beginner’s guide to Python programming",
+            videoLink: "https://www.youtube.com/watch?v=rfscVS0vtbw"
+          }
+        ]
+      },
+      {
+        id: 2,
+        topicName: "Data Types and Variables",
+        content: [
+          {
+            title: "Python Data Types",
+            text: "Python supports various data types like integers, floats, strings, lists, and dictionaries, which are commonly used to store and manipulate data in data science projects."
+          },
+          {
+            title: "Using Variables in Python",
+            text: "Variables are used to store data values. In Python, you can easily assign values to variables and use them in calculations or functions."
+          },
+          {
+            title: "Example: Defining Variables in Python",
+            exampleCode: `
+              # Integer
+              age = 25
+              
+              # Float
+              height = 5.9
+              
+              # String
+              name = "Alice"
+              
+              # List
+              scores = [88, 92, 79]
+              
+              # Dictionary
+              student = {"name": "Alice", "age": 25}
+            `
+          },
+          {
+            title: "Additional Resources",
+            text: "Learn more about Python data types and variables",
+            videoLink: "https://www.youtube.com/watch?v=rfscVS0vtbw"
+          }
+        ]
+      },
+      {
+        id: 3,
+        topicName: "Control Flow in Python",
+        content: [
+          {
+            title: "Using If-Else Statements",
+            text: "Control flow allows you to control the execution of code based on certain conditions. Python's `if`, `else`, and `elif` statements are used to implement decision-making logic."
+          },
+          {
+            title: "Loops in Python",
+            text: "Loops such as `for` and `while` are used to repeat a block of code multiple times. Loops are particularly useful when working with large datasets in data science."
+          },
+          {
+            title: "Example: Implementing Control Flow",
+            exampleCode: `
+              # If-Else statement
+              score = 85
+              if score >= 90:
+                  grade = 'A'
+              elif score >= 80:
+                  grade = 'B'
+              else:
+                  grade = 'C'
+  
+              # For loop
+              for i in range(5):
+                  print(i)
+  
+              # While loop
+              count = 0
+              while count < 5:
+                  print(count)
+                  count += 1
+            `
+          },
+          {
+            title: "Additional Resources",
+            text: "Watch this tutorial on control flow and loops in Python",
+            videoLink: "https://www.youtube.com/watch?v=rfscVS0vtbw"
+          }
+        ]
+      },
+      {
+        id: 4,
+        topicName: "Data Manipulation with Pandas",
+        content: [
+          {
+            title: "Introduction to Pandas",
+            text: "Pandas is a Python library used for data manipulation and analysis. It provides powerful tools for handling structured data, such as data frames and series."
+          },
+          {
+            title: "Working with DataFrames",
+            text: "DataFrames are 2-dimensional labeled data structures in Pandas. You can perform data manipulation tasks such as filtering, grouping, and merging data using DataFrames."
+          },
+          {
+            title: "Example: Loading and Manipulating Data with Pandas",
+            exampleCode: `
+              import pandas as pd
+  
+              # Load a dataset
+              df = pd.read_csv("data.csv")
+  
+              # Display the first few rows
+              print(df.head())
+  
+              # Filter data
+              filtered_df = df[df['age'] > 30]
+  
+              # Group data
+              grouped_df = df.groupby('gender').mean()
+            `
+          },
+          {
+            title: "Additional Resources",
+            text: "Watch this introduction to Pandas for data manipulation",
+            videoLink: "https://www.youtube.com/watch?v=rfscVS0vtbw"
+          }
+        ]
+      },
+      {
+        id: 5,
+        topicName: "Data Visualization with Matplotlib",
+        content: [
+          {
+            title: "Introduction to Matplotlib",
+            text: "Matplotlib is a Python library used for creating visualizations, such as line graphs, bar charts, and scatter plots, which are essential for data analysis and reporting."
+          },
+          {
+            title: "Creating Visualizations with Matplotlib",
+            text: "You can use Matplotlib to create a wide range of visualizations. Data visualizations help you gain insights into patterns and trends in data."
+          },
+          {
+            title: "Example: Plotting a Simple Graph with Matplotlib",
+            exampleCode: `
+              import matplotlib.pyplot as plt
+  
+              # Data for plotting
+              x = [1, 2, 3, 4, 5]
+              y = [10, 12, 8, 15, 7]
+  
+              # Create a line plot
+              plt.plot(x, y)
+              plt.xlabel('X Axis')
+              plt.ylabel('Y Axis')
+              plt.title('Simple Line Plot')
+              plt.show()
+            `
+          },
+          {
+            title: "Additional Resources",
+            text: "Learn more about creating visualizations using Matplotlib",
+            videoLink: "https://www.youtube.com/watch?v=rfscVS0vtbw"
+          }
+        ]
+      },
+      {
+        id: 6,
+        topicName: "Introduction to NumPy",
+        content: [
+          {
+            title: "What is NumPy?",
+            text: "NumPy is a core library in Python used for numerical and scientific computing. It provides support for working with large, multi-dimensional arrays and matrices."
+          },
+          {
+            title: "Working with Arrays in NumPy",
+            text: "NumPy arrays are similar to Python lists but provide more efficient storage and operations. You can perform mathematical operations on entire arrays at once."
+          },
+          {
+            title: "Example: Creating and Manipulating Arrays in NumPy",
+            exampleCode: `
+              import numpy as np
+  
+              # Create a NumPy array
+              arr = np.array([1, 2, 3, 4, 5])
+  
+              # Perform mathematical operations
+              print(arr + 5)
+              print(arr * 2)
+  
+              # Create a multi-dimensional array
+              matrix = np.array([[1, 2, 3], [4, 5, 6]])
+              print(matrix)
+            `
+          },
+          {
+            title: "Additional Resources",
+            text: "Watch this guide on using NumPy for scientific computing",
+            videoLink: "https://www.youtube.com/watch?v=rfscVS0vtbw"
+          }
+        ]
+      },
+      {
+        id: 7,
+        topicName: "Working with APIs in Python",
+        content: [
+          {
+            title: "What is an API?",
+            text: "An API (Application Programming Interface) allows your Python programs to communicate with external services and retrieve or send data. Many data science projects involve working with APIs to gather real-world data."
+          },
+          {
+            title: "Using the Requests Library",
+            text: "The `requests` library in Python is used to make HTTP requests to APIs. You can send GET or POST requests to interact with external APIs."
+          },
+          {
+            title: "Example: Fetching Data from an API",
+            exampleCode: `
+              import requests
+  
+              # Send a GET request to an API
+              response = requests.get('https://api.example.com/data')
+  
+              # Convert the response to JSON format
+              data = response.json()
+  
+              # Print the fetched data
+              print(data)
+            `
+          },
+          {
+            title: "Additional Resources",
+            text: "Learn how to work with APIs using Python",
+            videoLink: "https://www.youtube.com/watch?v=rfscVS0vtbw"
+          }
+        ]
+      },
+      {
+        id: 8,
+        topicName: "Introduction to Machine Learning with Python",
+        content: [
+          {
+            title: "What is Machine Learning?",
+            text: "Machine learning is a branch of artificial intelligence that allows computers to learn patterns from data without being explicitly programmed. Python provides many libraries, such as scikit-learn, for building machine learning models."
+          },
+          {
+            title: "Building a Simple Machine Learning Model",
+            text: "You can use libraries like scikit-learn to build, train, and evaluate machine learning models. Common models include linear regression, decision trees, and neural networks."
+          },
+          {
+            title: "Example: Building a Simple Linear Regression Model",
+            exampleCode: `
+              from sklearn.linear_model import LinearRegression
+              import numpy as np
+  
+              # Data for the model
+              X = np.array([[1], [2], [3], [4], [5]])
+              y = np.array([10, 12, 8, 15, 7])
+  
+              # Create a linear regression model
+              model = LinearRegression()
+  
+              # Train the model
+              model.fit(X, y)
+  
+              # Make predictions
+              predictions = model.predict(X)
+              print(predictions)
+            `
+          },
+          {
+            title: "Additional Resources",
+            text: "Watch this introduction to machine learning with Python",
+            videoLink: "https://www.youtube.com/watch?v=rfscVS0vtbw"
+          }
+        ]
+      }
+    ]
   },
+  
   {
     id: 18,
     name: "Data Analysis with Pandas",
-    description:
-      "Use the Pandas library to manipulate and analyze data efficiently.",
+    description: "Use the Pandas library to manipulate and analyze data efficiently.",
     track: "Data Science",
+    additionalResource: {
+      title: "Additional Resource",
+      videoLink: "https://www.youtube.com/watch?v=vmEHCJofslg",
+      websiteLink: {
+        title: "Pandas Documentation",
+        link: "https://pandas.pydata.org/pandas-docs/stable/"
+      }
+    },
+    topics: [
+      {
+        id: 1,
+        topicName: "Introduction to Pandas",
+        content: [
+          {
+            title: "What is Pandas?",
+            text: "Pandas is a powerful Python library for data manipulation and analysis. It provides data structures such as Series and DataFrames to efficiently store and manipulate structured data."
+          },
+          {
+            title: "Installing Pandas",
+            text: "To use Pandas, you need to install it using the command: `pip install pandas`. It’s widely used for data analysis in Python."
+          },
+          {
+            title: "Additional Resources",
+            text: "Watch this introduction to Pandas",
+            videoLink: "https://www.youtube.com/watch?v=vmEHCJofslg"
+          }
+        ]
+      },
+      {
+        id: 2,
+        topicName: "DataFrames in Pandas",
+        content: [
+          {
+            title: "Understanding DataFrames",
+            text: "DataFrames are 2-dimensional labeled data structures in Pandas. They are similar to Excel spreadsheets or SQL tables, making them perfect for working with tabular data."
+          },
+          {
+            title: "Creating DataFrames",
+            text: "You can create DataFrames from various sources like CSV files, SQL databases, or dictionaries in Python."
+          },
+          {
+            title: "Example: Creating a DataFrame from a CSV file",
+            exampleCode: `
+              import pandas as pd
+  
+              # Load data from a CSV file
+              df = pd.read_csv('data.csv')
+  
+              # Display the first few rows of the DataFrame
+              print(df.head())
+            `
+          },
+          {
+            title: "Additional Resources",
+            text: "Learn more about DataFrames in Pandas",
+            videoLink: "https://www.youtube.com/watch?v=vmEHCJofslg"
+          }
+        ]
+      },
+      {
+        id: 3,
+        topicName: "Basic Data Manipulation",
+        content: [
+          {
+            title: "Selecting Data",
+            text: "In Pandas, you can select specific columns or rows from a DataFrame using labels or indices."
+          },
+          {
+            title: "Filtering Data",
+            text: "You can filter data in a DataFrame using conditional statements, which allow you to analyze specific subsets of data."
+          },
+          {
+            title: "Example: Filtering Data Based on Conditions",
+            exampleCode: `
+              # Select a column
+              age_column = df['age']
+  
+              # Filter rows where age is greater than 30
+              filtered_data = df[df['age'] > 30]
+              print(filtered_data)
+            `
+          },
+          {
+            title: "Additional Resources",
+            text: "Explore how to select and filter data in Pandas",
+            videoLink: "https://www.youtube.com/watch?v=vmEHCJofslg"
+          }
+        ]
+      },
+      {
+        id: 4,
+        topicName: "Data Aggregation and Grouping",
+        content: [
+          {
+            title: "Grouping Data",
+            text: "Pandas allows you to group data by one or more columns to perform operations like sum, mean, or count on grouped data."
+          },
+          {
+            title: "Aggregating Data",
+            text: "Aggregation functions like `sum()`, `mean()`, `min()`, and `max()` can be applied to grouped data to get meaningful insights."
+          },
+          {
+            title: "Example: Grouping and Aggregating Data",
+            exampleCode: `
+              # Group data by the 'gender' column and calculate the mean age
+              grouped_data = df.groupby('gender')['age'].mean()
+              print(grouped_data)
+            `
+          },
+          {
+            title: "Additional Resources",
+            text: "Watch a tutorial on grouping and aggregating data",
+            videoLink: "https://www.youtube.com/watch?v=vmEHCJofslg"
+          }
+        ]
+      },
+      {
+        id: 5,
+        topicName: "Data Cleaning",
+        content: [
+          {
+            title: "Handling Missing Data",
+            text: "In real-world datasets, missing data is common. Pandas provides functions to handle missing values, such as filling them with a default value or dropping rows/columns with missing data."
+          },
+          {
+            title: "Renaming and Removing Columns",
+            text: "Pandas allows you to easily rename columns, drop unnecessary ones, and clean the dataset for analysis."
+          },
+          {
+            title: "Example: Handling Missing Data",
+            exampleCode: `
+              # Fill missing values with the mean
+              df['age'].fillna(df['age'].mean(), inplace=True)
+  
+              # Drop rows with missing values
+              df.dropna(inplace=True)
+            `
+          },
+          {
+            title: "Additional Resources",
+            text: "Learn about handling missing data in Pandas",
+            videoLink: "https://www.youtube.com/watch?v=vmEHCJofslg"
+          }
+        ]
+      },
+      {
+        id: 6,
+        topicName: "Merging and Joining Data",
+        content: [
+          {
+            title: "Merging DataFrames",
+            text: "You can merge multiple DataFrames in Pandas, similar to SQL joins, which is useful when combining different datasets."
+          },
+          {
+            title: "Concatenating DataFrames",
+            text: "Pandas also provides functions to concatenate DataFrames vertically or horizontally."
+          },
+          {
+            title: "Example: Merging Two DataFrames",
+            exampleCode: `
+              # Merge two DataFrames on a common column
+              df_merged = pd.merge(df1, df2, on='id')
+              print(df_merged)
+            `
+          },
+          {
+            title: "Additional Resources",
+            text: "Watch a guide on merging and joining data",
+            videoLink: "https://www.youtube.com/watch?v=vmEHCJofslg"
+          }
+        ]
+      },
+      {
+        id: 7,
+        topicName: "Data Visualization with Pandas",
+        content: [
+          {
+            title: "Plotting Data with Pandas",
+            text: "Pandas integrates well with Matplotlib, allowing you to quickly visualize your data using simple commands."
+          },
+          {
+            title: "Creating Different Plots",
+            text: "You can create bar plots, line plots, scatter plots, and histograms directly from your DataFrames."
+          },
+          {
+            title: "Example: Plotting a Line Chart",
+            exampleCode: `
+              # Plot a line chart for the 'age' column
+              df['age'].plot(kind='line')
+              plt.show()
+            `
+          },
+          {
+            title: "Additional Resources",
+            text: "Learn more about data visualization in Pandas",
+            videoLink: "https://www.youtube.com/watch?v=vmEHCJofslg"
+          }
+        ]
+      }
+    ]
   },
+  
   {
     id: 19,
     name: "Machine Learning Basics",
-    description:
-      "Introduction to machine learning concepts and how to implement them with Python.",
+    description: "Introduction to machine learning concepts and how to implement them with Python.",
     track: "Data Science",
+    additionalResource: {
+      title: "Additional Resource",
+      videoLink: "https://www.youtube.com/watch?v=i_LwzRVP7bg&t=4018s", // Placeholder link
+      websiteLink: {
+        title: "Machine Learning with Python - Freecodecamp",
+        link: "https://www.freecodecamp.org/learn/machine-learning-with-python/"
+      }
+    },
+    topics: [
+      {
+        id: 1,
+        topicName: "Introduction to Machine Learning",
+        content: [
+          {
+            title: "What is Machine Learning?",
+            text: "Machine Learning (ML) is a field of artificial intelligence (AI) that enables systems to learn and improve from experience without being explicitly programmed.",
+            exampleCode: ""
+          },
+          {
+            title: "Types of Machine Learning",
+            text: "The main types of machine learning are supervised learning, unsupervised learning, and reinforcement learning. Each type serves different purposes and uses various algorithms.",
+            exampleCode: ""
+          },
+          {
+            title: "Additional Resources",
+            text: "Watch this video for an introduction to Machine Learning",
+            videoLink: "https://www.youtube.com/watch?v=ukzFI9rgwfU"
+          }
+        ]
+      },
+      {
+        id: 2,
+        topicName: "Supervised Learning",
+        content: [
+          {
+            title: "Overview of Supervised Learning",
+            text: "Supervised learning involves training a model on a labeled dataset, meaning the model learns from input-output pairs.",
+            exampleCode: `
+              from sklearn.model_selection import train_test_split
+              from sklearn.linear_model import LinearRegression
+              from sklearn.metrics import mean_squared_error
+  
+              # Sample code for linear regression
+              X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=42)
+              model = LinearRegression()
+              model.fit(X_train, y_train)
+              predictions = model.predict(X_test)
+              mse = mean_squared_error(y_test, predictions)
+              print("Mean Squared Error:", mse)
+            `
+          },
+          {
+            title: "Additional Resources",
+            text: "Watch this video on Supervised Learning",
+            videoLink: "https://www.youtube.com/watch?v=4qVRBYAdLAo"
+          }
+        ]
+      },
+      {
+        id: 3,
+        topicName: "Unsupervised Learning",
+        content: [
+          {
+            title: "Overview of Unsupervised Learning",
+            text: "Unsupervised learning deals with finding hidden patterns or intrinsic structures in input data without labeled responses.",
+            exampleCode: `
+              from sklearn.cluster import KMeans
+              import matplotlib.pyplot as plt
+  
+              # Sample code for K-means clustering
+              kmeans = KMeans(n_clusters=3)
+              kmeans.fit(X)
+              plt.scatter(X[:, 0], X[:, 1], c=kmeans.labels_)
+              plt.show()
+            `
+          },
+          {
+            title: "Additional Resources",
+            text: "Watch this video on Unsupervised Learning",
+            videoLink: "https://www.youtube.com/watch?v=JnnaDNNb380"
+          }
+        ]
+      },
+      {
+        id: 4,
+        topicName: "Reinforcement Learning",
+        content: [
+          {
+            title: "Overview of Reinforcement Learning",
+            text: "Reinforcement learning is an area of ML where an agent learns to make decisions by performing certain actions and receiving rewards or penalties.",
+            exampleCode: `
+              import numpy as np
+  
+              # Sample code for simple Q-learning
+              Q = np.zeros((state_space, action_space))
+              for episode in range(num_episodes):
+                  state = env.reset()
+                  done = False
+                  while not done:
+                      action = np.argmax(Q[state])
+                      next_state, reward, done, _ = env.step(action)
+                      Q[state, action] = Q[state, action] + alpha * (reward + gamma * np.max(Q[next_state]) - Q[state, action])
+                      state = next_state
+            `
+          },
+          {
+            title: "Additional Resources",
+            text: "Watch this video on Reinforcement Learning",
+            videoLink: "https://www.youtube.com/watch?v=JgvyzIkgxF0"
+          }
+        ]
+      }
+    ]
   },
+
   {
     id: 20,
     name: "Data Visualization with Matplotlib",
-    description:
-      "Create compelling data visualizations using Python's Matplotlib library.",
+    description: "Create compelling data visualizations using Python's Matplotlib library.",
     track: "Data Science",
+    additionalResource: {
+      title: "Additional Resource",
+      videoLink: "https://www.youtube.com/watch?v=3Xc3CA655Y4", // Placeholder link
+      websiteLink: {
+        title: "Matplotlib Documentation",
+        link: "https://matplotlib.org/stable/contents.html"
+      }
+    },
+    topics: [
+      {
+        id: 1,
+        topicName: "Introduction to Matplotlib",
+        content: [
+          {
+            title: "What is Matplotlib?",
+            text: "Matplotlib is a plotting library for the Python programming language and its numerical mathematics extension NumPy. It provides an object-oriented API for embedding plots into applications.",
+            exampleCode: ""
+          },
+          {
+            title: "Basic Plotting",
+            text: "Matplotlib allows you to create various types of plots including line plots, bar plots, histograms, and scatter plots.",
+            exampleCode: `
+              import matplotlib.pyplot as plt
+  
+              # Sample code for a basic line plot
+              x = [1, 2, 3, 4, 5]
+              y = [2, 3, 5, 7, 11]
+              plt.plot(x, y)
+              plt.xlabel('X-axis')
+              plt.ylabel('Y-axis')
+              plt.title('Basic Line Plot')
+              plt.show()
+            `
+          },
+          {
+            title: "Additional Resources",
+            text: "Watch this video for an introduction to Matplotlib",
+            videoLink: "https://www.youtube.com/watch?v=nzKy9GY12yo"
+          }
+        ]
+      },
+      {
+        id: 2,
+        topicName: "Advanced Plotting Techniques",
+        content: [
+          {
+            title: "Customizing Plots",
+            text: "You can customize plots by adjusting colors, styles, and labels to make them more informative and visually appealing.",
+            exampleCode: `
+              import matplotlib.pyplot as plt
+  
+              # Sample code for customizing a plot
+              x = [1, 2, 3, 4, 5]
+              y = [2, 3, 5, 7, 11]
+              plt.plot(x, y, color='green', linestyle='--', marker='o')
+              plt.xlabel('X-axis')
+              plt.ylabel('Y-axis')
+              plt.title('Customized Line Plot')
+              plt.grid(True)
+              plt.show()
+            `
+          },
+          {
+            title: "Subplots and Layouts",
+            text: "Matplotlib supports creating multiple plots in a single figure with different layouts.",
+            exampleCode: `
+              import matplotlib.pyplot as plt
+  
+              # Sample code for subplots
+              fig, axs = plt.subplots(2, 2)
+              axs[0, 0].plot([1, 2, 3], [1, 4, 9], 'tab:blue')
+              axs[0, 1].bar([1, 2, 3], [1, 4, 9], color='tab:orange')
+              axs[1, 0].scatter([1, 2, 3], [1, 4, 9], color='tab:green')
+              axs[1, 1].hist([1, 2, 3, 1, 2, 3], bins=3, color='tab:red')
+  
+              for ax in axs.flat:
+                  ax.label_outer()
+  
+              plt.show()
+            `
+          },
+          {
+            title: "Additional Resources",
+            text: "Watch this video on advanced Matplotlib techniques",
+            videoLink: "https://www.youtube.com/watch?v=csXmVBw8cdo"
+          }
+        ]
+      },
+      {
+        id: 3,
+        topicName: "Interactive Visualizations",
+        content: [
+          {
+            title: "Creating Interactive Plots",
+            text: "Matplotlib supports interactive plots which can be useful for data exploration.",
+            exampleCode: `
+              import matplotlib.pyplot as plt
+  
+              # Sample code for interactive plotting
+              from matplotlib.widgets import Slider
+  
+              fig, ax = plt.subplots()
+              plt.subplots_adjust(left=0.25, bottom=0.25)
+              t = range(100)
+              s = [i**2 for i in t]
+              l, = plt.plot(t, s, lw=2)
+  
+              axcolor = 'lightgoldenrodyellow'
+              axamp = plt.axes([0.25, 0.1, 0.65, 0.03], facecolor=axcolor)
+              samp = Slider(axamp, 'Scale', 0.1, 10.0, valinit=1)
+  
+              def update(val):
+                  l.set_ydata([i**2 * samp.val for i in t])
+                  fig.canvas.draw_idle()
+  
+              samp.on_changed(update)
+              plt.show()
+            `
+          },
+          {
+            title: "Additional Resources",
+            text: "Watch this video on creating interactive plots with Matplotlib",
+            videoLink: "https://www.youtube.com/watch?v=FBX38xd_SiE"
+          }
+        ]
+      }
+    ]
   },
+  
   {
     id: 21,
     name: "Big Data with Hadoop",
-    description:
-      "Learn how to work with massive datasets using the Hadoop ecosystem.",
+    description: "Learn how to work with massive datasets using the Hadoop ecosystem.",
     track: "Data Science",
+    additionalResource: {
+      title: "Additional Resource",
+      videoLink: "https://www.youtube.com/watch?v=VmO0QgPCbZY", // Placeholder link
+      websiteLink: {
+        title: "Hadoop Documentation",
+        link: "https://hadoop.apache.org/docs/"
+      }
+    },
+    topics: [
+      {
+        id: 1,
+        topicName: "Introduction to Hadoop",
+        content: [
+          {
+            title: "What is Hadoop?",
+            text: "Hadoop is an open-source software framework designed for distributed storage and processing of large datasets across clusters of computers. It enables the handling of massive amounts of data using scalable, fault-tolerant infrastructure, making it a key component in managing big data.",
+            exampleCode: ""
+          },
+          {
+            title: "Hadoop Architecture",
+            text: "The core components of Hadoop are the Hadoop Distributed File System (HDFS), which handles data storage, and MapReduce, a programming model used for data processing. HDFS splits large files into blocks and distributes them across multiple machines. MapReduce breaks data processing into two phases: Map (filtering and sorting) and Reduce (aggregation), enabling efficient large-scale data handling.",
+            exampleCode: ""
+          },
+          {
+            title: "Additional Resources",
+            text: "Watch this video for an introduction to Hadoop",
+            videoLink: "https://www.youtube.com/watch?v=aReuLtY0YMI&t=343s"
+          }
+        ]
+      },
+      {
+        id: 2,
+        topicName: "Working with HDFS",
+        content: [
+          {
+            title: "Basic Commands",
+            text: "HDFS is a distributed file system that allows you to store large files and access them across multiple machines. You can interact with HDFS using basic commands like listing directories, uploading files, and downloading files.",
+            exampleCode: `
+              # List files in HDFS
+              hdfs dfs -ls /
+    
+              # Upload a file to HDFS
+              hdfs dfs -put localfile.txt /user/hadoop/
+    
+              # Download a file from HDFS
+              hdfs dfs -get /user/hadoop/localfile.txt localfile.txt
+            `
+          },
+          {
+            title: "File Storage and Retrieval",
+            text: "In HDFS, data is stored in blocks across multiple machines, with replication to ensure fault tolerance. This allows Hadoop to retrieve data efficiently even if certain machines fail. Understanding block distribution and replication is key to mastering HDFS.",
+            exampleCode: ""
+          },
+          {
+            title: "Additional Resources",
+            text: "Watch this video on working with HDFS",
+            videoLink: "https://www.youtube.com/watch?v=nRX4_3qf3rc"
+          }
+        ]
+      },
+      {
+        id: 3,
+        topicName: "MapReduce Programming",
+        content: [
+          {
+            title: "Introduction to MapReduce",
+            text: "MapReduce is a programming model used to process large datasets in a distributed manner. The Map phase involves breaking down tasks into key-value pairs, and the Reduce phase aggregates these values. This parallel processing enables Hadoop to handle massive datasets efficiently.",
+            exampleCode: ""
+          },
+          {
+            title: "Writing a MapReduce Job",
+            text: "MapReduce jobs can be written in Java, Python, or other supported languages. The key components are the Mapper, which handles the mapping of data, and the Reducer, which processes and aggregates the mapped data. Below is an example of a simple word count program in Java, which is a common introductory exercise for learning MapReduce.",
+            exampleCode: `
+              // Sample MapReduce job in Java
+              public class WordCount {
+                public static class TokenizerMapper extends Mapper<Object, Text, Text, IntWritable> {
+                  private final static IntWritable one = new IntWritable(1);
+                  private Text word = new Text();
+    
+                  public void map(Object key, Text value, Context context) throws IOException, InterruptedException {
+                    StringTokenizer itr = new StringTokenizer(value.toString());
+                    while (itr.hasMoreTokens()) {
+                      word.set(itr.nextToken());
+                      context.write(word, one);
+                    }
+                  }
+                }
+    
+                public static class IntSumReducer extends Reducer<Text, IntWritable, Text, IntWritable> {
+                  private IntWritable result = new IntWritable();
+    
+                  public void reduce(Text key, Iterable<IntWritable> values, Context context) throws IOException, InterruptedException {
+                    int sum = 0;
+                    for (IntWritable val : values) {
+                      sum += val.get();
+                    }
+                    result.set(sum);
+                    context.write(key, result);
+                  }
+                }
+    
+                public static void main(String[] args) throws Exception {
+                  Configuration conf = new Configuration();
+                  Job job = Job.getInstance(conf, "word count");
+                  job.setJarByClass(WordCount.class);
+                  job.setMapperClass(TokenizerMapper.class);
+                  job.setCombinerClass(IntSumReducer.class);
+                  job.setReducerClass(IntSumReducer.class);
+                  job.setOutputKeyClass(Text.class);
+                  job.setOutputValueClass(IntWritable.class);
+                  FileInputFormat.addInputPath(job, new Path(args[0]));
+                  FileOutputFormat.setOutputPath(job, new Path(args[1]));
+                  System.exit(job.waitForCompletion(true) ? 0 : 1);
+                }
+              }
+            `
+          },
+          {
+            title: "Additional Resources",
+            text: "Watch this video on writing MapReduce jobs",
+            videoLink: "https://www.youtube.com/watch?v=UJxFZkWoxA8"
+          }
+        ]
+      },
+      {
+        id: 4,
+        topicName: "Advanced Hadoop Ecosystem",
+        content: [
+          {
+            title: "Hadoop Ecosystem Components",
+            text: "Hadoop's ecosystem includes a variety of tools designed to enhance data processing capabilities. Hive is used for data warehousing, allowing you to query data stored in HDFS using SQL-like syntax. Pig is a scripting tool for processing large datasets, while HBase provides NoSQL storage for real-time access to large volumes of data.",
+            exampleCode: ""
+          },
+          {
+            title: "Integrating Hadoop with Other Tools",
+            text: "Hadoop can be integrated with other tools such as Apache Spark, which provides in-memory data processing for faster computations, and Apache Flume, which ingests large amounts of data from multiple sources. These integrations enhance Hadoop's data processing efficiency and expand its capabilities.",
+            exampleCode: ""
+          },
+          {
+            title: "Additional Resources",
+            text: "Watch this video on advanced Hadoop ecosystem components",
+            videoLink: "https://www.youtube.com/watch?v=eA4yYxLQuWU"
+          }
+        ]
+      }
+    ]
   },
+  
+  
   {
     id: 22,
     name: "Data Cleaning Techniques",
-    description:
-      "Master the art of cleaning messy datasets for accurate analysis.",
+    description: "Master the art of cleaning messy datasets for accurate analysis.",
     track: "Data Science",
+    additionalResource: {
+      title: "Additional Resource",
+      videoLink: "https://www.youtube.com/watch?v=zTaMGQm-T5g",
+      websiteLink: {
+        title: "Data Cleaning Guide",
+        link: "https://towardsdatascience.com/a-guide-to-data-cleaning-3e926be48a43"
+      }
+    },
+    topics: [
+      {
+        id: 1,
+        topicName: "Introduction to Data Cleaning",
+        content: [
+          {
+            title: "Why Data Cleaning is Important",
+            text: "Data cleaning is a fundamental step in the data analysis pipeline. It involves identifying and correcting errors or inconsistencies in data to improve its quality. Clean data ensures more reliable results, better decision-making, and more accurate predictions. Inaccurate or messy data can lead to misleading insights and poor outcomes.",
+            exampleCode: ""
+          },
+          {
+            title: "Common Data Issues",
+            text: "Common issues in datasets include missing values, duplicates, inconsistencies, and outliers. Missing values occur when no data is available for a particular record, which can skew analysis if not handled properly. Duplicates can inflate the data and lead to incorrect results. Inconsistencies arise when data entries differ in format or structure. Understanding these issues helps in selecting the right cleaning techniques.",
+            exampleCode: ""
+          },
+          {
+            title: "Additional Resources",
+            text: "For a deeper understanding of the importance of data cleaning and best practices, watch this video which provides practical insights and examples.",
+            videoLink: "https://www.youtube.com/watch?v=0l_SlOq34Ug"
+          }
+        ]
+      },
+      {
+        id: 2,
+        topicName: "Handling Missing Values",
+        content: [
+          {
+            title: "Identifying Missing Values",
+            text: "Detecting missing values in a dataset is crucial for proper data cleaning. Various methods can be used to identify these missing values, such as checking for null or NaN entries. Tools like Pandas in Python offer built-in functions to help with this task.",
+            exampleCode: `
+              import pandas as pd
+  
+              # Load data
+              df = pd.read_csv('data.csv')
+  
+              # Check for missing values
+              missing_values = df.isnull().sum()
+              print(missing_values)
+            `
+          },
+          {
+            title: "Strategies for Imputation",
+            text: "Once missing values are identified, you need to decide how to handle them. Imputation involves replacing missing values with substitute values, such as the mean, median, or mode of the column. This helps in preserving the dataset's integrity without losing too much information.",
+            exampleCode: `
+              from sklearn.impute import SimpleImputer
+  
+              # Impute missing values
+              imputer = SimpleImputer(strategy='mean')
+              df_imputed = imputer.fit_transform(df)
+              `
+          },
+          {
+            title: "Additional Resources",
+            text: "Learn more about handling missing values and techniques for imputation by watching this informative video.",
+            videoLink: "https://www.youtube.com/watch?v=uDr67HBIPz8"
+          }
+        ]
+      },
+      {
+        id: 3,
+        topicName: "Removing Duplicates",
+        content: [
+          {
+            title: "Identifying Duplicates",
+            text: "Duplicate records in a dataset can lead to overestimation of trends and inaccuracies in analysis. Identifying duplicates involves checking for identical records based on one or more columns. Techniques include using functions that compare rows and flag duplicates.",
+            exampleCode: `
+              # Identify duplicates
+              duplicates = df.duplicated()
+              print(df[duplicates])
+            `
+          },
+          {
+            title: "Removing Duplicates",
+            text: "Once duplicates are identified, they need to be removed to maintain data quality. Removing duplicates involves filtering out the redundant rows while keeping the original or relevant ones. This step ensures that each record is unique and contributes accurately to the analysis.",
+            exampleCode: `
+              # Remove duplicates
+              df_cleaned = df.drop_duplicates()
+              `
+          },
+          {
+            title: "Additional Resources",
+            text: "For practical examples and techniques on removing duplicates, watch this video which demonstrates effective methods for cleaning your data.",
+            videoLink: "https://www.youtube.com/watch?v=e5oOvU0VWBQ"
+          }
+        ]
+      },
+      {
+        id: 4,
+        topicName: "Data Consistency and Validation",
+        content: [
+          {
+            title: "Ensuring Consistency",
+            text: "Maintaining data consistency involves ensuring that data across different datasets or records follows the same format and rules. Consistent data is crucial for accurate analysis and reporting. Techniques include standardizing formats and verifying that related data elements are synchronized.",
+            exampleCode: ""
+          },
+          {
+            title: "Data Validation Techniques",
+            text: "Data validation ensures that data meets specific criteria or constraints before it is used in analysis. Validation techniques include checking data types, ranges, and business rules to ensure data correctness. Implementing validation rules helps prevent errors and ensures data integrity.",
+            exampleCode: `
+              # Example of data validation
+              def validate_data(value):
+                  if value > 0:
+                      return True
+                  return False
+  
+              df['valid'] = df['value'].apply(validate_data)
+              `
+          },
+          {
+            title: "Additional Resources",
+            text: "Watch this video to understand techniques for ensuring data consistency and validating data effectively.",
+            videoLink: "https://www.youtube.com/watch?v=zo4GMXoRkFA"
+          }
+        ]
+      }
+    ]
   },
+  
+  
   {
     id: 23,
     name: "Deep Learning with TensorFlow",
-    description:
-      "Dive into deep learning concepts using TensorFlow and neural networks.",
+    description: "Dive into deep learning concepts using TensorFlow and neural networks.",
     track: "Data Science",
+    additionalResource: {
+      title: "Additional Resource",
+      videoLink: "https://www.youtube.com/watch?v=tPYj3fFJGjk",
+      websiteLink: {
+        title: "TensorFlow Tutorials",
+        link: "https://www.tensorflow.org/tutorials"
+      }
+    },
+    topics: [
+      {
+        id: 1,
+        topicName: "Introduction to Deep Learning",
+        content: [
+          {
+            title: "Understanding Deep Learning",
+            text: "Deep learning is a specialized area of machine learning that uses neural networks with many layers to model complex patterns in data. It has become increasingly important for tasks such as image and speech recognition, natural language processing, and more.",
+            exampleCode: ""
+          },
+          {
+            title: "Basics of Neural Networks",
+            text: "Neural networks are computational models inspired by the human brain's architecture. They consist of layers of interconnected nodes, or 'neurons', where each connection represents a weight that adjusts during training. Basic neural networks include input, hidden, and output layers.",
+            exampleCode: ""
+          },
+          {
+            title: "Additional Resources",
+            text: "Watch this introductory video on deep learning to get a foundational understanding of the topic.",
+            videoLink: "https://www.youtube.com/watch?v=tPYj3fFJGjk"
+          }
+        ]
+      },
+      {
+        id: 2,
+        topicName: "Building Neural Networks with TensorFlow",
+        content: [
+          {
+            title: "Setting Up TensorFlow",
+            text: "TensorFlow is an open-source library developed by Google for numerical computation and machine learning. To get started with TensorFlow, you'll need to install it and set up your development environment.",
+            exampleCode: `
+              # Install TensorFlow
+              !pip install tensorflow
+            `
+          },
+          {
+            title: "Creating a Simple Neural Network",
+            text: "Using TensorFlow, you can build neural networks to solve various problems. A simple neural network typically consists of one or more dense (fully connected) layers. You'll define the architecture, compile the model, and then train it using your data.",
+            exampleCode: `
+              import tensorflow as tf
+              from tensorflow.keras.models import Sequential
+              from tensorflow.keras.layers import Dense
+  
+              # Define a simple neural network
+              model = Sequential([
+                Dense(64, activation='relu', input_shape=(784,)),
+                Dense(10, activation='softmax')
+              ])
+  
+              # Compile the model
+              model.compile(optimizer='adam', loss='sparse_categorical_crossentropy', metrics=['accuracy'])
+              `
+          },
+          {
+            title: "Additional Resources",
+            text: "Watch this tutorial on building neural networks with TensorFlow for a hands-on approach to creating models.",
+            videoLink: "https://www.youtube.com/watch?v=w2b07L6bbd8"
+          }
+        ]
+      },
+      {
+        id: 3,
+        topicName: "Training and Evaluating Models",
+        content: [
+          {
+            title: "Training Neural Networks",
+            text: "Training involves adjusting the weights of the neural network using a dataset. You'll split your data into training and validation sets, then use the training set to adjust weights through backpropagation and the validation set to monitor performance.",
+            exampleCode: `
+              # Train the model
+              history = model.fit(X_train, y_train, epochs=5, validation_split=0.2)
+            `
+          },
+          {
+            title: "Evaluating Model Performance",
+            text: "After training, evaluate the model's performance on a test set to determine its accuracy and generalization capabilities. Metrics such as accuracy, precision, and recall are commonly used to assess model performance.",
+            exampleCode: `
+              # Evaluate the model
+              test_loss, test_acc = model.evaluate(X_test, y_test)
+              print(f'Test accuracy: {test_acc}')
+            `
+          },
+          {
+            title: "Additional Resources",
+            text: "Explore this video for detailed insights into training and evaluating machine learning models.",
+            videoLink: "https://www.youtube.com/watch?v=2C8hSa8hFq8"
+          }
+        ]
+      },
+      {
+        id: 4,
+        topicName: "Advanced Topics in Deep Learning",
+        content: [
+          {
+            title: "Convolutional Neural Networks (CNNs)",
+            text: "CNNs are designed for processing structured grid data like images. They use convolutional layers to automatically and adaptively learn spatial hierarchies of features from input images, making them powerful for tasks like image classification and object detection.",
+            exampleCode: `
+              from tensorflow.keras.layers import Conv2D, MaxPooling2D
+  
+              # Define a CNN
+              cnn_model = Sequential([
+                Conv2D(32, (3, 3), activation='relu', input_shape=(64, 64, 3)),
+                MaxPooling2D(pool_size=(2, 2)),
+                Flatten(),
+                Dense(128, activation='relu'),
+                Dense(10, activation='softmax')
+              ])
+              `
+          },
+          {
+            title: "Recurrent Neural Networks (RNNs)",
+            text: "RNNs are suitable for sequence data, like time series or text. They have loops to maintain information from previous inputs, which makes them effective for tasks such as language modeling and sequence prediction.",
+            exampleCode: `
+              from tensorflow.keras.layers import LSTM
+  
+              # Define an RNN
+              rnn_model = Sequential([
+                LSTM(50, activation='relu', input_shape=(10, 1)),
+                Dense(1)
+              ])
+              `
+          },
+          {
+            title: "Additional Resources",
+            text: "Learn more about advanced deep learning techniques by watching this video on CNNs and RNNs.",
+            videoLink: "https://www.youtube.com/watch?v=_e8F_W0T2o4"
+          }
+        ]
+      }
+    ]
   },
+  
   {
     id: 24,
-    name: "Natural Language Processing (NLP)",
+    name: "Natural Language Processing",
     description:
-      "Learn how to process and analyze text data using Python's NLP libraries.",
+      "Explore the basics of Natural Language Processing (NLP) and how it enables computers to understand and generate human language.",
     track: "Data Science",
+    additionalResource: {
+      title: "Additional Resource",
+      videoLink: "https://www.youtube.com/watch?v=8u73bvm7pQI",
+      websiteLink: {
+        title: "NLP with Python",
+        link: "https://www.nltk.org/book/",
+      },
+    },
+    topics: [
+      // TOPIC 1: Introduction to NLP
+      {
+        id: 1,
+        topicName: "Introduction to NLP",
+        content: [
+          {
+            title: "What is NLP?",
+            text: "Natural Language Processing (NLP) is a field of artificial intelligence that focuses on the interaction between computers and human (natural) languages. It involves using computational techniques to analyze and generate human language data.",
+          },
+          {
+            title: "Applications of NLP",
+            text: "NLP is used in a variety of applications such as sentiment analysis, machine translation, chatbots, and text summarization. It powers voice assistants like Siri and Alexa, and search engines like Google rely on it to understand and process user queries.",
+          },
+          {
+            title: "Additional Resources",
+            text: "Check out this video on Introduction to NLP",
+            videoLink: "https://www.youtube.com/watch?v=xvqsFTUsOmc",
+          },
+        ],
+      },
+      // TOPIC 2: Tokenization
+      {
+        id: 2,
+        topicName: "Tokenization",
+        content: [
+          {
+            title: "What is Tokenization?",
+            text: "Tokenization is the process of breaking down text into smaller units called tokens. These tokens can be words, sentences, or even characters. It is a fundamental step in text preprocessing.",
+          },
+          {
+            title: "Word vs Sentence Tokenization",
+            text: "In word tokenization, text is split into individual words, whereas in sentence tokenization, the text is split into sentences. These are crucial steps for analyzing and understanding the structure of language data.",
+            exampleCode: `
+            // Example using NLTK in Python for word tokenization
+            from nltk.tokenize import word_tokenize
+  
+            sentence = "Natural Language Processing is exciting!"
+            tokens = word_tokenize(sentence)
+            print(tokens)  // Output: ['Natural', 'Language', 'Processing', 'is', 'exciting', '!']
+            `,
+          },
+          {
+            title: "Additional Resources",
+            text: "Check out this video on Tokenization",
+            videoLink: "https://www.youtube.com/watch?v=g2QOL6oD0E8",
+          },
+        ],
+      },
+      // TOPIC 3: Stemming and Lemmatization
+      {
+        id: 3,
+        topicName: "Stemming and Lemmatization",
+        content: [
+          {
+            title: "Understanding Stemming",
+            text: "Stemming is the process of reducing words to their base or root form. For example, 'running' becomes 'run.' However, it might produce non-words like 'happi' from 'happiness'.",
+          },
+          {
+            title: "Understanding Lemmatization",
+            text: "Lemmatization is similar to stemming but ensures that the root word is a valid word in the language. It considers the context and reduces words to their dictionary form, such as 'better' becoming 'good'.",
+            exampleCode: `
+            // Example using NLTK in Python for Lemmatization
+            from nltk.stem import WordNetLemmatizer
+  
+            lemmatizer = WordNetLemmatizer()
+            print(lemmatizer.lemmatize("better", pos="a"))  // Output: 'good'
+            `,
+          },
+          {
+            title: "Additional Resources",
+            text: "Check out this video on Stemming and Lemmatization",
+            videoLink: "https://www.youtube.com/watch?v=TbNymweHW4E",
+          },
+        ],
+      },
+      // TOPIC 4: Part-of-Speech (POS) Tagging
+      {
+        id: 4,
+        topicName: "Part-of-Speech (POS) Tagging",
+        content: [
+          {
+            title: "What is POS Tagging?",
+            text: "POS Tagging is the process of assigning parts of speech, such as nouns, verbs, and adjectives, to each word in a sentence. This helps in understanding the grammatical structure of the text.",
+          },
+          {
+            title: "How POS Tagging Works",
+            text: "POS Tagging uses algorithms to label words based on their definition and context. It is used in various NLP applications such as named entity recognition and syntactic parsing.",
+            exampleCode: `
+            // Example using NLTK in Python for POS tagging
+            import nltk
+            nltk.download('averaged_perceptron_tagger')
+  
+            sentence = "NLP is fascinating!"
+            words = nltk.word_tokenize(sentence)
+            pos_tags = nltk.pos_tag(words)
+            print(pos_tags)  // Output: [('NLP', 'NNP'), ('is', 'VBZ'), ('fascinating', 'VBG'), ('!', '.')]
+            `,
+          },
+          {
+            title: "Additional Resources",
+            text: "Check out this video on POS Tagging",
+            videoLink: "https://www.youtube.com/watch?v=M9Itm95JzL0",
+          },
+        ],
+      },
+      // TOPIC 5: Named Entity Recognition (NER)
+      {
+        id: 5,
+        topicName: "Named Entity Recognition (NER)",
+        content: [
+          {
+            title: "What is NER?",
+            text: "Named Entity Recognition is a technique used to locate and classify entities such as names, organizations, locations, dates, and more in text. It helps in structuring and understanding large datasets.",
+          },
+          {
+            title: "Examples of NER",
+            text: "For example, in the sentence 'John Doe works at Google,' NER would identify 'John Doe' as a person and 'Google' as an organization.",
+            exampleCode: `
+            // Example using SpaCy in Python for NER
+            import spacy
+  
+            nlp = spacy.load("en_core_web_sm")
+            doc = nlp("Google is a tech company based in California.")
+            for ent in doc.ents:
+              print(ent.text, ent.label_)  // Output: ('Google', 'ORG'), ('California', 'GPE')
+            `,
+          },
+          {
+            title: "Additional Resources",
+            text: "Check out this video on NER",
+            videoLink: "https://www.youtube.com/watch?v=A3EjU9pFO7E",
+          },
+        ],
+      },
+      // TOPIC 6: Sentiment Analysis
+      {
+        id: 6,
+        topicName: "Sentiment Analysis",
+        content: [
+          {
+            title: "Understanding Sentiment Analysis",
+            text: "Sentiment Analysis is the process of determining whether a piece of text is positive, negative, or neutral. It is widely used in social media monitoring, customer feedback, and market research.",
+          },
+          {
+            title: "How Sentiment Analysis Works",
+            text: "Sentiment Analysis involves preprocessing text, tokenizing, and then using a model (such as a machine learning or deep learning model) to classify the text's sentiment. Tools like VADER in Python can be used for simple sentiment analysis tasks.",
+            exampleCode: `
+            // Example using NLTK's VADER for Sentiment Analysis
+            from nltk.sentiment.vader import SentimentIntensityAnalyzer
+  
+            sid = SentimentIntensityAnalyzer()
+            sentence = "I love NLP!"
+            print(sid.polarity_scores(sentence))  // Output: {'neg': 0.0, 'neu': 0.3, 'pos': 0.7, 'compound': 0.6369}
+            `,
+          },
+          {
+            title: "Additional Resources",
+            text: "Check out this video on Sentiment Analysis",
+            videoLink: "https://www.youtube.com/watch?v=O5Q7PzWTmeI",
+          },
+        ],
+      },
+    ],
   },
+  
+
+  
   {
     id: 25,
     name: "Introduction to Cybersecurity",
     description:
       "Learn the fundamentals of cybersecurity and how to protect systems from attacks.",
     track: "Cybersecurity",
+    additionalResource: {
+      title: "Additional Resource",
+      videoLink: "https://www.youtube.com/watch?v=JlZCgDPGf6s",
+      websiteLink: {
+        title: "Introduction to Cybersecurity by Cisco",
+        link: "https://www.cisco.com/c/en/us/products/security/what-is-cybersecurity.html",
+      },
+    },
+    topics: [
+      // TOPIC 1: What is Cybersecurity?
+      {
+        id: 1,
+        topicName: "What is Cybersecurity?",
+        content: [
+          {
+            title: "Definition of Cybersecurity",
+            text: "Cybersecurity refers to the practice of protecting networks, systems, and programs from digital attacks. These cyberattacks typically aim to access, change, or destroy sensitive information, extort money from users, or disrupt normal business processes.",
+          },
+          {
+            title: "Importance of Cybersecurity",
+            text: "With increasing amounts of sensitive data stored online, cybersecurity is crucial to protecting personal information, preventing identity theft, and ensuring data integrity. It also helps businesses avoid costly data breaches and ensures trust with customers.",
+          },
+          {
+            title: "Additional Resources",
+            text: "Check out this video on Cybersecurity basics",
+            videoLink: "https://www.youtube.com/watch?v=2Tt-sS28v8g",
+          },
+        ],
+      },
+      // TOPIC 2: Types of Cyber Attacks
+      {
+        id: 2,
+        topicName: "Types of Cyber Attacks",
+        content: [
+          {
+            title: "Common Types of Cyber Attacks",
+            text: "Cyberattacks come in various forms, including phishing, malware, ransomware, denial-of-service (DoS), and man-in-the-middle attacks. Each method aims to compromise security and access confidential data.",
+          },
+          {
+            title: "Phishing Attacks",
+            text: "Phishing involves sending fraudulent communications that appear to come from a trusted source. It is usually performed via email and aims to steal sensitive data like login credentials or credit card numbers.",
+          },
+          {
+            title: "Malware",
+            text: "Malware is software intentionally designed to cause damage to a computer, server, or network. It includes viruses, worms, and trojan horses, which can spread rapidly and cause significant harm.",
+            exampleCode: `
+            // Basic example of malware code (not executable)
+            function malware() {
+              while(true) {
+                // Infinite loop to consume system resources
+                console.log('System crash...');
+              }
+            }
+            malware();
+            `,
+          },
+          {
+            title: "Additional Resources",
+            text: "Explore more about different types of cyberattacks",
+            videoLink: "https://www.youtube.com/watch?v=OVON_Sks03o",
+          },
+        ],
+      },
+      // TOPIC 3: Basic Security Measures
+      {
+        id: 3,
+        topicName: "Basic Security Measures",
+        content: [
+          {
+            title: "Strong Passwords",
+            text: "Using strong and unique passwords for each account is a fundamental step in protecting your digital life. Passwords should contain a mix of letters, numbers, and special characters and be at least 12 characters long.",
+          },
+          {
+            title: "Two-Factor Authentication (2FA)",
+            text: "Two-factor authentication adds an extra layer of security to the login process by requiring two forms of identification: something you know (your password) and something you have (e.g., a phone or authentication app).",
+          },
+          {
+            title: "Firewalls",
+            text: "A firewall is a network security device that monitors and controls incoming and outgoing network traffic. It establishes a barrier between a trusted internal network and untrusted external networks.",
+          },
+          {
+            title: "Additional Resources",
+            text: "Learn more about security measures in this video",
+            videoLink: "https://www.youtube.com/watch?v=Z1qQWWIJlY0",
+          },
+        ],
+      },
+      // TOPIC 4: Encryption and Data Protection
+      {
+        id: 4,
+        topicName: "Encryption and Data Protection",
+        content: [
+          {
+            title: "What is Encryption?",
+            text: "Encryption is the process of converting data into a code to prevent unauthorized access. It ensures that sensitive data like emails, messages, and online transactions are protected from interception by malicious actors.",
+          },
+          {
+            title: "Symmetric vs Asymmetric Encryption",
+            text: "Symmetric encryption uses the same key to encrypt and decrypt data, while asymmetric encryption uses a pair of public and private keys. Asymmetric encryption is commonly used in secure communications like SSL and TLS protocols.",
+            exampleCode: `
+            // Example of basic encryption using Python
+            from cryptography.fernet import Fernet
+  
+            key = Fernet.generate_key()  // Generate key
+            cipher_suite = Fernet(key)
+            text = "Sensitive Data"
+            encrypted_text = cipher_suite.encrypt(text.encode())  // Encrypt data
+            print(encrypted_text)
+            `,
+          },
+          {
+            title: "Additional Resources",
+            text: "Learn more about encryption in this video",
+            videoLink: "https://www.youtube.com/watch?v=ZghMPWGXexs",
+          },
+        ],
+      },
+      // TOPIC 5: Social Engineering
+      {
+        id: 5,
+        topicName: "Social Engineering",
+        content: [
+          {
+            title: "What is Social Engineering?",
+            text: "Social engineering is the art of manipulating people into giving up confidential information. Attackers often use psychological tricks to convince individuals to break standard security protocols.",
+          },
+          {
+            title: "Examples of Social Engineering",
+            text: "Common examples include pretexting (pretending to be someone else), baiting (offering something enticing to get information), and tailgating (following someone into a secure area without proper credentials).",
+          },
+          {
+            title: "Additional Resources",
+            text: "Watch this video on Social Engineering techniques",
+            videoLink: "https://www.youtube.com/watch?v=hhxrwx2qL8o",
+          },
+        ],
+      },
+      // TOPIC 6: Incident Response and Recovery
+      {
+        id: 6,
+        topicName: "Incident Response and Recovery",
+        content: [
+          {
+            title: "What is Incident Response?",
+            text: "Incident response involves identifying, managing, and recovering from a security breach. A well-planned response can minimize damage and ensure that normal operations resume quickly.",
+          },
+          {
+            title: "Steps in Incident Response",
+            text: "The incident response process typically includes preparation, identification, containment, eradication, recovery, and lessons learned. It's essential for organizations to have an incident response plan in place.",
+          },
+          {
+            title: "Additional Resources",
+            text: "Learn more about incident response strategies",
+            videoLink: "https://www.youtube.com/watch?v=qD2AABoOLpY",
+          },
+        ],
+      },
+    ],
   },
+  
+
   {
     id: 26,
     name: "Network Security Basics",
     description:
       "Understand the principles of securing network communications.",
     track: "Cybersecurity",
+    additionalResource: {
+      title: "Additional Resource",
+      videoLink: "https://www.youtube.com/watch?v=Zj2QpXj7Gq4",
+      websiteLink: {
+        title: "Network Security Fundamentals by Cisco",
+        link: "https://www.cisco.com/c/en/us/products/security/what-is-network-security.html",
+      },
+    },
+    topics: [
+      // TOPIC 1: What is Network Security?
+      {
+        id: 1,
+        topicName: "What is Network Security?",
+        content: [
+          {
+            title: "Definition of Network Security",
+            text: "Network security involves practices, tools, and protocols used to prevent and monitor unauthorized access, misuse, or modification of a computer network and its resources. It aims to create a secure environment for communication and data transfer.",
+          },
+          {
+            title: "Why Network Security is Important",
+            text: "In today’s connected world, safeguarding networks is crucial to ensure data integrity, protect against cyberattacks, and maintain business continuity. Securing both internal and external communications is vital to preventing data breaches.",
+          },
+          {
+            title: "Additional Resources",
+            text: "Watch this video to dive into the basics of network security",
+            videoLink: "https://www.youtube.com/watch?v=csGafph2gQ8",
+          },
+        ],
+      },
+      // TOPIC 2: Types of Network Security Threats
+      {
+        id: 2,
+        topicName: "Types of Network Security Threats",
+        content: [
+          {
+            title: "Common Network Security Threats",
+            text: "The most common threats include viruses, worms, Trojan horses, DoS (Denial-of-Service) attacks, man-in-the-middle attacks, and SQL injection. These threats aim to steal, damage, or disrupt data and services on a network.",
+          },
+          {
+            title: "Denial-of-Service (DoS) Attacks",
+            text: "A DoS attack aims to overwhelm a network or website with traffic, rendering it unavailable to users. These attacks can cripple an organization's ability to operate efficiently.",
+          },
+          {
+            title: "Man-in-the-Middle Attack",
+            text: "This occurs when an attacker intercepts communication between two parties, often in real-time, to steal information or inject malicious content. Common examples include intercepting login credentials over unsecured Wi-Fi.",
+          },
+          {
+            title: "Additional Resources",
+            text: "Explore network security threats and how to defend against them",
+            videoLink: "https://www.youtube.com/watch?v=UiIbcN9bzlU",
+          },
+        ],
+      },
+      // TOPIC 3: Firewalls and Their Role
+      {
+        id: 3,
+        topicName: "Firewalls and Their Role",
+        content: [
+          {
+            title: "What is a Firewall?",
+            text: "A firewall is a security device—either software or hardware—that monitors and controls incoming and outgoing network traffic based on predetermined security rules. It acts as a barrier between a trusted internal network and untrusted external networks.",
+          },
+          {
+            title: "Types of Firewalls",
+            text: "There are several types of firewalls: packet-filtering firewalls, stateful inspection firewalls, proxy firewalls, and next-generation firewalls. Each type offers a different level of security and inspection.",
+          },
+          {
+            title: "How Firewalls Protect Networks",
+            text: "Firewalls prevent unauthorized access, mitigate potential threats, and are often the first line of defense against cyberattacks. By analyzing data packets and enforcing security policies, they ensure that only legitimate traffic passes through.",
+          },
+          {
+            title: "Additional Resources",
+            text: "Watch this video on how firewalls work in network security",
+            videoLink: "https://www.youtube.com/watch?v=csOZ9-O5B9I",
+          },
+        ],
+      },
+      // TOPIC 4: Encryption in Network Security
+      {
+        id: 4,
+        topicName: "Encryption in Network Security",
+        content: [
+          {
+            title: "What is Encryption?",
+            text: "Encryption is the process of encoding information in such a way that only authorized parties can access it. In network security, encryption protects sensitive data as it travels across a network, preventing unauthorized access and eavesdropping.",
+          },
+          {
+            title: "End-to-End Encryption",
+            text: "End-to-end encryption ensures that data is encrypted at the sender’s device and only decrypted at the recipient’s device, making it unreadable to anyone in between. This is used in messaging apps, online transactions, and secure communications.",
+            exampleCode: `
+            // Simple encryption using Python (not executable)
+            from cryptography.fernet import Fernet
+  
+            key = Fernet.generate_key()  // Generate a key
+            cipher_suite = Fernet(key)
+            message = "Secure Network Data"
+            encrypted_message = cipher_suite.encrypt(message.encode())  // Encrypt the message
+            print(encrypted_message)
+            `,
+          },
+          {
+            title: "Additional Resources",
+            text: "Learn more about encryption techniques for securing networks",
+            videoLink: "https://www.youtube.com/watch?v=G6SeV4IvQ1E",
+          },
+        ],
+      },
+      // TOPIC 5: Virtual Private Networks (VPNs)
+      {
+        id: 5,
+        topicName: "Virtual Private Networks (VPNs)",
+        content: [
+          {
+            title: "What is a VPN?",
+            text: "A Virtual Private Network (VPN) creates a secure connection over a less secure network, such as the internet. VPNs encrypt your data, ensuring privacy and protection from cybercriminals as it passes through public networks.",
+          },
+          {
+            title: "How VPNs Work",
+            text: "VPNs work by routing your device's internet connection through the VPN's private server rather than your ISP, masking your IP address and encrypting data transferred between your device and the network.",
+          },
+          {
+            title: "Advantages of VPNs",
+            text: "VPNs help protect users when browsing on public Wi-Fi, ensure anonymous web browsing, and allow access to geo-restricted content. They are also widely used by businesses for secure remote work connections.",
+          },
+          {
+            title: "Additional Resources",
+            text: "Watch this video to learn more about VPNs and their role in security",
+            videoLink: "https://www.youtube.com/watch?v=od-vY6W6wS8",
+          },
+        ],
+      },
+      // TOPIC 6: Intrusion Detection Systems (IDS)
+      {
+        id: 6,
+        topicName: "Intrusion Detection Systems (IDS)",
+        content: [
+          {
+            title: "What is an IDS?",
+            text: "An Intrusion Detection System (IDS) monitors a network for malicious activities or policy violations. Once an attack or breach is detected, an alert is generated to allow security personnel to take action.",
+          },
+          {
+            title: "Types of IDS",
+            text: "There are two primary types of IDS: network-based IDS (NIDS), which monitors network traffic, and host-based IDS (HIDS), which monitors individual devices for signs of intrusion.",
+          },
+          {
+            title: "How IDS Improves Security",
+            text: "An IDS helps identify potential threats early, allowing administrators to respond before significant damage is done. It works in conjunction with other security tools like firewalls and antivirus software.",
+          },
+          {
+            title: "Additional Resources",
+            text: "Learn about IDS and how it helps in network security",
+            videoLink: "https://www.youtube.com/watch?v=Q4oHAYm-UBY",
+          },
+        ],
+      },
+    ],
   },
+  
   {
     id: 27,
     name: "Ethical Hacking",
     description:
       "Learn the tools and techniques used in ethical hacking to identify system vulnerabilities.",
     track: "Cybersecurity",
+    additionalResource: {
+      title: "Additional Resource",
+      videoLink: "https://www.youtube.com/watch?v=H17LY6FZdvE",
+      websiteLink: {
+        title: "Ethical Hacking Basics by EC-Council",
+        link: "https://www.eccouncil.org/programs/certified-ethical-hacker-ceh/",
+      },
+    },
+    topics: [
+      // TOPIC 1: What is Ethical Hacking?
+      {
+        id: 1,
+        topicName: "What is Ethical Hacking?",
+        content: [
+          {
+            title: "Definition of Ethical Hacking",
+            text: "Ethical hacking is the authorized practice of bypassing system security to identify potential data breaches and threats in a network. The aim is to improve the security of the system by finding vulnerabilities before malicious attackers do.",
+          },
+          {
+            title: "Role of an Ethical Hacker",
+            text: "An ethical hacker, also known as a white-hat hacker, uses the same tools and techniques as a malicious hacker, but with permission and within legal limits to safeguard systems.",
+          },
+          {
+            title: "Importance of Ethical Hacking",
+            text: "Ethical hacking helps organizations protect their data and ensure that their systems are safe from cybercriminals by identifying vulnerabilities and providing solutions.",
+          },
+          {
+            title: "Additional Resources",
+            text: "Watch this video for a quick overview of ethical hacking",
+            videoLink: "https://www.youtube.com/watch?v=4Wt9wts4ISY",
+          },
+        ],
+      },
+      // TOPIC 2: Types of Hacking
+      {
+        id: 2,
+        topicName: "Types of Hacking",
+        content: [
+          {
+            title: "White Hat Hacking",
+            text: "White-hat hackers are ethical hackers who work with organizations to identify and fix security vulnerabilities. They follow strict rules and legal guidelines in their hacking activities.",
+          },
+          {
+            title: "Black Hat Hacking",
+            text: "Black-hat hackers are malicious attackers who exploit vulnerabilities for personal gain. Their hacking activities are illegal and harmful.",
+          },
+          {
+            title: "Gray Hat Hacking",
+            text: "Gray-hat hackers fall between white-hat and black-hat hacking. While they may not have malicious intent, they often find vulnerabilities without permission, sometimes offering to fix them for a fee.",
+          },
+          {
+            title: "Additional Resources",
+            text: "Learn more about different types of hackers",
+            videoLink: "https://www.youtube.com/watch?v=UGQQqqv5AAc",
+          },
+        ],
+      },
+      // TOPIC 3: Ethical Hacking Tools and Techniques
+      {
+        id: 3,
+        topicName: "Ethical Hacking Tools and Techniques",
+        content: [
+          {
+            title: "Popular Ethical Hacking Tools",
+            text: "Common tools include Nmap, Metasploit, Wireshark, and Burp Suite. These tools help ethical hackers scan networks, find vulnerabilities, capture network packets, and conduct penetration testing.",
+          },
+          {
+            title: "Penetration Testing",
+            text: "Penetration testing (pentesting) involves simulating cyberattacks to identify weaknesses in a system's defenses. This helps organizations understand potential risks and how to mitigate them.",
+          },
+          {
+            title: "Social Engineering",
+            text: "Social engineering involves manipulating people into divulging confidential information. Ethical hackers use this technique to test human vulnerabilities in an organization's security system.",
+          },
+          {
+            title: "Additional Resources",
+            text: "Watch this video on how ethical hackers use various tools",
+            videoLink: "https://www.youtube.com/watch?v=OLyNEPDP9q0",
+          },
+        ],
+      },
+      // TOPIC 4: Stages of Ethical Hacking
+      {
+        id: 4,
+        topicName: "Stages of Ethical Hacking",
+        content: [
+          {
+            title: "Reconnaissance",
+            text: "The first stage of ethical hacking involves gathering information about the target system or network. This is often done using open-source intelligence (OSINT) to understand the system's architecture and vulnerabilities.",
+          },
+          {
+            title: "Scanning",
+            text: "Once reconnaissance is complete, the next step is scanning. Tools like Nmap and Wireshark are used to scan the network for open ports, services, and vulnerabilities.",
+          },
+          {
+            title: "Gaining Access",
+            text: "The ethical hacker attempts to exploit vulnerabilities to gain unauthorized access to the system. This is where penetration testing comes into play.",
+          },
+          {
+            title: "Maintaining Access",
+            text: "Once access is gained, the ethical hacker ensures continued control over the system to gather further data, but without causing harm. This helps in understanding long-term vulnerabilities.",
+          },
+          {
+            title: "Covering Tracks",
+            text: "Finally, ethical hackers mimic malicious attackers by covering their tracks and erasing logs to show how attackers could hide their presence.",
+          },
+          {
+            title: "Additional Resources",
+            text: "Learn about the stages of ethical hacking in this video",
+            videoLink: "https://www.youtube.com/watch?v=zuJjDLOKNJY",
+          },
+        ],
+      },
+      // TOPIC 5: Legal and Ethical Considerations
+      {
+        id: 5,
+        topicName: "Legal and Ethical Considerations",
+        content: [
+          {
+            title: "Why Ethics Matter",
+            text: "Ethical hackers must always work within the bounds of the law. Obtaining consent from the target organization is critical to avoid legal repercussions.",
+          },
+          {
+            title: "The CFAA and GDPR",
+            text: "The Computer Fraud and Abuse Act (CFAA) in the U.S. and the General Data Protection Regulation (GDPR) in Europe set strict guidelines for data security and privacy. Ethical hackers must comply with these regulations.",
+          },
+          {
+            title: "Bug Bounty Programs",
+            text: "Many companies run bug bounty programs, offering rewards to ethical hackers who find and report vulnerabilities. This encourages a collaborative approach to cybersecurity.",
+          },
+          {
+            title: "Additional Resources",
+            text: "Watch this video on the legalities of ethical hacking",
+            videoLink: "https://www.youtube.com/watch?v=sX7rEdU8xiw",
+          },
+        ],
+      },
+    ],
   },
+  
   {
     id: 28,
     name: "Cryptography Essentials",
     description:
       "Understand cryptographic methods for securing data and communications.",
     track: "Cybersecurity",
+    additionalResource: {
+      title: "Additional Resource",
+      videoLink: "https://www.youtube.com/watch?v=iVfw8cHiZ2A",
+      websiteLink: {
+        title: "Cryptography Overview by Stanford",
+        link: "https://crypto.stanford.edu/",
+      },
+    },
+    topics: [
+      // TOPIC 1: Introduction to Cryptography
+      {
+        id: 1,
+        topicName: "Introduction to Cryptography",
+        content: [
+          {
+            title: "What is Cryptography?",
+            text: "Cryptography is the practice of securing communication and information through the use of codes, ensuring that only the intended recipients can access the data. It is a key component in cybersecurity, protecting sensitive information from unauthorized access.",
+          },
+          {
+            title: "History of Cryptography",
+            text: "Cryptography has been used throughout history, from ancient ciphers to modern encryption techniques. The course begins with an overview of its historical development, including the Caesar cipher and the Enigma machine.",
+          },
+          {
+            title: "Applications of Cryptography",
+            text: "Cryptography is essential in securing emails, financial transactions, and confidential communications. Its use in technologies such as SSL/TLS and VPNs ensures the safety of online data transmission.",
+          },
+          {
+            title: "Additional Resources",
+            text: "Watch this video for an overview of cryptography",
+            videoLink: "https://www.youtube.com/watch?v=jmIcxKXZ2YE",
+          },
+        ],
+      },
+      // TOPIC 2: Symmetric Encryption
+      {
+        id: 2,
+        topicName: "Symmetric Encryption",
+        content: [
+          {
+            title: "How Symmetric Encryption Works",
+            text: "Symmetric encryption involves using the same key for both encryption and decryption. Popular algorithms include the Data Encryption Standard (DES) and the Advanced Encryption Standard (AES).",
+          },
+          {
+            title: "Block Ciphers vs. Stream Ciphers",
+            text: "Block ciphers encrypt data in fixed-size blocks, while stream ciphers encrypt data one bit or byte at a time. Both have specific use cases depending on the data size and application.",
+          },
+          {
+            title: "Common Symmetric Encryption Algorithms",
+            text: "AES (Advanced Encryption Standard) is the most widely used symmetric encryption algorithm, securing everything from online transactions to data storage.",
+          },
+          {
+            title: "Additional Resources",
+            text: "Learn more about symmetric encryption in this video",
+            videoLink: "https://www.youtube.com/watch?v=vcT_7mnviXw",
+          },
+        ],
+      },
+      // TOPIC 3: Asymmetric Encryption
+      {
+        id: 3,
+        topicName: "Asymmetric Encryption",
+        content: [
+          {
+            title: "How Asymmetric Encryption Works",
+            text: "Asymmetric encryption uses two keys: a public key for encryption and a private key for decryption. This method is commonly used in secure communication systems, such as SSL certificates.",
+          },
+          {
+            title: "Public and Private Keys",
+            text: "In asymmetric encryption, the public key can be freely shared to encrypt messages, while the private key is kept secret for decrypting them. RSA (Rivest-Shamir-Adleman) is the most well-known algorithm.",
+          },
+          {
+            title: "Applications of Asymmetric Encryption",
+            text: "Asymmetric encryption is used in digital signatures, email encryption, and securing web traffic (e.g., HTTPS). It ensures data authenticity and integrity.",
+          },
+          {
+            title: "Additional Resources",
+            text: "Watch this video explaining public and private keys",
+            videoLink: "https://www.youtube.com/watch?v=AQDCe585Lnc",
+          },
+        ],
+      },
+      // TOPIC 4: Hashing Functions
+      {
+        id: 4,
+        topicName: "Hashing Functions",
+        content: [
+          {
+            title: "What is Hashing?",
+            text: "Hashing is the process of converting data into a fixed-length string of characters, which is typically a hash code. Hash functions are commonly used in data integrity checks and password storage.",
+          },
+          {
+            title: "MD5, SHA-256, and Other Hashing Algorithms",
+            text: "Common hashing algorithms include MD5, SHA-1, and SHA-256. While MD5 and SHA-1 have vulnerabilities, SHA-256 remains widely used in blockchain and security protocols.",
+          },
+          {
+            title: "Uses of Hashing",
+            text: "Hashing is used in password management, digital signatures, and verifying data integrity. Hashing ensures that even small changes in input result in significantly different hash outputs.",
+          },
+          {
+            title: "Additional Resources",
+            text: "Learn more about SHA-256 and its uses",
+            videoLink: "https://www.youtube.com/watch?v=fYjYY47eCyI",
+          },
+        ],
+      },
+      // TOPIC 5: Digital Signatures and Certificates
+      {
+        id: 5,
+        topicName: "Digital Signatures and Certificates",
+        content: [
+          {
+            title: "How Digital Signatures Work",
+            text: "Digital signatures are a form of asymmetric cryptography that provide data integrity, authentication, and non-repudiation. They use the sender's private key to sign messages and the recipient’s public key to verify them.",
+          },
+          {
+            title: "Role of Digital Certificates",
+            text: "Digital certificates authenticate the identity of entities in online transactions. They are issued by certificate authorities (CAs) to ensure the legitimacy of public keys.",
+          },
+          {
+            title: "Applications in SSL/TLS",
+            text: "Digital certificates are used in SSL/TLS to secure web traffic, ensuring the integrity and authenticity of websites.",
+          },
+          {
+            title: "Additional Resources",
+            text: "Watch this video on digital certificates",
+            videoLink: "https://www.youtube.com/watch?v=nbpFVSRZTfo",
+          },
+        ],
+      },
+      // TOPIC 6: Future of Cryptography - Quantum Cryptography
+      {
+        id: 6,
+        topicName: "Future of Cryptography - Quantum Cryptography",
+        content: [
+          {
+            title: "What is Quantum Cryptography?",
+            text: "Quantum cryptography leverages the principles of quantum mechanics to develop secure communication methods. Quantum Key Distribution (QKD) is one such approach that enables secure data transmission.",
+          },
+          {
+            title: "Quantum Threats to Modern Cryptography",
+            text: "The development of quantum computers poses a threat to current encryption algorithms, particularly RSA and ECC. Post-quantum cryptography aims to develop algorithms that are resistant to quantum attacks.",
+          },
+          {
+            title: "Additional Resources",
+            text: "Learn more about the impact of quantum computing on cryptography",
+            videoLink: "https://www.youtube.com/watch?v=F_Riqjdh2oM",
+          },
+        ],
+      },
+    ],
   },
+  
   {
     id: 29,
     name: "Incident Response & Management",
     description:
       "Learn how to handle security breaches and mitigate their impact.",
     track: "Cybersecurity",
+    additionalResource: {
+      title: "Additional Resource",
+      videoLink: "https://www.youtube.com/watch?v=6tCyGmfMVcg",
+      websiteLink: {
+        title: "Incident Response Best Practices",
+        link: "https://www.sans.org/cyber-security-resources/",
+      },
+    },
+    topics: [
+      // TOPIC 1: Introduction to Incident Response
+      {
+        id: 1,
+        topicName: "Introduction to Incident Response",
+        content: [
+          {
+            title: "What is Incident Response?",
+            text: "Incident response (IR) is a structured approach for handling and managing the aftermath of a security breach or cyberattack. The goal is to control the situation and minimize damage, recovery time, and costs.",
+          },
+          {
+            title: "The Importance of Incident Response",
+            text: "Effective incident response can prevent breaches from escalating and causing severe damage. It is essential for maintaining business continuity and protecting sensitive data.",
+          },
+          {
+            title: "Additional Resources",
+            text: "Watch this video for a general overview of incident response processes",
+            videoLink: "https://www.youtube.com/watch?v=CTxunR-LzFQ",
+          },
+        ],
+      },
+      // TOPIC 2: Incident Response Phases
+      {
+        id: 2,
+        topicName: "Incident Response Phases",
+        content: [
+          {
+            title: "1. Preparation",
+            text: "The preparation phase involves establishing and training an incident response team, developing an incident response plan, and setting up detection mechanisms. This step ensures that the organization is ready to respond quickly to incidents.",
+          },
+          {
+            title: "2. Identification",
+            text: "In the identification phase, the security team detects and determines the nature and scope of the incident. This could involve the use of security monitoring tools, such as intrusion detection systems (IDS), to pinpoint breaches or abnormal activities.",
+          },
+          {
+            title: "3. Containment",
+            text: "Once an incident is confirmed, containment strategies are used to prevent further damage. This can involve isolating affected systems or deploying patches to prevent spread.",
+          },
+          {
+            title: "4. Eradication",
+            text: "The eradication phase involves removing the root cause of the incident, whether it's malicious software, unauthorized access, or vulnerabilities exploited during the attack.",
+          },
+          {
+            title: "5. Recovery",
+            text: "After resolving the incident, the recovery phase focuses on restoring systems and operations to normal. It also includes monitoring to ensure that there are no remaining threats.",
+          },
+          {
+            title: "6. Lessons Learned",
+            text: "The lessons learned phase is critical for improving future incident response efforts. Teams analyze the incident, assess what went wrong, and update response plans to prevent recurrence.",
+          },
+          {
+            title: "Additional Resources",
+            text: "Learn about the phases of incident response in this video",
+            videoLink: "https://www.youtube.com/watch?v=7_h9WLnlmdg",
+          },
+        ],
+      },
+      // TOPIC 3: Incident Response Teams and Roles
+      {
+        id: 3,
+        topicName: "Incident Response Teams and Roles",
+        content: [
+          {
+            title: "The Role of Incident Response Teams",
+            text: "Incident response teams are responsible for coordinating responses to security breaches. Teams typically include specialists in network security, forensics, and legal or compliance roles.",
+          },
+          {
+            title: "Team Structure",
+            text: "A typical incident response team consists of a team leader, security analysts, forensic experts, and IT support personnel. Each team member has clearly defined responsibilities during the response process.",
+          },
+          {
+            title: "Coordination with External Stakeholders",
+            text: "In some incidents, it may be necessary to coordinate with law enforcement, public relations, or legal teams to address compliance issues and communicate with affected parties.",
+          },
+          {
+            title: "Additional Resources",
+            text: "Watch this video about incident response teams",
+            videoLink: "https://www.youtube.com/watch?v=AEwop7BuWIo",
+          },
+        ],
+      },
+      // TOPIC 4: Legal and Compliance Considerations
+      {
+        id: 4,
+        topicName: "Legal and Compliance Considerations",
+        content: [
+          {
+            title: "Understanding Compliance Requirements",
+            text: "Incident response must comply with industry regulations such as GDPR, HIPAA, or PCI-DSS, depending on the type of data involved. Organizations need to ensure their response plan includes measures to meet these legal obligations.",
+          },
+          {
+            title: "Legal Implications of Incident Response",
+            text: "Incident response teams may need to collect evidence during a breach investigation. It is important to ensure that evidence is gathered and preserved in a way that complies with legal requirements for court cases or regulatory reviews.",
+          },
+          {
+            title: "Incident Reporting and Notifications",
+            text: "Depending on the incident type, organizations may be required to notify affected individuals and regulatory bodies. Incident response teams should be aware of notification requirements to avoid fines or legal consequences.",
+          },
+          {
+            title: "Additional Resources",
+            text: "Learn about compliance in incident response here",
+            videoLink: "https://www.youtube.com/watch?v=4yY4_fih4Io",
+          },
+        ],
+      },
+      // TOPIC 5: Cybersecurity Tools for Incident Response
+      {
+        id: 5,
+        topicName: "Cybersecurity Tools for Incident Response",
+        content: [
+          {
+            title: "Intrusion Detection and Prevention Systems (IDPS)",
+            text: "IDPS tools monitor network traffic for suspicious activity and provide early warnings to incident response teams.",
+          },
+          {
+            title: "Security Information and Event Management (SIEM)",
+            text: "SIEM systems collect and analyze log data from various sources to identify potential security incidents. They play a key role in incident detection and response.",
+          },
+          {
+            title: "Forensic Tools",
+            text: "Digital forensics tools are used to investigate security breaches, trace attackers' actions, and gather evidence. Tools like FTK (Forensic Toolkit) and Autopsy are commonly used.",
+          },
+          {
+            title: "Additional Resources",
+            text: "Watch this video on incident response tools",
+            videoLink: "https://www.youtube.com/watch?v=q7wd8MDN9Ls",
+          },
+        ],
+      },
+      // TOPIC 6: Post-Incident Reviews and Continuous Improvement
+      {
+        id: 6,
+        topicName: "Post-Incident Reviews and Continuous Improvement",
+        content: [
+          {
+            title: "Why Post-Incident Reviews Matter",
+            text: "Conducting post-incident reviews is essential to learn from the breach, understand the organization's strengths and weaknesses, and make necessary improvements to the incident response plan.",
+          },
+          {
+            title: "Improving Incident Response Plans",
+            text: "Based on lessons learned, organizations can update their incident response procedures, enhance staff training, and invest in more advanced security tools to better prepare for future incidents.",
+          },
+          {
+            title: "Continuous Monitoring and Threat Hunting",
+            text: "Organizations should implement continuous monitoring and proactive threat-hunting strategies to detect security incidents early and respond effectively.",
+          },
+          {
+            title: "Additional Resources",
+            text: "Explore post-incident review techniques",
+            videoLink: "https://www.youtube.com/watch?v=piF9PpqaAgE",
+          },
+        ],
+      },
+    ],
   },
+  
   {
     id: 30,
     name: "Risk Management",
     description:
       "Understand how to identify, assess, and mitigate security risks.",
     track: "Cybersecurity",
+    additionalResource: {
+      title: "Additional Resource",
+      videoLink: "https://www.youtube.com/watch?v=8qKMjR7cSjk",
+      websiteLink: {
+        title: "Comprehensive Risk Management Guide",
+        link: "https://www.nist.gov/risk-management-framework",
+      },
+    },
+    topics: [
+      // TOPIC 1: Introduction to Risk Management
+      {
+        id: 1,
+        topicName: "Introduction to Risk Management",
+        content: [
+          {
+            title: "What is Risk Management?",
+            text: "Risk management involves identifying, assessing, and controlling threats to an organization's capital and earnings. These threats could stem from various sources such as financial uncertainty, legal liabilities, or cybersecurity breaches.",
+          },
+          {
+            title: "Importance of Risk Management in Cybersecurity",
+            text: "In cybersecurity, risk management helps organizations identify and protect against potential threats, ensuring that resources are used efficiently to mitigate risks and minimize impact.",
+          },
+          {
+            title: "Additional Resources",
+            text: "Learn about risk management in cybersecurity with this video",
+            videoLink: "https://www.youtube.com/watch?v=QaQzv-lGiN4",
+          },
+        ],
+      },
+      // TOPIC 2: Risk Identification
+      {
+        id: 2,
+        topicName: "Risk Identification",
+        content: [
+          {
+            title: "How to Identify Risks",
+            text: "Risk identification involves recognizing potential risks before they occur. In cybersecurity, this includes understanding the organization's assets, vulnerabilities, and potential threat vectors.",
+          },
+          {
+            title: "Techniques for Risk Identification",
+            text: "Common techniques include brainstorming, SWOT analysis (Strengths, Weaknesses, Opportunities, and Threats), and risk assessment frameworks such as ISO 27001 and NIST SP 800-30.",
+          },
+          {
+            title: "Common Cybersecurity Risks",
+            text: "Some of the most common risks in cybersecurity include phishing attacks, ransomware, insider threats, data breaches, and vulnerabilities in software and hardware systems.",
+          },
+          {
+            title: "Additional Resources",
+            text: "For more on identifying risks, check out this guide",
+            videoLink: "https://www.youtube.com/watch?v=2QceSJSaGOA",
+          },
+        ],
+      },
+      // TOPIC 3: Risk Assessment and Analysis
+      {
+        id: 3,
+        topicName: "Risk Assessment and Analysis",
+        content: [
+          {
+            title: "Risk Assessment Process",
+            text: "Risk assessment involves evaluating the likelihood of a risk occurring and the potential impact it would have on the organization. This includes both quantitative and qualitative approaches.",
+          },
+          {
+            title: "Tools for Risk Assessment",
+            text: "Popular tools include risk matrices, heat maps, and probability-impact charts. These tools help organizations prioritize risks based on their severity and likelihood.",
+          },
+          {
+            title: "Conducting a Risk Analysis",
+            text: "Risk analysis includes understanding the potential consequences of an incident and determining appropriate mitigation strategies. It often involves cost-benefit analysis to decide on the best course of action.",
+          },
+          {
+            title: "Additional Resources",
+            text: "Watch this video on risk assessment techniques",
+            videoLink: "https://www.youtube.com/watch?v=f94ew9CjRPI",
+          },
+        ],
+      },
+      // TOPIC 4: Risk Mitigation Strategies
+      {
+        id: 4,
+        topicName: "Risk Mitigation Strategies",
+        content: [
+          {
+            title: "Approaches to Risk Mitigation",
+            text: "Risk mitigation strategies aim to reduce the likelihood of a threat or minimize its impact. Common approaches include avoiding the risk, transferring it (e.g., via insurance), reducing its likelihood, or accepting the risk if its impact is low.",
+          },
+          {
+            title: "Implementing Security Controls",
+            text: "Security controls, such as firewalls, encryption, and multi-factor authentication, can mitigate risks by reducing vulnerabilities in systems and data.",
+          },
+          {
+            title: "Monitoring and Continuous Improvement",
+            text: "Risk management is an ongoing process. Continuous monitoring helps organizations identify new risks and adjust their risk management strategies as needed.",
+          },
+          {
+            title: "Additional Resources",
+            text: "Learn about risk mitigation techniques in this video",
+            videoLink: "https://www.youtube.com/watch?v=MLHd0rlTqwo",
+          },
+        ],
+      },
+      // TOPIC 5: Risk Governance and Compliance
+      {
+        id: 5,
+        topicName: "Risk Governance and Compliance",
+        content: [
+          {
+            title: "Establishing Risk Governance Framework",
+            text: "Risk governance involves setting up the organizational structure and processes for managing risks. This includes defining roles, responsibilities, and oversight mechanisms.",
+          },
+          {
+            title: "Compliance and Regulatory Requirements",
+            text: "Organizations must ensure that their risk management practices comply with relevant regulations such as GDPR, HIPAA, or PCI-DSS. Compliance frameworks help to align risk management with legal requirements.",
+          },
+          {
+            title: "Reporting and Risk Communication",
+            text: "Clear communication of risks to stakeholders, such as executives and board members, is crucial for ensuring that risk management strategies are understood and supported at all levels of the organization.",
+          },
+          {
+            title: "Additional Resources",
+            text: "Explore governance and compliance best practices",
+            videoLink: "https://www.youtube.com/watch?v=xbJu_vYUgXg",
+          },
+        ],
+      },
+      // TOPIC 6: Emerging Risks and Trends in Cybersecurity
+      {
+        id: 6,
+        topicName: "Emerging Risks and Trends in Cybersecurity",
+        content: [
+          {
+            title: "New and Emerging Threats",
+            text: "As technology evolves, so do cybersecurity risks. Emerging threats such as AI-powered attacks, deepfakes, and quantum computing require organizations to adapt their risk management strategies.",
+          },
+          {
+            title: "Future Trends in Risk Management",
+            text: "Risk management is increasingly focusing on proactive approaches, such as threat intelligence and automation, to better predict and respond to evolving threats.",
+          },
+          {
+            title: "Preparing for the Future",
+            text: "Organizations should stay updated with the latest cybersecurity trends, invest in training, and implement advanced technologies to mitigate future risks effectively.",
+          },
+          {
+            title: "Additional Resources",
+            text: "Watch this video to understand the future of cybersecurity risks",
+            videoLink: "https://www.youtube.com/watch?v=gFyJw1sMiYA",
+          },
+        ],
+      },
+    ],
   },
+  
   {
     id: 31,
     name: "Security Auditing & Compliance",
     description:
       "Learn the essentials of auditing and ensuring compliance with security standards.",
     track: "Cybersecurity",
+    additionalResource: {
+      title: "Additional Resource",
+      videoLink: "https://www.youtube.com/watch?v=AEjFi8jZgkA",
+      websiteLink: {
+        title: "Comprehensive Guide to Security Auditing",
+        link: "https://www.isaca.org/resources",
+      },
+    },
+    topics: [
+      // TOPIC 1: Introduction to Security Auditing
+      {
+        id: 1,
+        topicName: "Introduction to Security Auditing",
+        content: [
+          {
+            title: "What is Security Auditing?",
+            text: "Security auditing involves evaluating an organization's security measures to ensure they meet regulatory standards and protect assets from threats. It is a systematic process that identifies security gaps.",
+          },
+          {
+            title: "The Importance of Security Audits",
+            text: "Regular security audits help organizations ensure compliance with legal regulations, mitigate security risks, and improve their overall security posture.",
+          },
+          {
+            title: "Additional Resources",
+            text: "Learn more about security auditing with this video",
+            videoLink: "https://www.youtube.com/watch?v=AEjFi8jZgkA",
+          },
+        ],
+      },
+      // TOPIC 2: Security Standards and Compliance Frameworks
+      {
+        id: 2,
+        topicName: "Security Standards and Compliance Frameworks",
+        content: [
+          {
+            title: "Understanding Compliance Standards",
+            text: "Organizations must comply with security standards such as ISO/IEC 27001, GDPR, HIPAA, and PCI-DSS. These frameworks guide the implementation of security measures and protect sensitive information.",
+          },
+          {
+            title: "Key Security Frameworks",
+            text: "Common frameworks include the NIST Cybersecurity Framework, COBIT, and ISO/IEC 27001. These frameworks provide best practices for managing information security and ensuring compliance.",
+          },
+          {
+            title: "Additional Resources",
+            text: "Explore various compliance frameworks",
+            videoLink: "https://www.youtube.com/watch?v=aIX_8lDBaA0",
+          },
+        ],
+      },
+      // TOPIC 3: Conducting Security Audits
+      {
+        id: 3,
+        topicName: "Conducting Security Audits",
+        content: [
+          {
+            title: "Steps in a Security Audit",
+            text: "A security audit involves planning, assessing current security practices, identifying risks, and creating recommendations for improvements. It also includes reviewing policies, procedures, and systems.",
+          },
+          {
+            title: "Types of Security Audits",
+            text: "There are various types of security audits, including internal audits, external audits, and compliance audits. Each focuses on ensuring that security practices are effective and compliant with regulations.",
+          },
+          {
+            title: "Using Auditing Tools",
+            text: "Auditing tools like Nessus, OpenVAS, and Splunk help in the automated evaluation of system vulnerabilities, log analysis, and tracking compliance issues.",
+          },
+          {
+            title: "Additional Resources",
+            text: "Learn about conducting audits in this guide",
+            videoLink: "https://www.youtube.com/watch?v=WrDV-1ODzGc",
+          },
+        ],
+      },
+      // TOPIC 4: Managing Compliance
+      {
+        id: 4,
+        topicName: "Managing Compliance",
+        content: [
+          {
+            title: "Compliance Management Process",
+            text: "Managing compliance involves ensuring that the organization adheres to security regulations and frameworks. This includes staying updated on new regulations and adjusting security policies as needed.",
+          },
+          {
+            title: "Tools for Compliance Management",
+            text: "Compliance management tools, such as TrustArc and ZenGRC, help organizations track and document compliance efforts, assess risks, and prepare for audits.",
+          },
+          {
+            title: "Monitoring and Reporting Compliance",
+            text: "Continuous monitoring of compliance ensures that security measures remain effective. Regular reporting to stakeholders and regulatory bodies is crucial to maintaining transparency.",
+          },
+          {
+            title: "Additional Resources",
+            text: "Watch this video on compliance management",
+            videoLink: "https://www.youtube.com/watch?v=3bzxwCzm1ZI",
+          },
+        ],
+      },
+      // TOPIC 5: Remediation and Continuous Improvement
+      {
+        id: 5,
+        topicName: "Remediation and Continuous Improvement",
+        content: [
+          {
+            title: "Identifying Gaps and Remediation",
+            text: "After an audit, remediation involves addressing identified security gaps and implementing necessary changes to strengthen the security posture. This could include upgrading security controls or revising policies.",
+          },
+          {
+            title: "Continuous Improvement in Security",
+            text: "Security is not a one-time effort. Continuous improvement involves regularly updating security measures, adopting new technologies, and staying informed about evolving threats.",
+          },
+          {
+            title: "Additional Resources",
+            text: "Learn about remediation strategies in this video",
+            videoLink: "https://www.youtube.com/watch?v=JwJv_zgyDa0",
+          },
+        ],
+      },
+      // TOPIC 6: Future Trends in Security Auditing
+      {
+        id: 6,
+        topicName: "Future Trends in Security Auditing",
+        content: [
+          {
+            title: "Automating Audits with AI",
+            text: "The future of auditing involves the increasing use of AI and machine learning to automate auditing processes, detect anomalies, and identify security risks more efficiently.",
+          },
+          {
+            title: "Risk-based Auditing",
+            text: "Risk-based auditing focuses on prioritizing high-risk areas to ensure that critical vulnerabilities are addressed first. This approach allows for more targeted and efficient audits.",
+          },
+          {
+            title: "Preparing for Emerging Regulations",
+            text: "As regulations evolve, organizations must be prepared for new compliance requirements, particularly in areas such as data privacy, AI ethics, and cloud security.",
+          },
+          {
+            title: "Additional Resources",
+            text: "Watch this video on future trends in auditing",
+            videoLink: "https://www.youtube.com/watch?v=dPZh9bgblP0",
+          },
+        ],
+      },
+    ],
   },
+  
   {
     id: 32,
     name: "Cloud Security Basics",
-    description:
-      "Discover how to secure cloud-based systems and infrastructure.",
+    description: "Discover how to secure cloud-based systems and infrastructure.",
     track: "Cybersecurity",
-  },
+    additionalResource: {
+      title: "Additional Resource",
+      videoLink: "https://www.youtube.com/watch?v=kpSKEkTKw_s", // Cloud Security basics
+      websiteLink: {
+        title: "Cloud Security Best Practices",
+        link: "https://cloudsecurityalliance.org/",
+      },
+    },
+    topics: [
+      // TOPIC 1: Introduction to Cloud Security
+      {
+        id: 1,
+        topicName: "Introduction to Cloud Security",
+        content: [
+          {
+            title: "What is Cloud Security?",
+            text: "Cloud security involves securing cloud-based systems, data, and infrastructure against threats. It covers data protection, compliance, and security management in cloud environments.",
+          },
+          {
+            title: "Types of Cloud Models",
+            text: "Cloud models include public, private, and hybrid clouds. Security needs and implementations vary depending on the model used by the organization.",
+          },
+          {
+            title: "Additional Resources",
+            text: "Learn more about the basics of cloud security",
+            videoLink: "https://www.youtube.com/watch?v=F0p8YEM1g0I",
+          },
+        ],
+      },
+      // TOPIC 2: Cloud Security Threats and Risks
+      {
+        id: 2,
+        topicName: "Cloud Security Threats and Risks",
+        content: [
+          {
+            title: "Common Threats in Cloud Environments",
+            text: "Some common cloud security threats include data breaches, insider threats, insecure interfaces, and account hijacking. These risks require constant monitoring and appropriate security measures.",
+          },
+          {
+            title: "Understanding Shared Responsibility",
+            text: "In cloud security, the shared responsibility model divides the security roles between the cloud provider and the customer. Understanding who is responsible for what is crucial in mitigating security risks.",
+          },
+          {
+            title: "Additional Resources",
+            text: "Explore more on cloud security risks in this video",
+            videoLink: "https://www.youtube.com/watch?v=2xz_nIvn2pM", // Cloud security risks and how to mitigate
+          },
+        ],
+      },
+      // TOPIC 3: Data Encryption in the Cloud
+      {
+        id: 3,
+        topicName: "Data Encryption in the Cloud",
+        content: [
+          {
+            title: "Encrypting Data at Rest and in Transit",
+            text: "Encryption is essential to securing data in the cloud. Data can be encrypted at rest (stored data) and in transit (data being transmitted) using various cryptographic methods.",
+          },
+          {
+            title: "Cloud Encryption Tools",
+            text: "There are a number of encryption tools available for securing cloud data, such as AWS KMS (Key Management Service), Google Cloud KMS, and Azure Key Vault.",
+          },
+          {
+            title: "Additional Resources",
+            text: "Watch this video to understand cloud encryption",
+            videoLink: "https://www.youtube.com/watch?v=y5k1BUEzrTo", // Explanation of encryption in the cloud
+          },
+        ],
+      },
+      // TOPIC 4: Identity and Access Management (IAM)
+      {
+        id: 4,
+        topicName: "Identity and Access Management (IAM)",
+        content: [
+          {
+            title: "Securing Access in the Cloud",
+            text: "IAM systems ensure that the right people and devices have the right access to cloud resources. This includes authentication, authorization, and auditing.",
+          },
+          {
+            title: "IAM Best Practices",
+            text: "Best practices for IAM include using multi-factor authentication (MFA), least privilege access, and regular audits of user permissions.",
+          },
+          {
+            title: "Additional Resources",
+            text: "Learn about IAM in this cloud security video",
+            videoLink: "https://www.youtube.com/watch?v=ts8xlXc0Zs4", // Introduction to IAM in the cloud
+          },
+        ],
+      },
+      // TOPIC 5: Cloud Security Tools and Solutions
+      {
+        id: 5,
+        topicName: "Cloud Security Tools and Solutions",
+        content: [
+          {
+            title: "Popular Cloud Security Tools",
+            text: "Popular tools for cloud security include AWS Security Hub, Azure Security Center, and Google Cloud Security Command Center. These tools help monitor and secure cloud environments.",
+          },
+          {
+            title: "Additional Resources",
+            text: "Watch this video to explore cloud security tools",
+            videoLink: "https://www.youtube.com/watch?v=h5NiD_lhA7A", // Overview of popular cloud security tools
+          },
+        ],
+      },
+      // TOPIC 6: Compliance and Regulatory Requirements in the Cloud
+      {
+        id: 6,
+        topicName: "Compliance and Regulatory Requirements in the Cloud",
+        content: [
+          {
+            title: "Ensuring Cloud Compliance",
+            text: "Cloud providers and customers must comply with various regulations such as GDPR, HIPAA, and PCI DSS. Regular audits and compliance checks ensure that cloud environments meet legal requirements.",
+          },
+          {
+            title: "Additional Resources",
+            text: "Learn about cloud compliance regulations",
+            videoLink: "https://www.youtube.com/watch?v=Zbg6RUrgALw", // Cloud compliance and regulatory framework explained
+          },
+        ],
+      },
+    ],
+  }
+  
 ];
 
 export default courses;

@@ -2,6 +2,7 @@ import { Link } from "react-router-dom";
 import { useNavigate } from "react-router-dom";
 import { useAuth } from "../AuthProvider";
 
+// eslint-disable-next-line react/prop-types
 function Navbar({ onIsSignupOpen, onIsLoginOpen }) {
   const { currentUser, logout } = useAuth();
   const navigate = useNavigate();

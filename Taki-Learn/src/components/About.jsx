@@ -1,7 +1,7 @@
 //import Button from "./button";
-import { useState } from 'react';
-import Navbar from "../components/homePage/navbar";
-import PropTypes from "prop-types";
+//import { useState } from 'react';
+//import Navbar from "../components/homePage/navbar";
+//import PropTypes from "prop-types";
 
 const About = () => {
 
@@ -56,19 +56,26 @@ const About = () => {
           <div className="member-card">
             <h3>Adedamola Toye</h3>
             <ul>
+              <li>Planning and Ideation</li>
               <li>Explore courses page</li>
               <li>Personalised quiz to choose track</li>
               <li>Page navigation</li>
-              <li>Course data</li>
+              <li>Course content</li>
+              <li>Course page and Topic Page styling</li>
+              <li>Deployment</li>
+              
+
             </ul>
           </div>
           <div className="member-card">
             <h3>Kehinde</h3>
             <ul>
+              <li>Planning and Ideation</li>
               <li>Home page</li>
               <li>Navbar</li>
               <li>Signin/out</li>
               <li>Styling</li>
+              <li>Authentication</li>
             </ul>
           </div>
           <div className="member-card">
@@ -77,23 +84,28 @@ const About = () => {
               <li>About us</li>
               <li>Styling</li>
               <li>Members contribution section</li>
+              <li>Course content</li>
             </ul>
           </div>
-          <div className="member-card">
-            <h3>Abdullah</h3>
-            <ul>
-              <li>Courses page</li>
-              <li>Planning, Ideation and UX</li>
-              <li>Deployment on vercel</li>
-            </ul>
-          </div>
+
           <div className="member-card">
             
             <h3>Idayat</h3>
             <ul>
+              <li>Planning and Ideation</li>
               <li>About us section</li>
+              <li>Worked on CSS course</li>
             </ul>
           </div>
+
+          <div className="member-card">
+            <h3>Abdullah</h3>
+            <ul>
+              <li>Planning, Ideation and UX</li>
+              <li>Deployment on vercel</li>
+            </ul>
+          </div>
+          
         </div>
       </section>
       
