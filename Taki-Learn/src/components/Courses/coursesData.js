@@ -2199,13 +2199,7 @@ You can also have values like flex-start, self-start or start and flex-end, self
     ],
   },
 
-  {
-    id: 6,
-    name: "Responsive Web Design",
-    description:
-      "Master the art of creating web pages that adapt to different screen sizes.",
-    track: "Frontend Web Development",
-  },
+
   {
     id: 6,
     name: "Responsive Web Design",
