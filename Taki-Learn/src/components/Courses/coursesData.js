@@ -2933,45 +2933,1369 @@ You can also have values like flex-start, self-start or start and flex-end, self
   {
     id: 11,
     name: "Express.js Fundamentals",
-    description:
-      "Master the basics of Express.js to build web servers in Node.js.",
+    description: "Master the basics of Express.js to build web servers in Node.js.",
     track: "Backend Web Development",
+    additionalResource: {
+      title: "Additional Resource",
+      videoLink: "https://www.youtube.com/watch?v=L72fhGm1tfE",  // Placeholder video
+      websiteLink: {
+        title: "Express.js Documentation",
+        link: "https://expressjs.com/en/starter/installing.html"
+      }
+    },
+    topics: [
+      {
+        id: 1,
+        topicName: "Introduction to Express.js",
+        content: [
+          {
+            title: "What is Express.js?",
+            text: "Express.js is a fast, unopinionated, and minimalist web framework for Node.js, designed for building web applications and APIs."
+          },
+          {
+            title: "Features of Express.js",
+            text: "Express provides a thin layer of fundamental web application features, without obscuring Node.js features."
+          },
+          {
+            title: "Additional Resources",
+            text: "Watch this introduction video on Express.js",
+            videoLink: "https://www.youtube.com/watch?v=L72fhGm1tfE"
+          }
+        ]
+      },
+      {
+        id: 2,
+        topicName: "Setting Up Express.js",
+        content: [
+          {
+            title: "Installing Express.js",
+            text: "You can install Express.js using NPM by running the command `npm install express`."
+          },
+          {
+            title: "Basic Server Setup",
+            exampleCode: `
+              const express = require('express');
+              const app = express();
+              const port = 3000;
+              
+              app.get('/', (req, res) => {
+                res.send('Hello Express.js!');
+              });
+              
+              app.listen(port, () => {
+                console.log(\`Server running at http://localhost:\${port}\`);
+              });
+            `
+          },
+          {
+            title: "Additional Resources",
+            text: "Watch this tutorial on setting up Express.js",
+            videoLink: "https://www.youtube.com/watch?v=L72fhGm1tfE"
+          }
+        ]
+      },
+      {
+        id: 3,
+        topicName: "Routing in Express.js",
+        content: [
+          {
+            title: "Defining Routes",
+            text: "Express.js allows you to define routes to handle requests of different types (GET, POST, etc.) for specific URLs."
+          },
+          {
+            title: "Example: Basic Routing",
+            exampleCode: `
+              app.get('/about', (req, res) => {
+                res.send('About Page');
+              });
+              
+              app.post('/submit', (req, res) => {
+                res.send('Form submitted');
+              });
+            `
+          },
+          {
+            title: "Additional Resources",
+            text: "Watch this guide on routing in Express.js",
+            videoLink: "https://www.youtube.com/watch?v=L72fhGm1tfE"
+          }
+        ]
+      },
+      {
+        id: 4,
+        topicName: "Middleware in Express.js",
+        content: [
+          {
+            title: "What is Middleware?",
+            text: "Middleware functions are functions that have access to the request and response objects. They can execute any code, modify the request/response, end the request-response cycle, or call the next middleware."
+          },
+          {
+            title: "Using Middleware",
+            exampleCode: `
+              app.use((req, res, next) => {
+                console.log('Request received at:', new Date().toISOString());
+                next();
+              });
+            `
+          },
+          {
+            title: "Additional Resources",
+            text: "Watch this tutorial on using middleware in Express.js",
+            videoLink: "https://www.youtube.com/watch?v=L72fhGm1tfE"
+          }
+        ]
+      },
+      {
+        id: 5,
+        topicName: "Handling Static Files",
+        content: [
+          {
+            title: "Serving Static Files",
+            text: "Express.js can serve static files like HTML, CSS, and images using the `express.static` middleware."
+          },
+          {
+            title: "Example: Serving Static Files",
+            exampleCode: `
+              app.use(express.static('public'));
+  
+              // Now, files in the 'public' directory can be accessed
+              // e.g., http://localhost:3000/images/example.png
+            `
+          },
+          {
+            title: "Additional Resources",
+            text: "Watch this tutorial on serving static files in Express.js",
+            videoLink: "https://www.youtube.com/watch?v=L72fhGm1tfE"
+          }
+        ]
+      },
+      {
+        id: 6,
+        topicName: "Error Handling in Express.js",
+        content: [
+          {
+            title: "Handling Errors",
+            text: "Error-handling middleware is used to handle any errors that occur during request processing."
+          },
+          {
+            title: "Example: Error Handling Middleware",
+            exampleCode: `
+              app.use((err, req, res, next) => {
+                console.error(err.stack);
+                res.status(500).send('Something broke!');
+              });
+            `
+          },
+          {
+            title: "Additional Resources",
+            text: "Watch this tutorial on error handling in Express.js",
+            videoLink: "https://www.youtube.com/watch?v=L72fhGm1tfE"
+          }
+        ]
+      }
+    ]
   },
+  
   {
     id: 12,
     name: "Database Management with MongoDB",
-    description:
-      "Learn how to use MongoDB to store and manage data in your web applications.",
+    description: "Learn how to use MongoDB to store and manage data in your web applications.",
     track: "Backend Web Development",
+    additionalResource: {
+      title: "Additional Resource",
+      videoLink: "https://www.youtube.com/watch?v=ofme2o29ngU",  // Placeholder video
+      websiteLink: {
+        title: "MongoDB Official Documentation",
+        link: "https://docs.mongodb.com/"
+      }
+    },
+    topics: [
+      {
+        id: 1,
+        topicName: "Introduction to MongoDB",
+        content: [
+          {
+            title: "What is MongoDB?",
+            text: "MongoDB is a NoSQL, document-oriented database designed to store data in flexible, JSON-like documents. It allows for efficient scaling and high-performance data storage."
+          },
+          {
+            title: "Advantages of MongoDB",
+            text: "MongoDB offers scalability, flexibility in schema design, and easy integration with various web frameworks, making it ideal for web applications."
+          },
+          {
+            title: "Additional Resources",
+            text: "Watch this introduction to MongoDB video",
+            videoLink: "https://www.youtube.com/watch?v=ofme2o29ngU"
+          }
+        ]
+      },
+      {
+        id: 2,
+        topicName: "Setting Up MongoDB",
+        content: [
+          {
+            title: "Installing MongoDB",
+            text: "To get started, you can install MongoDB locally by downloading it from the official website or use a cloud service like MongoDB Atlas for easy setup."
+          },
+          {
+            title: "Basic MongoDB Commands",
+            exampleCode: `
+              // Start MongoDB server
+              mongod
+  
+              // Connect to MongoDB shell
+              mongo
+  
+              // Show all databases
+              show dbs;
+  
+              // Create or switch to a new database
+              use myDatabase;
+            `
+          },
+          {
+            title: "Additional Resources",
+            text: "Watch this setup guide for MongoDB",
+            videoLink: "https://www.youtube.com/watch?v=ofme2o29ngU"
+          }
+        ]
+      },
+      {
+        id: 3,
+        topicName: "CRUD Operations in MongoDB",
+        content: [
+          {
+            title: "Creating Documents",
+            text: "Documents in MongoDB are created using the `insertOne` or `insertMany` commands to add data into a collection."
+          },
+          {
+            title: "Example: Inserting Data",
+            exampleCode: `
+              db.users.insertOne({
+                name: "John Doe",
+                email: "john@example.com",
+                age: 30
+              });
+            `
+          },
+          {
+            title: "Reading Documents",
+            text: "You can retrieve documents using the `find` command with optional filters to specify which documents to return."
+          },
+          {
+            title: "Updating Documents",
+            exampleCode: `
+              db.users.updateOne(
+                { name: "John Doe" },
+                { $set: { age: 31 } }
+              );
+            `
+          },
+          {
+            title: "Deleting Documents",
+            exampleCode: `
+              db.users.deleteOne({ name: "John Doe" });
+            `
+          },
+          {
+            title: "Additional Resources",
+            text: "Watch this tutorial on MongoDB CRUD operations",
+            videoLink: "https://www.youtube.com/watch?v=ofme2o29ngU"
+          }
+        ]
+      },
+      {
+        id: 4,
+        topicName: "Indexes in MongoDB",
+        content: [
+          {
+            title: "What are Indexes?",
+            text: "Indexes improve the performance of database queries by allowing the database to search efficiently for documents that match certain criteria."
+          },
+          {
+            title: "Creating an Index",
+            exampleCode: `
+              db.users.createIndex({ email: 1 });
+            `
+          },
+          {
+            title: "Example: Using Indexes",
+            text: "Indexes are useful for fields you query often, like user email addresses or product IDs."
+          },
+          {
+            title: "Additional Resources",
+            text: "Watch this guide on indexes in MongoDB",
+            videoLink: "https://www.youtube.com/watch?v=ofme2o29ngU"
+          }
+        ]
+      },
+      {
+        id: 5,
+        topicName: "Aggregation in MongoDB",
+        content: [
+          {
+            title: "What is Aggregation?",
+            text: "Aggregation is a powerful feature in MongoDB that allows you to process data and return computed results, similar to SQL's GROUP BY."
+          },
+          {
+            title: "Example: Aggregation Pipeline",
+            exampleCode: `
+              db.users.aggregate([
+                { $match: { age: { $gte: 18 } } },
+                { $group: { _id: "$age", totalUsers: { $sum: 1 } } }
+              ]);
+            `
+          },
+          {
+            title: "Additional Resources",
+            text: "Watch this tutorial on aggregation in MongoDB",
+            videoLink: "https://www.youtube.com/watch?v=ofme2o29ngU"
+          }
+        ]
+      },
+      {
+        id: 6,
+        topicName: "Working with MongoDB Atlas",
+        content: [
+          {
+            title: "What is MongoDB Atlas?",
+            text: "MongoDB Atlas is a cloud-based service that allows you to host and manage MongoDB databases in a secure and scalable environment."
+          },
+          {
+            title: "Creating a Cluster in MongoDB Atlas",
+            text: "With MongoDB Atlas, you can quickly create clusters, manage backups, and monitor performance through an intuitive interface."
+          },
+          {
+            title: "Additional Resources",
+            text: "Watch this tutorial on getting started with MongoDB Atlas",
+            videoLink: "https://www.youtube.com/watch?v=ofme2o29ngU"
+          }
+        ]
+      }
+    ]
   },
+  
   {
     id: 13,
     name: "RESTful API Development",
-    description:
-      "Learn how to design and build RESTful APIs using Node.js and Express.",
+    description: "Learn how to design and build RESTful APIs using Node.js and Express.",
     track: "Backend Web Development",
+    additionalResource: {
+      title: "Additional Resource",
+      videoLink: "https://www.youtube.com/watch?v=fgTGADljAeg", // Placeholder video
+      websiteLink: {
+        title: "RESTful API Design Guide",
+        link: "https://restfulapi.net/"
+      }
+    },
+    topics: [
+      {
+        id: 1,
+        topicName: "Introduction to RESTful APIs",
+        content: [
+          {
+            title: "What is a RESTful API?",
+            text: "A RESTful API is an architectural style for designing networked applications. It uses HTTP requests to perform CRUD operations (Create, Read, Update, Delete) on resources represented as URLs."
+          },
+          {
+            title: "Principles of RESTful API",
+            text: "Key principles include stateless interactions, use of HTTP methods (GET, POST, PUT, DELETE), and resource identification through URIs."
+          },
+          {
+            title: "Additional Resources",
+            text: "Watch this introductory video on RESTful APIs",
+            videoLink: "https://www.youtube.com/watch?v=fgTGADljAeg"
+          }
+        ]
+      },
+      {
+        id: 2,
+        topicName: "Setting Up Node.js and Express",
+        content: [
+          {
+            title: "Installing Node.js and Express",
+            text: "Learn how to set up a Node.js environment and install Express.js for building RESTful APIs."
+          },
+          {
+            title: "Setting up the Express App",
+            exampleCode: `
+              const express = require('express');
+              const app = express();
+              const PORT = 3000;
+  
+              app.listen(PORT, () => {
+                console.log(\`Server is running on port \${PORT}\`);
+              });
+            `
+          },
+          {
+            title: "Additional Resources",
+            text: "Watch this setup guide for Node.js and Express",
+            videoLink: "https://www.youtube.com/watch?v=fgTGADljAeg"
+          }
+        ]
+      },
+      {
+        id: 3,
+        topicName: "Creating Routes in Express",
+        content: [
+          {
+            title: "Routing in Express",
+            text: "Routes define how the application responds to client requests to different URLs. You can use methods like GET, POST, PUT, and DELETE to handle different requests."
+          },
+          {
+            title: "Example: Creating Basic Routes",
+            exampleCode: `
+              app.get('/', (req, res) => {
+                res.send('Hello, World!');
+              });
+  
+              app.post('/api/resource', (req, res) => {
+                // Handle POST request
+                res.send('Resource created');
+              });
+            `
+          },
+          {
+            title: "Additional Resources",
+            text: "Watch this tutorial on routing in Express",
+            videoLink: "https://www.youtube.com/watch?v=fgTGADljAeg"
+          }
+        ]
+      },
+      {
+        id: 4,
+        topicName: "Working with Middleware",
+        content: [
+          {
+            title: "What is Middleware?",
+            text: "Middleware functions are executed sequentially to handle requests, modify responses, or execute additional logic before sending the response."
+          },
+          {
+            title: "Example: Using Middleware",
+            exampleCode: `
+              const express = require('express');
+              const app = express();
+  
+              // Middleware to log request method and URL
+              app.use((req, res, next) => {
+                console.log(\`\${req.method} \${req.url}\`);
+                next();
+              });
+  
+              app.get('/', (req, res) => {
+                res.send('Middleware Example');
+              });
+            `
+          },
+          {
+            title: "Additional Resources",
+            text: "Watch this video on middleware in Express",
+            videoLink: "https://www.youtube.com/watch?v=fgTGADljAeg"
+          }
+        ]
+      },
+      {
+        id: 5,
+        topicName: "Building CRUD APIs",
+        content: [
+          {
+            title: "Implementing CRUD Operations",
+            text: "Learn how to create APIs that allow clients to perform Create, Read, Update, and Delete operations on resources."
+          },
+          {
+            title: "Example: Basic CRUD API",
+            exampleCode: `
+              const express = require('express');
+              const app = express();
+  
+              let items = [];
+  
+              // Create
+              app.post('/api/items', (req, res) => {
+                const item = { id: items.length + 1, name: req.body.name };
+                items.push(item);
+                res.status(201).send(item);
+              });
+  
+              // Read
+              app.get('/api/items', (req, res) => {
+                res.send(items);
+              });
+  
+              // Update
+              app.put('/api/items/:id', (req, res) => {
+                const item = items.find(i => i.id === parseInt(req.params.id));
+                if (!item) return res.status(404).send('Item not found');
+                item.name = req.body.name;
+                res.send(item);
+              });
+  
+              // Delete
+              app.delete('/api/items/:id', (req, res) => {
+                const item = items.find(i => i.id === parseInt(req.params.id));
+                if (!item) return res.status(404).send('Item not found');
+                items = items.filter(i => i.id !== item.id);
+                res.send(item);
+              });
+            `
+          },
+          {
+            title: "Additional Resources",
+            text: "Watch this tutorial on building CRUD APIs with Express",
+            videoLink: "https://www.youtube.com/watch?v=fgTGADljAeg"
+          }
+        ]
+      },
+      {
+        id: 6,
+        topicName: "Handling API Errors",
+        content: [
+          {
+            title: "Error Handling in Express",
+            text: "Properly handling errors in APIs ensures that clients receive meaningful error messages and the API remains reliable."
+          },
+          {
+            title: "Example: Error Handling Middleware",
+            exampleCode: `
+              app.use((err, req, res, next) => {
+                console.error(err.stack);
+                res.status(500).send('Something went wrong!');
+              });
+            `
+          },
+          {
+            title: "Additional Resources",
+            text: "Watch this guide on error handling in Express",
+            videoLink: "https://www.youtube.com/watch?v=fgTGADljAeg"
+          }
+        ]
+      },
+      {
+        id: 7,
+        topicName: "Securing RESTful APIs",
+        content: [
+          {
+            title: "Securing API Endpoints",
+            text: "Learn how to secure API endpoints using authentication and authorization mechanisms such as JWT (JSON Web Tokens)."
+          },
+          {
+            title: "Example: Implementing JWT Authentication",
+            exampleCode: `
+              const jwt = require('jsonwebtoken');
+  
+              app.post('/api/login', (req, res) => {
+                // Validate user credentials (e.g., using a database)
+                const token = jwt.sign({ userId: user.id }, 'secretKey');
+                res.send({ token });
+              });
+  
+              // Protecting routes using JWT
+              function authenticate(req, res, next) {
+                const token = req.header('Authorization').replace('Bearer ', '');
+                try {
+                  const decoded = jwt.verify(token, 'secretKey');
+                  req.user = decoded;
+                  next();
+                } catch (error) {
+                  res.status(401).send('Unauthorized');
+                }
+              }
+  
+              app.get('/api/protected', authenticate, (req, res) => {
+                res.send('This is a protected route');
+              });
+            `
+          },
+          {
+            title: "Additional Resources",
+            text: "Watch this video on securing APIs with JWT",
+            videoLink: "https://www.youtube.com/watch?v=fgTGADljAeg"
+          }
+        ]
+      }
+    ]
   },
+  
   {
     id: 14,
     name: "GraphQL for Backend",
-    description:
-      "Dive into GraphQL and learn how to build efficient and scalable APIs.",
+    description: "Dive into GraphQL and learn how to build efficient and scalable APIs.",
     track: "Backend Web Development",
+    additionalResource: {
+      title: "Additional Resource",
+      videoLink: "https://www.youtube.com/watch?v=ed8SzALpx1Q", // Placeholder video
+      websiteLink: {
+        title: "GraphQL Official Documentation",
+        link: "https://graphql.org/learn/"
+      }
+    },
+    topics: [
+      {
+        id: 1,
+        topicName: "Introduction to GraphQL",
+        content: [
+          {
+            title: "What is GraphQL?",
+            text: "GraphQL is a query language for APIs and a runtime for executing those queries. It allows clients to specify the shape of the data they need and returns exactly that, making it highly efficient compared to REST."
+          },
+          {
+            title: "Key Concepts",
+            text: "Key concepts of GraphQL include schema, resolvers, queries, and mutations. Schemas define the structure of your API, and resolvers are functions that handle API requests."
+          },
+          {
+            title: "Additional Resources",
+            text: "Watch this introductory video on GraphQL",
+            videoLink: "https://www.youtube.com/watch?v=ed8SzALpx1Q"
+          }
+        ]
+      },
+      {
+        id: 2,
+        topicName: "Setting Up a GraphQL Server with Node.js",
+        content: [
+          {
+            title: "Installing GraphQL and Express",
+            text: "Learn how to set up a GraphQL server using Node.js and Express by installing the required packages like `express`, `express-graphql`, and `graphql`."
+          },
+          {
+            title: "Example: Setting Up a Basic GraphQL Server",
+            exampleCode: `
+              const express = require('express');
+              const { graphqlHTTP } = require('express-graphql');
+              const { buildSchema } = require('graphql');
+  
+              const app = express();
+  
+              // Define the GraphQL schema
+              const schema = buildSchema(\`
+                type Query {
+                  hello: String
+                }
+              \`);
+  
+              // Define the resolver
+              const root = {
+                hello: () => 'Hello, world!'
+              };
+  
+              app.use('/graphql', graphqlHTTP({
+                schema: schema,
+                rootValue: root,
+                graphiql: true
+              }));
+  
+              app.listen(4000, () => {
+                console.log('GraphQL server running on port 4000');
+              });
+            `
+          },
+          {
+            title: "Additional Resources",
+            text: "Watch this setup guide for GraphQL with Node.js",
+            videoLink: "https://www.youtube.com/watch?v=ed8SzALpx1Q"
+          }
+        ]
+      },
+      {
+        id: 3,
+        topicName: "GraphQL Queries and Mutations",
+        content: [
+          {
+            title: "Writing GraphQL Queries",
+            text: "Queries are used to fetch data in GraphQL. You can request specific fields, and the API will return only the data you asked for."
+          },
+          {
+            title: "Writing GraphQL Mutations",
+            text: "Mutations are used to modify data, such as creating, updating, or deleting records. Mutations look similar to queries but have different semantics."
+          },
+          {
+            title: "Example: Creating a Query and Mutation",
+            exampleCode: `
+              const schema = buildSchema(\`
+                type Query {
+                  getMessage: String
+                }
+  
+                type Mutation {
+                  setMessage(message: String): String
+                }
+              \`);
+  
+              let message = 'Hello, world!';
+  
+              const root = {
+                getMessage: () => message,
+                setMessage: ({ message: newMessage }) => {
+                  message = newMessage;
+                  return message;
+                }
+              };
+            `
+          },
+          {
+            title: "Additional Resources",
+            text: "Watch this tutorial on queries and mutations",
+            videoLink: "https://www.youtube.com/watch?v=ed8SzALpx1Q"
+          }
+        ]
+      },
+      {
+        id: 4,
+        topicName: "GraphQL Schema Design",
+        content: [
+          {
+            title: "Designing the GraphQL Schema",
+            text: "Schemas define the shape and structure of your API. Learn how to design schemas to handle complex data relationships efficiently."
+          },
+          {
+            title: "Example: Defining a Schema with Types and Relationships",
+            exampleCode: `
+              const schema = buildSchema(\`
+                type Author {
+                  id: ID
+                  name: String
+                  books: [Book]
+                }
+  
+                type Book {
+                  id: ID
+                  title: String
+                  author: Author
+                }
+  
+                type Query {
+                  books: [Book]
+                  authors: [Author]
+                }
+              \`);
+            `
+          },
+          {
+            title: "Additional Resources",
+            text: "Watch this tutorial on GraphQL schema design",
+            videoLink: "https://www.youtube.com/watch?v=ed8SzALpx1Q"
+          }
+        ]
+      },
+      {
+        id: 5,
+        topicName: "Working with Resolvers",
+        content: [
+          {
+            title: "What are Resolvers?",
+            text: "Resolvers are functions that handle requests for specific fields in the GraphQL schema. They define how and from where to fetch the requested data."
+          },
+          {
+            title: "Example: Creating a Resolver Function",
+            exampleCode: `
+              const root = {
+                books: () => booksList,  // Fetches the list of books
+                authors: () => authorsList  // Fetches the list of authors
+              };
+            `
+          },
+          {
+            title: "Additional Resources",
+            text: "Watch this guide on building resolvers",
+            videoLink: "https://www.youtube.com/watch?v=ed8SzALpx1Q"
+          }
+        ]
+      },
+      {
+        id: 6,
+        topicName: "Handling Complex Data in GraphQL",
+        content: [
+          {
+            title: "Nested Queries and Relations",
+            text: "GraphQL allows you to request deeply nested data. Learn how to define relationships between different data types and handle complex data structures."
+          },
+          {
+            title: "Example: Nested Query",
+            exampleCode: `
+              query {
+                books {
+                  title
+                  author {
+                    name
+                  }
+                }
+              }
+            `
+          },
+          {
+            title: "Additional Resources",
+            text: "Watch this video on handling complex data with GraphQL",
+            videoLink: "https://www.youtube.com/watch?v=ed8SzALpx1Q"
+          }
+        ]
+      },
+      {
+        id: 7,
+        topicName: "Error Handling in GraphQL",
+        content: [
+          {
+            title: "Handling Errors Gracefully",
+            text: "Error handling in GraphQL ensures that the client is informed about what went wrong during data fetching or processing."
+          },
+          {
+            title: "Example: Returning Errors in GraphQL",
+            exampleCode: `
+              const root = {
+                books: () => {
+                  throw new Error('Books data could not be fetched.');
+                }
+              };
+            `
+          },
+          {
+            title: "Additional Resources",
+            text: "Watch this tutorial on error handling in GraphQL",
+            videoLink: "https://www.youtube.com/watch?v=ed8SzALpx1Q"
+          }
+        ]
+      },
+      {
+        id: 8,
+        topicName: "Optimizing GraphQL Performance",
+        content: [
+          {
+            title: "Optimizing Queries for Large Datasets",
+            text: "Learn techniques like batching and caching to optimize GraphQL queries when dealing with large datasets."
+          },
+          {
+            title: "Additional Resources",
+            text: "Watch this video on optimizing GraphQL performance",
+            videoLink: "https://www.youtube.com/watch?v=ed8SzALpx1Q"
+          }
+        ]
+      }
+    ]
   },
+  
   {
     id: 15,
     name: "Authentication & Authorization",
-    description:
-      "Learn how to secure your backend applications with proper user authentication.",
+    description: "Learn how to secure your backend applications with proper user authentication.",
     track: "Backend Web Development",
+    additionalResource: {
+      title: "Additional Resource",
+      videoLink: "https://www.youtube.com/watch?v=2jqok-WgelI", 
+      websiteLink: {
+        title: "JWT Authentication Tutorial",
+        link: "https://jwt.io/introduction/"
+      }
+    },
+    topics: [
+      {
+        id: 1,
+        topicName: "Introduction to Authentication & Authorization",
+        content: [
+          {
+            title: "What is Authentication?",
+            text: "Authentication is the process of verifying the identity of a user or application. It involves checking credentials like usernames, passwords, or tokens."
+          },
+          {
+            title: "What is Authorization?",
+            text: "Authorization is the process of determining what a user is allowed to do. It ensures that the authenticated user has the proper permissions to access specific resources."
+          },
+          {
+            title: "Difference Between Authentication and Authorization",
+            text: "Authentication verifies identity, while authorization determines permissions. Both are crucial in securing backend systems."
+          },
+          {
+            title: "Additional Resources",
+            text: "Watch this overview of Authentication & Authorization",
+            videoLink: "https://www.youtube.com/watch?v=2jqok-WgelI"
+          }
+        ]
+      },
+      {
+        id: 2,
+        topicName: "JWT (JSON Web Tokens) Authentication",
+        content: [
+          {
+            title: "What are JWTs?",
+            text: "JWTs are a secure way to represent user claims between two parties. They are used for stateless authentication, where the server verifies a token without storing session data."
+          },
+          {
+            title: "How JWTs Work",
+            text: "JWTs consist of a header, payload, and signature. The header contains metadata, the payload holds the claims, and the signature ensures data integrity."
+          },
+          {
+            title: "Example: Creating a JWT",
+            exampleCode: `
+              const jwt = require('jsonwebtoken');
+  
+              const user = { id: 1, username: 'exampleUser' };
+              const token = jwt.sign(user, 'yourSecretKey', { expiresIn: '1h' });
+  
+              console.log(token);
+            `
+          },
+          {
+            title: "Additional Resources",
+            text: "Learn more about JWTs in this tutorial",
+            videoLink: "https://www.youtube.com/watch?v=2jqok-WgelI"
+          }
+        ]
+      },
+      {
+        id: 3,
+        topicName: "Implementing Authentication with Passport.js",
+        content: [
+          {
+            title: "What is Passport.js?",
+            text: "Passport.js is a middleware for Node.js that simplifies implementing various authentication strategies, including local and third-party providers like Google or Facebook."
+          },
+          {
+            title: "Example: Setting Up Passport for Local Authentication",
+            exampleCode: `
+              const passport = require('passport');
+              const LocalStrategy = require('passport-local').Strategy;
+  
+              passport.use(new LocalStrategy(
+                (username, password, done) => {
+                  User.findOne({ username: username }, (err, user) => {
+                    if (err) return done(err);
+                    if (!user) return done(null, false, { message: 'Incorrect username.' });
+                    if (!user.verifyPassword(password)) return done(null, false, { message: 'Incorrect password.' });
+                    return done(null, user);
+                  });
+                }
+              ));
+            `
+          },
+          {
+            title: "Additional Resources",
+            text: "Watch this tutorial on Passport.js",
+            videoLink: "https://www.youtube.com/watch?v=2jqok-WgelI"
+          }
+        ]
+      },
+      {
+        id: 4,
+        topicName: "OAuth 2.0 Authentication",
+        content: [
+          {
+            title: "What is OAuth 2.0?",
+            text: "OAuth 2.0 is an authorization framework that allows third-party services to exchange access tokens without sharing credentials. It's commonly used for signing in with services like Google, Facebook, etc."
+          },
+          {
+            title: "How OAuth 2.0 Works",
+            text: "OAuth 2.0 uses access tokens that are granted based on user consent. The token can then be used by applications to access protected resources."
+          },
+          {
+            title: "Example: Implementing OAuth with Google",
+            exampleCode: `
+              const GoogleStrategy = require('passport-google-oauth20').Strategy;
+  
+              passport.use(new GoogleStrategy({
+                clientID: 'yourGoogleClientID',
+                clientSecret: 'yourGoogleClientSecret',
+                callbackURL: 'http://www.example.com/auth/google/callback'
+              },
+              (token, tokenSecret, profile, done) => {
+                User.findOrCreate({ googleId: profile.id }, (err, user) => {
+                  return done(err, user);
+                });
+              }));
+            `
+          },
+          {
+            title: "Additional Resources",
+            text: "Learn how OAuth 2.0 works with Google",
+            videoLink: "https://www.youtube.com/watch?v=2jqok-WgelI"
+          }
+        ]
+      },
+      {
+        id: 5,
+        topicName: "Securing Routes with Middleware",
+        content: [
+          {
+            title: "Using Middleware for Route Protection",
+            text: "Middleware can be used to protect routes by checking if the user is authenticated and authorized to access specific resources."
+          },
+          {
+            title: "Example: Protecting a Route with JWT Middleware",
+            exampleCode: `
+              const jwt = require('jsonwebtoken');
+  
+              const authenticateJWT = (req, res, next) => {
+                const token = req.header('Authorization');
+                if (!token) return res.status(401).send('Access Denied');
+  
+                try {
+                  const verified = jwt.verify(token, 'yourSecretKey');
+                  req.user = verified;
+                  next();
+                } catch (err) {
+                  res.status(400).send('Invalid Token');
+                }
+              };
+  
+              app.get('/protected', authenticateJWT, (req, res) => {
+                res.send('This is a protected route');
+              });
+            `
+          },
+          {
+            title: "Additional Resources",
+            text: "Learn how to secure routes using middleware",
+            videoLink: "https://www.youtube.com/watch?v=2jqok-WgelI"
+          }
+        ]
+      },
+      {
+        id: 6,
+        topicName: "Role-Based Authorization",
+        content: [
+          {
+            title: "What is Role-Based Authorization?",
+            text: "Role-based authorization is a security mechanism that restricts access to certain resources based on the user's role (e.g., admin, user, moderator)."
+          },
+          {
+            title: "Example: Implementing Role-Based Access Control",
+            exampleCode: `
+              const checkRole = (roles) => (req, res, next) => {
+                if (!roles.includes(req.user.role)) {
+                  return res.status(403).send('Access Forbidden');
+                }
+                next();
+              };
+  
+              app.get('/admin', authenticateJWT, checkRole(['admin']), (req, res) => {
+                res.send('Welcome, Admin!');
+              });
+            `
+          },
+          {
+            title: "Additional Resources",
+            text: "Watch this tutorial on role-based authorization",
+            videoLink: "https://www.youtube.com/watch?v=2jqok-WgelI"
+          }
+        ]
+      },
+      {
+        id: 7,
+        topicName: "Two-Factor Authentication (2FA)",
+        content: [
+          {
+            title: "What is Two-Factor Authentication?",
+            text: "Two-factor authentication (2FA) adds an extra layer of security by requiring two forms of identification, typically something the user knows (password) and something they have (OTP or app token)."
+          },
+          {
+            title: "Example: Implementing Two-Factor Authentication with Google Authenticator",
+            exampleCode: `
+              const speakeasy = require('speakeasy');
+              const qrcode = require('qrcode');
+  
+              const secret = speakeasy.generateSecret({ length: 20 });
+              console.log(secret.base32); // Save this in the user's profile
+  
+              // Generate a QR code for the user's app
+              qrcode.toDataURL(secret.otpauth_url, (err, data) => {
+                console.log(data); // Display this QR code to the user
+              });
+  
+              // Verifying the token
+              const verified = speakeasy.totp.verify({
+                secret: secret.base32,
+                encoding: 'base32',
+                token: req.body.token
+              });
+  
+              if (verified) {
+                console.log('Token is valid');
+              } else {
+                console.log('Token is invalid');
+              }
+            `
+          },
+          {
+            title: "Additional Resources",
+            text: "Watch this tutorial on 2FA implementation",
+            videoLink: "https://www.youtube.com/watch?v=2jqok-WgelI"
+          }
+        ]
+      },
+      {
+        id: 8,
+        topicName: "Common Security Best Practices",
+        content: [
+          {
+            title: "Ensuring Secure Authentication",
+            text: "Follow best practices such as using strong encryption, limiting login attempts, and hashing passwords with a secure algorithm like bcrypt."
+          },
+          {
+            title: "Example: Hashing Passwords with bcrypt",
+            exampleCode: `
+              const bcrypt = require('bcrypt');
+  
+              const saltRounds = 10;
+              const plainPassword = 'userPassword';
+  
+              bcrypt.hash(plainPassword, saltRounds, (err, hash) => {
+                console.log('Hashed Password:', hash);
+              });
+            `
+          },
+          {
+            title: "Additional Resources",
+            text: "Watch this tutorial on security best practices",
+            videoLink: "https://www.youtube.com/watch?v=2jqok-WgelI"
+          }
+        ]
+      }
+    ]
   },
+  
   {
     id: 16,
     name: "Deploying Node.js Apps",
-    description:
-      "Learn how to deploy Node.js applications using platforms like Heroku and AWS.",
+    description: "Learn how to deploy Node.js applications using platforms like Heroku and AWS.",
     track: "Backend Web Development",
+    additionalResource: {
+      title: "Additional Resource",
+      videoLink: "https://www.youtube.com/watch?v=G3gnMSyQjGg",
+      websiteLink: {
+        title: "Heroku Deployment Guide",
+        link: "https://devcenter.heroku.com/articles/deploying-nodejs"
+      }
+    },
+    topics: [
+      {
+        id: 1,
+        topicName: "Introduction to Node.js Deployment",
+        content: [
+          {
+            title: "What is Deployment?",
+            text: "Deployment is the process of publishing a web application so that it is accessible to users over the internet. In this topic, you will learn how to deploy Node.js applications to popular platforms like Heroku and AWS."
+          },
+          {
+            title: "Choosing a Deployment Platform",
+            text: "Popular platforms for deploying Node.js apps include Heroku, AWS, DigitalOcean, and Vercel. Each platform offers different services and pricing."
+          },
+          {
+            title: "Additional Resources",
+            text: "Watch this overview of deploying Node.js applications",
+            videoLink: "https://www.youtube.com/watch?v=G3gnMSyQjGg"
+          }
+        ]
+      },
+      {
+        id: 2,
+        topicName: "Deploying on Heroku",
+        content: [
+          {
+            title: "What is Heroku?",
+            text: "Heroku is a cloud platform that allows you to deploy and manage applications with ease. It supports Node.js applications and provides free-tier hosting with some limitations."
+          },
+          {
+            title: "Steps to Deploy a Node.js App on Heroku",
+            steps: [
+              "Install the Heroku CLI and log in to your account.",
+              "Initialize a Git repository in your project folder.",
+              "Run `heroku create` to create a new Heroku app.",
+              "Push your code to Heroku using `git push heroku master`.",
+              "Your app will be deployed and can be accessed at the generated Heroku URL."
+            ]
+          },
+          {
+            title: "Example: Deploying a Simple Node.js App",
+            exampleCode: `
+              // Install Heroku CLI and initialize Git
+              heroku login
+              git init
+              heroku create
+  
+              // Add code and commit changes
+              git add .
+              git commit -m "Initial commit"
+  
+              // Deploy to Heroku
+              git push heroku master
+            `
+          },
+          {
+            title: "Additional Resources",
+            text: "Watch this tutorial on deploying Node.js apps on Heroku",
+            videoLink: "https://www.youtube.com/watch?v=G3gnMSyQjGg"
+          }
+        ]
+      },
+      {
+        id: 3,
+        topicName: "Deploying on AWS Elastic Beanstalk",
+        content: [
+          {
+            title: "What is AWS Elastic Beanstalk?",
+            text: "AWS Elastic Beanstalk is a service provided by Amazon Web Services (AWS) that simplifies the process of deploying and scaling web applications. It automatically manages infrastructure, capacity provisioning, and load balancing."
+          },
+          {
+            title: "Steps to Deploy a Node.js App on AWS Elastic Beanstalk",
+            steps: [
+              "Create an AWS account and install the AWS CLI.",
+              "Run `eb init` to initialize Elastic Beanstalk in your project folder.",
+              "Run `eb create` to create an environment and deploy your app.",
+              "Elastic Beanstalk will handle the deployment, and your app will be accessible via a public URL."
+            ]
+          },
+          {
+            title: "Example: Deploying a Node.js App on AWS Elastic Beanstalk",
+            exampleCode: `
+              // Install AWS CLI and initialize Elastic Beanstalk
+              aws configure
+              eb init
+  
+              // Create an environment and deploy
+              eb create my-node-app-env
+              eb open
+            `
+          },
+          {
+            title: "Additional Resources",
+            text: "Watch this tutorial on deploying Node.js apps on AWS",
+            videoLink: "https://www.youtube.com/watch?v=G3gnMSyQjGg"
+          }
+        ]
+      },
+      {
+        id: 4,
+        topicName: "Environment Variables & Configuration",
+        content: [
+          {
+            title: "Why Use Environment Variables?",
+            text: "Environment variables allow you to store sensitive information, like API keys or database URLs, outside your source code. This makes it easy to switch environments (e.g., development, production) without modifying your code."
+          },
+          {
+            title: "How to Set Up Environment Variables",
+            steps: [
+              "Create a `.env` file in the root directory of your project.",
+              "Store sensitive data in the `.env` file (e.g., `DB_URI=mongodb://...`).",
+              "Use the `dotenv` package to load environment variables into your application."
+            ]
+          },
+          {
+            title: "Example: Using Environment Variables in Node.js",
+            exampleCode: `
+              // Install dotenv
+              npm install dotenv
+  
+              // Load environment variables
+              require('dotenv').config();
+  
+              // Access environment variables
+              const dbUri = process.env.DB_URI;
+              console.log('Database URI:', dbUri);
+            `
+          },
+          {
+            title: "Additional Resources",
+            text: "Watch this guide on using environment variables",
+            videoLink: "https://www.youtube.com/watch?v=G3gnMSyQjGg"
+          }
+        ]
+      },
+      {
+        id: 5,
+        topicName: "Scaling Node.js Apps",
+        content: [
+          {
+            title: "What is Scaling?",
+            text: "Scaling is the process of ensuring that your app can handle increased traffic by distributing the workload across multiple servers or instances."
+          },
+          {
+            title: "Horizontal vs Vertical Scaling",
+            text: "Horizontal scaling involves adding more instances or servers, while vertical scaling involves increasing the resources (e.g., CPU, memory) of a single server."
+          },
+          {
+            title: "Scaling on Heroku",
+            text: "Heroku allows you to scale horizontally by adding 'dynos' (virtual containers) to your app. You can increase the number of dynos to handle more traffic."
+          },
+          {
+            title: "Example: Scaling a Heroku App",
+            exampleCode: `
+              // Scale your Heroku app by increasing the number of dynos
+              heroku ps:scale web=2
+            `
+          },
+          {
+            title: "Additional Resources",
+            text: "Watch this tutorial on scaling Node.js apps",
+            videoLink: "https://www.youtube.com/watch?v=G3gnMSyQjGg"
+          }
+        ]
+      },
+      {
+        id: 6,
+        topicName: "Monitoring and Logging",
+        content: [
+          {
+            title: "Why Monitoring is Important",
+            text: "Monitoring helps you keep track of your application's performance and identify potential issues such as slow response times or high error rates."
+          },
+          {
+            title: "Using Logging Tools",
+            text: "Logging tools like Winston and Morgan can help you capture important information about requests, responses, and errors in your app. Heroku also provides built-in logging services."
+          },
+          {
+            title: "Example: Setting Up Winston Logging",
+            exampleCode: `
+              const winston = require('winston');
+  
+              const logger = winston.createLogger({
+                level: 'info',
+                format: winston.format.json(),
+                transports: [
+                  new winston.transports.Console(),
+                  new winston.transports.File({ filename: 'app.log' })
+                ]
+              });
+  
+              logger.info('Server started');
+            `
+          },
+          {
+            title: "Additional Resources",
+            text: "Learn about monitoring and logging best practices",
+            videoLink: "https://www.youtube.com/watch?v=G3gnMSyQjGg"
+          }
+        ]
+      },
+      {
+        id: 7,
+        topicName: "CI/CD for Node.js Applications",
+        content: [
+          {
+            title: "What is CI/CD?",
+            text: "CI/CD (Continuous Integration/Continuous Deployment) automates the process of testing, building, and deploying your application. It ensures that new changes are quickly integrated and deployed to production."
+          },
+          {
+            title: "Setting Up CI/CD with Heroku and GitHub",
+            text: "You can set up automated deployments from GitHub to Heroku. Every time you push changes to the GitHub repository, Heroku will automatically deploy the latest version."
+          },
+          {
+            title: "Example: Configuring Heroku CI/CD",
+            exampleCode: `
+              // Connect your GitHub repository to Heroku
+              heroku pipelines:connect your-github-repo
+  
+              // Enable automatic deployments
+              heroku pipelines:enable-auto-deploy
+            `
+          },
+          {
+            title: "Additional Resources",
+            text: "Learn how to set up CI/CD pipelines for Node.js",
+            videoLink: "https://www.youtube.com/watch?v=G3gnMSyQjGg"
+          }
+        ]
+      }
+    ]
   },
+  
   {
     id: 17,
     name: "Python for Data Science",
