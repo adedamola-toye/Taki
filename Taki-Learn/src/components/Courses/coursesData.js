@@ -310,7 +310,7 @@ const courses = [
             </body>
             </html>
 
-            `
+            `,
           },
           {
             title: "Advanced HTML Form Elements and Features",
@@ -372,14 +372,13 @@ const courses = [
     track: "Frontend Web Development",
     additonalResource: {
       title: "Additional Resource",
-      videoLink:
-        "https://www.youtube.com/watch?v=OXGznpKZ_sA",
+      videoLink: "https://www.youtube.com/watch?v=OXGznpKZ_sA",
       websiteLink: {
         title: "CSS Tutorial",
         link: "https://www.w3schools.com/css/default.asp",
       },
     },
-    topics:[
+    topics: [
       //TOPIC 1
       {
         id: 1,
@@ -441,13 +440,12 @@ const courses = [
           {
             title: "Additional Resources",
             text: "Check out this video for a visual introduction to CSS:",
-            videoLink:
-              "https://www.youtube.com/watch?v=0W6qz0-aDaM",
+            videoLink: "https://www.youtube.com/watch?v=0W6qz0-aDaM",
           },
         ],
       },
       //TOPIC 2
- 
+
       {
         id: 2,
         topicName: "Css Selectors",
@@ -461,34 +459,33 @@ const courses = [
             }`,
           },
           {
-          title: "The CSS Id Selector",
-          text: "The id selector uses the id attribute of an HTML element to select a specific element.The id of an element is unique within a page, so the id selector is used to select one unique element!To select an element with a specific id, write a hash (#) character, followed by the id of the element. In this example all HTML elements with class= center will be red and center-aligned: ",
-          exampleCode: `#para1 {
+            title: "The CSS Id Selector",
+            text: "The id selector uses the id attribute of an HTML element to select a specific element.The id of an element is unique within a page, so the id selector is used to select one unique element!To select an element with a specific id, write a hash (#) character, followed by the id of the element. In this example all HTML elements with class= center will be red and center-aligned: ",
+            exampleCode: `#para1 {
           text-align: center;
           color: red;
           }`,
-        },
-        {
-          title: "The CSS Class Selector",
-          text: "The class selector selects HTML elements with a specific class attribute.To select elements with a specific class, write a period (.) character, followed by the class name.",
-          exampleCode: `.center {
+          },
+          {
+            title: "The CSS Class Selector",
+            text: "The class selector selects HTML elements with a specific class attribute.To select elements with a specific class, write a period (.) character, followed by the class name.",
+            exampleCode: `.center {
           text-align: center;
           color: red;
           }`,
-        },
-        {
-          title: "The CSS Universal Selector",
-          text: "The universal selector (*) selects all HTML elements on the page.The CSS rule below will affect every HTML element on the page: ",
-          exampleCode: `* {
+          },
+          {
+            title: "The CSS Universal Selector",
+            text: "The universal selector (*) selects all HTML elements on the page.The CSS rule below will affect every HTML element on the page: ",
+            exampleCode: `* {
           text-align: center;
           color: blue;
          }`,
-        },
-        {
+          },
+          {
             title: "Grouping selectors",
             text: "You can combine selectors to apply the same declarations to multiple selectors. To do so, you separate them with a comma.",
-            exampleCode: 
-            `<p>
+            exampleCode: `<p>
             My dog name is:
             </p>
             <span class="dog-name">
@@ -502,8 +499,7 @@ const courses = [
           {
             title: "Follow the document tree with selectors",
             text: "We’ve seen how to target an element in the page by using a tag name, a class or an id.You can create a more specific selector by combining multiple items to follow the document tree structure. For example, if you have a span tag nested inside a p tag, you can target that one without applying the style to a span tag not included in a p tag:",
-            exampleCode: 
-            `span>
+            exampleCode: `span>
               Hello!
             </span>
             <p>
@@ -520,8 +516,7 @@ const courses = [
           {
             title: "Child combinator",
             text: "The child combinator (>) is placed between two CSS selectors. It matches only those elements matched by the second selector that are the direct children of elements matched by the first. ",
-            exampleCode: 
-            `<ul>
+            exampleCode: `<ul>
               <li>Unordered item</li>
               <li>Unordered item
                 <ol>
@@ -538,8 +533,7 @@ const courses = [
           {
             title: "Next-sibling combinator",
             text: "The next-sibling combinator (+) is placed between two CSS selectors. It matches only those elements matched by the second selector that are the next sibling element of the first selector.",
-            exampleCode: 
-            `<article>
+            exampleCode: `<article>
               <h1>A heading</h1>
                 <p>Veggies es bonus vobis, proinde vos postulo essum magis kohlrabi welsh onion daikon amaranth tatsoi tomatillo
                         melon azuki bean garlic.</p>
@@ -562,14 +556,13 @@ const courses = [
           {
             title: "Additional Resources",
             text: "Check out this video on CSS Selectors:",
-            videoLink:
-              "https://www.youtube.com/watch?v=l1mER1bV0N0",
+            videoLink: "https://www.youtube.com/watch?v=l1mER1bV0N0",
           },
         ],
       },
-       
+
       //TOPIC 3
-       {
+      {
         id: 3,
         topicName: "Css Specificity",
         content: [
@@ -577,7 +570,7 @@ const courses = [
             title: "What is Specificity",
             text: "Specificity is the algorithm used by browsers to determine the CSS declaration that is the most relevant to an element, which in turn, determines the property value to apply to the element. The specificity algorithm calculates the weight of a CSS selector to determine which rule from competing CSS declarations gets applied to an element.",
           },
-                  
+
           {
             title: "Selector weight categories",
             text: "The selector weight categories are listed here in the order of decreasing specificity:",
@@ -601,16 +594,14 @@ const courses = [
           {
             title: "Importance",
             text: "Specificity does not matter if a rule ends with !important:That rule will take precedence over any rule with more specificity Adding !important in a CSS rule is going to make that rule more important than any other rule, according to the specificity rules",
-            exampleCode: 
-            ` p {
+            exampleCode: ` p {
             font-size: 20px!important;
           }`,
           },
           {
             title: "Calculating Specificity",
             text: "Every selector in CSS has a specificity weight. A selector’s specificity weight, along with its placement in the cascade, identifies how its styles will be rendered.The higher the specificity weight of a selector, the more superiority the selector is given when a styling conflict occurs. For example, if a paragraph element is selected using a type selector in one place and an ID selector in another, the ID selector will take precedence over the type selector regardless of where the ID selector appears in the cascade.",
-            exampleCode: 
-              ` #food {
+            exampleCode: ` #food {
           background: green;
           }
           p {
@@ -624,8 +615,7 @@ const courses = [
           {
             title: "Additional Resources",
             text: "Check out this video on CSS Specificity:",
-            videoLink:
-              "https://www.youtube.com/watch?v=CHyPGSpIhSs",
+            videoLink: "https://www.youtube.com/watch?v=CHyPGSpIhSs",
           },
         ],
       },
@@ -641,27 +631,24 @@ const courses = [
           {
             title: "Working with the Box Model",
             text: "Every element is a rectangular box, and there are several properties that determine the size of that box. The core of the box is defined by the width and height of an element, which may be determined by the display property, by the contents of the element, or by specified width and height properties. padding and then border expand the dimensions of the box outward from the element’s width and height. Lastly, any margin we have specified will follow the border.Each part of the box model corresponds to a CSS property: width, height, padding, border, and margin.Let’s look these properties inside some code:",
-            exampleCode: 
-            `div {
+            exampleCode: `div {
               border: 6px solid #949599;
               height: 100px;
               margin: 20px;
               padding: 20px;
               width: 400px;
             }`,
-          },      
+          },
           {
             title: "How to calculate the Width of an Element",
             text: "According to the box model, the total width of an element can be calculated using the following formula:",
-            exampleCode: 
-            `margin-right + border-right + padding-right + width + padding-left + border-left + margin-left
+            exampleCode: `margin-right + border-right + padding-right + width + padding-left + border-left + margin-left
             `,
           },
           {
             title: "How to calculate the Height of an Element",
             text: "In comparison, according to the box model, the total height of an element can be calculated using the following formula:",
-            exampleCode: 
-            `margin-top + border-top + padding-top + height + padding-bottom + border-bottom + margin-bottom
+            exampleCode: `margin-top + border-top + padding-top + height + padding-bottom + border-bottom + margin-bottom
 
             `,
           },
@@ -670,13 +657,12 @@ const courses = [
           },
           {
             title: "Width & Height",
-            text: "Every element has default width and height. That width and height may be 0 pixels, but browsers, by default, will render every element with size. Depending on how an element is displayed, the default width and height may be adequate. If an element is key to the layout of a page, it may require specified width and height property values. In this case, the property values for non-inline elements may be specified."
+            text: "Every element has default width and height. That width and height may be 0 pixels, but browsers, by default, will render every element with size. Depending on how an element is displayed, the default width and height may be adequate. If an element is key to the layout of a page, it may require specified width and height property values. In this case, the property values for non-inline elements may be specified.",
           },
           {
             title: "Width",
             text: "The default width of an element depends on its display value. Block-level elements have a default width of 100%, consuming the entire horizontal space available. Inline and inline-block elements expand and contract horizontally to accommodate their content. Inline-level elements cannot have a fixed size, thus the width and height properties are only relevant to non-inline elements. To set a specific width for a non-inline element, use the width property:",
-            exampleCode: 
-            `div {
+            exampleCode: `div {
              width: 400px;
             }
             `,
@@ -684,8 +670,7 @@ const courses = [
           {
             title: "Height",
             text: "The default height of an element is determined by its content. An element will expand and contract vertically as necessary to accommodate its content. To set a specific height for a non-inline element, use the height property:",
-            exampleCode: 
-            `div {
+            exampleCode: `div {
               height: 100px;
             }
             `,
@@ -697,8 +682,7 @@ const courses = [
           {
             title: "Margin",
             text: "The margin property allows us to set the amount of space that surrounds an element. Margins for an element fall outside of any border and are completely transparent in color. Margins can be used to help position elements in a particular place on a page or to provide breathing room, keeping all other elements a safe distance away. Here’s the margin property in action:",
-            exampleCode: 
-            `div {
+            exampleCode: `div {
               margin: 20px;
             }
             `,
@@ -706,8 +690,7 @@ const courses = [
           {
             title: "Margin - Shorthand Property",
             text: "To shorten the code, it is possible to specify all the margin properties in one property.The margin property is a shorthand property for the following individual margin properties: margin-top margin-right margin-bottom margin-left.",
-            exampleCode: 
-            `So, here is how it works:
+            exampleCode: `So, here is how it works:
 
             If the margin property has four values:
 
@@ -721,8 +704,7 @@ const courses = [
           {
             title: "Padding",
             text: "The padding property is very similar to the margin property; however, it falls inside of an element’s border, should an element have a border. The padding property is used to provide spacing directly within an element. Here’s the code:",
-            exampleCode: 
-            `div {
+            exampleCode: `div {
               padding: 20px;
             }
             `,
@@ -730,24 +712,21 @@ const courses = [
           {
             title: "Borders",
             text: `Borders fall between the padding and margin, providing an outline around an element. The border property requires three values: width, style, and color. Shorthand values for the border property are stated in that order—width, style, color. In longhand, these three values can be broken up into the border-width, border-style, and border-color properties. These longhand properties are useful for changing, or overwriting, a single border value.`,
-            exampleCode: 
-            `div {
+            exampleCode: `div {
   border: 6px solid #949599;
 }`,
           },
           {
             title: "Individual Border Sides",
             text: "As with the margin and padding properties, borders can be placed on one side of an element at a time if we’d like. Doing so requires new properties: border-top, border-right, border-bottom, and border-left. The values for these properties are the same as those of the border property alone: width, style, and color. If we want, we can make a border appear only on the bottom of an element:",
-            exampleCode: 
-            `div {
+            exampleCode: `div {
               border-bottom: 6px solid #949599;
             }`,
           },
           {
             title: "Border Radius",
             text: "While we’re looking at borders and their different properties, we need to examine the border-radius property, which enables us to round the corners of an element The border-radius property accepts length units, including percentages and pixels, that identify the radius by which the corners of an element are to be rounded. A single value will round all four corners of an element equally; two values will round the top-left/bottom-right and top-right/bottom-left corners in that order; four values will round the top-left, top-right, bottom-right, and bottom-left corners in that order.",
-            exampleCode: 
-            `div {
+            exampleCode: `div {
               border-radius: 5px;
             }`,
           },
@@ -758,8 +737,7 @@ const courses = [
           {
             title: "Content Box",
             text: "The content-box value is the default value, leaving the box model as an additive design. If we don’t use the box-sizing property, this will be the default value for all elements. The size of an element begins with the width and height properties, and then any padding, border, or margin property values are added on from there.",
-            exampleCode: 
-            `div {
+            exampleCode: `div {
               -webkit-box-sizing: content-box;
               -moz-box-sizing: content-box;
               box-sizing: content-box;
@@ -768,8 +746,7 @@ const courses = [
           {
             title: "Padding Box",
             text: "The padding-box value alters the box model by including any padding property values within the width and height of an element. When using the padding-box value, if an element has a width of 400 pixels and a padding of 20 pixels around every side, the actual width will remain 400 pixels. As any padding values increase, the content size within an element shrinks proportionately.",
-            exampleCode: 
-            `div {
+            exampleCode: `div {
               box-sizing: padding-box;
             }`,
           },
@@ -788,8 +765,7 @@ const courses = [
           {
             title: "Additional Resources",
             text: "Check out this video on CSS Box Model:",
-            videoLink:
-              "https://www.youtube.com/watch?v=M6coJNLFBWI",
+            videoLink: "https://www.youtube.com/watch?v=M6coJNLFBWI",
           },
         ],
       },
@@ -805,12 +781,11 @@ const courses = [
           {
             title: "Normal Flow",
             text: "As detailed in the last lesson introducing layout, elements on a webpage lay out in normal flow if you haven't applied any CSS to change the way they behave. And, as we began to discover, you can change how elements behave either by adjusting their position in normal flow or by removing them from it altogether.Before digging deeper into different layout methods, it's worth revisiting some of the things you have studied in previous modules with regard to normal document flow.",
-          }, 
+          },
           {
             title: "How are elements laid out by default?",
             text: "That explains how elements are structured individually, but how about the way they're structured when they interact with one another? The normal layout flow (mentioned in the layout introduction article) is the system by which elements are placed inside the browser's viewport. By default, block-level elements are laid out in the block flow direction, which is based on the parent's writing mode (initial: horizontal-tb). Each element will appear on a new line below the last one, with each one separated by whatever margin that's been specified. In English, for example, (or any other horizontal, top to bottom writing mode) block-level elements are laid out vertically.Inline elements behave differently. They don't appear on new lines; instead, they all sit on the same line along with any adjacent (or wrapped) text content as long as there is space for them to do so inside the width of the parent block level element. If there isn't space, then the overflowing content will move down to a new line.Let's look at a simple example that explains all of this:",
-            exampleCode: 
-            `<h1>Basic document flow</h1>
+            exampleCode: `<h1>Basic document flow</h1>
 
               <p>
                 I am a basic block level element. My adjacent block level elements sit on new
@@ -867,8 +842,7 @@ const courses = [
           {
             title: "Introducing a simple example",
             text: "In this article, you'll work through a series of exercises to help you understand how flexbox works. To get started, you should make a local copy of the first starter file on your IDE. Load it in a modern browser (like Firefox or Chrome) and have a look at the code in your code editor. You can also see it live here",
-            exampleCode: 
-            `<!DOCTYPE html>
+            exampleCode: `<!DOCTYPE html>
               <html lang="en-US">
                 <head>
                   <meta charset="utf-8">
@@ -940,8 +914,7 @@ const courses = [
           {
             title: "Specifying what elements to lay out as flexible boxes",
             text: "To start with, we need to select which elements are to be laid out as flexible boxes. To do this, we set a special value of display on the parent element of the elements you want to affect. In this case we want to lay out the <article> elements, so we set this on the <section>:This causes the <section> element to become a flex container and its children become flex items. This is what it looks like:",
-            exampleCode: 
-            `section {
+            exampleCode: `section {
               display: flex;
             }
             `,
@@ -949,8 +922,7 @@ const courses = [
           {
             title: "Columns or rows?",
             text: "Flexbox provides a property called flex-direction that specifies which direction the main axis runs (which direction the flexbox children are laid out in). By default this is set to row, which causes them to be laid out in a row in the direction your browser's default language works in (left to right, in the case of an English browser).Try adding the following declaration to your <section> rule:",
-            exampleCode: 
-            `
+            exampleCode: `
              section {
                 display: flex;
                 flex-direction: column;
@@ -960,8 +932,7 @@ const courses = [
           {
             title: "Wrapping",
             text: "One issue that arises when you have a fixed width or height in your layout is that eventually your flexbox children will overflow their container, breaking the layout.",
-            exampleCode: 
-            `  section {
+            exampleCode: `  section {
                 display: flex;
                 flex-direction: row;
                 flex-wrap: wrap;
@@ -974,8 +945,7 @@ const courses = [
           {
             title: "flex-flow shorthand",
             text: "At this point it's worth noting that a shorthand exists for flex-direction and flex-wrap: flex-flow. So, for example, you can replace",
-            exampleCode: 
-            `
+            exampleCode: `
             section {
             flex-direction: row;
             flex-wrap: wrap;
@@ -991,15 +961,13 @@ const courses = [
           {
             title: "Flexible sizing of flex items",
             text: "Let's now return to our first example and look at how we can control what proportion of space flex items take up compared to the other flex items. First, add the following rule to the bottom of your CSS:",
-            exampleCode: 
-            `article {
+            exampleCode: `article {
               flex: 1;
             }`,
           },
           {
             text: "In this case, we're giving each <article> element the same value (a value of 1), which means they'll all take up an equal amount of the spare space left after properties like padding and margin have been set. This value is proportionally shared among the flex items: giving each flex item a value of 400000 would have exactly the same effect.Now add the following rule below the previous one:",
-            exampleCode: 
-            `article:nth-of-type(3) {
+            exampleCode: `article:nth-of-type(3) {
               flex: 2;
             }
             `,
@@ -1009,21 +977,18 @@ const courses = [
             text: `flex is a shorthand property that can specify up to three different values:The unitless proportion value we discussed above. This can be specified separately using the flex-grow longhand property.
                 A second unitless proportion value, flex-shrink, which comes into play when the flex items are overflowing their container. This value specifies how much an item will shrink in order to prevent overflow. This is quite an advanced flexbox feature and we won't be covering it any further in this article.
                 The minimum size value we discussed above. This can be specified separately using the flex-basis longhand value.`,
-              exampleCode: 
-                `article:nth-of-type(3) {
+            exampleCode: `article:nth-of-type(3) {
                   flex: 1 1 200px;
                 }
                 `,
           },
           {
-            text: "We'd advise against using the longhand flex properties unless you really have to (for example, to override something previously set). They lead to a lot of extra code being written and can be somewhat confusing."
-
+            text: "We'd advise against using the longhand flex properties unless you really have to (for example, to override something previously set). They lead to a lot of extra code being written and can be somewhat confusing.",
           },
           {
             title: "Horizontal and vertical alignment",
             text: "You can also use flexbox features to align flex items along the main or cross axis. Let's explore this by looking at a new example We're going to turn this into a neat, flexible button/toolbar. At the moment you'll see a horizontal menu bar with some buttons jammed into the top left-hand corner.",
-            exampleCode: 
-            `
+            exampleCode: `
             <!DOCTYPE html>
             <html lang="en-US">
               <head>
@@ -1070,8 +1035,7 @@ const courses = [
           },
           {
             text: "First, take a local copy of this example.Now, add the following to the bottom of the example's CSS",
-            exampleCode: 
-            `div {
+            exampleCode: `div {
               display: flex;
               align-items: center;
               justify-content: space-around;
@@ -1088,21 +1052,18 @@ You can also have values like flex-start, self-start or start and flex-end, self
           {
             title: "The align-self Property",
             text: "The align-self property specifies the alignment for the selected item inside the flexible container. You can override the align-items behavior for individual flex items by applying the align-self property to them. For example, try adding the following to your CSS:",
-            exampleCode: 
-            `button:first-child {
+            exampleCode: `button:first-child {
               align-self: flex-end;
             }`,
           },
           {
             title: "Justify Content",
             text: "The justify-content property is used to align the flex items:The default value is normal, which behaves as start, which makes all the items sit at the start of the main axis.You can use end or flex-end to make them sit at the end.The left and right values behave as start or end depending on the writing mode direction.center is also a value for justify-content. It'll make the flex items sit in the center of the main axis.The value we've used above, space-around, is useful — it distributes all the items evenly along the main axis with a bit of space left at either end.There is another value, space-between, which is very similar to space-around except that it doesn't leave any space at either end.The justify-items property is ignored in flexbox layouts.We'd like to encourage you to play with these values to see how they work before you continue.",
-            
           },
           {
             title: "Ordering flex items",
             text: "Flexbox also has a feature for changing the layout order of flex items without affecting the source order. This is another thing that is impossible to do with traditional layout methods.The order value must be a number, default value is 0.",
-            exampleCode: 
-            `button:first-child {
+            exampleCode: `button:first-child {
               order: 1; 
           }`,
           },
@@ -1113,8 +1074,7 @@ You can also have values like flex-start, self-start or start and flex-end, self
           {
             title: "Additional Resources",
             text: "Check out this video on CSS FlexBox:",
-            videoLink:
-              "https://www.youtube.com/watch?v=JJSoEo8JSnc",
+            videoLink: "https://www.youtube.com/watch?v=JJSoEo8JSnc",
           },
         ],
       },
@@ -1130,12 +1090,11 @@ You can also have values like flex-start, self-start or start and flex-end, self
           {
             title: "Creating your grid in CSS",
             text: "Having decided on the grid that your design needs, you can use CSS grid layout to create it. We'll look at the basic features of grid layout first and then explore how to create a simple grid system for your project.",
-          }, 
+          },
           {
             title: "Defining a grid",
             text: "Let's try out grid layouts with the help of an example.You will see an example with a container, which has some child items. By default, these items are displayed in a normal flow, causing them to appear one below the other. For the initial part of this lesson, we'll be using this file to see how its grid behaves.",
-            exampleCode: 
-            `<!DOCTYPE html>
+            exampleCode: `<!DOCTYPE html>
             <html lang="en-US">
               <head>
                 <meta charset="utf-8">
@@ -1181,7 +1140,7 @@ You can also have values like flex-start, self-start or start and flex-end, self
             exampleCode: `
             .container {
               display: grid;
-            }`
+            }`,
           },
           {
             text: "Unlike flexbox, the items will not immediately look any different. Declaring display: grid gives you a one column grid, so your items will continue to display one below the other as they do in normal flow.To see something that looks more grid-like, we'll need to add some columns to the grid. Let's add three 200-pixel columns. You can use any length unit or percentage to create these column tracks.",
@@ -1189,13 +1148,12 @@ You can also have values like flex-start, self-start or start and flex-end, self
             .container {
               display: grid;
               grid-template-columns: 200px 200px 200px;
-            }`
+            }`,
           },
           {
             title: "Flexible grids with the fr unit",
             text: "In addition to creating grids using lengths and percentages, we can use fr. The fr unit represents one fraction of the available space in the grid container to flexibly size grid rows and columns.Change your track listing to the following definition, creating three 1fr tracks:",
-            exampleCode: 
-            `.container {
+            exampleCode: `.container {
               display: grid;
               grid-template-columns: 1fr 1fr 1fr;
             }
@@ -1204,8 +1162,7 @@ You can also have values like flex-start, self-start or start and flex-end, self
           {
             title: "Gaps between tracks",
             text: "To create gaps between tracks, we use the properties:column-gap for gaps between columnsrow-gap for gaps between rows gap as a shorthand for both css",
-            exampleCode: 
-            `.container {
+            exampleCode: `.container {
                 display: grid;
                 grid-template-columns: 2fr 1fr 1fr;
                 gap: 20px;
@@ -1215,8 +1172,7 @@ You can also have values like flex-start, self-start or start and flex-end, self
           {
             title: "Repeating track listings",
             text: "You can repeat all or merely a section of your track listing using the CSS repeat() function. Change your track listing to the following: You'll now get three 1fr tracks just as before",
-            exampleCode: 
-            `
+            exampleCode: `
             .container {
               display: grid;
               grid-template-columns: repeat(3, 1fr);
@@ -1227,8 +1183,7 @@ You can also have values like flex-start, self-start or start and flex-end, self
           {
             title: "The minmax() function",
             text: "The minmax() function lets us set a minimum and maximum size for a track, for example, minmax(100px, auto). The minimum size is 100 pixels, but the maximum is auto, which will expand to accommodate more content. Try changing grid-auto-rows to use a minmax value:",
-            exampleCode: 
-            ` .container {
+            exampleCode: ` .container {
                 display: grid;
                 grid-template-columns: repeat(3, 1fr);
                 grid-auto-rows: minmax(100px, auto);
@@ -1239,8 +1194,7 @@ You can also have values like flex-start, self-start or start and flex-end, self
           {
             title: "As many columns as will fit",
             text: "We can combine some of the lessons we've learned about track listing, repeat notation, and minmax() to create a useful pattern. Sometimes it's helpful to be able to ask grid to create as many columns as will fit into the container. We do this by setting the value of grid-template-columns using the repeat() function, but instead of passing in a number, pass in the keyword auto-fit. For the second parameter of the function we use minmax() with a minimum value equal to the minimum track size that we would like to have and a maximum of 1fr.",
-            exampleCode: 
-            `
+            exampleCode: `
             .container {
               display: grid;
               grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
@@ -1252,8 +1206,7 @@ You can also have values like flex-start, self-start or start and flex-end, self
           {
             title: "Line-based placement",
             text: "We now move on from creating a grid to placing things on the grid. Our grid always has lines — these are numbered beginning with 1 and relate to the writing mode of the document.To position items along these lines, we can specify the start and end lines of the grid area where an item should be placed. There are four properties we can use to do this:grid-column-start, grid-column-end,grid-row-start,grid-row-end",
-            exampleCode: 
-            `
+            exampleCode: `
             header {
               grid-column: 1 / 3;
               grid-row: 1;
@@ -1277,8 +1230,7 @@ You can also have values like flex-start, self-start or start and flex-end, self
           {
             title: "Positioning with grid-template-areas",
             text: "An alternative way to arrange items on your grid is to use the grid-template-areas property and give the various elements of your design a name.Remove the line-based positioning from the last example and add the following CSS.",
-            exampleCode: 
-            `.container {
+            exampleCode: `.container {
               display: grid;
               grid-template-areas:
                 "header header"
@@ -1309,8 +1261,7 @@ You can also have values like flex-start, self-start or start and flex-end, self
             text: `It's possible to nest a grid within another grid, creating a "subgrid". You can do this by setting the display: grid property on a grid item.
                   Let's expand on the previous example by adding a container for articles and using a nested grid to control the layout of multiple articles. While we're using only one column in the nested grid, we can define the rows to be split in a 2:1:1 ratio by using the grid-template-rows property. This approach allows us to create a layout where one article at the top of the page has a large display, while the others have a smaller, preview-like layout.
                   The minimum size value we discussed above. This can be specified separately using the flex-basis longhand value.`,
-            exampleCode: 
-                `
+            exampleCode: `
                   .articles {
                     display: grid;
                     grid-template-rows: 2fr 1fr 1fr;
@@ -1326,8 +1277,7 @@ You can also have values like flex-start, self-start or start and flex-end, self
           },
           {
             text: "To make it easier to work with layouts in nested grids, you can use subgrid on grid-template-rows and grid-template-columns properties. This allows you to leverage the tracks defined in the parent grid.In the following example, we're using line-based placement, enabling the nested grid to span multiple columns and rows of the parent grid. We've added subgrid to inherit the parent grid's column tracks while adding a different layout for the rows within the nested grid.",
-            exampleCode: 
-            `
+            exampleCode: `
               <div class="container">
                 <div>One</div>
                 <div>Two</div>
@@ -1367,8 +1317,7 @@ You can also have values like flex-start, self-start or start and flex-end, self
           {
             title: "Additional Resources",
             text: "Check out this video on CSS Grid Layout:",
-            videoLink:
-              "https://www.youtube.com/watch?v=S9OiWe5iBYo",
+            videoLink: "https://www.youtube.com/watch?v=S9OiWe5iBYo",
           },
         ],
       },
@@ -1392,13 +1341,12 @@ You can also have values like flex-start, self-start or start and flex-end, self
               position: static;
               background: yellow;
             }
-            `
-          }, 
+            `,
+          },
           {
             title: "Relative positioning",
             text: "Relative positioning is the first position type we'll take a look at. This is very similar to static positioning, except that once the positioned element has taken its place in the normal flow, you can then modify its final position, including making it overlap other elements on the page. Go ahead and update the position declaration in your code:",
-            exampleCode: 
-            `
+            exampleCode: `
             position: relative;
             `,
           },
@@ -1409,27 +1357,25 @@ You can also have values like flex-start, self-start or start and flex-end, self
 
             top: 30px;
             left: 30px;
-            `
+            `,
           },
           {
             title: "Absolute positioning",
             text: "Absolute positioning brings very different results.Let's try changing the position declaration in your code as follows:",
             exampleCode: `
             position: absolute;
-            `
+            `,
           },
           {
             title: "Positioning contexts",
             text: "Which element is the containing element of an absolutely positioned element? This is very much dependent on the position property of the ancestors of the positioned element. To see this, add the following declaration to your body rule",
-            exampleCode: 
-            `position: relative;
+            exampleCode: `position: relative;
             `,
           },
           {
             title: "Introducing z-index",
             text: "All this absolute positioning is good fun, but there's another feature we haven't considered yet. When elements start to overlap, what determines which elements appear over others and which elements appear under others? In the example we've seen so far, we only have one positioned element in the positioning context, and it appears on the top since positioned elements win over non-positioned elements. What about when we have more than one?Try adding the following to your CSS to make the first paragraph absolutely positioned too:",
-            exampleCode: 
-            `
+            exampleCode: `
               p:nth-of-type(1) {
                 position: absolute;
                 background: lime;
@@ -1440,16 +1386,14 @@ You can also have values like flex-start, self-start or start and flex-end, self
           },
           {
             text: "Can you change the stacking order? Yes, you can, by using the z-index property. z-index is a reference to the z-axis. You may recall from previous points in the course where we discussed web pages using horizontal (x-axis) and vertical (y-axis) coordinates to work out positioning for things like background images and drop shadow offsets.To change the stacking order, try adding the following declaration to your p:nth-of-type(1) rule: ",
-            exampleCode: 
-            `
+            exampleCode: `
             z-index: 1;
             `,
           },
           {
             title: "Fixed positioning",
             text: "fixed positioning usually fixes an element in place relative to the visible portion of the viewport. (An exception to this occurs if one of the element's ancestors is a fixed containing block because its transform property has a value other than none.) This means that you can create useful UI items that are fixed in place, like persistent navigation menus that are always visible no matter how much the page scrolls.Let's put together a simple example to show what we mean. First of all, delete the existing p:nth-of-type(1) and .positioned rules from your CSS.Now update the body rule to remove the position: relative; declaration and add a fixed height, like so:",
-            exampleCode: 
-            ` body {
+            exampleCode: ` body {
                 width: 500px;
                 height: 1400px;
                 margin: 0 auto;
@@ -1458,8 +1402,7 @@ You can also have values like flex-start, self-start or start and flex-end, self
           },
           {
             text: "Now we're going to give the h1 element position: fixed; and have it sit at the top of the viewport. Add the following rule to your CSS:",
-            exampleCode: 
-            `
+            exampleCode: `
               h1 {
                 position: fixed;
                 top: 0;
@@ -1472,8 +1415,7 @@ You can also have values like flex-start, self-start or start and flex-end, self
           },
           {
             text: "The top: 0; is required to make it stick to the top of the screen. We give the heading the same width as the content column and then a white background and some padding and margin so the content won't be visible underneath it.If you save and refresh, you'll see a fun little effect of the heading staying fixed — the content appears to scroll up and disappear underneath it. But notice how some of the content is initially clipped under the heading. This is because the positioned heading no longer appears in the document flow, so the rest of the content moves up to the top. We could improve this by moving the paragraphs all down a bit. We can do this by setting some top margin on the first paragraph. Add this now:",
-            exampleCode: 
-            `
+            exampleCode: `
             p:nth-of-type(1) {
               margin-top: 60px;
             }`,
@@ -1485,8 +1427,7 @@ You can also have values like flex-start, self-start or start and flex-end, self
           {
             title: "Basic example",
             text: "Sticky positioning can be used, for example, to cause a navigation bar to scroll with the page until a certain point and then stick to the top of the page.The minimum size value we discussed above. This can be specified separately using the flex-basis longhand value.",
-          exampleCode: 
-                `
+            exampleCode: `
                   .positioned {
                     position: sticky;
                     top: 30px;
@@ -1497,8 +1438,7 @@ You can also have values like flex-start, self-start or start and flex-end, self
           {
             title: "Scrolling index",
             text: "An interesting and common use of position: sticky is to create a scrolling index page where different headings stick to the top of the page as they reach it. The markup for such an example might look like so:",
-            exampleCode: 
-            `
+            exampleCode: `
               <h1>Sticky positioning</h1>
 
               <dl>
@@ -1547,72 +1487,57 @@ You can also have values like flex-start, self-start or start and flex-end, self
           {
             title: "Additional Resources",
             text: "Check out this video on CSS Positioning:",
-            videoLink:
-              "https://www.youtube.com/watch?v=jx5jmI0UlXU",
+            videoLink: "https://www.youtube.com/watch?v=jx5jmI0UlXU",
           },
         ],
       },
     ],
   },
-    /* COURSE 3 */
+  /* COURSE 3 */
 
-    {
+  {
+    id: 2,
 
-      id: 2,
-      
-      name: "JavaScript for Beginners",
-      
-      description:
-      
+    name: "JavaScript for Beginners",
+
+    description:
       "Master the basics of JavaScript to build interactive web applications.",
-      
-      track: "Frontend Web Development",
-      
-      additonalResource: {
-      
+
+    track: "Frontend Web Development",
+
+    additonalResource: {
       title: "Additional Resource",
-      
-      videoLink:
-      
-      "https://www.youtube.com/watch?v=jS4aFq5-91M&t=6125s",
-      
+
+      videoLink: "https://www.youtube.com/watch?v=jS4aFq5-91M&t=6125s",
+
       websiteLink: {
-      
-      title: "JavaScript Tutorial",
-      
-      link: "https://www.w3schools.com/js/default.asp",
-      
+        title: "JavaScript Tutorial",
+
+        link: "https://www.w3schools.com/js/default.asp",
       },
-      
-      },
-      
-      topics: [
-      
+    },
+
+    topics: [
       //Topic 1
-      
+
       {
-      
-      id: 1,
-      
-      topicName: "JavaScript Basics",
-      
-      content: [
-      
-      {
-      
-      title: "Introduction to JavaScript",
-      
-      text: "JavaScript is a versatile programming language used for adding interactivity to web pages. From handling user input to updating content dynamically, JavaScript powers many of the features we use every day on the web.",
-      
-      },
-      
-      {
-      
-      title: "Variables and Data Types",
-      
-      text: "In JavaScript, variables are used to store data. You can declare a variable using `var`, `let`, or `const`. JavaScript supports various data types including strings, numbers, booleans, arrays, and objects.",
-      
-      exampleCode: `
+        id: 1,
+
+        topicName: "JavaScript Basics",
+
+        content: [
+          {
+            title: "Introduction to JavaScript",
+
+            text: "JavaScript is a versatile programming language used for adding interactivity to web pages. From handling user input to updating content dynamically, JavaScript powers many of the features we use every day on the web.",
+          },
+
+          {
+            title: "Variables and Data Types",
+
+            text: "In JavaScript, variables are used to store data. You can declare a variable using `var`, `let`, or `const`. JavaScript supports various data types including strings, numbers, booleans, arrays, and objects.",
+
+            exampleCode: `
       
       // Declaring variables
       
@@ -1637,48 +1562,38 @@ You can also have values like flex-start, self-start or start and flex-end, self
       console.log(person); // output: { name: 'John', age: 30 }
       
       `,
-      
+          },
+
+          {
+            title: "JavaScript Syntax",
+
+            text: "JavaScript syntax includes rules on how to write code that the browser can understand. Proper syntax ensures that your code runs without errors and behaves as expected.",
+          },
+
+          {
+            title: "Additional Resources",
+
+            text: "Check out this video on Javascript basics:",
+
+            videoLink: "https://www.youtube.com/watch?v=xwKbtUP87Dk",
+          },
+        ],
       },
-      
-      {
-      
-      title: "JavaScript Syntax",
-      
-      text: "JavaScript syntax includes rules on how to write code that the browser can understand. Proper syntax ensures that your code runs without errors and behaves as expected.",
-      
-      },
-      
-      {
-      
-      title: "Additional Resources",
-      
-      text: "Check out this video on Javascript basics:",
-      
-      videoLink: "https://www.youtube.com/watch?v=xwKbtUP87Dk",
-      
-      },
-      
-      ],
-      
-      },
-      
+
       // TOPIC 2: Functions and Control Flow
-      
+
       {
-      
-      id: 2,
-      
-      topicName: "Functions and Control Flow",
-      
-      content: [
-      
-      {
-      
-      title: "Functions",
-      
-      text: "A function is a block of reusable code that performs a specific task. You can define a function using the `function` keyword, followed by the function name and parentheses.",
-      
-      exampleCode: `
+        id: 2,
+
+        topicName: "Functions and Control Flow",
+
+        content: [
+          {
+            title: "Functions",
+
+            text: "A function is a block of reusable code that performs a specific task. You can define a function using the `function` keyword, followed by the function name and parentheses.",
+
+            exampleCode: `
       
       // Function declaration
       
@@ -1693,16 +1608,14 @@ You can also have values like flex-start, self-start or start and flex-end, self
       console.log(greet('Alice')); // output: Hello, Alice!
       
       `,
-      
-      },
-      
-      {
-      
-      title: "If-Else Statements",
-      
-      text: "JavaScript allows you to control the flow of your program using conditional statements like `if-else`. These are used to execute code based on certain conditions.",
-      
-      exampleCode: `
+          },
+
+          {
+            title: "If-Else Statements",
+
+            text: "JavaScript allows you to control the flow of your program using conditional statements like `if-else`. These are used to execute code based on certain conditions.",
+
+            exampleCode: `
       
       let age = 18;
        `,
@@ -2197,7 +2110,8 @@ You can also have values like flex-start, self-start or start and flex-end, self
           {
             title: "Additional Resources",
             text: "Check out this playlist on Sass Basics",
-            videoLink: "https://www.youtube.com/playlist?list=PL4-IK0AVhVjNiZpLY-3ILQFyRF0Bs914J",
+            videoLink:
+              "https://www.youtube.com/playlist?list=PL4-IK0AVhVjNiZpLY-3ILQFyRF0Bs914J",
           },
         ],
       },
@@ -2285,7 +2199,7 @@ You can also have values like flex-start, self-start or start and flex-end, self
       },
     ],
   },
-  
+
   {
     id: 6,
     name: "Responsive Web Design",
@@ -2301,8 +2215,7 @@ You can also have values like flex-start, self-start or start and flex-end, self
     track: "Frontend Web Development",
     additonalResource: {
       title: "Additional Resource",
-      videoLink:
-        "https://www.youtube.com/watch?v=srvUrASNj0s", // Placeholder link
+      videoLink: "https://www.youtube.com/watch?v=srvUrASNj0s", // Placeholder link
       websiteLink: {
         title: "MDN Responsive Design Tutorial",
         link: "https://developer.mozilla.org/en-US/docs/Learn/CSS/CSS_layout/Responsive_Design",
@@ -2469,14 +2382,12 @@ You can also have values like flex-start, self-start or start and flex-end, self
           {
             title: "Additional Resources",
             text: "Watch this video on CSS Flexbox and Grid",
-            videoLink: "https://www.youtube.com/watch?v=0xMQfnTU6oo", 
+            videoLink: "https://www.youtube.com/watch?v=0xMQfnTU6oo",
           },
         ],
       },
     ],
   },
-  
-
 
   {
     id: 8,
@@ -2484,196 +2395,245 @@ You can also have values like flex-start, self-start or start and flex-end, self
     description:
       "Learn how to create dynamic user interfaces using React's component system.",
     track: "Frontend Web Development",
-    additonalResource: {
-      title: "Additional Resource",
-      videoLink:
-        "https://youtu.be/CgkZ7MvWUAA?si=R-NQ2bSztqoekCa4", // Placeholder link
-      websiteLink: {
-        title: "Building Interactive UIs With Ease",
-        link: "https://cyberogism.com/rise-of-react-ui-development/",
-      },
-    },
     topics: [
-      // TOPIC 1: Introduction to React
       {
+        // topic 1
         id: 1,
-        topicName: "Introduction to React",
+        topicName: "CSS Architecture and Design Systems in React",
         content: [
           {
-            title: "What is React?",
-            text: "React is a JavaScript library for building user interfaces (UIs) on the web. React is a declarative, component based library that allows developers to build reusable UI components and It follows the Virtual DOM (Document Object Model) approach, which optimizes rendering performance by minimizing DOM updates. React is fast and works well with other tools and libraries. React is recommended in creating SPAs, allowing smooth content updates without page reloads. Its focus on reusable components makes it ideal for real-time applications.",
+            title: "Introduction",
+            text: "In large React applications, organizing CSS effectively is crucial. CSS architecture helps keep styles maintainable and scalable. Using design systems ensures consistent UI elements across your app.",
           },
           {
-            title: "Installation",
-            text: "Before embarking on your React journey, ensure you have a suitable development environment set up. Here’s a roadmap to get you started: Node.js and npm: Download and install Node.js (https://nodejs.org/en/download/package-manager/current) as it provides the runtime environment for JavaScript code execution. npm (Node Package Manager) is bundled with Node.js and is used to manage project dependencies.",
-            exampleCode: `
-            // run this in your terminal after downloading node.js
-            npx create-react-app my-react-app
-            cd my-react-app
-            npm start
-            `
+            title: "CSS Modules vs. Styled Components",
+            text: "CSS Modules scope styles to individual components, preventing conflicts. Styled Components allow you to write CSS directly in your JavaScript files.",
+            exampleCode: `// Using CSS Modules
+            import styles from './Button.module.css';
+
+            function Button() {
+              return <button className={styles.primaryButton}>Click Me</button>;
+            }
+
+
+              // Using Styled Components
+            import styled from 'styled-components';
+
+            const Button = styled.button"
+              background-color: #3498db;
+              padding: 10px 20px;
+            "
+
+            function App() {
+              return <Button>Click Me</Button>;
+            }
+
+            `,
+          },
+          {
+            title: "Design Systems and Sass",
+            text: "A design system centralizes colors, typography, and components for consistency. Sass can be used to define variables and organize your design tokens.",
+            exampleCode: `// _variables.scss
+            $primary-color: #3498db;
+            $spacing-unit: 8px;
+
+            .button {
+              background-color: $primary-color;
+              padding: $spacing-unit * 2;
+            }
+            `,
+          },
+          {
+            title: "Reusable UI Components",
+            text: "React components should adhere to your design system for consistency. Below is a button component using Sass variables:",
+            exampleCode: `// Button.js
+            import React from 'react';
+            import './Button.scss';
+
+            function Button({ label }) {
+              return <button className="button">{label}</button>;
+            }
+            `,
           },
           {
             title: "Additional Resources",
-            text: "Watch this step by step video on how to install react",
-            videoLink: "https://youtu.be/HIdPpm-0ZNQ?si=3FIT7SwGpFceRQGG", // Placeholder link
+            text: "check out this link on css architechture and designs for react",
+            websiteLink: {
+              title: "Styled Components",
+              link: "https://styled-components.com/",
+            },
           },
         ],
       },
-      // TOPIC 2: React Components
       {
+        // topic two
         id: 2,
-        topicName: "React Components",
+        topicName: "Component-Based Animations in React",
         content: [
           {
-            title: "Components",
-            text: "Components in React serve as independent and reusable code blocks for UI elements. They represent different parts of a web page and contain both structure and behavior. They are similar to JavaScript functions and make creating and managing complex user interfaces easier by breaking them down into smaller, reusable pieces..",
-            exampleCode: `
-            /* Example of a functional component */
-            function demoComponent() {
-              return (<h1>
-                  Welcome Message!
-                </h1>
+            title: "Introduction",
+            text: "Animations enhance user experience by adding life to your UI. In React, you can easily implement animations using CSS transitions or libraries like Framer Motion or React Spring, which are designed for complex, interactive animations.",
+          },
+          {
+            title: "Animating with CSS Transitions",
+            text: "CSS transitions allow you to animate changes to CSS properties, such as opacity, color, or position, by specifying a duration and easing.",
+            exampleCode: `// Using CSS transitions
+            import React, { useState } from 'react';
+            import './Box.css';
+
+            function Box() {
+              const [isActive, setIsActive] = useState(false);
+
+              return (
+                <div
+                  className={"box $ {isActive ? "active" : ""}"}
+                  onClick={() => setIsActive(!isActive)}
+                />
               );
             }
 
-            /* Example of a Class component */ 
-            class Democomponent extends React.Component {
-              render() {
-                return <h1>Welcome Message!</h1>;
-              }
+            // Box.css
+            .box {
+              width: 100px;
+              height: 100px;
+              background-color: #3498db;
+              transition: transform 0.5s ease;
+            }
+
+            .box.active {
+              transform: scale(1.2);
             }
             `,
           },
           {
+            title: "Animating with Framer Motion",
+            text: "Framer Motion provides a declarative way to animate React components with more complex interactions and smooth transitions.",
+            exampleCode: `// Using Framer Motion
+            import { motion } from 'framer-motion';
+
+            function AnimatedBox() {
+              return (
+                <motion.div
+                  animate={{ scale: 1.2 }}
+                  whileHover={{ scale: 1.3 }}
+                  transition={{ duration: 0.5 }}
+                  style={{ width: '100px', height: '100px', backgroundColor: '#3498db' }}
+                />
+              );
+            }
+            `,
+          },
+          {
+            title: "Choosing the Right Animation Approach",
+            text: `CSS Transitions: Great for simple animations (hover effects, fades, etc.).
+            Framer Motion: Ideal for more complex, interactive animations (dragging, transitions between pages).`,
+          },
+          {
             title: "Additional Resources",
-            text: "Watch this video on creating components in react",
-            videoLink: "https://youtu.be/oYspSD04HJE?si=1iAWnxYlQI7fmi1o", // Placeholder link
+            websiteLink: {
+              title: "react spring",
+              link: "https://www.react-spring.dev/",
+            },
           },
         ],
       },
-      // TOPIC 3: Hooks
       {
-        id: 3,
-        topicName: "Hooks",
+        // topic 3
+        id: "3",
+        topicName: "Designing Custom UI Themes in React",
         content: [
           {
-            title: "What are react hooks?",
-            text: "In React, Hooks are reusable functions that provide access to state in React Applications. Hooks were introduced in the 16.8 version of React. Hooks give access to states for functional components while creating a React application. It allows you to use state and other React features without writing a class.",
-            
+            title: "Introduction",
+            text: "Custom themes allow users to personalize the look and feel of an application. By implementing light and dark mode, you enhance both accessibility and user experience. In React, theme switching can be easily managed with CSS variables or a context provider.",
           },
           {
-            title: "Types of hooks",
-            text: "The Built-in React Hooks are: - State Hooks - Context Hooks - Ref Hooks - Effect Hooks - Performance Hooks - Resource Hooks - Other Hooks",
-            websiteLink: "https://www.geeksforgeeks.org/reactjs-hooks/"
+            title: "Using CSS Variables for Theming",
+            text: "CSS variables allow you to define reusable values for colors, fonts, and more. You can then switch between themes dynamically by changing these variables.",
           },
 
           {
-            title: "Additional Resources",
-            text: "Watch this video on react hooks and how to make your own hook",
-            videoLink: "https://youtu.be/TNhaISOUy6Q?si=lGqbhf8HkiX7eqOJ", // Placeholder link
-          },
-        ],
-      },
-      // TOPIC 4: Props Drilling
-      {
-        id: 4,
-        topicName: "Props Drilling",
-        content: [
-          {
-            title: "What are props?",
-            text: "In React, components can receive information from a parent component by utilizing props (short for properties). A prop is an object accessible to all React components. It serves as a means to pass data from a parent component to a child component.",
-          },
-          {
-            title: "What is prop drilling?",
-            text: "Prop drilling is basically a situation when the same data is being sent at almost every level due to requirements in the final level. Here is a diagram to demonstrate it better. Data needed to be sent from Parent to ChildC.",
+            title: "",
+            text: "in the css",
+
             exampleCode: `
-            /* Example using prop drilling */
-            //without_useContext.js
- 
-            import React, { useState } from "react";
-            
-            function Parent() {
-                const [fName, setfName] = useState("firstName");
-                const [lName, setlName] = useState("LastName");
-                return (
-                    <>
-                        <div>This is a Parent component</div>
-                        <br />
-                        <ChildA fName={fName} lName={lName} />
-                    </>
-                );
-            }
-            
-            function ChildA({ fName, lName }) {
-                return (
-                    <>
-                        This is ChildA Component.
-                        <br />
-                        <ChildB fName={fName} lName={lName} />
-                    </>
-                );
-            }
-            
-            function ChildB({ fName, lName }) {
-                return (
-                    <>
-                        This is ChildB Component.
-                        <br />
-                        <ChildC fName={fName} lName={lName} />
-                    </>
-                );
-            }
-            
-            function ChildC({ fName, lName }) {
-                return (
-                    <>
-                        This is ChildC component.
-                        <br />
-                        <h3> Data from Parent component is as follows:</h3>
-                        <h4>{fName}</h4>
-                        <h4>{lName}</h4>
-                    </>
-                );
-            }
-            
-            export default Parent;
-            `,
+            /* Global styles (variables.css) */
+          :root {
+            --primary-color: #3498db;
+            --background-color: #ffffff;
+            --text-color: #000000;
+          }
+
+          .dark-theme {
+            --primary-color: #2ecc71;
+            --background-color: #1e1e1e;
+            --text-color: #ffffff;
+          }
+
+          body {
+            background-color: var(--background-color);
+            color: var(--text-color);
+          }
+        `,
+          },
+          {
+            title: "",
+            text: "in the jsx",
+
+            exampleCode: `
+        // App.js
+      import React, { useState } from 'react';
+      import './variables.css';
+
+      function App() {
+        const [isDarkMode, setIsDarkMode] = useState(false);
+
+        return (
+          <div className={isDarkMode ? 'dark-theme' : ''}>
+            <button onClick={() => setIsDarkMode(!isDarkMode)}>
+              Toggle Theme
+            </button>
+            <h1>Hello, World!</h1>
+          </div>
+        );
+      }
+
+    `,
+          },
+          {
+            title: "Using React Context for Theme Management",
+            text: "Context API allows you to manage theme state across your entire application.",
+            exampleCode: `// ThemeContext.js
+      import React, { createContext, useState, useContext } from 'react';
+
+      const ThemeContext = createContext();
+
+      export const useTheme = () => useContext(ThemeContext);
+
+      export function ThemeProvider({ children }) {
+        const [isDarkMode, setIsDarkMode] = useState(false);
+
+        const toggleTheme = () => setIsDarkMode(!isDarkMode);
+
+        return (
+          <ThemeContext.Provider value={{ isDarkMode, toggleTheme }}>
+            {children}
+          </ThemeContext.Provider>
+        );
+      }
+      `,
           },
           {
             title: "Additional Resources",
-            text: "Watch this video on props and prop drilling.",
-            videoLink: "https://youtu.be/XyIXMQ9SZmI?si=gUkYx_vROaLgS-sv", // Placeholder link
-          },
-        ],
-      },
-      // TOPIC 5: Context API
-      {
-        id: 5,
-        topicName: "Context API",
-        content: [
-          {
-            title: "What is Context API?",
-            text: "Context API is used to pass global variables anywhere in the code. It helps when there is a need for sharing state between a lot of nested components. It is light in weight and easier to use, to create a context just need to call React.createContext(). No need to install other dependencies or third-party libraries like redux for state management.",
-           
-          },
-          {
-            title: "Implementing Context API",
-            text: "The link shows how to implement context APIs",
-            websiteLink: "https://www.geeksforgeeks.org/explain-new-context-api-in-react/"
-          },
-          {
-            title: "Additional Resources",
-            text: "Watch this video on the basic concept of context APIs",
-            videoLink: "https://youtu.be/aAcI_FdfkA8?si=eIu7acpfhhugNgjb", // Placeholder link
+            text: "check out this link on css architechture and designs for react",
+            websiteLink: {
+              title: "CSS Variables",
+              link: "https://developer.mozilla.org/en-US/docs/Web/CSS/Using_CSS_custom_properties",
+            },
           },
         ],
       },
     ],
   },
-
-
-
   {
     id: 9,
     name: "JavaScript for Backend",
@@ -2841,7 +2801,6 @@ You can also have values like flex-start, self-start or start and flex-end, self
       "Discover how to secure cloud-based systems and infrastructure.",
     track: "Cybersecurity",
   },
-]
-
+];
 
 export default courses;
